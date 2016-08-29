@@ -47,7 +47,7 @@
 	</div>
 	</div><!-- Content End -->
 
-			<?php glowline_post_nav(); ?>
+		<?php glowline_post_nav(); ?>
 	<div class="clearfix"></div>
 	<div class="related-post">
 		<?php glowline_get_related_sigle_post(); ?>
