@@ -26,7 +26,7 @@ elseif (!empty($header_color) && $header_bg_type=='color'):
  <?php
  endif;
   ?>
-  .main-heading .main-logo h1 a, .main-heading .main-logo p{ color:#<?php echo $header_textcolor; ?>}
+<?php if ( $header_textcolor ) : ?>  .main-heading .main-logo h1 a, .main-heading .main-logo p{ color:#<?php echo $header_textcolor; ?>} <?php endif; ?>
 .navigation .menu > li > a:hover, .navigation ul li a:hover, header #main-menu-wrapper .menu-item-has-children > a:hover:after, .navigation ul ul.sub-menu a:hover, .navigation ul ul.sub-menu a:link:hover{
   color:<?php echo $theme_color; ?>;
 }
