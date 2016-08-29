@@ -13,7 +13,7 @@
 		<div class="container">
 			<ul>
 				<li class="copyright">
-					<?php 
+					<?php
 						$copyright_textbox = get_theme_mod( 'copyright_textbox');
 					if( $copyright_textbox!=''){
 						echo esc_html($copyright_textbox);

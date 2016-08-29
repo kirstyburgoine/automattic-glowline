@@ -31,6 +31,6 @@
   <?php endif; ?>
     <div class="post-share">
       <?php glowline_shareText(); ?>
-    </div> 
+    </div>
    </div>
 </li>

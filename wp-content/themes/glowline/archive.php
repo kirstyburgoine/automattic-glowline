@@ -46,7 +46,7 @@
 			// If no content, include the "No posts found" template.
 			?>
 		</ul>
-		
+
 	</div>
 	<?php
 			else :

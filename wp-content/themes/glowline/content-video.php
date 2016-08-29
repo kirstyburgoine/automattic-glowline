@@ -31,7 +31,7 @@
     <div class="post-share">
       <?php glowline_shareText(); ?>
     </div>
-    
-    
+
+
   </div>
 </li>

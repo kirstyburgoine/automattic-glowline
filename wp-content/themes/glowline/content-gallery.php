@@ -23,9 +23,9 @@
       <?php endif; ?>
     </div>
   </div>
-  
+
   <?php the_content(__('Continue Reading...','glowline' ),true); ?>
-  
+
   <div class="clearfix"></div>
   <div class="standard-bottom-meta">
     <?php  if(!glowline_home_post_meta('comment')): ?>

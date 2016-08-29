@@ -11,7 +11,7 @@
     <span class="post-category">
       <?php echo $category_list = get_the_category_list( __( ', ', 'glowline' ) ); ?>
     </span>
-  <?php endif; ?> 
+  <?php endif; ?>
     <div class="post-title">
       <a href="<?php the_permalink(); ?>">
         <h2><?php the_title(); ?></h2>
