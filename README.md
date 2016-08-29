@@ -6,6 +6,7 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 
 * Only the theme files and plugins installed are tracked in this repo. Not the base install of WordPress
 * Uses vanilla CSS, maybe change that to SASS later?
+* Test data installed from: https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
 
 ### Theme Settings (controlled in Admin) ###
 
