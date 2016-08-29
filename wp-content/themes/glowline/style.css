@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #5a5d5a;
     font-weight: 700;
     letter-spacing: 1px;
-    line-height: 30px;
+    line-height: 1; /* nicer default */
 }
 p {
 	font-family:"Lato", sans-serif;
@@ -195,6 +195,11 @@ ul, ul li, ol, ol li{
       color: #7D7D7D;
       line-height: 24px;
 }
+
+pre {
+  white-space: pre-wrap;
+}
+
 .page blockquote {
 	overflow: hidden;
     margin: 2.5rem 0;
