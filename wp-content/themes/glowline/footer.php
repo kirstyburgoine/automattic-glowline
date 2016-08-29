@@ -13,18 +13,15 @@
 		<div class="container">
 			<ul>
 				<li class="copyright">
-					<?php
-						$copyright_textbox = get_theme_mod( 'copyright_textbox');
-					if( $copyright_textbox!=''){
-						echo esc_html($copyright_textbox);
-						} else { ?>
-					<a href="http://wordpress.org"><?php printf(__('WordPress theme by %s','glowline'),'Glowline')?></a>
-					<?php } ?>
+					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'glowline' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'glowline' ), 'WordPress' ); ?></a> <?php printf( __( 'Theme: %1$s by %2$s.', 'glowline' ), 'Glowline', '<a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>' ); ?>
 				</li>
 				<li class="social-icon">
 					<?php glowline_social_links(); ?>
 				</li>
 			</ul>
+
+
+
 		</div>
 	</div>
 </div>
