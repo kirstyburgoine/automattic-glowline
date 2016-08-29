@@ -1,7 +1,7 @@
 <?php
 /**
+* @package Glowline
 * The template for displaying the footer
-* @since GlowLine 1.0
 */
 ?>
 <div class="footer-wrapper">

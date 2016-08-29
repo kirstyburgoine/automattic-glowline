@@ -1,7 +1,8 @@
 <?php
-/*
-  Template Name: Fullwidth Page
- */
+/**
+* @package Glowline
+* Template Name: Fullwidth Page
+*/
 get_header();
 $value = get_post_meta( $post->ID, 'glowline_sidebar_dyn', true );
 ?>

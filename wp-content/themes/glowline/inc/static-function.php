@@ -1,4 +1,4 @@
-<?php
+<?php  /**  * @package Glowline  */
  /**
  * Enable support for Post Thumbnails on posts and pages.
  *

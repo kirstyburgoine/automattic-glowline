@@ -1,9 +1,7 @@
 <?php
 /**
+* @package Glowline
 * The template for displaying archive pages
-* If you'd like to further customize these archive views, you may create a
-*
-* @since GlowLine 1.0
 */
 ?>
 <?php get_header(); ?>

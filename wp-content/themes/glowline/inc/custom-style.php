@@ -1,4 +1,4 @@
-<?php
+<?php  /**  * @package Glowline  */
 
  // custom header background
 function glowline_custom_style(){

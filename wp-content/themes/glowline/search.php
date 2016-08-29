@@ -1,7 +1,7 @@
 <?php
 /**
+* @package Glowline
 * The template for displaying Search Results pages
-* @since GlowLine 1.0
 */
 get_header(); ?>
 </div>

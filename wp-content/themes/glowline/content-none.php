@@ -1,7 +1,7 @@
 <?php
 /**
- * The template for displaying a "No posts found" message
- * @since GlowLine 1.0
+* @package Glowline
+* The template for displaying a "No posts found" message
  */
 ?>
 <div class="page-header">

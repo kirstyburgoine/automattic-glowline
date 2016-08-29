@@ -1,5 +1,6 @@
 <?php
 /**
+* @package Glowline
 * The Index template file.
 *
 * This is the most generic template file in a WordPress theme

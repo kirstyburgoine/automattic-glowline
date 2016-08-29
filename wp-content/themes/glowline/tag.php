@@ -1,5 +1,6 @@
 <?php
 /**
+* @package Glowline
 * The template for displaying tag pages.
 */
 ?>

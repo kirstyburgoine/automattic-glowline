@@ -1,10 +1,8 @@
-<?php
+<?php  /**  * @package Glowline  */
 	 //  =============================
 	 //  = Default Theme Customizer Settings  =
 	 //  @GlowLine Theme
 	 //  =============================
-
-
 
 /*theme customizer*/
 function glowline_customize_register( $wp_customize ) {

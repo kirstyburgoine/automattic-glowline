@@ -1,9 +1,4 @@
-<?php
-/*
- *  About me widget
- *  user about us
- *
- */
+<?php  /**  * @package Glowline  */
 
 // register widget
 add_action('widgets_init', 'glowline_about_me_widget');

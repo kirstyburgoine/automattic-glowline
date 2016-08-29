@@ -1,4 +1,5 @@
-<?php
+<?php  /**  * @package Glowline  */
+
 $loop = new WP_Query(array('posts_per_page' => get_theme_mod('slider_count',1),
 'cat' => get_theme_mod('slider_cate'),
 'order' => 'DESC',

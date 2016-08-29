@@ -1,4 +1,4 @@
-<?php
+<?php  /**  * @package Glowline  */
 
 /**
  * tgm plugin installation and activation

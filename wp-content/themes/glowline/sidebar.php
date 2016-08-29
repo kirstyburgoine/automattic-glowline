@@ -1,7 +1,7 @@
 <?php
 /**
+* @package Glowline
 * The template for displaying the sidebar
-*
 */
 ?>
 <aside class="sidebar">

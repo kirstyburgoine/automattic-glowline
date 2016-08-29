@@ -1,4 +1,4 @@
-<?php
+<?php  /**  * @package Glowline  */
 /**
  * Dynamic sidbar on default page
  * Calls the glowline_metaClass on the post edit screen.

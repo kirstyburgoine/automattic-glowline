@@ -1,7 +1,7 @@
 <?php
 /**
+* @package Glowline
 * The Template for displaying all single posts
-* @since GlowLine 1.0
 */
 get_header(); ?>
 </div>

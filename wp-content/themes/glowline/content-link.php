@@ -1,7 +1,7 @@
 <?php
 /**
+* @package Glowline
 * The template for displaying posts in the Link post format
-* @since GlowLine 1.0
 */
 ?>
 <li id="post-<?php the_ID(); ?>" <?php post_class(); ?> >

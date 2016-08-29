@@ -1,4 +1,4 @@
-<?php
+<?php  /**  * @package Glowline  */
 /**
 * The template for displaying 404 pages (Not Found)
 * @since GlowLine 1.0

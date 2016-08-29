@@ -1,8 +1,9 @@
 <?php
 /**
- * WordPress function Page
- * @since GlowLine
- */
+* @package Glowline
+* The template for displaying 404 pages (Not Found)
+*/
+
 if ( ! isset( $content_width ) ) {
 	$content_width = 1170;
 }

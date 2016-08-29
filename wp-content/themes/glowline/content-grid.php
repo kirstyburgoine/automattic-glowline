@@ -1,7 +1,7 @@
 <?php
 /**
+* @package Glowline
 * The template for displaying posts in the dynamic grid view
-* @since GlowLine 1.0
 */
 ?>
 <?php global $grid_layout; ?>

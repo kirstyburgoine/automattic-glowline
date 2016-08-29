@@ -1,7 +1,7 @@
 <?php
 /**
- * The default template for displaying content
- * @since GlowLine 1.0
+* @package Glowline
+* The default template for displaying content
  */
 ?>
 <?php if (is_single()) : ?>

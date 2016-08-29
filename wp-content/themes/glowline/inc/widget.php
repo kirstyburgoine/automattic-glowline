@@ -1,4 +1,5 @@
-<?php
+<?php  /**  * @package Glowline  */
+
 function glowline_widgets_init() {
 // Area , located below the Primary Widget Area in the sidebar. Empty by default.
 register_sidebar(array(
