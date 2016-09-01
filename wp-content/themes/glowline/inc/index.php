@@ -3,8 +3,6 @@
  * all file includeed
  */
 	include( get_template_directory() . '/inc/constant.php' );
-	require_once( get_template_directory() . '/class-tgm-plugin-activation.php' );
-	include( get_template_directory() . '/inc/plugin-install.php' );
 	include( get_template_directory() . '/inc/static-function.php' );
 	//sidebar and footer widget
 	include( get_template_directory() . '/inc/widget.php' );
