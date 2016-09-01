@@ -12,7 +12,7 @@
 	<?php endif; ?>
 		<div class="post-title"><h1><span><?php the_title(); ?></span></h1></div>
 	<div class="post-meta">
-				<?php if(!glowline_single_post_meta('single_date')) : ?>
+		<?php if(!glowline_single_post_meta('single_date')) : ?>
 		<span class="post-date"><?php the_time( get_option('date_format') ); ?></span>
 		<?php endif; ?>
 	</div>

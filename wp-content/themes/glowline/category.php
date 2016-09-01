@@ -24,7 +24,7 @@
 		<ul class="<?php echo $grid_layout; ?>">
 			<?php
 			if($grid_layout=='standard-layout'):
-					// Start the post formate loop.
+				// Start the post formate loop.
 			while ( have_posts() ) : the_post();
 			get_template_part( 'content', get_post_format() );
 			endwhile;

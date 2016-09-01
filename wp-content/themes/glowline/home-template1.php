@@ -23,6 +23,8 @@ $cat_id= $cat->term_id;
 // Make a header for the cateogry
 //echo "<h2>".$cat->name."</h2>";
 // create a custom wordpress query
+
+// TODO: Change this to nested loop
 query_posts("cat=$cat_id&post_per_page=100");
 
 if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -37,7 +39,6 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 // done our wordpress loop. Will start again for each category ?>
 
 <?php } // done the foreach statement ?>
-
 
 	<?php the_content(); ?>
 </div>

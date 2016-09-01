@@ -1,8 +1,9 @@
-<?php  /**  * @package Glowline  */
+<?php
 /**
+* @package Glowline
 * The template for displaying 404 pages (Not Found)
-* @since GlowLine 1.0
 */
+
 get_header(); ?>
 <div class="container" class="clearfix">
 	<div class="page-title breadcrumb">

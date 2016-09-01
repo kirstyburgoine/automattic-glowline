@@ -24,4 +24,3 @@
 
 	<?php endif; ?>
 </div>
-<!-- .page-content -->
