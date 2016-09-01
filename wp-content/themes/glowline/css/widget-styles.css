@@ -1,0 +1,19 @@
+/*
+ *  Extra classes to override some styling on default widgets
+  * Should be very minimal
+ */
+
+
+/* create some space around Jetpack posts */
+.widget .jetpack-display-remote-posts h4 {
+	font-size: 100%!important;
+	line-height: 1.4!important;
+	margin: 10px 0!important;
+}
+
+
+.widget .jetpack-display-remote-posts p {
+	font-size: 100%!important;
+	line-height: 1.4!important;
+	margin: 10px 0 30px 0!important;
+}
