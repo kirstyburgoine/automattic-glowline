@@ -20,3 +20,13 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 ### TODOs ###
 
 * home-template1.php: Line 26, change to nested loop
+* Remove default Twitter plugin as Jetpack has that
+* Stylesheet tags
+
+### Queries ###
+
+* Check for consistent post navigation labels (#312-wpcom-themes). #312 has no content?
+* Use comment_form() instead of hard-coded comment form (#306-wpcom-themes). #306 has no content?
+* (#171-wpcom-themes and #376-wpcom-themes), r6202-wpcom-themes empty?
+* How to test wordpress.com widget styles?
+* Jetpack social icons have no classes to change the styling
