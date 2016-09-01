@@ -16,3 +16,7 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * Enabled threaded comments 5 levels deep
 * Break comments into pages after 5 comments
 * Permalinks set to Post Name
+
+### TODOs ###
+
+* home-template1.php: Line 26, change to nested loop
