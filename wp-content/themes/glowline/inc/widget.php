@@ -13,7 +13,7 @@ register_sidebar(array(
 ));
 // Area , located below the Secondry Widget Area in the sidebar. Empty by default.
 register_sidebar(array(
-'name' => __('Secondry Sidebar', 'glowline'),
+'name' => __('Secondary Sidebar', 'glowline'),
 'id' => 'secondary-sidebar',
 'description' => __('Secondry sidebar that appears on the left.', 'glowline'),
 'before_widget' => '<div class="sidebar-inner-widget">',
