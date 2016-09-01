@@ -20,7 +20,6 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 ### TODOs ###
 
 * home-template1.php: Line 26, change to nested loop
-* Remove default Twitter plugin as Jetpack has that
 * Stylesheet tags
 
 ### Queries ###
