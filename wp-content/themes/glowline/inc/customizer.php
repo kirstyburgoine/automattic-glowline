@@ -154,54 +154,7 @@ $wp_customize->remove_control( 'header_textcolor' );
 	)
 );
 
-	//  =============================
-	//  = Social Settings       =
-	//  =============================
 
-		// on/off social icon
-	$wp_customize->add_section('social_option', array(
-		'title'    => __('Social Icon Options ', 'glowline'),
-		'priority' => 25,
-	));
-	//= social Options = facebook
-	 $wp_customize->add_setting('f_link', array(
-		'capability'     => 'edit_theme_options',
-		'sanitize_callback' => 'esc_url_raw',
-		'transport'         => 'postMessage'
-	));
-	$wp_customize->add_control('f_link', array(
-		'settings' => 'f_link',
-		'label'   => __('Facebook Link:','glowline'),
-		'section' => 'social_option',
-		'type'    => 'text',
-	)  );
-	//google icon
-	$wp_customize->add_setting('g_link', array(
-		'capability'     => 'edit_theme_options',
-		'sanitize_callback' => 'esc_url_raw',
-		'transport'         => 'postMessage'
-
-	));
-	$wp_customize->add_control('g_link', array(
-		'settings' => 'g_link',
-		'label'   => __('Google Link:','glowline'),
-		'section' => 'social_option',
-		'type'    => 'text',
-	)  );
-
-	//pintrest
-	$wp_customize->add_setting('p_link', array(
-		'capability'     => 'edit_theme_options',
-		'sanitize_callback' => 'esc_url_raw',
-		'transport'         => 'postMessage'
-
-	));
-	$wp_customize->add_control('p_link', array(
-		'settings' => 'p_link',
-		'label'   => __('Pinterest Link:','glowline'),
-		'section' => 'social_option',
-		'type'    => 'text',
-	)  );
 
 
 	//  =============================
