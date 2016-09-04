@@ -9,5 +9,5 @@
 	include( get_template_directory() . '/inc/about-me-widget.php' );
 	include( get_template_directory() . '/inc/custom-customizer.php' );
 	include( get_template_directory() . '/inc/customizer.php' );
-	include( get_template_directory() . '/inc/dynamic-sidebar.php' );
+	//include( get_template_directory() . '/inc/dynamic-sidebar.php' );
 	include( get_template_directory() . '/inc/custom-style.php' );

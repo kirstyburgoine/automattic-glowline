@@ -10,7 +10,6 @@
 *
 */
 get_header();
-$value = get_post_meta( $post->ID, 'glowline_sidebar_dyn', true );
 ?>
 </div>
 <div id="page" class="clearfix <?php echo $value; ?>">
@@ -28,10 +27,10 @@ endwhile; endif;
 </div>
 </div>
 <!-- / Content End -->
-<?php if($value!='no-sidebar'): ?>
+
 <div class="sidebar-wrapper">
 <?php get_sidebar(); ?>
 </div>
-<?php endif; ?>
+
 </div>
 <?php get_footer(); ?>

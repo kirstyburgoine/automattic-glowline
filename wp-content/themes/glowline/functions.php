@@ -34,20 +34,6 @@ function glowline_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'glowline_scripts' );
 
-/**
-  * dynamic social link
-  *
-  */
-function glowline_social_links(){
-?>
-<ul>
-	<?php if($f_link = get_theme_mod('f_link')) : ?><li><a target='_blank' href="<?php echo esc_url($f_link); ?>" ><i class='fa fa-facebook'></i></a></li><?php endif; ?>
-	<?php if($g_link = get_theme_mod('g_link')) : ?><li><a target='_blank' href="<?php echo esc_url($g_link); ?>" ><i class='fa fa-google-plus'></i></a></li><?php endif; ?>
-	<?php if($p_link = get_theme_mod('p_link')) : ?><li><a target='_blank' href="<?php echo esc_url($p_link); ?>" ><i class='fa fa-pinterest'></i></a></li><?php endif; ?>
-</ul>
-
-<?php
-}
 
 if ( ! function_exists( 'glowline_setup' ) ) :
 /**

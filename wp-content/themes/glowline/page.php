@@ -4,10 +4,10 @@
 * The template for displaying all pages
 */
 get_header();
-$value = get_post_meta( $post->ID, 'glowline_sidebar_dyn', true );
+
 ?>
 </div>
-<div id="page" class="clearfix <?php echo $value; ?>">
+<div id="page" class="clearfix">
 <div class="content"><!-- Content Start -->
 <div class="page-content"><!-- blog-single -->
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
@@ -36,10 +36,10 @@ endif;
 </div>
 </div>
 <!-- / Content End -->
-<?php if($value!='no-sidebar'): ?>
+
 <div class="sidebar-wrapper">
 <?php get_sidebar(); ?>
 </div>
-<?php endif; ?>
+
 </div>
 <?php get_footer(); ?>
