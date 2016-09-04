@@ -35,6 +35,7 @@ function glowline_scripts() {
 add_action( 'wp_enqueue_scripts', 'glowline_scripts' );
 
 
+
 if ( ! function_exists( 'glowline_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -58,7 +59,7 @@ function glowline_setup() {
 	 * Enable support for Post Formats.
 	 */
 
-	add_theme_support( 'post-formats', array('link','gallery','quate','video','audio') );
+	add_theme_support( 'post-formats', array('link','gallery','quote','video','audio') );
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.

@@ -15,9 +15,7 @@
 				<li class="copyright">
 					<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'glowline' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'glowline' ), 'WordPress' ); ?></a> <?php printf( __( 'Theme: %1$s by %2$s.', 'glowline' ), 'Glowline', '<a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>' ); ?>
 				</li>
-				<li class="social-icon">
-					<?php glowline_social_links(); ?>
-				</li>
+
 			</ul>
 
 

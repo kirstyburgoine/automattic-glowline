@@ -158,26 +158,6 @@ $wp_customize->remove_control( 'header_textcolor' );
 
 
 	//  =============================
-	//  = Footer Settings      =
-	//  =============================
-	$wp_customize->add_section('footer_option', array(
-		'title'    => __('Footer Options ', 'glowline'),
-		'priority' => 25,
-	));
-
-	$wp_customize->add_setting('copyright_textbox', array(
-		'default'        => '',
-		'capability'     => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field',
-	));
-	$wp_customize->add_control('copyright_textbox', array(
-		'settings'   => 'copyright_textbox',
-		'label'      => __('Copyright Text','glowline'),
-		'section'    => 'footer_option',
-		'type'       => 'text',
-	) );
-
-	//  =============================
 	//  = Custom Css      =
 	//  =============================
 
