@@ -16,18 +16,24 @@ $value = get_post_meta( $post->ID, 'glowline_sidebar_dyn', true );
 
 <?php // get all the categories from the database
 $cats = get_categories();
+//var_dump($cats);
 // loop through the categries
 foreach ($cats as $cat) {
 // setup the cateogory ID
 $cat_id= $cat->term_id;
 // Make a header for the cateogry
-//echo "<h2>".$cat->name."</h2>";
+echo "<h2>".$cat->name."</h2>";
 // create a custom wordpress query
 
 // TODO: Change this to nested loop
-query_posts("cat=$cat_id&post_per_page=100");
+// Loop for featured events in carousel
+$args = array(
+	'cat' => $cat_id,
+	'posts_per_page' => 100,
+);
+$my_query = new WP_Query( $args );
+if ( $my_query->have_posts() ) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <?php // create our link now that the post is setup ?>
 
@@ -35,7 +41,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <?php echo "<hr/>"; ?>
 
-<?php endwhile; endif;
+<?php endwhile; endif; wp_reset_postdata();
 // done our wordpress loop. Will start again for each category ?>
 
 <?php } // done the foreach statement ?>
