@@ -10,71 +10,28 @@
 *
 */
 get_header();
+$value = get_post_meta( $post->ID, 'glowline_sidebar_dyn', true );
 ?>
-<div class="container">
-	<!-- Main Heading Start -->
-	<div class="main-heading">
-		<!-- Logo Start -->
-		<div class="main-logo">
-		<?php glowline_the_custom_logo(); ?>
-		<?php
-			if ( is_front_page() && is_home() ) : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php endif;
-
-		$description = get_bloginfo( 'description', 'display' );
-		if ( $description || is_customize_preview() ) : ?>
-			<p class="site-description"><?php echo $description; ?></p>
-		<?php endif;  ?>
-		</div>
-		<!-- / Logo End -->
-
-		<?php if(get_theme_mod('slider_on_off','slider_off')=='slider_on'):?>
-		<?php  get_template_part( 'template/main', 'slider' ); ?>
-		<?php endif; ?>
-	</div> <!-- Main Heading End -->
 </div>
-</div> <!-- Main Header End -->
-	<!--class="no-sidebar" full index-->
-	<div id="page" class="clearfix right" >
-		<div class="content-wrapper clearfix">
-			<div class="content">  <!-- right -->
-			<main id="main" class="site-main" role="main">
-				<?php if ( have_posts() ) :
-					global $grid_layout;
-			$grid_layout = get_theme_mod('dynamic_grid','standard-layout');
-			?>
-			<ul class="load_post <?php echo $grid_layout; ?>">
-				<?php
-				while ( have_posts() ) : the_post();
-				if($grid_layout == 'standard-layout'):
-						// Start the post formate loop.
-				get_template_part( 'content', get_post_format() );
-				else :
-					// Start the post formate grid.
-				get_template_part( 'content', 'grid');
-				endif;
-				endwhile;
-				?>
-			</ul>
-			<div class="clearfix"></div>
+<div id="page" class="clearfix <?php echo $value; ?>">
+<div class="content"><!-- Content Start -->
+<div class="page-content"><!-- blog-single -->
+<?php if (have_posts()) : while (have_posts()) : the_post();
+	get_template_part('content');
+	// If comments are open or we have at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) {
+	comments_template();
+	}
 
-			<?php
-			glowline_pagination();
-			else :
-			// If no content, include the "No posts found" template.
-			get_template_part( 'content', 'none' );
-			endif;
-			?>
-			</main><!-- .site-main -->
-			<div class="clearfix"></div>
-		</div>
-		<div class="sidebar-wrapper"><!-- left -->
-		<?php get_sidebar(); ?>
-	</div>
+endwhile; endif;
+?>
 </div>
-<!-- / content-wrapper end -->
+</div>
+<!-- / Content End -->
+<?php if($value!='no-sidebar'): ?>
+<div class="sidebar-wrapper">
+<?php get_sidebar(); ?>
+</div>
+<?php endif; ?>
 </div>
 <?php get_footer(); ?>
