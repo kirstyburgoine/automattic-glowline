@@ -10,6 +10,7 @@
 * Template Name: Home
 */
 get_header();
+$value = get_post_meta( $post->ID, 'glowline_sidebar_dyn', true );
 ?>
 <div class="container">
 	<!-- Main Heading Start -->
@@ -38,8 +39,9 @@ get_header();
 </div>
 </div> <!-- Main Header End -->
 	<!--class="no-sidebar" full index-->
-	<div id="page" class="clearfix right" >
+	<div id="page" class="clearfix <?php echo $value; ?>" >
 		<div class="content-wrapper clearfix">
+
 			<div class="content">  <!-- right -->
 			<main id="main" class="site-main" role="main">
 				<?php if ( have_posts() ) :
@@ -71,8 +73,11 @@ get_header();
 			</main><!-- .site-main -->
 			<div class="clearfix"></div>
 		</div>
-		<div class="sidebar-wrapper"><!-- left -->
+		<?php if($value!='no-sidebar'): ?>
+		<div class="sidebar-wrapper">
 		<?php get_sidebar(); ?>
+		</div>
+		<?php endif; ?>
 	</div>
 </div>
 <!-- / content-wrapper end -->
