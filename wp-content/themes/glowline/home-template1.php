@@ -24,8 +24,7 @@ $cat_id= $cat->term_id;
 echo "<h2>".$cat->name."</h2>";
 // create a custom wordpress query
 
-// TODO: Change this to nested loop
-// Loop for featured events in carousel
+
 $args = array(
 	'cat' => $cat_id,
 	'posts_per_page' => 100,
