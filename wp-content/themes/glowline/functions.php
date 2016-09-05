@@ -68,6 +68,10 @@ function glowline_setup() {
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 	) );
 
+	/*
+	 * Enable global print stylesheet.
+	 */
+	add_theme_support( 'print-style' );
 
 	// header image
 	$args = array(
