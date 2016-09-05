@@ -497,7 +497,7 @@ header h1#logo {
 }
 .home header.smaller, header.smaller {
 	height: auto;
-	background-color: rgba(255, 255, 255, 0.95);
+	/* background-color: rgba(255, 255, 255, 0.95); */
 	box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
 	-webkit-box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
 	-moz-box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);

@@ -17,7 +17,7 @@ $wp_customize->remove_control( 'header_textcolor' );
 	 //  =============================
 	 //  = Header Settings       =
 	 //  =============================
-	$wp_customize->get_section('header_image')->title = esc_html__('Header Image Setting', 'glowline');
+	$wp_customize->get_section('header_image')->title = esc_html__('Background Image Setting', 'glowline');
 	$wp_customize->get_section('header_image')->priority = 25;
 	//  =header  Background Type  =
 	 $wp_customize->add_setting('header_background_type', array(
@@ -26,7 +26,7 @@ $wp_customize->remove_control( 'header_textcolor' );
 	));
 	$wp_customize->add_control( 'header_background_type', array(
 		'settings' => 'header_background_type',
-		'label'   => __('Header Background','glowline'),
+		'label'   => __('Background','glowline'),
 		'section' => 'header_image',
 		'priority' => 5,
 		'type'    => 'radio',
@@ -41,7 +41,7 @@ $wp_customize->remove_control( 'header_textcolor' );
 		'capability'        => 'edit_theme_options',
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'theme_bg_color', array(
-		'label'    => __('Header Background Color', 'glowline'),
+		'label'    => __('Background Color', 'glowline'),
 		'section'  => 'header_image',
 		'settings' => 'theme_bg_color',
 		'priority' => 6,
@@ -158,10 +158,10 @@ $wp_customize->remove_control( 'header_textcolor' );
 
 
 	//  =============================
-	//  = Custom Css      =
+	//  = Colors & Custom      =
 	//  =============================
 
-	 $wp_customize->get_section('colors')->title = esc_html__('Custom CSS', 'glowline');
+	 $wp_customize->get_section('colors')->title = esc_html__('Colors & Custom', 'glowline');
 	 $wp_customize->add_setting('theme_color', array(
 		'default'           => '#bdb76b',
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -172,6 +172,18 @@ $wp_customize->remove_control( 'header_textcolor' );
 		'section'  => 'colors',
 		'settings' => 'theme_color',
 		'priority' => 6,
+
+	)));
+	$wp_customize->add_setting('header_bg_color', array(
+		'default'           => '#ffffff',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'header_bg_color', array(
+		'label'    => __('Header Background Color', 'glowline'),
+		'section'  => 'colors',
+		'settings' => 'header_bg_color',
+		'priority' => 7,
 
 	)));
    $wp_customize->add_setting('custom_css_text', array(

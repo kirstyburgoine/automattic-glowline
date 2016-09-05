@@ -5,6 +5,7 @@ function glowline_custom_style(){
 $theme_color = esc_html(get_theme_mod('theme_color','#bdb76b'));
 $header_upload = esc_url_raw(get_header_image());
 $header_color = esc_html(get_theme_mod('theme_bg_color','#f5f5f5'));
+$header_bg_color = esc_html(get_theme_mod('header_bg_color','#ffffff'));
 $header_bg_type = esc_html(get_theme_mod('header_background_type','color'));
 $header_textcolor = esc_html(get_theme_mod('header_textcolor'));
 if(!empty($header_upload) && $header_bg_type=='image'):
@@ -63,6 +64,13 @@ background:<?php echo $theme_color; ?>;
 border: 1px solid <?php echo $theme_color; ?>;
 }
 <?php
+if ( $header_bg_color ) : ?>
+	.nav-wrapper,
+	.home header.smaller, header.smaller {
+		background-color: <?php echo $header_bg_color; ?>;
+	}
+<?php
+endif;
 	// Has the text been hidden?
 		if ( ! display_header_text() ) :
 	?>

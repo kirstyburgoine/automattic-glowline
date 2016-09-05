@@ -17,7 +17,7 @@
 	<!--Main Header Start -->
 	<div class="header-wrapper" id="header">
 		<!-- Top Header Start -->
-		<header>
+		<header class="nav-wrapper">
 			<div class="container">
 				<div class="header">
 					<!-- Logo Start -->
