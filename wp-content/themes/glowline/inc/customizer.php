@@ -11,13 +11,13 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	 //  =============================
 	 //  = Genral Settings     =
 	 //  =============================
-$wp_customize->get_section('title_tagline')->title = esc_html__('General Settings', 'glowline');
-$wp_customize->remove_control( 'header_textcolor' );
+	$wp_customize->get_section('title_tagline')->title = esc_html__('General Settings', 'glowline');
+	$wp_customize->remove_control( 'header_textcolor' );
 
 	 //  =============================
 	 //  = Header Settings       =
 	 //  =============================
-	$wp_customize->get_section('header_image')->title = esc_html__('Background Image Setting', 'glowline');
+	$wp_customize->get_section('header_image')->title = esc_html__('Background Settings', 'glowline');
 	$wp_customize->get_section('header_image')->priority = 25;
 	//  =header  Background Type  =
 	 $wp_customize->add_setting('header_background_type', array(
@@ -184,6 +184,18 @@ $wp_customize->remove_control( 'header_textcolor' );
 		'section'  => 'colors',
 		'settings' => 'header_bg_color',
 		'priority' => 7,
+
+	)));
+	$wp_customize->add_setting('strapline_color', array(
+		'default'           => '#bdb76b',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'capability'        => 'edit_theme_options',
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'strapline_color', array(
+		'label'    => __('Strapline Color', 'glowline'),
+		'section'  => 'colors',
+		'settings' => 'strapline_color',
+		'priority' => 8,
 
 	)));
    $wp_customize->add_setting('custom_css_text', array(

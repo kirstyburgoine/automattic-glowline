@@ -7,11 +7,11 @@ $header_upload = esc_url_raw(get_header_image());
 $header_color = esc_html(get_theme_mod('theme_bg_color','#f5f5f5'));
 $header_bg_color = esc_html(get_theme_mod('header_bg_color','#ffffff'));
 $header_bg_type = esc_html(get_theme_mod('header_background_type','color'));
-$header_textcolor = esc_html(get_theme_mod('header_textcolor'));
+$strapline_color = esc_html(get_theme_mod('strapline_color'));
 if(!empty($header_upload) && $header_bg_type=='image'):
 		?>
 .home .header-wrapper{
-					background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("<?php echo $header_upload; ?>");
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("<?php echo $header_upload; ?>");
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("<?php echo $header_upload; ?>");
 		background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("<?php echo $header_upload; ?>");
 		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("<?php echo $header_upload; ?>");
@@ -27,13 +27,14 @@ elseif (!empty($header_color) && $header_bg_type=='color'):
  <?php
  endif;
 	?>
-<?php if ( $header_textcolor ) : ?>  .main-heading .main-logo h1 a, .main-heading .main-logo p{ color:#<?php echo $header_textcolor; ?>} <?php endif; ?>
+
+<?php if ( $strapline_color ) : ?>  .main-heading .main-logo h1 a, .main-heading .main-logo p, , header.smaller .header .logo h1 a { color:#<?php echo $strapline_color; ?>} <?php endif; ?>
+
 .navigation .menu > li > a:hover, .navigation ul li a:hover, header #main-menu-wrapper .menu-item-has-children > a:hover:after, .navigation ul ul.sub-menu a:hover, .navigation ul ul.sub-menu a:link:hover{
 	color:<?php echo $theme_color; ?>;
 }
 .slider-post-category span a, .post-category a,
-.social-icon i.fa:hover, .post-share i.fa:hover, .footer-copyright .social-icon ul li a:hover, .header-bottom .social-icon ul li a:hover, .content .post-content .read-more a, .slider-post-content .read-more-slider a, .owl-controls .owl-prev:before, .owl-controls .owl-next:before, a.more-link, ul li a:hover, #commentform #commentSubmit, ol.commentlist li .reply a, .th-widget-recent-post .th-recent-post h5 a:hover, .widget .twitter-user a, .standard-layout .format-link h2, .format-quote blockquote p:before, .widget .tagcloud a:hover, .content .post-content .description p a, .page-description p a, .multipage-links span, .content .navigation.post-navigation .nav-links a:hover, .content, #searchform .icon-search:before, .content .post .post-meta .post-author a:hover, header.smaller .header .logo h1 a,
-.main-heading .main-logo h1 a {
+.social-icon i.fa:hover, .post-share i.fa:hover, .footer-copyright .social-icon ul li a:hover, .header-bottom .social-icon ul li a:hover, .content .post-content .read-more a, .slider-post-content .read-more-slider a, .owl-controls .owl-prev:before, .owl-controls .owl-next:before, a.more-link, ul li a:hover, #commentform #commentSubmit, ol.commentlist li .reply a, .th-widget-recent-post .th-recent-post h5 a:hover, .widget .twitter-user a, .standard-layout .format-link h2, .format-quote blockquote p:before, .widget .tagcloud a:hover, .content .post-content .description p a, .page-description p a, .multipage-links span, .content .navigation.post-navigation .nav-links a:hover, .content, #searchform .icon-search:before, .content .post .post-meta .post-author a:hover {
 color:<?php echo $theme_color; ?>;
 }
 .post .post-content .post-category, .post .post-category, .single-meta .post-category, .slider-post-category span, .archive-title, .page-title, li.sl-related-thumbnail h3, .multipage-links span, #searchform #s, #searchform #s:focus, #searchform #s:hover, #searchform .icon-search:hover + #s {
@@ -71,6 +72,7 @@ if ( $header_bg_color ) : ?>
 	}
 <?php
 endif;
+
 	// Has the text been hidden?
 		if ( ! display_header_text() ) :
 	?>
