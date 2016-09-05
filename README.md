@@ -21,6 +21,7 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 ### TODOs ###
 
 * Stylesheet tags
+* Fix strapline color in customizer
 
 ### Queries ###
 
