@@ -7,7 +7,7 @@ $header_upload = esc_url_raw(get_header_image());
 $header_color = esc_html(get_theme_mod('theme_bg_color','#f5f5f5'));
 $header_bg_color = esc_html(get_theme_mod('header_bg_color','#ffffff'));
 $header_bg_type = esc_html(get_theme_mod('header_background_type','color'));
-$strapline_color = esc_html(get_theme_mod('strapline_color'));
+$strapline = esc_html(get_theme_mod('strapline','#bdb76b'));
 if(!empty($header_upload) && $header_bg_type=='image'):
 		?>
 .home .header-wrapper{
@@ -28,7 +28,12 @@ elseif (!empty($header_color) && $header_bg_type=='color'):
  endif;
 	?>
 
-<?php if ( $strapline_color ) : ?>  .main-heading .main-logo h1 a, .main-heading .main-logo p, , header.smaller .header .logo h1 a { color:#<?php echo $strapline_color; ?>} <?php endif; ?>
+<?php if ( $strapline ) : ?>
+.main-heading .main-logo h1 a,
+.main-heading .main-logo p,
+header.smaller .header .logo h1 a,
+.header h1.site-title a { color:<?php echo $strapline; ?>; }
+<?php endif; ?>
 
 .navigation .menu > li > a:hover, .navigation ul li a:hover, header #main-menu-wrapper .menu-item-has-children > a:hover:after, .navigation ul ul.sub-menu a:hover, .navigation ul ul.sub-menu a:link:hover{
 	color:<?php echo $theme_color; ?>;

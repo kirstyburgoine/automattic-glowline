@@ -186,15 +186,15 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 		'priority' => 7,
 
 	)));
-	$wp_customize->add_setting('strapline_color', array(
+	$wp_customize->add_setting('strapline', array(
 		'default'           => '#bdb76b',
 		'sanitize_callback' => 'sanitize_hex_color',
 		'capability'        => 'edit_theme_options',
 	));
-	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'strapline_color', array(
+	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'strapline', array(
 		'label'    => __('Strapline Color', 'glowline'),
 		'section'  => 'colors',
-		'settings' => 'strapline_color',
+		'settings' => 'strapline',
 		'priority' => 8,
 
 	)));
