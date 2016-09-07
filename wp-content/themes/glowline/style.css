@@ -428,7 +428,7 @@ color: #bdb76b;
     /*padding: 13px 0;*/
 }
 .home header.smaller #main-menu-wrapper nav.navigation ul {
-   /* padding: 13px 0;*/
+   padding: 13px 0;
 
 }
 .home header {
@@ -516,25 +516,7 @@ header h1#logo {
 .home .header .logo p{
 	color:#fff;
 }
-header.smaller .logo h1,
-header .logo h1.site-title {
-font-size: 21px;
-width: 100%;
-text-align: center;
-top: 10px;
-position: absolute;
 
-
-}
-
-@media screen and (max-width: 1024px){
-  header.smaller .logo h1,
-  header .logo h1.site-title {
-    position: relative;
-    text-align: left;
-    width: 75%;
-  }
-}
 header.smaller .logo h1 a{
 	color:#000;
 }
@@ -558,7 +540,7 @@ header.smaller .header .logo h1 a{
     right: 15px;
 }
 #main-menu-wrapper nav.navigation .menu{
-  padding: 0 0 15px 0;
+  padding: 15px 0;
   margin: 0;
 -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
@@ -682,10 +664,10 @@ border-bottom:1px solid #ddd;
 display:inline-block;
 }
  .logo {
-  padding: 7px 0 0 0;
-  /*margin-right: 40px;*/
+  padding: 12px 0 0 0;
+  margin-right: 40px;
   position: relative;
-/*float:left;*/
+  float:left;
 -webkit-transition: all 0.5s ease-out;
  -moz-transition: all 0.5s ease-out;
  -o-transition: all 0.5s ease-out;
