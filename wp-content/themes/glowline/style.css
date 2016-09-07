@@ -405,7 +405,7 @@ color: #bdb76b;
 	visibility:hidden;
 }
 .main-logo img {
-    height: 125px;
+    /*height: 125px;*/
 }
 .home header.smaller .header .logo{
   display:block;
