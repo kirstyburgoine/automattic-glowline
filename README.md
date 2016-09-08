@@ -18,10 +18,15 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * Permalinks set to Post Name
 * Homepage now has a template called Home. All other settings are in customizer
 
+### Images Used in Screenshot ###
+* https://unsplash.com/?photo=jOS6t2qZFHQ
+* https://commons.wikimedia.org/wiki/File:IPC_logo_white_(2004).png
+* https://commons.wikimedia.org/wiki/Category:Paralympic_Games#/media/File:140930-D-DB155-016_(15232257889).jpg
+
 ### TODOs ###
 
 * Stylesheet tags
-* Fix strapline color in customizer
+
 
 ### Queries ###
 
