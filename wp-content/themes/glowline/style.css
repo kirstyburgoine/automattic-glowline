@@ -1142,6 +1142,10 @@ ul.slider-post-social.social-icon li.share-text, .post-share .share-text, .singl
 .post .post-content .post-header {
 	text-align:center;
 }
+
+.post .post-content .post-header .post-title a:hover h2,
+.post .post-content .post-header .post-title a:focus h2 { text-decoration: underline; }
+
 .post .post-category, .single-meta .post-category, .slider-post-category span {
     text-align: center;
     border-bottom: 1px solid #ddd;
@@ -1689,6 +1693,12 @@ letter-spacing: 1px;}
 }
 #move-to-top .fa-angle-up:before {
     font-size:20px;
+}
+
+#move-to-top:hover,
+#move-to-top:focus {
+  background: #ccc;
+  border: solid 1px #999;
 }
 /* Back to top end */
 /* Footer Style Start */
