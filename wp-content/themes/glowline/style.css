@@ -45,12 +45,11 @@ body{
 #searchform input[type=submit], .search-form input[type=submit]{
     display:none;
 }
-a, a:hover, #commentform #commentSubmit, #commentform #commentSubmit:hover{
+a, a:hover, a:focus, #commentform #commentSubmit, #commentform #commentSubmit:hover{
 transition: all 0.25s linear;
+text-decoration: underline;
 }
-a#cancel-comment-reply-link:hover {
-    text-decoration: underline;
- }
+
  a#cancel-comment-reply-link {
     font-size: 13px;
     color: #999;
@@ -66,6 +65,7 @@ span.edit-link a.post-edit-link {
     margin-top: 20px;
     color: #000;
 }
+
 img, video, object {
     max-width: 100%;
   height:auto;
@@ -358,6 +358,11 @@ a img.aligncenter {
   	text-transform: uppercase;
 		letter-spacing: 2px;
 }
+
+}
+.tagcloud a:hover,
+.tagcloud a:focus { background: #ccc!important; border: 1px solid #eee; }
+
 .textwidget {
     letter-spacing: 1px;
 }
@@ -373,8 +378,10 @@ a img.aligncenter {
   margin: 0 2px 4px;
   border: 1px solid #eee;
 }
-.widget .tagcloud a:hover{
-color: #bdb76b;
+.widget .tagcloud a:hover,
+.widget .tagcloud a:focus{
+background: #999;
+border: 1px solid #eee;
 }
 .widget li a {
     letter-spacing: 1px;
@@ -1141,8 +1148,26 @@ ul.slider-post-social.social-icon li.share-text, .post-share .share-text, .singl
     text-transform: uppercase;
     font-size: 12px;
      letter-spacing: .7px;
-    padding-bottom: 1px;
+    padding: 2px;
 }
+.post .post-category:hover,
+.single-meta .post-category:hover,
+.slider-post-category span:hover,
+.post .post-category:focus,
+.single-meta .post-category:focus,
+.slider-post-category span:focus {
+border: 1px solid #ddd;
+}
+
+.post .post-category:hover a,
+.single-meta .post-category:hover a,
+.slider-post-category span:hover a,
+.post .post-category:focus a,
+.single-meta .post-category:focus a,
+.slider-post-category span:focus a {
+  text-decoration: none;
+}
+
 ul.two-grid-layout li.post:nth-of-type(even){
 	margin-right:0px;
 }
@@ -1806,6 +1831,8 @@ text-decoration:underline;
 		padding:15px 5px;
 	color: #BABABA;
 }
+
+
 .related-post {
 	margin:85px 0px;
 	overflow:hidden;
@@ -1826,6 +1853,7 @@ li.sl-related-thumbnail h3{
     display: inline-block;
     margin: 10px 0;
     font-size:15px;
+    padding-bottom: 10px;
 }
 .related-post li:last-child {
     margin-right: 0px;

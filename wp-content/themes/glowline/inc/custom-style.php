@@ -10,7 +10,7 @@ $header_bg_type = esc_html(get_theme_mod('header_background_type','color'));
 $strapline = esc_html(get_theme_mod('strapline','#bdb76b'));
 if(!empty($header_upload) && $header_bg_type=='image'):
 		?>
-.home .header-wrapper{
+.header-wrapper{
 		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("<?php echo $header_upload; ?>");
 		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("<?php echo $header_upload; ?>");
 		background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("<?php echo $header_upload; ?>");
@@ -39,11 +39,26 @@ header.smaller .header .logo h1 a,
 	color:<?php echo $theme_color; ?>;
 }
 .slider-post-category span a, .post-category a,
-.social-icon i.fa:hover, .post-share i.fa:hover, .footer-copyright .social-icon ul li a:hover, .header-bottom .social-icon ul li a:hover, .content .post-content .read-more a, .slider-post-content .read-more-slider a, .owl-controls .owl-prev:before, .owl-controls .owl-next:before, a.more-link, ul li a:hover, #commentform #commentSubmit, ol.commentlist li .reply a, .th-widget-recent-post .th-recent-post h5 a:hover, .widget .twitter-user a, .standard-layout .format-link h2, .format-quote blockquote p:before, .widget .tagcloud a:hover, .content .post-content .description p a, .page-description p a, .multipage-links span, .content .navigation.post-navigation .nav-links a:hover, .content, #searchform .icon-search:before, .content .post .post-meta .post-author a:hover {
+.social-icon i.fa:hover, .post-share i.fa:hover, .footer-copyright .social-icon ul li a:hover, .header-bottom .social-icon ul li a:hover, .content .post-content .read-more a, .slider-post-content .read-more-slider a, .owl-controls .owl-prev:before, .owl-controls .owl-next:before, a.more-link, ul li a:hover, #commentform #commentSubmit, ol.commentlist li .reply a, .th-widget-recent-post .th-recent-post h5 a:hover, .widget .twitter-user a, .standard-layout .format-link h2, .format-quote blockquote p:before, .widget .tagcloud a:hover, .tagcloud a:hover, .content .post-content .description p a, .page-description p a, .multipage-links span, .content .navigation.post-navigation .nav-links a:hover, .content, #searchform .icon-search:before, .content .post .post-meta .post-author a:hover {
 color:<?php echo $theme_color; ?>;
 }
+
+.tagcloud a:hover {
+	background: #ccc;
+	border: solid 1px #999;
+}
+
 .post .post-content .post-category, .post .post-category, .single-meta .post-category, .slider-post-category span, .archive-title, .page-title, li.sl-related-thumbnail h3, .multipage-links span, #searchform #s, #searchform #s:focus, #searchform #s:hover, #searchform .icon-search:hover + #s {
 	 border-bottom: 1px solid <?php echo $theme_color; ?>;
+}
+
+.post .post-category:hover,
+.single-meta .post-category:hover,
+.slider-post-category span:hover,
+.post .post-category:focus,
+.single-meta .post-category:focus,
+.slider-post-category span:focus {
+border: 1px solid <?php echo $theme_color; ?>;
 }
 .format-quote blockquote, .single .format-quote blockquote, .single blockquote{
 	 border-left: 5px solid <?php echo $theme_color; ?>;
