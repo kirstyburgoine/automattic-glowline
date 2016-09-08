@@ -26,12 +26,16 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 ### TODOs ###
 
 * Stylesheet tags
-
+* Mobile Tests
+* Post by email
+* Test Common Shortcodes
+* Check against Theme Guide
+* Unit Tests
+* optimise images / check spritesheet
+* google structured data testing
 
 ### Queries ###
 
-* Check for consistent post navigation labels (#312-wpcom-themes). #312 has no content?
-* Use comment_form() instead of hard-coded comment form (#306-wpcom-themes). #306 has no content?
-* (#171-wpcom-themes and #376-wpcom-themes), r6202-wpcom-themes empty?
+* Most #***-wpcom-themes have no content?
 * How to test wordpress.com widget styles?
 * Jetpack social icons have no classes to change the styling
