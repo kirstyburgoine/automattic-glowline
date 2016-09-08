@@ -4,7 +4,7 @@
  // Responsive slider
 
  jQuery(".owl-carousel").owlCarousel({
-
+ 			rtl: true,
 			nav: true, // Show next and prev buttons
 			pagination:false,
 			slideSpeed : 500,

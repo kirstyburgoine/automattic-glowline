@@ -142,6 +142,11 @@ header h1#logo {
 	float: left;
 }
 
+.navigation ul li {
+
+    float: right;
+}
+
 #main-menu-wrapper .menu-item-has-children > a:after {
 	right: 4px;
 	left: auto;
@@ -154,28 +159,8 @@ header h1#logo {
 
 .navigation ul {
 	margin-right: 80px;
-	/*clear: left;
-	margin-left: auto;
 }
 
-.navigation ul li {
-	float: left;
-}
-
-.navigation ul ul.sub-menu a, .navigation ul ul.sub-menu a:link {
-	border-left: 0;
-	border-right: 0;
-}
-
-.navigation ul ul ul {
-	left: 230px;
-	right: auto;
-}
-
-.navigation i {
-	margin-right: 4px;
-	margin-left: auto;
-}
 
 /*-Custom Nav Widget-*/
 .widget_nav_menu .fa > a, .widget_nav_menu .fa > a {
@@ -194,7 +179,7 @@ header h1#logo {
 
 .logo {
 	margin-right: 40px;
-	float:left;
+	float:right;
 	margin-left: auto;
 }
 
@@ -202,27 +187,12 @@ header h1#logo {
 
 /****Contact form start*******/
 
-/****Slider*******/
+/*.owl-carousel {
+	direction: rtl;
+}*/
 
-.header-wrapper .owl-carousel .owl-item img {
-	float: left;
-}
-
-.header-wrapper .slider-post-content {
-	float: left;
-	padding-left: 25px;
-	padding-right: 0;
-}
-
-.slider .owl-controls .owl-next {
-	right:0%;
-	left: auto;
-}
-
-.slider .owl-controls .owl-prev {
-	left:0%;
-	right: auto;
-}
+.owl-carousel .owl-item { float: right!important; }
+.header-wrapper .owl-carousel .owl-item img { float: right!important; }
 
 /****Slider End*******/
 /****slider control****/
@@ -261,9 +231,9 @@ header h1#logo {
 
 #searchform-wrap {
 	margin: 5px 0 0 5px;
-	float: right;
-	right: 0px;
-	left: auto;
+	float: left;
+	right: auto;
+	left: 0px;
 }
 
 #searchform .icon-search:before {
@@ -274,6 +244,7 @@ header h1#logo {
 #searchform #s {
 	margin: 0px 27px 0 0;
 	float: right;
+	text-align: left;
 }
 
 /****Header search style End*******/
@@ -400,7 +371,7 @@ ul.list-layout .post .post-img {
 }
 
 ul.list-layout .post .post-content .post-header {
-	text-align:left;
+	text-align:right;
 }
 
 ul.list-layout .post .post-content .post-meta .post-date, ul.list-layout .post .post-content .post-meta .post-comment {
@@ -491,7 +462,7 @@ tfoot tr #prev a {
 }
 
 .widget .th-aboutme {
-	text-align:left;
+	text-align:right;
 }
 
 /** recent post widget **/
