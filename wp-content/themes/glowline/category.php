@@ -43,6 +43,12 @@
 	get_template_part( 'content', 'none' );
 	endif;
 	?>
+<div class="clearfix"></div>
+<?php the_posts_pagination( array(
+    'mid_size' => 2,
+    'prev_text' => __( 'Back', 'textdomain' ),
+    'next_text' => __( 'Onward', 'textdomain' ),
+) ); ?>
 </div>
 <!-- left -->
 <div class="sidebar-wrapper">

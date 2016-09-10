@@ -45,10 +45,13 @@ get_header();
 			<div class="content">  <!-- right -->
 			<main id="main" class="site-main" role="main">
 			<?php
+			$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
 			$args = array(
 				'post_type' => 'post',
-				'posts_per_page' => 10,
+				'posts_per_page' => 9,
+				'paged' => $paged
 			);
+
 			$home_query = new WP_Query( $args );
 			if ( $home_query->have_posts() ) :
 			global $grid_layout;
@@ -70,12 +73,19 @@ get_header();
 			<div class="clearfix"></div>
 
 			<?php
-			glowline_pagination();
 			else :
 			// If no content, include the "No posts found" template.
 			get_template_part( 'content', 'none' );
 			endif;
 			?>
+
+			<div class="clearfix"></div>
+			<?php the_posts_pagination( array(
+			    'mid_size' => 2,
+			    'prev_text' => __( 'Back', 'textdomain' ),
+			    'next_text' => __( 'Onward', 'textdomain' ),
+			) ); ?>
+			</div>
 			</main><!-- .site-main -->
 			<div class="clearfix"></div>
 		</div>
