@@ -39,19 +39,19 @@
 		<?php if(!glowline_single_post_meta('single_tag')) : ?>
 		<div class="tagcloud"><?php echo get_the_tag_list( '', __( ' ', 'glowline' ) ); ?></div>
 		<?php endif; ?>
-		<?php if(get_theme_mod('single_social_share','on')=='on'): ?>
-		<div class="post-share">
-			<?php glowline_shareText(); ?>
-		</div>
-		<?php endif; ?>
+
 	</div>
 	</div><!-- Content End -->
 
 		<?php glowline_post_nav(); ?>
+
+
 	<div class="clearfix"></div>
+	<?php if ( glowline_get_related_sigle_post() ) : ?>
 	<div class="related-post">
 		<?php glowline_get_related_sigle_post(); ?>
 	</div>
+<?php endif; ?>
 	<div class="clearfix"></div>
 	<?php edit_post_link( __( 'Edit', 'glowline' ), '<span class="edit-link">', '</span>' );
 	?>

@@ -14,6 +14,7 @@ get_header();
 <div class="post-title"><h1><?php the_title(); ?></h1></div>
 <div class="page-description">
 	<?php the_content(); ?>
+	<?php edit_post_link( __( 'Edit', 'glowline' ), '<span class="edit-link">', '</span>' ); ?>
 </div>
 	<div class="multipage-links">
 		<?php
