@@ -17,6 +17,7 @@ if(!empty($header_upload) && $header_bg_type=='image'):
 		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("<?php echo $header_upload; ?>");
 		background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.4))), url("<?php echo $header_upload; ?>");
 		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("<?php echo $header_upload; ?>");
+		padding-top: 182px;
 }
 <?php
 elseif (!empty($header_color) && $header_bg_type=='color'):
@@ -48,7 +49,7 @@ color:<?php echo $theme_color; ?>;
 	border: solid 1px #999;
 }
 
-.post .post-content .post-category, .post .post-category, .single-meta .post-category, .slider-post-category span, .archive-title, .page-title, li.sl-related-thumbnail h3, .multipage-links span, #searchform #s, #searchform #s:focus, #searchform #s:hover, #searchform .icon-search:hover + #s {
+.post .post-content .post-category, .post .post-category, .single-meta .post-category, .slider-post-category span, .page-title, li.sl-related-thumbnail h3, .multipage-links span, #searchform #s, #searchform #s:focus, #searchform #s:hover, #searchform .icon-search:hover + #s {
 	 border-bottom: 1px solid <?php echo $theme_color; ?>;
 }
 
