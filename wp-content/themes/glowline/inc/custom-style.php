@@ -72,6 +72,8 @@ border: 1px solid <?php echo $theme_color; ?>;
 background:<?php echo $theme_color; ?>;
  border: 1px solid <?php echo $theme_color; ?>;
 }
+
+.page blockquote { border-left: 0.3rem solid <?php echo $theme_color; ?>;}
 @media screen and (max-width: 1024px){
 .navigation ul .current-menu-item > a, .navigation ul li a:hover {
 		background:<?php echo $theme_color; ?>;

@@ -2458,10 +2458,15 @@ margin-top:30px;
   .main-heading .main-logo h1 a{
       font-size: 40px;
     }
- ul.two-grid-layout li.post,  ul.three-grid-layout li.post, ul.four-grid-layout li.post,ul.five-grid-layout li.post {
-width:100%;
-margin-right:0px;
-}
+
+    ul.two-grid-layout,  ul.three-grid-layout, ul.four-grid-layout,ul.five-grid-layout {
+      padding: 0;
+    }
+  ul.two-grid-layout li.post,  ul.three-grid-layout li.post, ul.four-grid-layout li.post,ul.five-grid-layout li.post {
+  width:100%;
+  margin-right:0px;
+  float: none;
+  }
   .standard-layout .format-link h2 {
     padding: 25px 25px 25px 25px;
     }

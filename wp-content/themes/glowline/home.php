@@ -70,7 +70,7 @@ get_header();
 				endwhile;
 				?>
 			</ul>
-			<div class="clearfix"></div>
+
 
 			<?php
 			else :
@@ -87,8 +87,8 @@ get_header();
 			) ); ?>
 			</div>
 			</main><!-- .site-main -->
-			<div class="clearfix"></div>
-		</div>
+
+
 
 		<div class="sidebar-wrapper">
 		<?php get_sidebar(); ?>
