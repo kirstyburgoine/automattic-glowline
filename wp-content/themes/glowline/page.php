@@ -11,7 +11,7 @@ get_header();
 <div class="content"><!-- Content Start -->
 <div class="page-content"><!-- blog-single -->
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
-<div class="page-title"><h1><?php the_title(); ?></h1></div>
+<div class="post-title"><h1><?php the_title(); ?></h1></div>
 <div class="page-description">
 	<?php the_content(); ?>
 </div>
