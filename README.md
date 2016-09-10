@@ -25,7 +25,6 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 
 ### TODOs ###
 
-* Stylesheet tags
 * Mobile Tests
 * Post by email
 * Test Common Shortcodes
@@ -39,3 +38,4 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * Most #***-wpcom-themes have no content?
 * How to test wordpress.com widget styles?
 * Jetpack social icons have no classes to change the styling
+* Theme Tuxlist?
