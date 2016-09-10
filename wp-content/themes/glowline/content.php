@@ -39,7 +39,11 @@
 		<?php if(!glowline_single_post_meta('single_tag')) : ?>
 		<div class="tagcloud"><?php echo get_the_tag_list( '', __( ' ', 'glowline' ) ); ?></div>
 		<?php endif; ?>
-
+		<?php if(get_theme_mod('single_social_share','on')=='on'): ?>
+		<div class="post-share">
+			<?php glowline_shareText(); ?>
+		</div>
+		<?php endif; ?>
 	</div>
 	</div><!-- Content End -->
 
