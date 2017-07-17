@@ -8,7 +8,7 @@ class Jetpack_Settings_Page extends Jetpack_Admin_Page {
 	// Show the settings page only when Jetpack is connected or in dev mode
 	protected $dont_show_if_not_active = true;
 
-	function add_page_actions( $hook ) {} // There are no page specific actions to attach to the menu
+	function add_page_actions( $hook ) {}
 
 	// Adds the Settings sub menu
 	function get_page_hook() {
@@ -19,63 +19,64 @@ class Jetpack_Settings_Page extends Jetpack_Admin_Page {
 	// actions to activate/deactivate and configure modules
 	function page_render() {
 		$list_table = new Jetpack_Modules_List_Table;
-		$build_url = esc_url( plugins_url( '/_inc/build/',  JETPACK__PLUGIN_FILE ) );
 
-		$static_html = wp_remote_get( $build_url . 'static.html' );
-		if ( 200 == wp_remote_retrieve_response_code( $static_html ) ) {
-			$static_html = wp_remote_retrieve_body( $static_html );
-		} else {
-			esc_html_e( 'Error fetching static.html.', 'jetpack' );
+		$static_html = @file_get_contents( JETPACK__PLUGIN_DIR . '_inc/build/static.html' );
 
-			// If static.html isn't there, there's nothing else we can do.
+		// If static.html isn't there, there's nothing else we can do.
+		if ( false === $static_html ) {
+			echo '<p>';
+			esc_html_e( 'Error fetching static.html. Try running: ', 'jetpack' );
+			echo '<code>yarn distclean && yarn build</code>';
+			echo '</p>';
 			return;
 		}
 
-		$noscript_notice = wp_remote_get( $build_url . 'static-noscript-notice.html' );
-		$noscript_notice = 200 == wp_remote_retrieve_response_code( $noscript_notice )
-			? wp_remote_retrieve_body( $noscript_notice )
-			: '';
-
-		$version_notice = wp_remote_get( $build_url . 'static-version-notice.html' );
-		$version_notice = 200 == wp_remote_retrieve_response_code( $version_notice )
-			? wp_remote_retrieve_body( $version_notice )
-			: '';
-
-		$ie_notice = wp_remote_get( $build_url . 'static-ie-notice.html' );
-		$ie_notice = 200 == wp_remote_retrieve_response_code( $ie_notice )
-			? wp_remote_retrieve_body( $ie_notice )
-			: '';
+		// We have static.html so let's continue trying to fetch the others
+		$noscript_notice = @file_get_contents( JETPACK__PLUGIN_DIR . '_inc/build/static-noscript-notice.html' );
+		$version_notice = $rest_api_notice = @file_get_contents( JETPACK__PLUGIN_DIR . '_inc/build/static-version-notice.html' );
+		$ie_notice = @file_get_contents( JETPACK__PLUGIN_DIR . '_inc/build/static-ie-notice.html' );
 
 		$noscript_notice = str_replace(
 			'#HEADER_TEXT#',
-			esc_html( __( 'You have JavaScript disabled', 'jetpack' ) ),
+			esc_html__( 'You have JavaScript disabled', 'jetpack' ),
 			$noscript_notice
 		);
 		$noscript_notice = str_replace(
 			'#TEXT#',
-			esc_html( __( "Turn on JavaScript to unlock Jetpack's full potential!", 'jetpack' ) ),
+			esc_html__( "Turn on JavaScript to unlock Jetpack's full potential!", 'jetpack' ),
 			$noscript_notice
 		);
 
 		$version_notice = str_replace(
 			'#HEADER_TEXT#',
-			esc_html( __( 'You are using an outdated version of WordPress', 'jetpack' ) ),
+			esc_html__( 'You are using an outdated version of WordPress', 'jetpack' ),
 			$version_notice
 		);
 		$version_notice = str_replace(
 			'#TEXT#',
-			esc_html( __( "Update WordPress to unlock Jetpack's full potential!", 'jetpack' ) ),
+			esc_html__( "Update WordPress to unlock Jetpack's full potential!", 'jetpack' ),
 			$version_notice
+		);
+
+		$rest_api_notice = str_replace(
+			'#HEADER_TEXT#',
+			esc_html( __( 'WordPress REST API is disabled', 'jetpack' ) ),
+			$rest_api_notice
+		);
+		$rest_api_notice = str_replace(
+			'#TEXT#',
+			esc_html( __( "Enable WordPress REST API to unlock Jetpack's full potential!", 'jetpack' ) ),
+			$rest_api_notice
 		);
 
 		$ie_notice = str_replace(
 			'#HEADER_TEXT#',
-			esc_html( __( 'You are using an unsupported browser version.', 'jetpack' ) ),
+			esc_html__( 'You are using an unsupported browser version.', 'jetpack' ),
 			$ie_notice
 		);
 		$ie_notice = str_replace(
 			'#TEXT#',
-			esc_html( __( "Update your browser to unlock Jetpack's full potential!", 'jetpack' ) ),
+			esc_html__( "Update your browser to unlock Jetpack's full potential!", 'jetpack' ),
 			$ie_notice
 		);
 
@@ -85,6 +86,9 @@ class Jetpack_Settings_Page extends Jetpack_Admin_Page {
 
 		if ( $this->is_wp_version_too_old() ) {
 			echo $version_notice;
+		}
+		if ( ! $this->is_rest_api_enabled() ) {
+			echo $rest_api_notice;
 		}
 		echo $noscript_notice;
 		echo $ie_notice;
@@ -159,17 +163,17 @@ class Jetpack_Settings_Page extends Jetpack_Admin_Page {
 			$static_html
 		);
 
-		JetpackTracking::record_user_event( 'page_view', array( 'path' => 'wpa_old_settings' ) );
+		JetpackTracking::record_user_event( 'wpa_page_view', array( 'path' => 'old_settings' ) );
 	}
 
 	/**
 	 * Load styles for static page.
 	 *
-	 * @since 4.3
+	 * @since 4.3.0
 	 */
 	function additional_styles() {
 		$rtl = is_rtl() ? '.rtl' : '';
-		wp_enqueue_style( 'dops-css', plugins_url( "_inc/build/static.dops-style$rtl.css", JETPACK__PLUGIN_FILE ), array(), JETPACK__VERSION );
+		wp_enqueue_style( 'dops-css', plugins_url( "_inc/build/admin.dops-style$rtl.css", JETPACK__PLUGIN_FILE ), array(), JETPACK__VERSION );
 		wp_enqueue_style( 'components-css', plugins_url( "_inc/build/style.min$rtl.css", JETPACK__PLUGIN_FILE ), array(), JETPACK__VERSION );
 	}
 

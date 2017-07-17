@@ -9,7 +9,7 @@ class Jetpack_Frame_Nonce_Preview {
 	/**
 	 * Returns the single instance of the Jetpack_Frame_Nonce_Preview object
 	 *
-	 * @since 4.4.0
+	 * @since 4.3.0
 	 *
 	 * @return Jetpack_Frame_Nonce_Preview
 	 **/
@@ -25,12 +25,18 @@ class Jetpack_Frame_Nonce_Preview {
 		if ( isset( $_GET['frame-nonce'] ) && ! is_admin() ) {
 			add_filter( 'pre_get_posts', array( $this, 'maybe_display_post' ) );
 		}
+
+		// autosave previews are validated differently
+		if ( isset( $_GET[ 'frame-nonce' ] ) && isset( $_GET[ 'preview_id' ] ) && isset( $_GET[ 'preview_nonce' ] ) ) {
+			remove_action( 'init', '_show_post_preview' );
+			add_action( 'init', array( $this, 'handle_autosave_nonce_validation' ) );
+		}
 	}
 
 	/**
 	 * Verify that frame nonce exists, and if so, validate the nonce by calling WP.com.
 	 *
-	 * @since 4.4.0
+	 * @since 4.3.0
 	 *
 	 * @return bool
 	 */
@@ -53,7 +59,7 @@ class Jetpack_Frame_Nonce_Preview {
 	/**
 	 * Conditionally add a hook on posts_results if this is the main query, a preview, and singular.
 	 *
-	 * @since 4.4.0
+	 * @since 4.3.0
 	 *
 	 * @param WP_Query $query
 	 *
@@ -74,7 +80,7 @@ class Jetpack_Frame_Nonce_Preview {
 	/**
 	 * Conditionally set the first post to 'publish' if the frame nonce is valid and there is a post.
 	 *
-	 * @since 4.4.0
+	 * @since 4.3.0
 	 *
 	 * @param array $posts
 	 *
@@ -94,6 +100,19 @@ class Jetpack_Frame_Nonce_Preview {
 		add_filter( 'pings_open', '__return_false' );
 
 		return $posts;
+	}
+
+	/**
+	 * Handle validation for autosave preview request
+	 *
+	 * @since 4.7.0
+	 *
+	 */
+	public function handle_autosave_nonce_validation() {
+		if ( ! $this->is_frame_nonce_valid() ) {
+			wp_die( __( 'Sorry, you are not allowed to preview drafts.', 'jetpack' ) );
+		}
+		add_filter( 'the_preview', '_set_preview' );
 	}
 }
 
