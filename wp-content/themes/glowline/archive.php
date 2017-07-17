@@ -9,18 +9,10 @@
 <?php if (have_posts()) : ?>
 <div class="container" class="clearfix">
 <div class="archive-title">
-	<?php
-		if ( is_day() ) :
-			printf( __( '<h1>Daily Archives:%s</h1>', 'glowline' ), get_the_date() );
-		elseif ( is_month() ) :
-			printf( __( '<h1>Monthly Archives:%s</h1>', 'glowline' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'glowline' ) ) );
-		elseif ( is_year() ) :
-			printf( __( '<h1>Yearly Archives:%s</h1>', 'glowline' ), get_the_date( _x( 'Y', 'yearly archives date format', 'glowline' ) ) );
-		else :
-			_e( '<h1>Archives</h1>', 'glowline' );
-		endif;
-	?>
+	<h1><?php the_archive_title() ?></h1>
 </div>
+<?php if ( get_the_archive_description() ) : echo the_archive_description(); endif; ?>
+
 </div>
 
 <div id="page" class="clearfix right">
