@@ -11,16 +11,6 @@ register_sidebar(array(
 'before_title' => '<h4 class="widgettitle">',
 'after_title' => '</h4>',
 ));
-// Area , located below the Secondry Widget Area in the sidebar. Empty by default.
-register_sidebar(array(
-'name' => __('Secondary Sidebar', 'glowline'),
-'id' => 'secondary-sidebar',
-'description' => __('Secondry sidebar that appears on the left.', 'glowline'),
-'before_widget' => '<div class="sidebar-inner-widget">',
-'after_widget' => '</div><div class="clearfix"></div>',
-'before_title' => '<h4 class="widgettitle">',
-'after_title' => '</h4>',
-));
 // Area 1, located in the footer. Empty by default.
 register_sidebar(array(
 'name' => __('First Footer Widget Area', 'glowline'),
