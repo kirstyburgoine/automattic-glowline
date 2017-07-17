@@ -219,7 +219,7 @@ the_posts_pagination( array(
 
 /*Number of comment*/
 function glowline_comment_number(){ ?>
-<span class="post-comment"><?php comments_popup_link(__('No Comment','glowline'), __('1 Comment','glowline'), __('% Comments','glowline')); ?></span>
+<span class="post-comment"><?php comments_popup_link(__('Leave a Comment','glowline'), __('1 Comment','glowline'), __('% Comments','glowline')); ?></span>
 <?php }
 
 function glowline_userPic(){
