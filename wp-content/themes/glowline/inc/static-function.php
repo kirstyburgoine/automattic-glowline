@@ -60,13 +60,13 @@ function glowline_register_theme_menu() {
 			wp_nav_menu( array('theme_location' => 'primary',
 			'container' => false,
 				'menu_class' => 'menu',
-				'menu_id'         => 'menu',
+				'menu_id'         => 'menu-1',
 				'fallback_cb'     => 'glowline_wp_page_menu'));
 		}
 
 	 function glowline_wp_page_menu()
 {
-		echo '<ul class="menu" id="menu">';
+		echo '<ul class="menu" id="menu-2">';
 		wp_list_pages(array('title_li' => ''));
 		echo '</ul>';
 }
