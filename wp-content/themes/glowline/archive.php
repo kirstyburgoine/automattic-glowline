@@ -47,8 +47,8 @@
 <div class="clearfix"></div>
 <?php the_posts_pagination( array(
     'mid_size' => 2,
-    'prev_text' => __( 'Back', 'textdomain' ),
-    'next_text' => __( 'Onward', 'textdomain' ),
+    'prev_text' => esc_html__( 'Back', 'glowline' ),
+    'next_text' => esc_html__( 'Onward', 'glowline' ),
 ) ); ?>
 </div>
 </div>
