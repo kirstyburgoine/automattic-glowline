@@ -2,7 +2,6 @@
 /**
  * all file includeed
  */
-	include( get_template_directory() . '/inc/constant.php' );
 	include( get_template_directory() . '/inc/static-function.php' );
 	//sidebar and footer widget
 	include( get_template_directory() . '/inc/widget.php' );
