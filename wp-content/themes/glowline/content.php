@@ -5,12 +5,14 @@
  */
 ?>
 <?php if (is_single()) : ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="single-meta"><!-- Single Meta Start -->
 	<?php if(!glowline_single_post_meta('single_catgory')) : ?>
 	<span class="post-category"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'glowline' ) ); ?></span>
 	<?php endif; ?>
-		<div class="post-title"><h1><span><?php the_title(); ?></span></h1></div>
+
+		<?php the_title('<div class="post-title"><h1><span>', '</span></h1></div>'); ?>
+
 	<div class="post-meta">
 		<?php if(!glowline_single_post_meta('single_date')) : ?>
 		<span class="post-date"><?php the_time( get_option('date_format') ); ?></span>
@@ -61,7 +63,7 @@
 	?>
 </article>
 <?php else: ?>
-<li id="post-<?php the_ID(); ?>" <?php post_class('post'); ?> >
+<li id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	<div class="post-header">
 	<?php if(!glowline_home_post_meta('category')): ?>
 		<span class="post-category">
