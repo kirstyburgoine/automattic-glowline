@@ -70,23 +70,7 @@ function glowline_register_theme_menu() {
 		wp_list_pages(array('title_li' => ''));
 		echo '</ul>';
 }
-// full thumb get post content
-function glowline_full_post_image(){
 
-	 $img_source = '';
-		global $post;
-
-	 $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-
-		if (isset($matches [1] [0])) {
-				$img_source = $matches [1] [0];
-		}
-		 if($img_source!=''){
-				 $permalink = esc_url(get_permalink($post->ID));
-				print "<a href='$permalink'><img src='$img_source' class='postimg' alt='Post Image'/></a>";
-				}
-
-}
 
 /**
  * Display navigation to next/previous post when applicable.
@@ -142,19 +126,12 @@ return $excerpt;
 						while ($my_query->have_posts()) : $my_query->the_post();
 								?>
 							 <li class="sl-related-thumbnail">
-										<div class="sl-related-thumbnail-size">
-												<?php
-											 if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())) {
-														?>
-														<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('glowline-custom-three-grid-thumb',array('class' => "postimg listing-thumbnail")); ?></a>
-														<?php
-												} else {
-														?><a href="<?php the_permalink(); ?>"><?php glowline_post_image(358, 204); ?></a>
-												<?php } ?>
-												</div>
-										<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+									<div class="sl-related-thumbnail-size">
+										<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('glowline-custom-three-grid-thumb',array('class' => "postimg listing-thumbnail")); ?></a>
+									</div>
+									<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 								</li>
-								<?php
+				<?php
 						endwhile;
 				}
 		wp_reset_query(); // to use the original query again

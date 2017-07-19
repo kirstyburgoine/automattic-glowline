@@ -80,11 +80,7 @@
 		</div>
 	</div>
 	<div class="post-img">
-		<?php if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())) { ?>
 		<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('post-thumbnails'); ?></a>
-		<?php  } else{ ?>
-		<a href=""><?php echo glowline_full_post_image(); ?></a>
-		<?php  }  ?>
 	</div>
 	<?php the_content('Continue Reading...',true); ?>
 	<div class="clearfix"></div>

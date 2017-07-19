@@ -13,11 +13,7 @@ $i = 0;
     while ($loop->have_posts()) : $loop->the_post();
     ?>
         <div class="item">
-        <?php
-        if ((function_exists('has_post_thumbnail')) && (has_post_thumbnail())) {
-        ?>
         <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('glowline-custom-slider-thumb'); ?></a>
-        <?php  } ?>
             <div class="slider-post-content-wrapper">
                 <div class="slider-post-content">
                     <div class="slider-post-category">
