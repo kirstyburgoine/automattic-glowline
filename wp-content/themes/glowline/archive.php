@@ -20,7 +20,7 @@
 <div class="content">
 	<?php global $glowline_grid_layout; ?>
 	<div id="main">
-		<ul class="<?php echo $glowline_grid_layout; ?>">
+		<ul class="<?php esc_html_e($glowline_grid_layout, 'glowline'); ?>">
 			<?php
 			if($glowline_grid_layout=='standard-layout'):
 					// Start the post formate loop.

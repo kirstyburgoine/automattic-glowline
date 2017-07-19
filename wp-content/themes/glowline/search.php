@@ -15,7 +15,7 @@ get_header(); ?>
 <?php if (have_posts()) : ?>
 	<?php global $glowline_grid_layout; ?>
 <div id="main">
-	<ul class="<?php echo $glowline_grid_layout; ?>">
+	<ul class="<?php echo esc_html_e($glowline_grid_layout, 'glowline'); ?>">
 		<?php
 		if($glowline_grid_layout=='standard-layout'):
 				// Start the post formate loop.
