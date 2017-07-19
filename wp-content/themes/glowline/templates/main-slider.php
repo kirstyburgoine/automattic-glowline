@@ -25,7 +25,7 @@ $i = 0;
                         </a>
                     </div>
                     <div class="slider-post-date"><span><a><?php the_time( get_option('date_format') ); ?></a></span></div>
-                    <p>  <?php echo glowline_get_custom_excerpt(); ?> </p>
+                    <p>  <?php glowline_custom_excerpt(); ?> </p>
                     <div class="read-more read-more-slider"><a href="<?php the_permalink(); ?>"><?php _e('Continue Reading...','glowline'); ?></a></div>
                     <div class="slider-post-meta">
 
