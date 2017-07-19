@@ -222,15 +222,15 @@ function glowline_comment_number(){ ?>
 <span class="post-comment"><?php comments_popup_link(__('Leave a Comment','glowline'), __('1 Comment','glowline'), __('% Comments','glowline')); ?></span>
 <?php }
 
-function glowline_userPic(){
+function glowline_userpic(){
 		 $address = get_the_author_meta('user_email');
 		 $nicname = get_the_author_meta('user_nicename');
 		$pic = get_avatar( $address, 30, '', $nicname);
 		return $pic;
 	}
 
-function glowline_shareText(){ ?>
+function glowline_share_text(){ ?>
  <ul class="single-social-icon">
-				<li><span class="post-author-pic"> <?php echo glowline_userPic(); ?></span></li>
+				<li><span class="post-author-pic"> <?php echo glowline_userpic(); ?></span></li>
 				<li><span class="post-author"><?php the_author_posts_link(); ?></span></li>
 				</ul> <?php } ?>

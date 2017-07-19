@@ -41,7 +41,7 @@
 		<?php endif; ?>
 		<?php if(get_theme_mod('single_social_share','on')=='on'): ?>
 		<div class="post-share">
-			<?php glowline_shareText(); ?>
+			<?php glowline_share_text(); ?>
 		</div>
 		<?php endif; ?>
 	</div>
@@ -93,7 +93,7 @@
 		<?php glowline_comment_number(); ?>
 	<?php endif; ?>
 		<div class="post-share">
-			<?php glowline_shareText(); ?>
+			<?php glowline_share_text(); ?>
 		</div>
 	</div>
 </li>
