@@ -109,6 +109,13 @@ function glowline_setup() {
 endif; // glowline_setup
 add_action( 'after_setup_theme', 'glowline_setup' );
 
+function enable_threaded_comments(){
+    if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
+       wp_enqueue_script('comment-reply');
+    }
+}
+add_action('get_header', 'enable_threaded_comments');
+
 // home page post meta
 function glowline_home_post_meta($search,$default=false){
 	$home_post_meta = get_theme_mod('home_post_meta');
