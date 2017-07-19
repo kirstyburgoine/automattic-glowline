@@ -100,16 +100,12 @@ endif;
 /**
  * custom post excerpt
  */
-function glowline_get_custom_excerpt(){
-$excerpt = get_the_content();
-$excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
-$excerpt = strip_shortcodes($excerpt);
-$excerpt = strip_tags($excerpt);
-$excerpt = substr($excerpt, 0, 200);
-$excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
-return $excerpt;
+function glowline_get_custom_excerpt( $length ) {
+    return 20;
 }
+add_filter( 'excerpt_length', 'glowline_custom_excerpt', 99 );
+
+
 
 // related post
 	function glowline_get_related_single_post() {
