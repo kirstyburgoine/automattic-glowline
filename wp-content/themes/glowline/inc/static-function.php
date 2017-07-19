@@ -112,7 +112,7 @@ return $excerpt;
 }
 
 // related post
-	function glowline_get_related_sigle_post() {
+	function glowline_get_related_single_post() {
 		global $post;
 		 $args = array(
 							 'category__in' => wp_get_post_categories($post->ID),

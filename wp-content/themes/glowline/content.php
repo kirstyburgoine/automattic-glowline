@@ -53,9 +53,9 @@
 
 
 	<div class="clearfix"></div>
-	<?php if ( glowline_get_related_sigle_post() ) : ?>
+	<?php if ( glowline_get_related_single_post() ) : ?>
 	<div class="related-post">
-		<?php glowline_get_related_sigle_post(); ?>
+		<?php glowline_get_related_single_post(); ?>
 	</div>
 <?php endif; ?>
 	<div class="clearfix"></div>
