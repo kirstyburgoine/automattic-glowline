@@ -30,3 +30,7 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * How to test wordpress.com widget styles?
 * Jetpack social icons have no classes to change the styling
 * Theme Tuxlist?
+
+### i2 Queries ###
+
+* Check whether `echo esc_html_e($glowline_grid_layout, 'glowline');` is better than echo `esc_attr_e($glowline_grid_layout, 'glowline');` as technically its a class
