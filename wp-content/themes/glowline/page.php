@@ -11,7 +11,7 @@ get_header();
 <div class="content"><!-- Content Start -->
 <div class="page-content"><!-- blog-single -->
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
-<div class="post-title"><h1><?php the_title(); ?></h1></div>
+<?php the_title('<div class="post-title"><h1>', '</h1></div>'); ?>
 <div class="page-description">
 	<?php the_content(); ?>
 	<?php edit_post_link( __( 'Edit', 'glowline' ), '<span class="edit-link">', '</span>' ); ?>

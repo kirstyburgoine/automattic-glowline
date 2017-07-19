@@ -8,9 +8,9 @@
 </div>
 <?php if (have_posts()) : ?>
 <div class="container" class="clearfix">
-<div class="archive-title">
-	<h1><?php the_archive_title() ?></h1>
-</div>
+
+	<?php the_archive_title('<div class="archive-title"><h1>', '<h1></div>') ?>
+
 <?php if ( get_the_archive_description() ) : echo the_archive_description(); endif; ?>
 
 </div>
