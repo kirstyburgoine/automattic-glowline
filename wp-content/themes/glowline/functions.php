@@ -122,5 +122,5 @@ function glowline_single_post_meta($search,$default=false){
 	return $value;
 }
 
-global $grid_layout;
-$grid_layout = get_theme_mod('dynamic_grid','standard-layout');
+global $glowline_grid_layout;
+$glowline_grid_layout = get_theme_mod('dynamic_grid','standard-layout');

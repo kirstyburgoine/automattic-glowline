@@ -13,11 +13,11 @@ get_header(); ?>
 <div id="page" class="clearfix right" >
 <div class="content"><!-- Content Start -->
 <?php if (have_posts()) : ?>
-	<?php global $grid_layout; ?>
+	<?php global $glowline_grid_layout; ?>
 <div id="main">
-	<ul class="<?php echo $grid_layout; ?>">
+	<ul class="<?php echo $glowline_grid_layout; ?>">
 		<?php
-		if($grid_layout=='standard-layout'):
+		if($glowline_grid_layout=='standard-layout'):
 				// Start the post formate loop.
 		while ( have_posts() ) : the_post();
 		get_template_part( 'content', get_post_format() );

@@ -54,13 +54,13 @@ get_header();
 
 			$home_query = new WP_Query( $args );
 			if ( $home_query->have_posts() ) :
-			global $grid_layout;
-			$grid_layout = get_theme_mod('dynamic_grid','standard-layout');
+			global $glowline_grid_layout;
+			$glowline_grid_layout = get_theme_mod('dynamic_grid','standard-layout');
 			?>
-			<ul class="load_post <?php echo $grid_layout; ?>">
+			<ul class="load_post <?php echo $glowline_grid_layout; ?>">
 				<?php
 				while ($home_query->have_posts()) : $home_query->the_post();
-				if($grid_layout == 'standard-layout'):
+				if($glowline_grid_layout == 'standard-layout'):
 						// Start the post formate loop.
 					get_template_part( 'content', get_post_format() );
 				else :

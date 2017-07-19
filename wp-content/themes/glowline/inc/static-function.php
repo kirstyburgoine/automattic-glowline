@@ -5,9 +5,9 @@
  * @param
  * @return mixed|string
  */
-function glowline_grid_thumb($grid_layout, $thumb_crop=true){
+function glowline_grid_thumb($glowline_grid_layout, $thumb_crop=true){
 		if($thumb_crop):
-switch($grid_layout){
+switch($glowline_grid_layout){
 				case 'two-grid-layout':
 						 the_post_thumbnail('glowline-custom-two-grid-thumb');
 						break;
