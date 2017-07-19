@@ -31,6 +31,8 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * Jetpack social icons have no classes to change the styling
 * Theme Tuxlist?
 
-###Â i2 Queries ###
+### i2 Queries ###
 
 * Check whether `echo esc_html_e($glowline_grid_layout, 'glowline');` is better than echo `esc_attr_e($glowline_grid_layout, 'glowline');` as technically its a class
+* Check if this function is needed in content.php? `glowline_get_related_single_post()`
+* Double check removing constants from default image in functions.php (line 86) is correct syntax
