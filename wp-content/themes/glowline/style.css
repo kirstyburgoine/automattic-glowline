@@ -413,6 +413,18 @@ border: 1px solid #eee;
 .home header.smaller .header .logo{
   display:block;
 }
+
+header.smaller .header .logo h1 a {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
 .home .navigation ul li {
 	display:inline-block;
 }
