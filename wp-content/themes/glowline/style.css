@@ -414,7 +414,7 @@ border: 1px solid #eee;
   display:block;
 }
 
-header.smaller .header .logo h1 a {
+.header .logo h1 a {
   margin: -1px;
   padding: 0;
   width: 1px;
