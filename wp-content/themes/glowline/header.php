@@ -33,7 +33,17 @@
 					<div id="main-menu-wrapper">
 						<a href="#" id="pull" class="toggle-mobile-menu"></a>
 						<nav class="navigation clearfix mobile-menu-wrapper">
-							<?php glowline_nav_menu(); ?>
+							<?php
+							wp_nav_menu(
+								array(
+								'theme_location' => 'primary',
+								'container' => false,
+								'menu_class' => 'menu',
+								'menu_id'         => 'menu-1',
+								'fallback_cb'     => 'glowline_wp_page_menu'
+								)
+							);
+							?>
 						</nav>
 						<!-- search Start -->
 						<div id="searchform-wrap" class="main-searchform-wrap">

@@ -56,13 +56,7 @@ add_action( 'after_setup_theme', 'glowline_register_theme_menu' );
 function glowline_register_theme_menu() {
 	register_nav_menu( 'primary', __( 'Primary Menu', 'glowline' ) );
 }
-		function glowline_nav_menu(){
-			wp_nav_menu( array('theme_location' => 'primary',
-			'container' => false,
-				'menu_class' => 'menu',
-				'menu_id'         => 'menu-1',
-				'fallback_cb'     => 'glowline_wp_page_menu'));
-		}
+
 
 	 function glowline_wp_page_menu()
 {
