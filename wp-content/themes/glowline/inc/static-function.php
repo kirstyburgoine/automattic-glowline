@@ -57,39 +57,12 @@ function glowline_register_theme_menu() {
 	register_nav_menu( 'primary', __( 'Primary Menu', 'glowline' ) );
 }
 
-
-	 function glowline_wp_page_menu()
-{
-		echo '<ul class="menu" id="menu-2">';
-		wp_list_pages(array('title_li' => ''));
-		echo '</ul>';
+function glowline_wp_page_menu() {
+	echo '<ul class="menu" id="menu-2">';
+	wp_list_pages(array('title_li' => ''));
+	echo '</ul>';
 }
 
-
-/**
- * Display navigation to next/previous post when applicable.
- *
- * @since ThemeHunk 1.0
- */
-
-if ( ! function_exists( 'glowline_post_nav' ) ) :
-function glowline_post_nav() {
-		// Don't print empty markup if there's nowhere to navigate.
-		?>
-
-		<nav class="navigation post-navigation" role="navigation">
-				<div class="nav-links">
-					 <?php
-							the_post_navigation( array(
-								'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( '%title', 'glowline' ) . '</span> ' ,
-								'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( '%title', 'glowline' )));
-								//%title
-						?>
-				</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
-		<?php
-}
-endif;
 
 /**
  * custom post excerpt

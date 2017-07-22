@@ -49,7 +49,16 @@
 	</div>
 	</div><!-- Content End -->
 
-		<?php glowline_post_nav(); ?>
+
+		<?php
+		the_post_navigation( array(
+            'prev_text'                  => '<span class="meta-nav" aria-hidden="true">' . __( '%title', 'glowline' ) . '</span> ' ,
+            'next_text'                  => '<span class="meta-nav" aria-hidden="true">' . __( '%title', 'glowline' ) . '</span> ' ,
+            'in_same_term'               => true,
+            'taxonomy'                   => __( 'post_tag' ),
+            'screen_reader_text' => __( 'Continue Reading' ),
+        ) );
+		?>
 
 
 	<div class="clearfix"></div>
