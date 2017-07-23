@@ -100,12 +100,7 @@ add_filter( 'excerpt_length', 'glowline_custom_excerpt', 99 );
 		wp_reset_query(); // to use the original query again
 }
 
-function glowline_get_my_url() {
-		if ( ! preg_match( '/<a\s[^>]*?href=[\'"](.+?)[\'"]/is', get_the_content(), $matches ) ){
-				return false;
-		}
-		return esc_url_raw( $matches[1] );
-}
+
 
 /*hexa to rgba convert*/
 function glowline_hex2rgba($color, $opacity = false) {
