@@ -27,10 +27,15 @@ function glowline_scripts() {
 	wp_enqueue_style( 'glowline-owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.0.0' );
 	wp_enqueue_style( 'glowline-widgets', get_template_directory_uri() . '/css/widget-styles.css', array(), '1.0.0' );
 	// Load our main stylesheet.
-	wp_enqueue_style('glowline-style', get_stylesheet_uri());
+	wp_enqueue_style( 'glowline-style', get_stylesheet_uri());
 	wp_enqueue_script( 'glowline-classie', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '', true );
-	wp_enqueue_script( 'glowline-owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'glowline-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '', true );
+
+
+	if ( glowline_has_featured_posts( 2 ) ) {
+		wp_enqueue_script( 'glowline-owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.js', array( 'jquery' ), '', true );
+	}
+
 	// Comment reply
 	if (is_singular() && get_option('thread_comments')){
 		wp_enqueue_script('comment-reply');
@@ -71,8 +76,8 @@ function glowline_setup() {
 	/*
 	 * Enable support for Post Formats.
 	 */
-
 	add_theme_support( 'post-formats', array('link','gallery','quote','video','audio') );
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -80,7 +85,6 @@ function glowline_setup() {
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 	) );
-
 
 	/*
 	 * Enable global print stylesheet.
@@ -110,20 +114,60 @@ function glowline_setup() {
 	'header-text' => array( 'site-title', 'site-description' ),
   	) );
 
+
+	// ---------------------------------------------------------
+	// JETPACK STUFF
+	// ---------------------------------------------------------
  	add_theme_support( 'infinite-scroll', array(
     'container' => 'posts-container',
     'footer' => 'page',
 	) );
 
-	/*
-	 * Enable responsive videos.
-	 */
 	add_theme_support( 'jetpack-responsive-videos' );
 
-  	}
-endif; // glowline_setup
-add_action( 'after_setup_theme', 'glowline_setup' );
+	// To replace custom slider
+	add_theme_support( 'featured-content', array(
+    	'filter'     => 'glowline_get_featured_posts',
+    	'max_posts'  => 20,
+    	'post_types' => array( 'post' ),
+	) );
 
+}
+
+endif; // glowline_setup
+
+add_action( 'after_setup_theme', 'glowline_setup' );
+// ---------------------------------------------------------
+// Ends After Setup Stuff
+// ---------------------------------------------------------
+// Begins additional Functions
+
+
+// More stuff for Jetpack featured content to replace custom slider
+function glowline_get_featured_posts() {
+    return apply_filters( 'glowline_get_featured_posts', array() );
+}
+
+
+// More stuff for Jetpack featured content to replace custom slider
+function glowline_has_featured_posts( $minimum = 1 ) {
+    if ( is_paged() )
+        return false;
+
+    $minimum = absint( $minimum );
+    $featured_posts = apply_filters( 'glowline_get_featured_posts', array() );
+
+    if ( ! is_array( $featured_posts ) )
+        return false;
+
+    if ( $minimum > count( $featured_posts ) )
+        return false;
+
+    return true;
+}
+
+
+// Enable threaded comments here instead of header
 function enable_threaded_comments(){
     if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
        wp_enqueue_script('comment-reply');
@@ -131,18 +175,27 @@ function enable_threaded_comments(){
 }
 add_action('get_header', 'enable_threaded_comments');
 
+
+// ---------------------------------------------------------
+// TODO:
+// Everything below here might be considered a modification to be removed.
+// Need to double check. Especially grid settings...
+
 // home page post meta
 function glowline_home_post_meta($search,$default=false){
 	$home_post_meta = get_theme_mod('home_post_meta');
 	$value = (!empty($home_post_meta) && !empty($home_post_meta[0]))?in_array($search, $home_post_meta):$default;
 	return $value;
 }
+
+
 // single page post meta
 function glowline_single_post_meta($search,$default=false){
 	$home_post_meta = get_theme_mod('single_post_meta');
 	$value = (!empty($home_post_meta) && !empty($home_post_meta[0]))?in_array($search, $home_post_meta):$default;
 	return $value;
 }
+
 
 global $glowline_grid_layout;
 $glowline_grid_layout = get_theme_mod('dynamic_grid','standard-layout');

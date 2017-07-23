@@ -32,9 +32,10 @@ get_header();
 		</div>
 		<!-- / Logo End -->
 
-		<?php if(get_theme_mod('slider_on_off','slider_off')=='slider_on'):?>
+		<?php if ( glowline_has_featured_posts( 1 ) ) : ?>
 		<?php  get_template_part( 'template/main', 'slider' ); ?>
 		<?php endif; ?>
+
 	</div> <!-- Main Heading End -->
 </div>
 </div> <!-- Main Header End -->
