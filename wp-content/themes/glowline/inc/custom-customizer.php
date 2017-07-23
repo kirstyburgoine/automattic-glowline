@@ -109,9 +109,6 @@ function glowline_registers() {
 
 	wp_enqueue_script( 'glowline_customizer_script', get_template_directory_uri() . '/js/customizer.js', array("jquery"), '', true  );
 
-	wp_localize_script( 'glowline_customizer_script', 'glowlineCustomizerObject', array(
-		'pro' => __('View PRO version','glowline')
-	) );
 }
 add_action( 'customize_controls_enqueue_scripts', 'glowline_registers' );
 
