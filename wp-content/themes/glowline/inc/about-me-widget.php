@@ -26,13 +26,13 @@ class glowline_aboutme extends WP_Widget {
 		// widget content
 		echo $before_widget;
 
-		 $title = apply_filters('widget_title', empty($instance['title']) ? __('About Me','glowline') : $instance['title'], $instance, $this->id_base);
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('About Me','glowline') : $instance['title'], $instance, $this->id_base);
 		$text = isset($instance['text'])?$instance['text']:'';
 		$author_img_uri = isset($instance['author_img_uri'])?$instance['author_img_uri']:'';
 ?>
 <div class="th-aboutme">
 	<h4 class="widgettitle"><?php echo sanitize_text_field($title); ?></h4 class="widgettitle">
-	<?php if( $author_img_uri != ''): ?>
+	<?php if( $author_img_uri ) : ?>
 		<img src="<?php echo esc_url($author_img_uri); ?>" />
 		<?php endif; ?>
 		<p><?php echo esc_textarea($text); ?></p>
@@ -65,7 +65,7 @@ class glowline_aboutme extends WP_Widget {
 		<p>
 		<label for="<?php echo $this->get_field_id('author_img_uri'); ?>"><?php echo esc_html__('Upload Author Image:','glowline'); ?></label><br />
 		<?php
-			if ( isset($instance['author_img_uri']) && $instance['author_img_uri'] != '' ) :
+			if ( isset($instance['author_img_uri']) && $instance['author_img_uri'] ) :
 				echo '<img class="custom_media_image" src="' . $instance['author_img_uri'] . '" style="margin:0;padding:0;max-width:100px;float:left;display:inline-block" /><br />';
 			endif;
 		?>

@@ -60,7 +60,7 @@ get_header();
 			<ul class="load_post <?php echo $glowline_grid_layout; ?>">
 				<?php
 				while ($home_query->have_posts()) : $home_query->the_post();
-				if($glowline_grid_layout == 'standard-layout'):
+				if ( 'standard-layout' == $glowline_grid_layout ) :
 						// Start the post formate loop.
 					get_template_part( 'content', get_post_format() );
 				else :
