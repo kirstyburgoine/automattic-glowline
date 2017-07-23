@@ -5,12 +5,10 @@
 */
 ?>
 <?php
-if ( is_active_sidebar( 'primary-sidebar' ) ){ ?>
+if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 <aside class="sidebar">
 	<div class="widget">
-<?php
-dynamic_sidebar( 'primary-sidebar' );
-?>
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</div>
 </aside>
-<?php } ?>
+<?php endif; ?>

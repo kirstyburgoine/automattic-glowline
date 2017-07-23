@@ -7,33 +7,32 @@
 <div class="footer">
  	<div class="footer-widget-column footer-widget-3column-active">
 		<?php
-		if ( ! is_active_sidebar( 'first-footer-widget-area'  )
-		&& ! is_active_sidebar( 'second-footer-widget-area' )
-		&& ! is_active_sidebar( 'third-footer-widget-area'  )
-		&& ! is_active_sidebar( 'fourth-footer-widget-area' )
-		){
+		if ( ! is_active_sidebar( 'sidebar-2'  )
+		&& ! is_active_sidebar( 'sidebar-3' )
+		&& ! is_active_sidebar( 'sidebar-4'  )
+		) :
 		return;
-		}
+		endif;
 		?>
 		<div class="widget">
 			<?php
-			if ( is_active_sidebar( 'first-footer-widget-area' ) ){
-			dynamic_sidebar( 'first-footer-widget-area' );
-		}
-		?>
-		</div>
-		<div class="widget">
-			<?php
-			if ( is_active_sidebar( 'second-footer-widget-area' ) ){
-			dynamic_sidebar( 'second-footer-widget-area' );
-		}
+			if ( is_active_sidebar( 'sidebar-2' ) ) :
+			dynamic_sidebar( 'sidebar-2' );
+			endif;
 		?>
 		</div>
 		<div class="widget">
 			<?php
-			if ( is_active_sidebar( 'third-footer-widget-area' ) ){
-			dynamic_sidebar( 'third-footer-widget-area' );
-			}
+			if ( is_active_sidebar( 'sidebar-3' ) ) :
+			dynamic_sidebar( 'sidebar-3' );
+			endif;
+		?>
+		</div>
+		<div class="widget">
+			<?php
+			if ( is_active_sidebar( 'sidebar-4' ) ) :
+			dynamic_sidebar( 'sidebar-4' );
+			endif;
 			?>
 		</div>
 	</div>
