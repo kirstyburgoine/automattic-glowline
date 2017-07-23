@@ -7,7 +7,13 @@
 if ( ! isset( $content_width ) ) {
 	$content_width = 1170;
 }
-require_once( get_template_directory() . '/inc/index.php' );
+
+include( get_template_directory() . '/inc/static-function.php' );
+include( get_template_directory() . '/inc/widget.php' );
+include( get_template_directory() . '/inc/about-me-widget.php' );
+include( get_template_directory() . '/inc/custom-customizer.php' );
+include( get_template_directory() . '/inc/customizer.php' );
+include( get_template_directory() . '/inc/custom-style.php' );
 
 /**
  * Enqueue scripts and styles for the front end.
