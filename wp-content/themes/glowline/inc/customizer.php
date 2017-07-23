@@ -48,65 +48,6 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
 	)));
 
-	 //  =============================
-	//  = Home Post Slider Settings    =
-	//  =============================
-	 $wp_customize->add_section('slider_option', array(
-		'title'    => __('Home Page Slider Options ', 'glowline'),
-		'priority' => 25,
-	));
-
-	 //= Slider On Off  =
-	 $wp_customize->add_setting('slider_on_off', array(
-		'default'        => 'slider_off',
-		'capability'     => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field',
-	));
-	$wp_customize->add_control('slider_on_off', array(
-		'settings' => 'slider_on_off',
-		'label'   => __('Post Slider On/Off','glowline'),
-		'section' => 'slider_option',
-		 'type'       => 'radio',
-		'choices'    => array(
-		'slider_on'     => 'On',
-		'slider_off'     => 'Off',
-		),
-	) );
-
-  //= Choose All Category  =
-  $cats = array();
-   $cats[0] = 'All Categories';
-	foreach ( get_categories() as $categories => $category ){
-		$cats[$category->term_id] = $category->name;
-	}
-
-	 $wp_customize->add_setting('slider_cate', array(
-		'default'        => 1,
-		'capability'     => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field',
-	));
-	$wp_customize->add_control('slider_cate', array(
-		'settings'      => 'slider_cate',
-		'label'         => __('Featured Post Category','glowline'),
-		 'description'  => __( 'Blog post slider show', 'glowline' ),
-		'section'       => 'slider_option',
-		'type'          => 'select',
-		'choices'       => $cats,
-	) );
-
-	$wp_customize->add_setting('slider_count', array(
-		'default'               => 1,
-		'capability'            => 'edit_theme_options',
-		'sanitize_callback'     => 'glowline_sanitize_int',
-	));
-	$wp_customize->add_control('slider_count', array(
-		'settings'      => 'slider_count',
-		'label'         => __('Number of Slides (maximum 3 slides)','glowline'),
-		'section'       => 'slider_option',
-		'type'          => 'number',
-		'input_attrs'    => array('min' => 1,'max' => 4)
-
-	) );
 
 
 	//  =============================
