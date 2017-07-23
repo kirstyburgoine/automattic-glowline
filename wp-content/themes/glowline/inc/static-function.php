@@ -143,15 +143,7 @@ function glowline_hex2rgba($color, $opacity = false) {
 	return $output;
 }
 
-//pagination
-function glowline_pagination() {
 
-the_posts_pagination( array(
-		'mid_size' => 2,
-		'prev_text' => __( '&laquo;', 'glowline' ),
-		'next_text' => __( '&raquo;', 'glowline' ),
-) );
-}
 
 /*Number of comment*/
 function glowline_comment_number(){ ?>

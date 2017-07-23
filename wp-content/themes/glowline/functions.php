@@ -110,6 +110,16 @@ function glowline_setup() {
 	'header-text' => array( 'site-title', 'site-description' ),
   	) );
 
+ 	add_theme_support( 'infinite-scroll', array(
+    'container' => 'posts-container',
+    'footer' => 'page',
+	) );
+
+	/*
+	 * Enable responsive videos.
+	 */
+	add_theme_support( 'jetpack-responsive-videos' );
+
   	}
 endif; // glowline_setup
 add_action( 'after_setup_theme', 'glowline_setup' );

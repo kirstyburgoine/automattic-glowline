@@ -20,9 +20,9 @@
 <div class="content">
 	<?php global $glowline_grid_layout; ?>
 	<div id="main">
-		<ul class="<?php esc_html_e($glowline_grid_layout, 'glowline'); ?>">
+		<ul class="<?php esc_html_e($glowline_grid_layout, 'glowline'); ?>" id="posts-container">
 			<?php
-			if($glowline_grid_layout=='standard-layout'):
+			if ( 'standard-layout' == $glowline_grid_layout ):
 					// Start the post formate loop.
 			while ( have_posts() ) : the_post();
 			get_template_part( 'content', get_post_format() );
@@ -38,18 +38,13 @@
 		</ul>
 
 	</div>
-	<?php
-			else :
-			get_template_part( 'content', 'none' );
-			endif;
-	?>
+<?php
+	else :
+	get_template_part( 'content', 'none' );
+	endif;
+?>
 
 <div class="clearfix"></div>
-<?php the_posts_pagination( array(
-    'mid_size' => 2,
-    'prev_text' => esc_html__( 'Back', 'glowline' ),
-    'next_text' => esc_html__( 'Onward', 'glowline' ),
-) ); ?>
 </div>
 </div>
 <div class="sidebar-wrapper"><!-- left -->

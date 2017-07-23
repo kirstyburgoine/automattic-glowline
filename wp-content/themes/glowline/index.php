@@ -57,7 +57,7 @@ get_header();
 			global $glowline_grid_layout;
 			$glowline_grid_layout = get_theme_mod('dynamic_grid','standard-layout');
 			?>
-			<ul class="load_post <?php echo $glowline_grid_layout; ?>">
+			<ul class="load_post <?php echo $glowline_grid_layout; ?>" id="posts-container">
 				<?php
 				while ($home_query->have_posts()) : $home_query->the_post();
 				if ( 'standard-layout' == $glowline_grid_layout ) :
@@ -80,11 +80,6 @@ get_header();
 			?>
 
 			<div class="clearfix"></div>
-			<?php the_posts_pagination( array(
-			    'mid_size' => 2,
-			    'prev_text' => __( 'Back', 'textdomain' ),
-			    'next_text' => __( 'Onward', 'textdomain' ),
-			) ); ?>
 			</div>
 			</main><!-- .site-main -->
 
