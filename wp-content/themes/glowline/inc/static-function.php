@@ -70,13 +70,7 @@ function glowline_register_theme_menu() {
 
 
 
-// ----------------------------------------------------------------------
-// custom post excerpt
-// ----------------------------------------------------------------------
-function glowline_custom_excerpt( $length ) {
-    return 20;
-}
-add_filter( 'excerpt_length', 'glowline_custom_excerpt', 99 );
+
 
 
 

@@ -46,59 +46,55 @@ get_header();
 
 	</div> <!-- Main Heading End -->
 </div>
+
 </div> <!-- Main Header End -->
+
 	<!--class="no-sidebar" full index-->
 	<div id="page" class="clearfix" >
 		<div class="content-wrapper clearfix">
 
 			<div class="content">  <!-- right -->
-			<main id="main" class="site-main" role="main">
-			<?php
-			$paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
-			$args = array(
-				'post_type' => 'post',
-				'posts_per_page' => 9,
-				'paged' => $paged
-			);
+			<?php if (have_posts()) : ?>
 
-			$home_query = new WP_Query( $args );
-			if ( $home_query->have_posts() ) :
-			global $glowline_grid_layout;
-			$glowline_grid_layout = get_theme_mod('dynamic_grid','standard-layout');
-			?>
-			<ul class="load_post <?php echo $glowline_grid_layout; ?>" id="posts-container">
-				<?php
-				while ($home_query->have_posts()) : $home_query->the_post();
-				if ( 'standard-layout' == $glowline_grid_layout ) :
-						// Start the post formate loop.
-					get_template_part( 'content', get_post_format() );
-				else :
-					// Start the post formate grid.
-					get_template_part( 'content', 'grid');
+				<?php global $glowline_grid_layout; ?>
+
+				<main id="main" class="site-main" role="main">
+					<?php
+					$glowline_grid_layout = get_theme_mod('dynamic_grid','standard-layout');
+					?>
+
+					<ul class="<?php esc_html_e($glowline_grid_layout, 'glowline'); ?>" id="posts-container">
+						<?php
+						if ( 'standard-layout' == $glowline_grid_layout ):
+								// Start the post formate loop.
+							while ( have_posts() ) : the_post();
+								get_template_part( 'content', get_post_format() );
+							endwhile;
+						else :
+							// Start the post formate grid.
+							while ( have_posts() ) : the_post();
+								get_template_part( 'content', 'grid' );
+							endwhile;
+						endif;
+						// If no content, include the "No posts found" template.
+						?>
+					</ul>
+				</main>
+
+			<?php else :
+				get_template_part( 'content', 'none' );
 				endif;
-				endwhile;
-				?>
-			</ul>
-
-
-			<?php
-			else :
-			// If no content, include the "No posts found" template.
-			get_template_part( 'content', 'none' );
-			endif;
 			?>
 
 			<div class="clearfix"></div>
 			</div>
-			</main><!-- .site-main -->
 
+			<div class="sidebar-wrapper">
+			<?php get_sidebar(); ?>
+			</div>
 
-
-		<div class="sidebar-wrapper">
-		<?php get_sidebar(); ?>
 		</div>
 	</div>
-</div>
 <!-- / content-wrapper end -->
 </div>
 <?php get_footer(); ?>

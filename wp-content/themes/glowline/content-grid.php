@@ -31,7 +31,7 @@
 					<?php endif; ?>
 				</div>
 			</div>
-			<div class="description"><p><?php glowline_custom_excerpt('50'); ?></p></div>
+			<div class="description"><p><?php the_excerpt(); ?></p></div>
 			<div class="read-more">
 				<a href="<?php the_permalink(); ?>"><?php _e('Continue Reading...','glowline'); ?></a>
 			</div>
