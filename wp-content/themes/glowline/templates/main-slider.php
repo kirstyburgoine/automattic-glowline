@@ -1,6 +1,8 @@
+<?php
+$featured_posts = glowline_get_featured_posts()
+?>
 
-
-        <?php //foreach ( $featured_posts as $post ) : setup_postdata( $post ); ?>
+        <?php foreach ( $featured_posts as $post ) : setup_postdata( $post ); ?>
 
             <div class="item">
             <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('glowline-custom-slider-thumb'); ?></a>
@@ -24,4 +26,4 @@
                 </div>
             </div>
 
-        <?php // endforeach; ?>
+        <?php endforeach; ?>
