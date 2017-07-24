@@ -71,12 +71,7 @@
 		?>
 
 
-	<div class="clearfix"></div>
-	<?php if ( glowline_get_related_single_post() ) : ?>
-	<div class="related-post">
-		<?php glowline_get_related_single_post(); ?>
-	</div>
-<?php endif; ?>
+
 	<div class="clearfix"></div>
 	<?php edit_post_link( __( 'Edit', 'glowline' ), '<span class="edit-link">', '</span>' );
 	?>

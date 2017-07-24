@@ -71,37 +71,6 @@ function glowline_register_theme_menu() {
 
 
 
-
-
-
-// ----------------------------------------------------------------------
-// related post
-// ----------------------------------------------------------------------
-function glowline_get_related_single_post() {
-	global $post;
-	$args = array(
-		'category__in' => wp_get_post_categories($post->ID),
-		'post__not_in' => array($post->ID),
-		'post_status' => array('publish'),
-		'meta_key' => '_thumbnail_id',
-		'posts_per_page' => 3,
-	);
-	$my_query = new WP_Query($args);
-		if ($my_query->have_posts()) {
-			while ($my_query->have_posts()) : $my_query->the_post(); ?>
-				<li class="sl-related-thumbnail">
-					<div class="sl-related-thumbnail-size">
-						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('glowline-custom-three-grid-thumb',array('class' => "postimg listing-thumbnail")); ?></a>
-					</div>
-					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				</li>
-		<?php endwhile;
-		}
-	wp_reset_query(); // to use the original query again
-}
-
-
-
 // ----------------------------------------------------------------------
 // hexa to rgba convert
 // ----------------------------------------------------------------------
