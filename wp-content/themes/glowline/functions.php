@@ -151,6 +151,7 @@ function glowline_get_featured_posts() {
 
 // More stuff for Jetpack featured content to replace custom slider
 function glowline_has_featured_posts( $minimum = 1 ) {
+
     if ( is_paged() )
         return false;
 

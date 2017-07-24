@@ -32,9 +32,17 @@ get_header();
 		</div>
 		<!-- / Logo End -->
 
+
+
 		<?php if ( glowline_has_featured_posts( 1 ) ) : ?>
-		<?php  get_template_part( 'template/main', 'slider' ); ?>
+			<div class="slider">
+    			<div id="owl-demo" class="owl-carousel">
+					<?php get_template_part( 'templates/main', 'slider' ); ?>
+				</div>
+			</div>
 		<?php endif; ?>
+
+
 
 	</div> <!-- Main Heading End -->
 </div>
