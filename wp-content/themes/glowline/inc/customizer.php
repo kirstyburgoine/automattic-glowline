@@ -51,54 +51,6 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
 
 	//  =============================
-	//  = Theme Settings       =
-	//  =============================
-   $wp_customize->add_section('theme_settings', array(
-		'title'    => __('Theme Settings ', 'glowline'),
-		'priority' => 25,
-	));
-
-	//= Choose Grid Layout  =
-	 $wp_customize->add_setting('dynamic_grid', array(
-		'default'           => 'standard-layout',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field',
-	));
-	$wp_customize->add_control( 'dynamic_grid', array(
-		'settings'  => 'dynamic_grid',
-		'label'     => __('Choose Post Layout','glowline'),
-		'section'   => 'theme_settings',
-		'type'      => 'select',
-		'choices'   => array(
-			'standard-layout'       => __('Standard Layout','glowline'),
-			'two-grid-layout'       => __('Two Grid','glowline'),
-		),
-	));
-
-	   //= Choose Post Meta  =
-	 $wp_customize->add_setting('home_post_meta', array(
-		'default'           =>array(),
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'glowline_checkbox_explode'
-	));
-	$wp_customize->add_control(new Customize_Control_Checkbox_Multiple(
-		$wp_customize,'home_post_meta', array(
-		'settings'          => 'home_post_meta',
-		'label'             => __( 'Meta Info to Hide', 'glowline' ),
-		'section'           => 'theme_settings',
-		'choices'           => array(
-			   'category'   => __( 'Hide Category','glowline' ),
-				'date'      => __( 'Hide Date','glowline' ),
-				'comment'   => __( 'Hide Comment','glowline' ),
-			)
-		)
-	)
-);
-
-
-
-
-	//  =============================
 	//  = Colors      =
 	//  =============================
 
@@ -139,6 +91,33 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 		'priority' => 8,
 
 	)));
+
+
+	//  =============================
+	//  = Theme Settings       =
+	//  =============================
+   $wp_customize->add_section('theme_settings', array(
+		'title'    => __('Theme Settings ', 'glowline'),
+		'priority' => 250,
+	));
+
+	//= Choose Grid Layout  =
+	 $wp_customize->add_setting('dynamic_grid', array(
+		'default'           => 'standard-layout',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field',
+	));
+	$wp_customize->add_control( 'dynamic_grid', array(
+		'settings'  => 'dynamic_grid',
+		'label'     => __('Choose Post Layout','glowline'),
+		'section'   => 'theme_settings',
+		'type'      => 'select',
+		'choices'   => array(
+			'standard-layout'       => __('Standard Layout','glowline'),
+			'two-grid-layout'       => __('Two Grid','glowline'),
+		),
+	));
+
 
 }
 add_action('customize_register','glowline_customize_register');
