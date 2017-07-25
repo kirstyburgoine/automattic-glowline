@@ -9,15 +9,15 @@ function glowline_customize_register( $wp_customize ) {
 $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
 	 //  =============================
-	 //  = Genral Settings     =
+	 //  = General Settings     =
 	 //  =============================
-	$wp_customize->get_section('title_tagline')->title = esc_html__('General Settings', 'glowline');
+	$wp_customize->get_section('title_tagline')->title = esc_html__('Site Identity', 'glowline');
 	$wp_customize->remove_control( 'header_textcolor' );
 
 	 //  =============================
 	 //  = Header Settings       =
 	 //  =============================
-	$wp_customize->get_section('header_image')->title = esc_html__('Background Settings', 'glowline');
+	$wp_customize->get_section('header_image')->title = esc_html__('Header Image Settings', 'glowline');
 	$wp_customize->get_section('header_image')->priority = 25;
 	//  =header  Background Type  =
 	 $wp_customize->add_setting('header_background_type', array(
@@ -51,10 +51,10 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
 
 	//  =============================
-	//  = Home Page Settings       =
+	//  = Theme Settings       =
 	//  =============================
-   $wp_customize->add_section('home_page', array(
-		'title'    => __('Home Page Settings ', 'glowline'),
+   $wp_customize->add_section('theme_settings', array(
+		'title'    => __('Theme Settings ', 'glowline'),
 		'priority' => 25,
 	));
 
@@ -67,7 +67,7 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->add_control( 'dynamic_grid', array(
 		'settings'  => 'dynamic_grid',
 		'label'     => __('Choose Post Layout','glowline'),
-		'section'   => 'home_page',
+		'section'   => 'theme_settings',
 		'type'      => 'select',
 		'choices'   => array(
 			'standard-layout'       => __('Standard Layout','glowline'),
@@ -85,7 +85,7 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 		$wp_customize,'home_post_meta', array(
 		'settings'          => 'home_post_meta',
 		'label'             => __( 'Meta Info to Hide', 'glowline' ),
-		'section'           => 'home_page',
+		'section'           => 'theme_settings',
 		'choices'           => array(
 			   'category'   => __( 'Hide Category','glowline' ),
 				'date'      => __( 'Hide Date','glowline' ),
@@ -99,10 +99,10 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
 
 	//  =============================
-	//  = Colors & Custom      =
+	//  = Colors      =
 	//  =============================
 
-	 $wp_customize->get_section('colors')->title = esc_html__('Colors & Custom', 'glowline');
+	 $wp_customize->get_section('colors')->title = esc_html__('Colors', 'glowline');
 	 $wp_customize->add_setting('theme_color', array(
 		'default'           => '#bdb76b',
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -139,17 +139,6 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 		'priority' => 8,
 
 	)));
-   $wp_customize->add_setting('custom_css_text', array(
-		'default'           => '',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'wp_filter_nohtml_kses',
-	));
-	$wp_customize->add_control('custom_css_text', array(
-		'settings' => 'custom_css_text',
-		'label'     => __('Custom CSS','glowline'),
-		'section' => 'colors',
-		'type'    => 'textarea',
-	) );
 
 }
 add_action('customize_register','glowline_customize_register');
