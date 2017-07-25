@@ -132,6 +132,29 @@ function glowline_setup() {
     	'post_types' => array( 'post' ),
 	) );
 
+	add_theme_support( 'jetpack-content-options', array(
+    'blog-display'       => 'content', // the default setting of the theme: 'content', 'excerpt' or array( 'content', 'excerpt' ) for themes mixing both display.
+    'author-bio'         => true, // display or not the author bio: true or false.
+    'author-bio-default' => false, // the default setting of the author bio, if it's being displayed or not: true or false (only required if false).
+    'masonry'            => '.site-main', // a CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
+    'post-details'       => array(
+        'stylesheet'      => 'themeslug-style', // name of the theme's stylesheet.
+        'date'            => '.posted-on', // a CSS selector matching the elements that display the post date.
+        'categories'      => '.cat-links', // a CSS selector matching the elements that display the post categories.
+        'tags'            => '.tags-links', // a CSS selector matching the elements that display the post tags.
+        'author'          => '.byline', // a CSS selector matching the elements that display the post author.
+        'comment'         => '.comments-link', // a CSS selector matching the elements that display the comment link.
+    ),
+    'featured-images'    => array(
+        'archive'         => true, // enable or not the featured image check for archive pages: true or false.
+        'archive-default' => false, // the default setting of the featured image on archive pages, if it's being displayed or not: true or false (only required if false).
+        'post'            => true, // enable or not the featured image check for single posts: true or false.
+        'post-default'    => false, // the default setting of the featured image on single posts, if it's being displayed or not: true or false (only required if false).
+        'page'            => true, // enable or not the featured image check for single pages: true or false.
+        'page-default'    => false, // the default setting of the featured image on single pages, if it's being displayed or not: true or false (only required if false).
+    ),
+) );
+
 }
 
 endif; // glowline_setup
@@ -199,24 +222,8 @@ add_action('get_header', 'enable_threaded_comments');
 
 
 // ---------------------------------------------------------
-// TODO:
-// Everything below here might be considered a modification to be removed.
-// Need to double check. Especially grid settings...
+// Keep Grid Settings in - Nice feature and compliments masonry
 
-// home page post meta
-function glowline_home_post_meta($search,$default=false){
-	$home_post_meta = get_theme_mod('home_post_meta');
-	$value = (!empty($home_post_meta) && !empty($home_post_meta[0]))?in_array($search, $home_post_meta):$default;
-	return $value;
-}
-
-
-// single page post meta
-function glowline_single_post_meta($search,$default=false){
-	$home_post_meta = get_theme_mod('single_post_meta');
-	$value = (!empty($home_post_meta) && !empty($home_post_meta[0]))?in_array($search, $home_post_meta):$default;
-	return $value;
-}
 
 
 global $glowline_grid_layout;

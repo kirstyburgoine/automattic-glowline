@@ -128,6 +128,7 @@ function glowline_comment_number(){ ?>
 // ----------------------------------------------------------------------
 // Specific styling for  Author card
 // ----------------------------------------------------------------------
+// Decided to leave in as suits style of theme - May need removing later
 function glowline_userpic(){
 	$address = get_the_author_meta('user_email');
 	$nicname = get_the_author_meta('user_nicename');

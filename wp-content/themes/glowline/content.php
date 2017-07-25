@@ -7,16 +7,25 @@
 <?php if (is_single()) : ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="single-meta"><!-- Single Meta Start -->
-	<?php if(!glowline_single_post_meta('single_catgory')) : ?>
-	<span class="post-category"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'glowline' ) ); ?></span>
-	<?php endif; ?>
+
+		<div class="post-category">
+		<?php
+		$current_category = single_cat_title("", false);
+		if ( true == $current_category ) :
+			echo $current_category;
+		else :
+			$categories_list = get_the_category_list( __( ', ', 'glowline' ) );
+		echo $categories_list;
+		endif;
+		?>
+		</div>
+
+	</div>
 
 		<?php the_title('<div class="post-title"><h1><span>', '</span></h1></div>'); ?>
 
 	<div class="post-meta">
-		<?php if(!glowline_single_post_meta('single_date')) : ?>
 		<span class="post-date"><?php the_time( get_option('date_format') ); ?></span>
-		<?php endif; ?>
 	</div>
 	</div><!-- Single Meta End -->
 	<div class="post-content clearfix"><!-- Content Start -->
@@ -48,9 +57,7 @@
 		?>
 	</div>
 	<div class="single-bottom-meta">
-		<?php if(!glowline_single_post_meta('single_tag')) : ?>
 		<div class="tagcloud"><?php echo get_the_tag_list( '', __( ' ', 'glowline' ) ); ?></div>
-		<?php endif; ?>
 		<?php if(get_theme_mod('single_social_share','on')=='on'): ?>
 		<div class="post-share">
 			<?php glowline_share_text(); ?>
@@ -76,34 +83,51 @@
 	<?php edit_post_link( __( 'Edit', 'glowline' ), '<span class="edit-link">', '</span>' );
 	?>
 </article>
+
 <?php else: ?>
+
 <li id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	<div class="post-header">
-	<?php if(!glowline_home_post_meta('category')): ?>
-		<span class="post-category">
-			<?php echo $category_list = get_the_category_list( __( ', ', 'glowline' ) ); ?>
-		</span>
-	<?php endif; ?>
+		<div class="post-category">
+			<?php
+			$current_category = single_cat_title("", false);
+			if ( true == $current_category ) :
+				echo $current_category;
+			else :
+				$categories_list = get_the_category_list( __( ', ', 'glowline' ) );
+			echo $categories_list;
+			endif;
+			?>
+		</div>
 		<div class="post-title">
 			<a href="<?php the_permalink(); ?>">
 				<h2><?php the_title(); ?></h2>
 			</a>
 		</div>
 		<div class="post-meta">
-			 <?php  if(!glowline_home_post_meta('date')): ?>
 			<span class="post-date"><?php the_time( get_option('date_format') ); ?></span>
-			<?php endif; ?>
 		</div>
 	</div>
 	<div class="post-img">
 		<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('post-thumbnails'); ?></a>
 	</div>
-	<?php the_content('Continue Reading...',true); ?>
+	<?php the_content( sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', '_s' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			) );
+	?>
 	<div class="clearfix"></div>
 	<div class="standard-bottom-meta">
-	 <?php  if(!glowline_home_post_meta('comment')): ?>
+
 		<?php glowline_comment_number(); ?>
-	<?php endif; ?>
 		<div class="post-share">
 			<?php glowline_share_text(); ?>
 		</div>
