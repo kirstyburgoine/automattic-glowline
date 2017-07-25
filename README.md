@@ -16,7 +16,6 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * Enabled threaded comments 5 levels deep
 * Break comments into pages after 5 comments
 * Permalinks set to Post Name
-* Homepage now has a template called Home. All other settings are in customizer
 
 ### Images Used in Screenshot ###
 * https://unsplash.com/?photo=jOS6t2qZFHQ
