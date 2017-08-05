@@ -8,6 +8,11 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * Uses vanilla CSS, maybe change that to SASS later?
 * Test data installed from: https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
 
+### TODO's ###
+
+* Remove defend.css
+* Find and Replace all 'TODO:' to check all tasks have been followed up and remove when done 
+
 ### Theme Settings (controlled in Admin) ###
 
 * Site Title: "This is a test for the Glowline theme, which is a rubbish name for a website".
