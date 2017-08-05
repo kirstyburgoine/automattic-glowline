@@ -1101,7 +1101,7 @@ ul.load_post.standard-layout {
  *
  * ------------------------------------------------------
  * ------------------------------------------------------ */
-.two-grid-layout {
+.standard-layout, .two-grid-layout, .three-grid-layout, .four-grid-layout, .five-grid-layout {
     padding: 0;
 }
 
@@ -2154,8 +2154,10 @@ a.more-link {
     margin-bottom: 20px;
 }
 
+
 .content .standard-layout .post .post-header .post-meta {
     display: block;
+    /* Makse sure it clears category when no title */
 }
 
 
