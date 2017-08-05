@@ -15,12 +15,12 @@ get_header(); ?>
 
 		<header class="page-header">
 			<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_title( '<h1 class="archive-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 			?>
 		</header><!-- .page-header //-->
 
-		<div class="content">
+		<div class="content clearfix">
 
 			<?php global $glowline_grid_layout; ?>
 
@@ -50,12 +50,13 @@ get_header(); ?>
 		</div> <!-- .content //-->
 
 	<?php
+		get_sidebar();
+
 	else :
 		get_template_part( 'template-parts/content', 'none' );
 	endif;
 
-
-	get_sidebar(); ?>
+	?>
 
 	</div><!-- .container //-->
 

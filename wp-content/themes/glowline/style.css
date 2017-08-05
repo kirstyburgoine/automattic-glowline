@@ -93,8 +93,8 @@ img, video, object {
 .home #page {
     padding-top: 70px;
 }
-.admin-bar header,
-.admin-bar header.small {
+.admin-bar .nav-wrapper,
+.admin-bar .nav-wrapper.small {
 	top: 32px;
 }
 .content {
@@ -382,51 +382,42 @@ border: 1px solid #eee;
 .widget li a {
     letter-spacing: 1px;
 }
+
+/* ------------------------------------------------------
+ * ------------------------------------------------------
+ * 1. Header Area
+ *
+ * ------------------------------------------------------
+ * ------------------------------------------------------ */
+
+/* -- Home specific -- */
 .home .header-wrapper {
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-position: center center;
-   background-size: cover;
-  	overflow:hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    overflow:hidden;
 }
-/* Home menu Style Start*/
-.main-heading .main-logo h1 a{
-	font-size:50px;
-  color: #BDB76F;
+
+.home .header {
+/*    position: relative;
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;*/
+    text-align:center;
 }
-.main-heading .main-logo p{
-	font-size:20px;
-	color:#5A5D5A;
-}
-.home #main-menu-wrapper{
-	text-align:center;
-}
+
 .home .header .logo{
-	display:none;
-}
-.main-heading.smaller .main-logo{
-	visibility:hidden;
-}
-.main-logo img {
-    /*height: 125px;*/
-}
-.home header.smaller .header .logo{
-  display:block;
+    display:none;
 }
 
-.header .logo h1 a {
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip: rect(0, 0, 0, 0);
-  position: absolute;
+.home .header-wrapper.smaller .header .logo{
+    display:block;
 }
 
-.home .navigation ul li {
-	display:inline-block;
+/*.home .navigation ul li {
+    display:inline-block;
 }
 .home #main-menu-wrapper {
     display: block;
@@ -439,50 +430,81 @@ border: 1px solid #eee;
     padding: 0;
     margin: 0;
 }
-.home header.smaller .logo {
-    /*padding: 13px 0;*/
+.home .nav-wrapper.smaller .logo {
+    /*padding: 13px 0;
 }
-.home header.smaller #main-menu-wrapper nav.navigation ul {
+.home .nav-wrapper.smaller #main-menu-wrapper nav.navigation ul {
    padding: 13px 0;
 
 }
-.home header {
-  /*  background-color: rgb(255, 255, 255); */
-	box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
+.nav-wrapper {
+  /*  background-color: rgb(255, 255, 255);
+    box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
     -webkit-box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
     -moz-box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
-	border-bottom:none;
+    border-bottom:none;
 }
 .home .main-logo{
-	padding:30px 0;
+    padding:30px 0;
 }
 .home .header-wrapper {
     padding-top: 70px;
 }
+*/
 
-/* Home menu Style End*/
+/* -- Logo -- */
+/* TODO: Is this needed?
+* -----------------------
 
-header {
-   width: 100%;
-   position: fixed;
-   top: 0;
-   left: 0;
-   z-index: 999;
-   -webkit-transition: height 0.3s;
-   -moz-transition: height 0.3s;
-   -ms-transition: height 0.3s;
-   -o-transition: height 0.3s;
-   transition: height 0.3s;
+.main-heading .main-logo h1 a{
+	font-size:50px;
+    color: #BDB76F;
+}
+.main-heading .main-logo p{
+	font-size:20px;
+	color:#5A5D5A;
+}
+
+.main-heading.smaller .main-logo{
+	visibility:hidden;
+}
+.main-logo img {
+    /*height: 125px;
+}
+* -----------------------
+*/
+
+.header .logo h1 a {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+
+
+/* -- Menu Stuff -- */
+
+.nav-wrapper {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
     border-bottom: 1px solid rgba(190, 190, 190, 0.11);
 	/* background-color: rgba(255, 255, 255,1); */
 }
-.home .header {
-    position: relative;
-    width: 100%;
-    float: left;
-    margin: 0;
-    padding: 0;
-}
+
+
 
 header h1#logo {
 	display: inline-block;
@@ -666,18 +688,19 @@ a#pull { display: none }
 }
 .toggle-menu .active > .toggle-caret .fa:before { content: "\f068" }
 /***Header for no-home pages***/
-.page header{
-   /* background-color: rgba(255, 255, 255,1); */
-   }
-.archive-title h1, .page-title h1{
-   letter-spacing: 1px;
-   margin-bottom:10px;
+
+.page-header {
+    width: 100%;
+    display: block;
 }
-.archive-title, .page-title{
- margin: 0 0 40px;
-border-bottom:1px solid #ddd;
-display:inline-block;
+
+.page-header h1 {
+    display: inline-block;
+    letter-spacing: 1px;
+    border-bottom:1px solid #ddd;
+    padding-bottom: 20px;
 }
+
  .logo {
   padding: 12px 0 0 0;
   margin-right: 40px;
@@ -1070,6 +1093,19 @@ ul.load_post.standard-layout {
 	clear: none;
 	margin-bottom:70px;
 }
+
+
+/* ------------------------------------------------------
+ * ------------------------------------------------------
+ * 1. Grid Layouts
+ *
+ * ------------------------------------------------------
+ * ------------------------------------------------------ */
+.two-grid-layout {
+    padding: 0;
+}
+
+
 .content .two-grid-layout .post, .content .three-grid-layout .post, .content .four-grid-layout .post,
 .content .five-grid-layout .post, .content .boxed-layout .post{
 	box-shadow: 0 0 1px #DDD;
