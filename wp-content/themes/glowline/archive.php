@@ -55,7 +55,6 @@ get_header(); ?>
 	else :
 		get_template_part( 'partials/content', 'none' );
 	endif;
-
 	?>
 
 	</div><!-- .container //-->

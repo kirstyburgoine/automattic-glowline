@@ -2150,9 +2150,15 @@ a.more-link {
 }
 
 .content .standard-layout .post .post-header, .standard-layout .format-link .post-title{
-text-align:center;
+    text-align:center;
     margin-bottom: 20px;
 }
+
+.content .standard-layout .post .post-header .post-meta {
+    display: block;
+}
+
+
 .standard-bottom-meta {
     overflow: hidden;
     padding-bottom: 10px;

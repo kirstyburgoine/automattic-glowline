@@ -84,53 +84,79 @@
 	?>
 </article>
 
-<?php else: ?>
+<?php else:
+/*
+ * Else, this is standard post content on archive pages
+ * TODO: Check <a><h2></h2></a> is valid on title
+ * TODO: Review current category link - Messy
+ */
+?>
 
 <li id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-	<div class="post-header">
-		<div class="post-category">
+
+	<header class="post-header">
+
+		<span class="post-category">
 			<?php
+			// Get the title of the current category
 			$current_category = single_cat_title("", false);
-			if ( true == $current_category ) :
-				echo $current_category;
+		    // Get the ID of the current category
+		    $category_id = get_cat_ID( $current_category );
+		    // Get the URL of this category too
+		    $category_link = get_category_link( $category_id );
+
+
+			if ( true == $current_category ) : ?>
+
+				<a href="<?php echo esc_url( $category_link ); ?>" title="<?php echo esc_attr($current_category);?>"><?php echo esc_html($current_category);?></a>
+
+			<?php
 			else :
 				$categories_list = get_the_category_list( __( ', ', 'glowline' ) );
-			echo $categories_list;
+				echo $categories_list;
 			endif;
 			?>
+		</span>
+
+
+		<?php the_title( '<div class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><h2 class="entry-title">', '</h2></a></div>' ); ?>
+
+		<?php glowline_posted_on(); ?>
+
+	</header>
+
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="post-img">
+			<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('post-thumbnails'); ?></a>
 		</div>
-		<div class="post-title">
-			<a href="<?php the_permalink(); ?>">
-				<h2><?php the_title(); ?></h2>
-			</a>
-		</div>
-		<div class="post-meta">
-			<span class="post-date"><?php the_time( get_option('date_format') ); ?></span>
-		</div>
-	</div>
-	<div class="post-img">
-		<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('post-thumbnails'); ?></a>
-	</div>
+	<?php endif; ?>
+
 	<?php the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', '_s' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
+		wp_kses(
+			/* translators: %s: Name of current post. Only visible to screen readers */
+			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', '_s' ),
+				array(
+					'span' => array(
+						'class' => array('read-more'),
+					),
+				)
+			),
+			get_the_title()
+		) );
 	?>
+
 	<div class="clearfix"></div>
+
 	<div class="standard-bottom-meta">
 
 		<?php glowline_comment_number(); ?>
+
 		<div class="post-share">
 			<?php glowline_share_text(); ?>
 		</div>
+
 	</div>
+
 </li>
+
 <?php endif; ?>
