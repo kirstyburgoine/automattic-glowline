@@ -1,26 +1,46 @@
 <?php
 /**
-* @package Glowline
-* The template for displaying a "No posts found" message
+ * @package Glowline
+ * The template for displaying a "No posts found" message
+ * TODO: Copied from _s check works correctly in this theme later
  */
 ?>
-<div class="page-header">
-	<h1 class="page-title"><?php _e( 'Nothing Found', 'glowline' ); ?></h1>
-</div>
-<div class="page-content">
-	<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+<section class="no-results not-found">
 
-	<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'glowline' ), admin_url( 'post-new.php' ) ); ?></p>
+	<header class="page-header">
+		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', '_s' ); ?></h1>
+	</header><!-- .page-header -->
 
-	<?php elseif ( is_search() ) : ?>
+	<div class="page-content">
+		<?php
+		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-	<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'glowline' ); ?></p>
-	<?php get_search_form(); ?>
+			<p><?php
+				printf(
+					wp_kses(
+						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', '_s' ),
+						array(
+							'a' => array(
+								'href' => array(),
+							),
+						)
+					),
+					esc_url( admin_url( 'post-new.php' ) )
+				);
+			?></p>
 
-	<?php else : ?>
+		<?php elseif ( is_search() ) : ?>
 
-	<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'glowline' ); ?></p>
-	<?php get_search_form(); ?>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', '_s' ); ?></p>
+			<?php
+				get_search_form();
+		else : ?>
 
-	<?php endif; ?>
-</div>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', '_s' ); ?></p>
+			<?php
+				get_search_form();
+		endif; ?>
+
+	</div><!-- .page-content //-->
+
+</section><!-- .no-results //-->

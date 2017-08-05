@@ -6,9 +6,9 @@
  */
 get_header(); ?>
 
-<main id="main">
+<main id="main" class="site-main">
 
-	<div class="container" class="clearfix">
+	<div class="container clearfix">
 
 	<?php
 	if ( have_posts() ) : ?>
@@ -24,14 +24,14 @@ get_header(); ?>
 
 			<?php global $glowline_grid_layout; ?>
 
-			<ul class="<?php esc_attr($glowline_grid_layout, 'glowline'); ?>" id="posts-container">
+			<ul class="<?php echo esc_attr($glowline_grid_layout, 'glowline'); ?>" id="posts-container">
 
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 					if ( 'standard-layout' == $glowline_grid_layout ):
 					/*
-					 * IIf ayout is standard, iclude the Post-Format-specific template for the content.
+					 * If layout is standard, include the Post-Format-specific template for the content.
 					 */
 					get_template_part( 'template-parts/content', get_post_format() );
 					else :
