@@ -1,54 +1,64 @@
 <?php
 /**
-* @package Glowline
-* The template for displaying archive pages
-*/
-?>
-<?php get_header(); ?>
-</div>
-<?php if (have_posts()) : ?>
-<div class="container" class="clearfix">
+ * The template for displaying archive pages
+ *
+ * @package Glowline
+ */
+get_header(); ?>
 
-	<?php the_archive_title('<div class="archive-title"><h1>', '<h1></div>') ?>
+<main id="main">
 
-<?php if ( get_the_archive_description() ) : echo the_archive_description(); endif; ?>
+	<div class="container" class="clearfix">
 
-</div>
+	<?php
+	if ( have_posts() ) : ?>
 
-<div id="page" class="clearfix right">
-<!-- Content Start -->
-<div class="content">
-	<?php global $glowline_grid_layout; ?>
-	<div id="main">
-		<ul class="<?php esc_html_e($glowline_grid_layout, 'glowline'); ?>" id="posts-container">
+		<header class="page-header">
 			<?php
-			if ( 'standard-layout' == $glowline_grid_layout ):
-					// Start the post formate loop.
-			while ( have_posts() ) : the_post();
-			get_template_part( 'content', get_post_format() );
-			endwhile;
-			else :
-				// Start the post formate grid.
-			while ( have_posts() ) : the_post();
-			get_template_part( 'content', 'grid' );
-			endwhile;
-			endif;
-			// If no content, include the "No posts found" template.
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="archive-description">', '</div>' );
 			?>
-		</ul>
+		</header><!-- .page-header //-->
 
-	</div>
-<?php
+		<div class="content">
+
+			<?php global $glowline_grid_layout; ?>
+
+			<ul class="<?php esc_attr($glowline_grid_layout, 'glowline'); ?>" id="posts-container">
+
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) : the_post();
+					if ( 'standard-layout' == $glowline_grid_layout ):
+					/*
+					 * IIf ayout is standard, iclude the Post-Format-specific template for the content.
+					 */
+					get_template_part( 'template-parts/content', get_post_format() );
+					else :
+					/*
+					 * Otherwise, include the grid template for content.
+					 */
+					get_template_part( 'content', 'grid' );
+					endif;
+				endwhile;
+				?>
+
+			</ul>
+
+			<?php the_posts_navigation(); ?>
+
+		</div> <!-- .content //-->
+
+	<?php
 	else :
-	get_template_part( 'content', 'none' );
+		get_template_part( 'template-parts/content', 'none' );
 	endif;
-?>
 
-<div class="clearfix"></div>
-</div>
-</div>
-<div class="sidebar-wrapper"><!-- left -->
-<?php get_sidebar(); ?>
-</div>
-</div><!-- Content End -->
+
+	get_sidebar(); ?>
+
+	</div><!-- .container //-->
+
 <?php get_footer(); ?>
+
+</main>
