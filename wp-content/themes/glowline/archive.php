@@ -33,12 +33,12 @@ get_header(); ?>
 					/*
 					 * If layout is standard, include the Post-Format-specific template for the content.
 					 */
-					get_template_part( 'template-parts/content', get_post_format() );
+					get_template_part( 'partials/content', get_post_format() );
 					else :
 					/*
 					 * Otherwise, include the grid template for content.
 					 */
-					get_template_part( 'content', 'grid' );
+					get_template_part( 'partials/content', 'grid' );
 					endif;
 				endwhile;
 				?>
@@ -53,7 +53,7 @@ get_header(); ?>
 		get_sidebar();
 
 	else :
-		get_template_part( 'template-parts/content', 'none' );
+		get_template_part( 'partials/content', 'none' );
 	endif;
 
 	?>
