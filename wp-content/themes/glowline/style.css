@@ -1034,25 +1034,49 @@ ul.load_post.standard-layout {
  *
  * ------------------------------------------------------
  * ------------------------------------------------------ */
-.standard-layout, .two-grid-layout, .three-grid-layout, .four-grid-layout, .five-grid-layout {
+
+ /* -- Styles that apply to all grid settings -- */
+.posts-container {
     list-style-type: none;
     padding: 0;
 }
 
-
-.content .two-grid-layout .post, .content .three-grid-layout .post, .content .four-grid-layout .post,
-.content .five-grid-layout .post, .content .boxed-layout .post{
-	border: solid 1px #DDD;
-	-webkit-transition: all ease-in-out .2s;
-	transition: all ease-in-out .2s;
+.posts-container .post {
+    border: solid 1px #DDD;
+    -webkit-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
 }
 
-.content .two-grid-layout .post:hover, .content .three-grid-layout .post:hover, .content .four-grid-layout .post:hover,  .content .five-grid-layout .post:hover{
-     box-shadow: 0 0 1px #E5E5E5;
-}
 .post-content {
     padding: 17px 3% 35px;
 }
+
+/*
+ * Negative margins instead of using nth-child because
+ * masonry cannot determine which would be 1st, 2nd, 3rd etc.
+ */
+.masonry-enabled {
+    margin-left: -2%;
+    margin-right: -2%;
+}
+
+.masonry-enabled .post {
+    margin: 0 1.3% 35px 1.3%;
+}
+
+/*
+ * Listing each grid as we don't want hover on standard
+ * but we do on all grids whether masonry is enabled or not
+ */
+.content .two-grid-layout .post:hover,
+.content .three-grid-layout .post:hover,
+.content .four-grid-layout .post:hover,
+.content .five-grid-layout .post:hover {
+     box-shadow: 0 0 1px #E5E5E5;
+}
+
+
+
 .two-grid-layout .post-content{
 	padding:17px 6% 35px 6%;
 }
@@ -1170,24 +1194,27 @@ ul.two-grid-layout li.post:nth-child(2n+1), ul.three-grid-layout li.post:nth-chi
 	margin-right:4%;
 }
 /* Sidebar two grid style end */
+
+
 /* Sidebar three grid style start */
 ul.three-grid-layout li.post {
 	width:30.6%;
 	float:left;
 }
-ul.three-grid-layout li.post:nth-of-type(3n+3) {
+
+/*ul.three-grid-layout li.post:nth-of-type(3n+3) {
 	margin-right:0px;
-}
- .three-grid-layout .post {
-	margin-right:4%;
-}
+}*/
+
+
 .three-grid-layout .post-content{
-padding: 17px 6% 0px 6%;
+    padding: 17px 6% 0px 6%;
 }
+
 .three-grid-layout .post-content h2{
 font-size:18px;
-line-height: 26px;
-text-align:center;
+    line-height: 26px;
+    text-align:center;
 }
 /* Sidebar three grid style end */
 /* Sidebar four grid style start */
