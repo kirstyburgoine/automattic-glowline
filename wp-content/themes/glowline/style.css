@@ -342,6 +342,8 @@ a img.aligncenter {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+
+
 .tagcloud a {
     font-size: 9px;
     padding: 8px 13px;
@@ -416,6 +418,77 @@ border: 1px solid #eee;
     display:block;
 }
 
+/* Large logo and description on homepage */
+.main-logo {
+    text-align: center;
+    padding:30px 0;
+}
+
+.main-logo h1 a {
+    font-size: 50px;
+    color: #fff;
+}
+.main-logo p {
+    font-size: 20px;
+    color: #fff;
+}
+
+.smaller .main-logo {
+    visibility: hidden;
+}
+
+
+
+/*.header-wrapper.normal{
+    padding-top:0px;
+}
+.single .header-wrapper.normal, .page .header-wrapper.normal {
+    padding-bottom: 50px;
+}
+.header-wrapper.normal .featured-posts {
+    margin-top: 40px;
+}
+.header-wrapper.normal header{
+    position: static;
+}
+.normal header.smaller {
+    background: none;
+    background-color:transparent;
+}
+.home header.smaller, header.smaller {
+    height: auto;
+    /* background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
+    -webkit-box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
+    -moz-box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
+    border-bottom:none;
+}
+.header .logo h1{
+    margin:10px 0 0 0;
+    color:#fff;
+}*/
+
+
+/*header.smaller .logo h1 a{
+    color:#000;
+}
+header.smaller .logo p{
+    display:none;
+}
+header.smaller .header .logo h1 a{
+    color:#BDB76B;
+}*/
+
+
+
+/*.home .header .logo h1 a{
+    margin:0px;
+    color:#fff;
+}
+.home .header .logo p{
+    color:#fff;
+}*/
+
 /*.home .navigation ul li {
     display:inline-block;
 }
@@ -452,41 +525,10 @@ border: 1px solid #eee;
 }
 */
 
-/* -- Logo in header and homepage -- */
 
 
-/* Large logo and description on homepage */
 
-.main-logo {
-    text-align: center;
-    padding:30px 0;
-}
 
-.main-logo h1 a {
-	font-size:50px;
-}
-.main-logo p {
-	font-size:20px;
-}
-
-.main-logo img {
-    /*height: 125px;*/
-}
-
-.smaller .main-logo{
-    visibility:hidden;
-}
-
-/*.header .logo h1 a {
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip: rect(0, 0, 0, 0);
-  position: absolute;
-}*/
 
 
 
@@ -507,8 +549,20 @@ border: 1px solid #eee;
 	/* background-color: rgba(255, 255, 255,1); */
 }
 
+.nav-wrapper .logo h1 a {
+  /* site description breaks layout but we want to keep for screen readers */
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
 
-
+/*
+ * TODO: Do we need this?
 header h1#logo {
 	display: inline-block;
 	height: 122px;
@@ -520,52 +574,11 @@ header h1#logo {
 	-ms-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-}
-.header-wrapper.normal{
-	padding-top:0px;
-}
-.single .header-wrapper.normal, .page .header-wrapper.normal {
-    padding-bottom: 50px;
-}
-.header-wrapper.normal .featured-posts {
-    margin-top: 40px;
-}
-.header-wrapper.normal header{
-	position: static;
-}
-.normal header.smaller {
-	background: none;
-	background-color:transparent;
-}
-.home header.smaller, header.smaller {
-	height: auto;
-	/* background-color: rgba(255, 255, 255, 0.95); */
-	box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
-	-webkit-box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
-	-moz-box-shadow: 0px .5px 3px rgba(190, 190, 190, 0.46);
-	border-bottom:none;
-}
-.header .logo h1{
-	margin:10px 0 0 0;
-	color:#fff;
-}
-.home .header .logo h1 a{
-	margin:0px;
-	color:#fff;
-}
-.home .header .logo p{
-	color:#fff;
-}
+}*/
 
-header.smaller .logo h1 a{
-	color:#000;
-}
-header.smaller .logo p{
-	/*display:none;*/
-}
-header.smaller .header .logo h1 a{
-	color:#BDB76B;
-}
+
+
+
 .widget_nav_menu .sub-menu { margin-top: 8px }
 #main-menu-wrapper .menu-item-has-children > a:after {
     content: "\f107";
@@ -750,27 +763,8 @@ max-height:50px;
     margin-bottom:54px;
 }*/
 
-/****Contact form start*******/
-.wpcf7 p {
-   color: #777;
-   font-style: italic;
-   margin-bottom: 16px;
-}
-.wpcf7 input, .wpcf7 textarea {
-   font-size: 12px;
-   margin-top: 6px;
-}
-.wpcf7 input {
-   width: 300px;
-}
-.wpcf7 .wpcf7-submit {
-   font-size: 12px;
-   margin-top: 0;
-   }
-   input[type=submit]:hover {
-   background: #222;
-   color: #FFF;
-}
+/****form start*******/
+
 input, select, textarea {
    border: 1px solid #ddd;
    color: #5a5d5a;
@@ -827,6 +821,8 @@ color:#ddd;
 content:"\f192";
 font-family:fontAwesome;
 }
+
+
 /****Search page start*******/
 .search-no-results .page-header .page-title{
 border:none;
@@ -843,6 +839,7 @@ display:inline-block;
 float:right;
 display:inline-block;
 }
+
 /***Gallery page CSS start here***/
  .gallery-icon.landscape a img:hover{
 opacity:0.6;
