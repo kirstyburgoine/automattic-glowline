@@ -1051,6 +1051,47 @@ ul.load_post.standard-layout {
     padding: 17px 3% 35px;
 }
 
+.post-content .post-header {
+    text-align:center;
+}
+.post-content .post-header .post-title a:focus h2 {
+    text-decoration: underline;
+}
+/*.post-content .post-date {
+    text-align:center;
+    color:#999;
+}*/
+.post-content .post-comment {
+    float:right;
+}
+.post-content .post-meta {
+    float:left;
+}
+
+
+.post-content .description{
+    padding-top:25px;
+    /*padding-bottom:45px;*/
+}
+.post-content .description p a, .page-description p a {
+    color:#bdb76b;
+}
+
+
+.post-content .read-more{
+    text-align:center;
+}
+.post-content .read-more a {
+    padding:0px 0px 3px;
+    display: inline-block;
+    font-size:13px;
+    letter-spacing:1px;
+    font-weight: 600;
+}
+.post-content .read-more a:hover {
+    text-decoration: underline;
+}
+
 /*
  * Negative margins instead of using nth-child because
  * masonry cannot determine which would be 1st, 2nd, 3rd etc.
@@ -1085,33 +1126,18 @@ ul.load_post.standard-layout {
 	font-size:22px;
 	margin-bottom:22px;
 }
-.content  .post-content .post-date{
-	text-align:center;
-	color:#999;
-}
-.content .post-content .description{
-	padding-top:25px;
-	/*padding-bottom:45px;*/
-}
-.content .post-content .description p a, .page-description p a {
-	color:#bdb76b;
-}
+
 .content .four-grid-layout .post-content .read-more, .content .three-grid-layout .post-content .read-more{
 	display:none;
 }
-.content .post-content .read-more{
-	text-align:center;
-}
-.content  .post-content .read-more a{
-	padding:0px 0px 3px;
-	display: inline-block;
-	font-size:13px;
-	letter-spacing:1px;
-	font-weight: 600;
-}
-.content .post-content .read-more a:hover, ol.commentlist li .reply a:hover, a.more-link:hover {
+
+
+
+ol.commentlist li .reply a:hover, a.more-link:hover {
 	text-decoration: underline!important;
 }
+
+
 .content .post .post-meta .post-date, .slider-post-date span {
     font-size: 15px;
     color: #999999;
@@ -1137,18 +1163,10 @@ ul.slider-post-social.social-icon li.share-text, .post-share .share-text, .singl
 	font-style: italic;
 	letter-spacing: 1.5px;
 }
-.post .post-content .post-meta .post-comment {
-	float:right;
-}
-.post .post-content .post-meta .post-date {
-	float:left;
-}
-.post .post-content .post-header {
-	text-align:center;
-}
 
-.post .post-content .post-header .post-title a:hover h2,
-.post .post-content .post-header .post-title a:focus h2 { text-decoration: underline; }
+
+
+
 
 .post .post-category, .single-meta .post-category, .slider-post-category span {
     text-align: center;
