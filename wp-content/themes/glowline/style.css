@@ -589,50 +589,54 @@ header h1#logo {
     right: 4px;
     color: rgb(0, 0, 0);
 }
+
 .sub-menu .menu-item-has-children > a:after {
     top: 50%;
     margin-top: -12px;
     right: 15px;
 }
-.navigation nav.navigation .menu{
-  padding: 15px 0;
-  margin: 0;
--webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  }
 
-header.smaller .navigation nav.navigation ul.toggle-submenu{
-padding:0px;
+.navigation nav.navigation .menu{
+    padding: 15px 0;
+    margin: 0;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 }
+
+.nav-wrapper.smaller .navigation nav.navigation ul.toggle-submenu{
+    padding:0px;
+}
+
 .navigation ul {
-margin-right: 80px;
+    margin-right: 80px;
     /*clear: left;*/
 }
+
 .navigation .menu > li > a {
-     padding: 0 15px;
+    padding: 0 15px;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: .5px;
 }
+
 .navigation ul li {
-  line-height: 44px;
+    line-height: 44px;
     float: left;
     position: relative;
     list-style-type: none;
 }
+
 .navigation ul li a, .navigation ul li a:link{
     display: inline-block;
     transition: background-color, color 0.2s linear;
 }
-.navigation > ul > .current a {
-    background: transparent;
-    color: #5a5a5a !important;
-}
+
 .navigation ul li li {
     border-bottom: 0;
 }
+
 .navigation ul ul {
     position: absolute;
     width: 230px;
@@ -644,16 +648,19 @@ margin-right: 80px;
 	background: rgba(255, 255, 255, 0.95);
 	border: 1px solid rgba(188, 180, 180, 0.1);
 }
+
 .navigation ul ul li {
     padding: 0;
     color: #fff;
-	  line-height: 25px;
+    line-height: 25px;
 }
+
 .navigation ul ul li:hover {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
+
 .navigation ul ul.sub-menu a, .navigation ul ul.sub-menu a:link{
-font-size: 12px;
+    font-size: 12px;
     letter-spacing: 1px;
     padding: 8px 20px 8px 20px;
     position: relative;
@@ -666,18 +673,21 @@ font-size: 12px;
     margin: 0;
     color: #5a5d5a;
 }
+
 .navigation ul ul li:last-child a { border-bottom: none }
 .navigation ul ul { display: none }
 .navigation ul ul ul {
     left: 230px;
     top: 0;
 }
+
 .sub-menu .menu-item-has-children:after { color: #fff }
 .navigation .toggle-caret { display: none }
 .clearfix:before, .clearfix:after {
     content: " ";
     display: table;
 }
+
 .clearfix:after { clear: both }
 .clearfix { *zoom: 1  }
 a#pull { display: none }
