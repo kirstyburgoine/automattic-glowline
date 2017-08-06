@@ -1036,10 +1036,11 @@ ul.load_post.standard-layout {
 
 .content .two-grid-layout .post, .content .three-grid-layout .post, .content .four-grid-layout .post,
 .content .five-grid-layout .post, .content .boxed-layout .post{
-	box-shadow: 0 0 1px #DDD;
+	border: solid 1px #DDD;
 	-webkit-transition: all ease-in-out .2s;
 	transition: all ease-in-out .2s;
 }
+
 .content .two-grid-layout .post:hover, .content .three-grid-layout .post:hover, .content .four-grid-layout .post:hover,  .content .five-grid-layout .post:hover{
      box-shadow: 0 0 1px #E5E5E5;
 }

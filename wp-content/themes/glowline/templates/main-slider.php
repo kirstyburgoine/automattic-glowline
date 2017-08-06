@@ -19,9 +19,6 @@ $featured_posts = glowline_get_featured_posts()
                         <div class="slider-post-date"><span><a><?php the_time( get_option('date_format') ); ?></a></span></div>
                         <p>  <?php the_excerpt(); ?> </p>
                         <div class="read-more read-more-slider"><a href="<?php the_permalink(); ?>"><?php _e('Continue Reading...','glowline'); ?></a></div>
-                        <div class="slider-post-meta">
-
-                        </div>
                     </div>
                 </div>
             </div>
