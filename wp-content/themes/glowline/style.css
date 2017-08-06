@@ -1061,7 +1061,7 @@ ul.load_post.standard-layout {
 }
 .content .post-content .description{
 	padding-top:25px;
-	padding-bottom:45px;
+	/*padding-bottom:45px;*/
 }
 .content .post-content .description p a, .page-description p a {
 	color:#bdb76b;
