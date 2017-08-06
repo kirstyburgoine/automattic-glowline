@@ -1035,6 +1035,7 @@ ul.load_post.standard-layout {
  * ------------------------------------------------------
  * ------------------------------------------------------ */
 .standard-layout, .two-grid-layout, .three-grid-layout, .four-grid-layout, .five-grid-layout {
+    list-style-type: none;
     padding: 0;
 }
 

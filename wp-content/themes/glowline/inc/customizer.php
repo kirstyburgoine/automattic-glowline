@@ -115,6 +115,9 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 		'choices'   => array(
 			'standard-layout'       => __('Standard Layout','glowline'),
 			'two-grid-layout'       => __('Two Grid','glowline'),
+			'three-grid-layout'     => __('Three Grid','glowline'),
+			'four-grid-layout'      => __('Four Grid','glowline'),
+			'five-grid-layout'      => __('Five Grid','glowline'),
 		),
 	));
 
