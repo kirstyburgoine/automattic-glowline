@@ -452,29 +452,32 @@ border: 1px solid #eee;
 }
 */
 
-/* -- Logo -- */
-/* TODO: Is this needed?
-* -----------------------
+/* -- Logo in header and homepage -- */
 
-.main-heading .main-logo h1 a{
+
+/* Large logo and description on homepage */
+
+.main-logo {
+    text-align: center;
+    padding:30px 0;
+}
+
+.main-logo h1 a {
 	font-size:50px;
-    color: #BDB76F;
 }
-.main-heading .main-logo p{
+.main-logo p {
 	font-size:20px;
-	color:#5A5D5A;
 }
 
-.main-heading.smaller .main-logo{
-	visibility:hidden;
-}
 .main-logo img {
-    /*height: 125px;
+    /*height: 125px;*/
 }
-* -----------------------
-*/
 
-.header .logo h1 a {
+.smaller .main-logo{
+    visibility:hidden;
+}
+
+/*.header .logo h1 a {
   margin: -1px;
   padding: 0;
   width: 1px;
@@ -483,7 +486,7 @@ border: 1px solid #eee;
   clip: rect(0 0 0 0);
   clip: rect(0, 0, 0, 0);
   position: absolute;
-}
+}*/
 
 
 
@@ -524,7 +527,7 @@ header h1#logo {
 .single .header-wrapper.normal, .page .header-wrapper.normal {
     padding-bottom: 50px;
 }
-.header-wrapper.normal .main-heading {
+.header-wrapper.normal .featured-posts {
     margin-top: 40px;
 }
 .header-wrapper.normal header{
@@ -664,10 +667,9 @@ font-size: 12px;
 .clearfix { *zoom: 1  }
 a#pull { display: none }
 .navigation i { margin-right: 4px }
-/*-Custom Nav Widget-*/
-.widget_nav_menu .fa > a, .widget_nav_menu .fa > a { padding-left: 5px }
-.widget_nav_menu .sub-menu { margin-top: 8px }
-.widget_nav_menu .menu-item-has-children > a:after { content: '' }
+
+
+
 /*-Toggle menu-*/
 .toggle-menu ul ul { display: none }
 .toggle-menu .toggle-menu-item-parent { position: relative }
@@ -687,6 +689,7 @@ a#pull { display: none }
     line-height: 24px;
 }
 .toggle-menu .active > .toggle-caret .fa:before { content: "\f068" }
+
 /***Header for no-home pages***/
 
 .page-header {
@@ -720,27 +723,32 @@ header .logo img{
 max-height:50px;
 }
 /* Logo Style End*/
-.main-heading {
-text-align:center;
+/*
+.featured-posts {
+    text-align:center;
 }
-.main-heading  .heading {
-  overflow: hidden;
+
+.featured-posts  .heading {
+    overflow: hidden;
 }
-.main-heading .heading h1{
-color:#fff;
-font-size:40px;
-text-transform: uppercase;
-line-height:45px;
-letter-spacing: 1px;
+
+.featured-posts .heading h1{
+    color:#fff;
+    font-size:40px;
+    text-transform: uppercase;
+    line-height:45px;
+    letter-spacing: 1px;
 }
-.main-heading .description {
- padding-top: 26px;
+
+.featured-posts .description {
+    padding-top: 26px;
 }
-.main-heading .description h6{
-color:#fff;
-font:hind-regular;
-margin-bottom:54px;
-}
+
+.featured-posts .description h6{
+    color:#fff;
+    font:hind-regular;
+    margin-bottom:54px;
+}*/
 
 /****Contact form start*******/
 .wpcf7 p {
@@ -785,96 +793,7 @@ input[type=submit] {
    width: auto;
 }
 
-/****Slider*******/
-.main-heading .slider{
-background-color:#fff;
-border:1px solid rgba(221, 221, 221, 0.35);
-padding:10px;
-overflow: hidden;
-min-height: 480px;
-}
-.header-wrapper .owl-carousel .owl-item img {
-  display: inline-block;
-  width: 70%;
-  float: left;
-}
-.header-wrapper .slider-post-content {
-  display: inline-block;
-  width: 29%;
-  float: left;
-  padding-left: 25px;
-}
-.slider-post-category {
-  margin-top: 20px;
-}
 
-.slider-post-content .slider-post-title{
-  margin-bottom: 20px;
-   letter-spacing: 2px;
-}
-.slider-post-content .slider-post-title h2{
-  font-size:21px;
-}
-.slider-post-date {
-  margin: 20px 0;
-}
-.slider-post-content .read-more-slider a {
-  border: 1px solid #ddd;
-  padding: 9px 15px;
-  display: inline-block;
-}
-.slider-post-content .read-more-slider a:hover {
-color:#fff;
-}
-.slider-post-content .read-more-slider{
-margin-top:30px;
-display: inline-block;
-}
-.slider-post-meta {
-  margin-top: 38px;
-  text-align: center;
-}
-ul.slider-post-social.social-icon li.share-text, .standard-bottom-meta .post-share .share-text, .single-bottom-meta .post-share .share-text {
-    margin: 0px;
-  color:#999999;
-}
-.social-icon i.fa,.post-share i.fa{
-color:#bababa;
-}
-.slider-post-content .slider-post-social li.share-text{
-  font-size:13px;
-}
-.slider-post-content .slider-post-social li{
-display:inline;
-margin:4px;
- font-size:15px;
-}
-.owl-controls .owl-prev:before {
-    content: "\f104";
-font-family:fontawesome;
-font-size:50px;
-color:#bdb76b;
-}
-.owl-controls .owl-next:before {
-    content: "\f105";
-font-family:fontawesome;
-font-size:50px;
-color:#bdb76b;
-}
-.slider .owl-controls .owl-next{
-right:0%;
-}
-.slider .owl-controls .owl-prev{
-left:0%;
-}
-.slider .owl-controls .owl-prev, .slider .owl-controls .owl-next{
-opacity:0;
-transition: all 0.25s linear;
-}
-.slider div#owl-demo:hover .owl-prev, .slider div#owl-demo:hover .owl-next{
-opacity:1;
-color: transparent;
-}
 /****Slider End*******/
 /****slider control****/
 .owl-carousel .owl-controls .owl-dots{
@@ -2511,7 +2430,7 @@ margin-top:30px;
   }
 }
 @media screen and (max-width: 550px){
-  .main-heading .main-logo h1 a{
+  .featured-posts .main-logo h1 a{
       font-size: 40px;
     }
 
@@ -2567,7 +2486,7 @@ ul.list-layout .post .post-content .read-more {
 }
 }
 @media screen and (max-width: 480px) {
-  .main-heading .main-logo h1 a{
+  .featured-posts .main-logo h1 a{
       font-size: 36px;
     }
 a#pull {

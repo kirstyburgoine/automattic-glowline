@@ -12,23 +12,6 @@
 get_header();
 
 ?>
-<div class="container">
-	<!-- Main Heading Start -->
-	<div class="main-heading">
-
-		<?php if ( glowline_has_featured_posts( 1 ) ) : ?>
-			<div class="slider">
-    			<div id="owl-demo" class="owl-carousel">
-					<?php get_template_part( 'templates/main', 'slider' ); ?>
-				</div>
-			</div>
-		<?php endif; ?>
-
-	</div> <!-- Main Heading End -->
-</div>
-
-</div> <!-- Main Header End -->
-
 	<!--class="no-sidebar" full index-->
 	<div id="page" class="clearfix" >
 		<div class="content-wrapper clearfix">

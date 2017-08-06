@@ -7,7 +7,8 @@
 
 if ( ! function_exists( 'glowline_posted_on' ) ) :
 	/**
-	 * Prints HTML with meta information for the current post-date/time to replace Glowline's custom.
+	 * Prints HTML with meta information for the current post-date/time to
+	 * replace Glowline's custom.
 	 */
 	function glowline_posted_on() {
 

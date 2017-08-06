@@ -18,7 +18,7 @@
 <body <?php body_class(); ?>>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'glowline' ); ?></a>
 
-	<!--Main Header Start -->
+	<!-- Main Header Start -->
 	<header class="header-wrapper clearfix" id="masthead">
 
 		<!-- Top Header Start -->
@@ -59,22 +59,46 @@
 		</div>
 
 		<?php
+		// ------------------------------------------------------------------
+		// ------------------------------------------------------------------
 		if ( is_front_page() && is_home() ) : ?>
-		<!-- Logo Start -->
-		<div class="main-logo">
-		<?php glowline_the_custom_logo(); ?>
-		<?php
-			if ( is_front_page() && is_home() ) : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php endif;
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-			<p class="site-description"><?php echo $description; ?></p>
-		<?php endif;  ?>
-		</div>
-		<!-- / Logo End -->
-		<?php endif; ?>
+			<div class="main-logo">
+
+				<?php glowline_the_custom_logo(); ?>
+
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+				<?php
+				$description = get_bloginfo( 'description', 'display' );
+
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><?php echo $description; ?></p>
+				<?php
+				endif;  ?>
+			</div>
+			<!-- Ends Main Logo -->
+
+
+			<!-- Slider Area -->
+			<?php
+			if ( glowline_has_featured_posts( 1 ) ) : ?>
+			<div class="container featured-posts">
+
+				<div class="slider">
+		    		<div id="owl-demo" class="owl-carousel">
+						<?php get_template_part( 'templates/main', 'slider' ); ?>
+					</div>
+				</div>
+
+			</div>
+			<?php
+			endif; // ends if featured posts ?>
+
+		<?php // Ends if front page and home
+		endif;
+		// ------------------------------------------------------------------
+		// ------------------------------------------------------------------
+		?>
+
 	</header>
