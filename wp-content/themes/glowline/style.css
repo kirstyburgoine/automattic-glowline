@@ -424,7 +424,7 @@ border: 1px solid #eee;
     padding:30px 0;
 }
 
-.main-logo h1 a {
+.main-logo h1 {
     font-size: 50px;
     color: #fff;
 }
@@ -435,6 +435,11 @@ border: 1px solid #eee;
 
 .smaller .main-logo {
     visibility: hidden;
+}
+
+/* May not need to be on home? */
+.home .navigation ul {
+    text-align: left;
 }
 
 
@@ -549,7 +554,7 @@ header.smaller .header .logo h1 a{
 	/* background-color: rgba(255, 255, 255,1); */
 }
 
-.nav-wrapper .logo h1 a {
+.nav-wrapper .logo h1 {
   /* site description breaks layout but we want to keep for screen readers */
   margin: -1px;
   padding: 0;
@@ -623,7 +628,7 @@ header h1#logo {
 
 .navigation ul li {
     line-height: 44px;
-    float: left;
+    display: inline-block;
     position: relative;
     list-style-type: none;
 }
@@ -2291,7 +2296,7 @@ background:#bdb76b!important;
   padding:0px;
   }
     .navigation { width: 100%; border: none !important; display: none; }
-        .navigation ul .current-menu-item > a, .navigation ul li a:hover {   background: #bdb76b; color: #fff!important; }
+    .navigation ul .current-menu-item > a, .navigation ul li a:hover {   background: #bdb76b; color: #fff!important; }
     .navigation .menu a, .navigation .menu .fa > a, .navigation .menu .fa > a { color: #000!important; background: transparent; }
     .navigation .menu { display: block!important; float: none; background: transparent; margin-bottom: 45px; margin-right: 0; }
     .navigation ul ul { visibility: visible!important; opacity: 1!important; position: relative; left: 0!important; border: 0; width: 100%; }
