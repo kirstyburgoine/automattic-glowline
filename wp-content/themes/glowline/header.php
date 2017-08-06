@@ -63,7 +63,7 @@
 		// ------------------------------------------------------------------
 		if ( is_front_page() && is_home() ) : ?>
 
-			<div class="main-logo">
+			<div class="main-logo container">
 
 				<?php glowline_the_custom_logo(); ?>
 

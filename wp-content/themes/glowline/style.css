@@ -492,21 +492,21 @@ header.smaller .header .logo h1 a{
 /*.home .navigation ul li {
     display:inline-block;
 }
-.home #main-menu-wrapper {
+.home .navigation {
     display: block;
     float: none;
 }
 .home .navigation ul {
       float: none;
 }
-.home #main-menu-wrapper nav.navigation .menu {
+.home .navigation nav.navigation .menu {
     padding: 0;
     margin: 0;
 }
 .home .nav-wrapper.smaller .logo {
     /*padding: 13px 0;
 }
-.home .nav-wrapper.smaller #main-menu-wrapper nav.navigation ul {
+.home .nav-wrapper.smaller .navigation nav.navigation ul {
    padding: 13px 0;
 
 }
@@ -580,7 +580,9 @@ header h1#logo {
 
 
 .widget_nav_menu .sub-menu { margin-top: 8px }
-#main-menu-wrapper .menu-item-has-children > a:after {
+
+
+.navigation .menu-item-has-children > a:after {
     content: "\f107";
     font-family: FontAwesome;
     position: absolute;
@@ -592,7 +594,7 @@ header h1#logo {
     margin-top: -12px;
     right: 15px;
 }
-#main-menu-wrapper nav.navigation .menu{
+.navigation nav.navigation .menu{
   padding: 15px 0;
   margin: 0;
 -webkit-transition: all 0.5s ease-out;
@@ -601,7 +603,7 @@ header h1#logo {
   transition: all 0.5s ease-out;
   }
 
-header.smaller #main-menu-wrapper nav.navigation ul.toggle-submenu{
+header.smaller .navigation nav.navigation ul.toggle-submenu{
 padding:0px;
 }
 .navigation ul {
@@ -893,7 +895,7 @@ cursor: pointer;
 }
 /****Single page slider End*******/
 /****Header search style start*******/
-#main-menu-wrapper{
+.navigation{
 display: block;
 }
 .home #searchform-wrap {
@@ -2252,7 +2254,7 @@ a#more_posts img {
 }
 }
 @media screen and (max-width:1024px) {
-#main-menu-wrapper {
+.navigation {
     display: inline-block;
     float: right;
 }
@@ -2268,13 +2270,13 @@ background:#bdb76b!important;
 #searchform-wrap {
     right: 50px;
 }
-.logged-in  header #main-menu-wrapper nav.navigation ul{
+.logged-in  header .navigation nav.navigation ul{
     padding: 45px 0!important;
 }
-  header.smaller #main-menu-wrapper nav.navigation ul{
+  header.smaller .navigation nav.navigation ul{
     padding: 30px 0!important;
 }
-  #main-menu-wrapper nav.navigation .menu{
+  .navigation nav.navigation .menu{
   padding:0px;
   }
     .navigation { width: 100%; border: none !important; display: none; }
@@ -2315,7 +2317,7 @@ background:#bdb76b!important;
     .navigation ul ul ul ul a { padding: 9px 36px !important }
     .navigation .toggle-caret { display: block; width: 43px; height: 44px; line-height: 43px; color: #6C6969; border-left: 1px solid rgba(193, 193, 193, 0.2); }
     .navigation .toggle-caret i { margin-right: 0 }
-   #main-menu-wrapper .menu-item-has-children > a:after{
+   .navigation .menu-item-has-children > a:after{
 display:none;
 }}
 @media (max-width: 990px) {
