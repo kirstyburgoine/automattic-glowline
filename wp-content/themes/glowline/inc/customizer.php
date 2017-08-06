@@ -96,8 +96,8 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	//  =============================
 	//  = Theme Settings       =
 	//  =============================
-   $wp_customize->add_section('theme_settings', array(
-		'title'    => __('Theme Settings ', 'glowline'),
+   $wp_customize->add_section('theme_options', array(
+		'title'    => __('Theme Options ', 'glowline'),
 		'priority' => 250,
 	));
 
@@ -110,7 +110,7 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->add_control( 'dynamic_grid', array(
 		'settings'  => 'dynamic_grid',
 		'label'     => __('Choose Post Layout','glowline'),
-		'section'   => 'theme_settings',
+		'section'   => 'theme_options',
 		'type'      => 'select',
 		'choices'   => array(
 			'standard-layout'       => __('Standard Layout','glowline'),
@@ -118,6 +118,22 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 			'three-grid-layout'     => __('Three Grid','glowline'),
 			'four-grid-layout'      => __('Four Grid','glowline'),
 			'five-grid-layout'      => __('Five Grid','glowline'),
+		),
+	));
+	//= Enable Masonry  =
+	$wp_customize->add_setting('masonry_grid', array(
+		'default'           => 'no',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field',
+	));
+	$wp_customize->add_control( 'masonry_grid', array(
+		'settings'  => 'masonry_grid',
+		'label'     => __('Enable Masonry','glowline'),
+		'section'   => 'theme_options',
+		'type'      => 'select',
+		'choices'   => array(
+			'masonry-enabled'       => __('Enable','glowline'),
+			'masonry-disabled'      => __('Disable','glowline'),
 		),
 	));
 

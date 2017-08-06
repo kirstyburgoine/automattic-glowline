@@ -25,6 +25,13 @@
 
 	});
 
+// masonry
+ jQuery('.masonry-enabled').masonry({
+  // options...
+  itemSelector: '.post',
+  columnWidth: '.post'
+});
+
 // Dropdown menu
 
 		function thDropdownMenu() {
