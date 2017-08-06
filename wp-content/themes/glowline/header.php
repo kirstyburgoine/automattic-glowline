@@ -58,4 +58,23 @@
 			</div>
 		</div>
 
+		<?php
+		if ( is_front_page() && is_home() ) : ?>
+		<!-- Logo Start -->
+		<div class="main-logo">
+		<?php glowline_the_custom_logo(); ?>
+		<?php
+			if ( is_front_page() && is_home() ) : ?>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php endif;
+
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+			<p class="site-description"><?php echo $description; ?></p>
+		<?php endif;  ?>
+		</div>
+		<!-- / Logo End -->
+		<?php endif; ?>
 	</header>
