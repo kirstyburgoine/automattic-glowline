@@ -1028,39 +1028,63 @@ ul.load_post.standard-layout {
 }
 
 
-/* ------------------------------------------------------
- * ------------------------------------------------------
- * 1. Grid Layouts
+/* ------------------------------------------------------ *\
+ * ------------------------------------------------------ *
+ * Grid Layouts
  *
- * ------------------------------------------------------
- * ------------------------------------------------------ */
+ * ------------------------------------------------------ *
+\* ------------------------------------------------------ */
 
  /* -- Styles that apply to all grid settings -- */
 .posts-container {
     list-style-type: none;
     padding: 0;
 }
-
 .posts-container .post {
     border: solid 1px #DDD;
     -webkit-transition: all ease-in-out .2s;
     transition: all ease-in-out .2s;
 }
-
 .post-content {
     padding: 17px 3% 35px;
 }
 
+/* ------ Post Header ------- */
 .post-content .post-header {
     text-align:center;
 }
 .post-content .post-header .post-title a:focus h2 {
     text-decoration: underline;
 }
-/*.post-content .post-date {
-    text-align:center;
-    color:#999;
-}*/
+/* Category lists in header */
+.post-content .post-category,
+.single-meta .post-category,
+.slider-post-category span {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .7px;
+    padding: 2px;
+}
+.post-content .post-category:hover,
+.post-content .post-category:focus,
+.single-meta .post-category:hover,
+.slider-post-category span:hover,
+.single-meta .post-category:focus,
+.slider-post-category span:focus {
+    border: 1px solid #ddd;
+}
+.post-content .post-category:hover a,
+.post-content .post-category:focus a,
+.single-meta .post-category:hover a,
+.slider-post-category span:hover a,
+.single-meta .post-category:focus a,
+.slider-post-category span:focus a {
+    text-decoration: none;
+}
+
+/* Date and comments beneath header */
 .post-content .post-comment {
     float:right;
 }
@@ -1068,7 +1092,7 @@ ul.load_post.standard-layout {
     float:left;
 }
 
-
+/* ------ Post Description ------- */
 .post-content .description{
     padding-top:25px;
     /*padding-bottom:45px;*/
@@ -1076,8 +1100,6 @@ ul.load_post.standard-layout {
 .post-content .description p a, .page-description p a {
     color:#bdb76b;
 }
-
-
 .post-content .read-more{
     text-align:center;
 }
@@ -1117,169 +1139,107 @@ ul.load_post.standard-layout {
 }
 
 
-
-.two-grid-layout .post-content{
+/* ------------------------------ *\
+ * Two Column Grid Layout
+\* ------------------------------ */
+ .two-grid-layout .post {
+    width:48%;
+    float:left;
+    margin-right:4%;
+    list-style-type: none;
+}
+.two-grid-layout .post-content {
 	padding:17px 6% 35px 6%;
 }
-
 .two-grid-layout .post-content h2 {
 	font-size:22px;
 	margin-bottom:22px;
 }
-
-.content .four-grid-layout .post-content .read-more, .content .three-grid-layout .post-content .read-more{
-	display:none;
+.two-grid-layout .post:nth-of-type(even){
+    margin-right:0px;
 }
+/* Two grid style end */
 
 
-
-ol.commentlist li .reply a:hover, a.more-link:hover {
-	text-decoration: underline!important;
+/* ------------------------------ *\
+ * Three Column Grid Layout
+\* ------------------------------ */
+.three-grid-layout .post {
+    width:30.6%;
+    float:left;
 }
-
-
-.content .post .post-meta .post-date, .slider-post-date span {
-    font-size: 15px;
-    color: #999999;
-  }
-.content .post .post-meta .post-author a{
-	font-size:14px;
-	color:#999999;
-	letter-spacing: 1.5px;
-}
-.content .post .post-author-pic img {
-	vertical-align: middle;
-	max-width: 80px;
-	margin:0 10px!important;
-	border-radius: 100%;
-}
-.post span.post-comment a{
-    font-size: 11px;
-    color: #999999;
-    font-style: italic;
-    letter-spacing: 1.5px;
-}
-ul.slider-post-social.social-icon li.share-text, .post-share .share-text, .single-bottom-meta .post-share .share-text{
-	font-style: italic;
-	letter-spacing: 1.5px;
-}
-
-
-
-
-
-.post .post-category, .single-meta .post-category, .slider-post-category span {
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    text-transform: uppercase;
-    font-size: 12px;
-     letter-spacing: .7px;
-    padding: 2px;
-}
-.post .post-category:hover,
-.single-meta .post-category:hover,
-.slider-post-category span:hover,
-.post .post-category:focus,
-.single-meta .post-category:focus,
-.slider-post-category span:focus {
-border: 1px solid #ddd;
-}
-
-.post .post-category:hover a,
-.single-meta .post-category:hover a,
-.slider-post-category span:hover a,
-.post .post-category:focus a,
-.single-meta .post-category:focus a,
-.slider-post-category span:focus a {
-  text-decoration: none;
-}
-
-ul.two-grid-layout li.post:nth-of-type(even){
-	margin-right:0px;
-}
-ul.two-grid-layout li.post:nth-child(2n+1), ul.three-grid-layout li.post:nth-child(3n+1), ul.four-grid-layout li.post:nth-child(4n+1), ul.five-grid-layout li.post:nth-child(5n+1) {
-    clear: both;
-}
-
-/* Global Style for posts End*/
-/* Sidebar two grid style start */
- ul.two-grid-layout li.post{
-	width:48%;
-	float:left;
-  list-style-type: none;
-}
-.two-grid-layout .post {
-	margin-right:4%;
-}
-/* Sidebar two grid style end */
-
-
-/* Sidebar three grid style start */
-ul.three-grid-layout li.post {
-	width:30.6%;
-	float:left;
-}
-
-/*ul.three-grid-layout li.post:nth-of-type(3n+3) {
-	margin-right:0px;
-}*/
-
-
-.three-grid-layout .post-content{
+.three-grid-layout .post-content {
     padding: 17px 6% 0px 6%;
 }
-
 .three-grid-layout .post-content h2{
-font-size:18px;
+    font-size:18px;
     line-height: 26px;
     text-align:center;
 }
-/* Sidebar three grid style end */
-/* Sidebar four grid style start */
+.three-grid-layout .post:nth-of-type(3n+3) {
+    margin-right:0px;
+}
+/* Three grid style end */
 
- ul.four-grid-layout li.post {
-width:22%;
-float:left;
-}
- .four-grid-layout .post {
-margin-right:4%;
-}
-ul.four-grid-layout li.post:nth-of-type(4n+4) {
-margin-right:0px;
-}
 
+/* ------------------------------ *\
+ * Four Column Grid Layout
+\* ------------------------------ */
+.four-grid-layout .post {
+    width:22%;
+    float:left;
+    margin-right:4%;
+}
 .four-grid-layout .post-content {
-padding: 10% 6% 3% 6%;
+    padding: 10% 6% 3% 6%;
 }
 .four-grid-layout .post-content h2{
-font-size:16px;
-line-height: 26px;
-text-align:center;
+    font-size:16px;
+    line-height: 26px;
+    text-align:center;
+}
+.four-grid-layout .post:nth-of-type(4n+4) {
+    margin-right:0px;
+}
+/* Three grid style end */
+
+
+/* ------------------------------ *\
+ * Five Column Grid Layout
+\* ------------------------------ */
+.five-grid-layout .post {
+    width:17.6%;
+    float:left;
+    margin-right:3%;
+}
+.five-grid-layout .post-content {
+    padding:15px 6% 20px 6%;
+}
+.five-grid-layout .post-content h2{
+    font-size:16px;
+    line-height: 26px;
+    text-align:center;
+}
+.five-grid-layout .post:nth-of-type(5n+5) {
+    margin-right:0px;
+}
+/* Five grid style end */
+
+
+.two-grid-layout .post:nth-child(2n+1),
+.three-grid-layout .post:nth-child(3n+1),
+.four-grid-layout .post:nth-child(4n+1),
+.five-grid-layout .post:nth-child(5n+1) {
+    clear: both;
 }
 
-/* Fullwidth Five grid style Start */
-ul.five-grid-layout li.post {
-width:17.6%;
-float:left;
+.four-grid-layout .post-content .read-more,
+.three-grid-layout .post-content .read-more{
+	display:none;
 }
-
- .five-grid-layout .post-content {
-padding:15px 6% 20px 6%;
-}
- .five-grid-layout .post {
-margin-right:3%;
-}
-  .five-grid-layout .post-content h2{
-font-size:16px;
-line-height: 26px;
-text-align:center;
-}
-ul.five-grid-layout li.post:nth-of-type(5n+5) {
-margin-right:0px;
-}
-
-/* Fullwidth Five grid style end */
-
+/* ------------------------------------------------------ *\
+ * End Grid Layouts
+\* ------------------------------------------------------ */
 
 
 /* box list Post Style Start */
