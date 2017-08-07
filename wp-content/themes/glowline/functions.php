@@ -28,8 +28,10 @@ function glowline_scripts() {
 	wp_enqueue_style( 'glowline-owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.0.0' );
 	wp_enqueue_style( 'glowline-widgets', get_template_directory_uri() . '/css/widget-styles.css', array(), '1.0.0' );
 	wp_enqueue_style( 'glowline-defend', get_template_directory_uri() . '/defend.css', array(), '1.0.0' );
+	wp_enqueue_style( 'glowline-delete', get_template_directory_uri() . '/delete.css', array(), '1.0.0' );
 	// Load our main stylesheet.
 	wp_enqueue_style( 'glowline-style', get_stylesheet_uri());
+
 	wp_enqueue_script( 'glowline-classie', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'glowline-masonry', get_template_directory_uri() . '/js/masonry.min.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'glowline-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '', true );

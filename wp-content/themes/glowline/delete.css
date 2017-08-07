@@ -1,0 +1,75 @@
+/*
+ * Temporary styesheet for code to be deleted
+ *
+ * At the end of the project the grunt task to determine if CSS is bein used should discount everything in here
+ */
+
+/* Don't think these layouts are an option now... */
+ul.boxed-layout .post .post-img  {
+    width:50%;
+    float:left;
+    display:inline-block;
+    position:relative;
+}
+ul.boxed-layout .post .post-img img {
+    max-width:100%;
+    height:auto;
+    vertical-align:top;
+}
+ul.boxed-layout .post .post-content {
+    padding: 20px 30px;
+    display: table;
+    width: 50%;
+    min-height: 266px;
+}
+#page.no-sidebar ul.boxed-layout .post .post-content {
+    padding: 20px 30px;
+    min-height: 332px;
+}
+ul.boxed-layout .post .post-content .post-content-inner {
+    vertical-align: middle;
+    display: table-cell;
+}
+ul.boxed-layout li.post:nth-child(even) .post-img {
+    float: right;
+}
+/* box list Post Style end */
+/* list Post Style start */
+ul.list-layout .post .post-img {
+    width: 40%;
+    float: left;
+    display: inline-block;
+    position: relative;
+}
+.content ul.list-layout .post{
+    box-shadow:none;
+    overflow:hidden;
+}
+ullist-layout .post .post-content .post-content-inner {
+    vertical-align: middle;
+    display: table-cell;
+}
+ul.list-layout .post .post-content {
+    padding: 0px 3% 15px;
+    display: table;
+    width: 60%;
+   }
+ul.list-layout .post .post-content .post-header{
+    text-align:left;
+}
+ul.list-layout .post .post-content .post-meta .post-date, ul.list-layout .post .post-content .post-meta .post-comment{
+    margin-right:10px;
+    float:none;
+}
+
+.content .list-layout .post-content .description {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+ul.list-layout .post .post-content .read-more{
+    text-align: left;
+}
+.content .ul.list-layout .post-content .read-more a {
+    border: none;
+    padding: 0;
+}
