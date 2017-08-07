@@ -1027,6 +1027,72 @@ ul.load_post.standard-layout {
 	margin-bottom:70px;
 }
 
+/* ------------------------------------------------------ *\
+ * ------------------------------------------------------ *
+ * Standard Layout
+ *
+ * ------------------------------------------------------ *
+\* ------------------------------------------------------ */
+.standard-layout .post {
+    box-shadow: none;
+    list-style-type: none;
+}
+
+.standard-layout .post .post-header,
+.standard-layout .format-link .post-title{
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.standard-layout .post .post-header .post-meta {
+    display: block;
+    /* Makes sure it clears category when no title */
+}
+.standard-layout .post-title h2,
+.single .post-title h1  {
+    margin: 12px;
+}
+
+.standard-layout .post img {
+    margin-bottom:20px;
+    margin-top:10px;
+}
+
+.standard-layout .post p{
+    text-align:center;
+}
+
+.standard-bottom-meta {
+    overflow: hidden;
+    padding-bottom: 10px;
+    margin-top:20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.standard-layout .post  span.post-comment{
+    float: left;
+    font-size: 13px;
+    color: #999;
+}
+.standard-layout .post span.post-comment:before{
+    font-family: FontAwesome;
+    content: "\f0e6";
+    padding-right:4px;
+    color:#999;
+}
+.standard-layout .post .post-share {
+    float: right;
+    display: inline-flex;
+    padding: 5px 0px;
+}
+
+.standard-layout .post .post-share .post-author-pic img {
+    margin: 0;
+}
+
+.standard-layout .post .post-gallery-slider img{
+    margin-bottom:0px;
+}
+
 
 /* ------------------------------------------------------ *\
  * ------------------------------------------------------ *
@@ -1041,7 +1107,6 @@ ul.load_post.standard-layout {
     padding: 0;
 }
 .posts-container .post {
-    border: solid 1px #DDD;
     -webkit-transition: all ease-in-out .2s;
     transition: all ease-in-out .2s;
 }
@@ -1097,7 +1162,8 @@ ul.load_post.standard-layout {
     padding-top:25px;
     /*padding-bottom:45px;*/
 }
-.post-content .description p a, .page-description p a {
+.post-content .description p a,
+.page-description p a {
     color:#bdb76b;
 }
 .post-content .read-more{
@@ -1131,6 +1197,12 @@ ul.load_post.standard-layout {
  * Listing each grid as we don't want hover on standard
  * but we do on all grids whether masonry is enabled or not
  */
+.content .two-grid-layout .post,
+.content .three-grid-layout .post,
+.content .four-grid-layout .post,
+.content .five-grid-layout .post {
+     border: solid 1px #DDD;
+ }
 .content .two-grid-layout .post:hover,
 .content .three-grid-layout .post:hover,
 .content .four-grid-layout .post:hover,
@@ -1299,7 +1371,12 @@ color:#fff;
  text-transform: uppercase;
 }
 
-/**SIDEBAR START**/
+/* ------------------------------------------------------ *\
+ * ------------------------------------------------------ *
+ * Sidebar
+ *
+ * ------------------------------------------------------ *
+\* ------------------------------------------------------ */
 .widget {
 	margin: 0 0 3.5em;
 	word-wrap: break-word;
@@ -1460,41 +1537,41 @@ display:inline-block;
     margin-right:0px;
 }
 .instagram-pics li img{
-width:100%;
+    width:100%;
 }
 .instagram-pics li img:hover, .widget .th-aboutme img:hover{
-opacity:0.9;
+    opacity:0.9;
 }
 .widget .th-aboutme{
-text-align:left;
-      line-height: 26px;
+    text-align:left;
+    line-height: 26px;
 }
 .widget .th-aboutme img{
-max-width:100%;
+    max-width:100%;
 }
 .widget .th-aboutme p{
-padding:10px;
+    padding:10px;
 }
 /** recent post widget **/
 .th-widget-recent-post{
-padding-bottom:12px;
-margin-bottom:12px;
-overflow:hidden;
+    padding-bottom:12px;
+    margin-bottom:12px;
+    overflow:hidden;
 }
 .th-widget-recent-post img{
-width:90px;
-float:left;
+    width:90px;
+    float:left;
 }
 .th-widget-recent-post .th-recent-post{
-overflow:hidden;
+    overflow:hidden;
 }
 .th-widget-recent-post .th-recent-post h5{
     line-height: 5px;
     margin: 9px 0px;
 }
 .th-widget-recent-post .th-recent-post{
-overflow:hidden;
-padding:0px 10px
+    overflow:hidden;
+    padding:0px 10px;
 }
 .th-widget-recent-post .th-recent-post h5 a{
     display: block;
@@ -1504,22 +1581,23 @@ padding:0px 10px
     font-size: 13px;
     color: #999999;
 }
-
 .widget span.screen-reader-text {
     display: none;
 }
 form.search-form{
-text-align:center;
+    text-align:center;
 }
 .widget input.search-field{
-width:100%;
+    width:100%;
 }
-.widget input.search-field, .search input.search-field, .error404 input.search-field{
-height:45px;
-max-width: 350px;
-padding-left:15px;
-border:1px solid #eee;
-padding-right:10px;
+.widget input.search-field,
+.search input.search-field,
+.error404 input.search-field{
+    height:45px;
+    max-width: 350px;
+    padding-left:15px;
+    border:1px solid #eee;
+    padding-right:10px;
     font-size: 15px;
     letter-spacing: 1px;
 }
@@ -1527,7 +1605,7 @@ padding-right:10px;
 .widget .tweet-content {
     padding: 6px;
     line-height: 18px;
-      letter-spacing: 1px;
+    letter-spacing: 1px;
 }
 .widget .tweet-content .time{
     padding-top: 5px;
@@ -1536,13 +1614,13 @@ padding-right:10px;
 }
 .widget .twitter-user {
     padding-top: 10px;
-      letter-spacing: 1px;
+    letter-spacing: 1px;
 }
 .mc4wp-form {
     margin: 1em 0;
     background: #ececec;
     padding: 30px;
-overflow: hidden;
+    overflow: hidden;
 }
 .footer .mc4wp-form {
     background: none;
@@ -1551,7 +1629,6 @@ overflow: hidden;
     display:none!important;
 }
 .mc4wp-form input[type=submit] {
-
     padding: 10px 0;
     float: right;
     border: 0;
@@ -1564,14 +1641,14 @@ overflow: hidden;
     transition: all 0.25s linear;
     background: #bdb76b;
     margin-top: 15px;
-      -webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
 .form.mc4wp-form input[type="email"] {
--webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
- border-radius: 3px;
+    border-radius: 3px;
     width: 100%;
     background-color: #fff;
     float: left;
@@ -1581,9 +1658,12 @@ overflow: hidden;
     border: 1px solid #DDD;
     box-shadow: 1px 1px 3px #EEE inset;
     box-sizing: border-box;
-letter-spacing: 1px;}
+    letter-spacing: 1px;
+}
 
-/**SIDEBAR END**/
+/* ------------------------------------------------------ *\
+ * End Sidebar
+\* ------------------------------------------------------ */
 
 /* Back to top Start */
 #move-to-top {
@@ -1987,19 +2067,7 @@ border-bottom:none;
 /*Comment Style End*/
 /***Post Format Start***/
 /*Standard post layout*/
-.standard-layout .post-title h2, .single .post-title h1  {
-    margin: 12px;
-}
-.content .standard-layout .post img {
-margin-bottom:20px;
-margin-top:10px;
-}
-.standard-layout .post p{
-text-align:center;
-}
-.content .standard-layout .post .post-gallery-slider img{
-margin-bottom:0px;
-}
+
 .owl-wrapper-outer.autoHeight {
     overflow: hidden;
 }
@@ -2011,49 +2079,12 @@ a.more-link {
     margin-bottom: 30px;
     letter-spacing: 1.5px;
 }
-.content .standard-layout .post {
-    box-shadow: none;
-    list-style-type: none;
-    }
+
 .comment object, .comment embed,  iframe {
     max-width: 100%;
 /**padding:20px 0px; **/
 }
 
-.content .standard-layout .post .post-header, .standard-layout .format-link .post-title{
-    text-align:center;
-    margin-bottom: 20px;
-}
-
-
-.content .standard-layout .post .post-header .post-meta {
-    display: block;
-    /* Makse sure it clears category when no title */
-}
-
-
-.standard-bottom-meta {
-    overflow: hidden;
-    padding-bottom: 10px;
-	margin-top:20px;
-      border-bottom: 1px solid #e5e5e5;
-}
-.content .standard-layout .post  span.post-comment{
-    float: left;
-    font-size: 13px;
-    color: #999;
-}
-.content .standard-layout .post span.post-comment:before{
-font-family: FontAwesome;
-content: "\f0e6";
-padding-right:4px;
-color:#999;
-}
-.content .standard-layout .post .post-share {
-    float: right;
-    display: inline-flex;
-    padding: 5px 0px;
-}
 .post-gallery-slider {
     padding-bottom: 20px;
 }
