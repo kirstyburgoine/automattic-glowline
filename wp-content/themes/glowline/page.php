@@ -14,12 +14,9 @@ get_header(); ?>
 		if (have_posts()) :
 			while (have_posts()) : the_post();
 
-				get_template_part( 'partials/content', 'post' );
+				get_template_part( 'partials/content', 'page' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				/* moved comments into content-page */
 
 			endwhile;
 		endif;

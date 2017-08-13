@@ -1762,7 +1762,8 @@ form.search-form{
  * ------------------------------------------------------ *
 \* ------------------------------------------------------ */
 
-.single .post-content {
+.single .post-content,
+.page .post-content {
 	padding:0px 0px 40px 0px;
 	height:auto;
 }
@@ -1873,6 +1874,9 @@ li.sl-related-thumbnail h3{
 .related-post li:last-child {
     margin-right: 0px;
 }
+
+
+
 /*Comment Style Start*/
 .comments-area {
 	margin: 0;
