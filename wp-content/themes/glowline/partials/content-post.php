@@ -5,7 +5,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="single-meta"><!-- Single Meta Start -->
 

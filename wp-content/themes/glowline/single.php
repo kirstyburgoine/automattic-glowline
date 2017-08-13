@@ -10,17 +10,26 @@ get_header(); ?>
 	<div class="container clearfix">
 
 		<?php
-		if (have_posts()) :
-			while (have_posts()) : the_post();
+		if (have_posts()) : ?>
 
-				get_template_part( 'partials/content', 'post' );
+			<div class="content clearfix" id="content">
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				<?php
+				while (have_posts()) : the_post();
 
-			endwhile;
+					get_template_part( 'partials/content', 'post' );
+
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+
+				endwhile;
+				?>
+
+			</div>
+
+		<?php
 		endif;
 
 		get_sidebar();

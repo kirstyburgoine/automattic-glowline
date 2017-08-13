@@ -20,7 +20,7 @@ get_header(); ?>
 			?>
 		</header><!-- .page-header //-->
 
-		<div class="content clearfix">
+		<div class="content clearfix" id="content">
 
 			<?php
 			global $glowline_grid_layout;

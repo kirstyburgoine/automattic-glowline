@@ -18,7 +18,7 @@ get_header(); ?>
 		<?php
 		if (have_posts()) : ?>
 
-		<div class="content clearfix">
+		<div class="content clearfix" id="content">
 
 			<?php
 			global $glowline_grid_layout;

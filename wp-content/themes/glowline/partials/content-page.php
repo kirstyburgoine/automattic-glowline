@@ -5,9 +5,9 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php the_title('<header class="post-title"><h1>', '</h1></header>'); ?>
+	<?php the_title('<header><h1 class="post-title">', '</h1></header>'); ?>
 
 	<div class="post-content clearfix"><!-- Content Start -->
 
@@ -33,13 +33,8 @@
 			?>
 		</div>
 
-		<?php
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-				comments_template();
-		endif;
-		?>
 
-	</div><!-- Content End -->
+
+	</div><!-- post-content End -->
 
 </article>
