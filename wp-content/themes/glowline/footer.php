@@ -4,7 +4,7 @@
 * The template for displaying the footer
 */
 ?>
-		<div class="footer-wrapper">
+		<div class="footer-wrapper" id="footer">
 
 			<?php get_sidebar('footer'); ?>
 

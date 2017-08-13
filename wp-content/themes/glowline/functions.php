@@ -10,6 +10,7 @@ if ( ! isset( $content_width ) ) {
 
 include( get_template_directory() . '/inc/static-function.php' );
 include( get_template_directory() . '/inc/template-tags.php' );
+include( get_template_directory() . '/inc/jetpack.php' );
 include( get_template_directory() . '/inc/widget.php' );
 include( get_template_directory() . '/inc/custom-customizer.php' );
 include( get_template_directory() . '/inc/customizer.php' );

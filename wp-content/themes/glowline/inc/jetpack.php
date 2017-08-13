@@ -3,11 +3,14 @@
 // JETPACK STUFF
 // ---------------------------------------------------------
 
+if ( ! function_exists( 'glowline_jetpack_setup' ) ) :
+
 function glowline_jetpack_setup() {
 
  	add_theme_support( 'infinite-scroll', array(
-    'container' => 'posts-container',
-    'footer' => 'page',
+    	'container' => 'posts-container',
+    	'footer_widgets' => array('sidebar-2', 'sidebar-3', 'sidebar-4',),
+    	'footer' => 'footer',
 	) );
 
 	add_theme_support( 'jetpack-responsive-videos' );
@@ -40,11 +43,20 @@ function glowline_jetpack_setup() {
 	        'page'            => true, // enable or not the featured image check for single pages: true or false.
 	        'page-default'    => false, // the default setting of the featured image on single pages, if it's being displayed or not: true or false (only required if false).
 	    ),
-	)
-);
+	) );
+
+}
 
 endif; // glowline_setup
 
 add_action( 'after_setup_theme', 'glowline_jetpack_setup' );
+
+
+
+// add_action( 'init', 'glowline_infinite_scroll_init' );
+
+// function glowline_infinite_scroll_render() {
+//     get_template_part( 'partials/content', 'grid' );
+// }
 
 ?>
