@@ -3,41 +3,37 @@
 * @package Glowline
 * Template Name: Fullwidth Page
 */
-get_header();
-?>
-</div>
-<div id="page" class="clearfix">
-<div class="content-fullwidth"><!-- Content Start -->
-<div class="page-content"><!-- blog-single -->
-<?php if (have_posts()) : while (have_posts()) : the_post();?>
-<div class="post-title"><h1><?php the_title(); ?></h1></div>
-<div class="page-description">
-	<?php the_content(); ?>
-</div>
-	<div class="multipage-links">
+get_header(); ?>
+
+<main id="main" class="site-main">
+
+	<div class="container clearfix">
+
 		<?php
-			wp_link_pages( array(
-						'before'      => '<span class="meta-nav">' . __( 'Pages:', 'glowline' ) . '</span>',
-						'after'       => '',
-						'link_before' => '<span class="active">',
-						'link_after'  => '</span>',
-					) );
-		?>
-	</div>
-	<div class="clearfix"></div>
-<?php
-// If comments are open or we have at least one comment, load up the comment template.
-if ( comments_open() || get_comments_number() ) {
-comments_template();
-}
-endwhile;
-endif;
-?>
-</div>
-</div>
-<!-- / Content End -->
+		if (have_posts()) : ?>
 
+			<div class="content-fullwidth clearfix" id="content">
 
+				<?php
+				while (have_posts()) : the_post();
 
-</div>
+					get_template_part( 'partials/content', 'page' );
+
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+							comments_template();
+					endif;
+
+				endwhile;
+				?>
+
+			</div>
+
+		<?php
+		endif; ?>
+
+	</div><!-- .container //-->
+
+</main>
+
 <?php get_footer(); ?>

@@ -110,10 +110,9 @@ img, video, object {
     float: right;
 }
 .content-fullwidth {
-    width:100%;
-    max-width:1170px;
+    width: 100%;
+    max-width: 1170px;
 }
-
 .sidebar-wrapper{
     max-width: 400px;
     width: 27.5%;

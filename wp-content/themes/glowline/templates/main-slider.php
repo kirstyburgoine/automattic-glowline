@@ -13,12 +13,14 @@ foreach ( $featured_posts as $post ) : setup_postdata( $post ); ?>
             <div class="slider-post-content">
 
                 <div class="slider-post-category">
-                    <span><?php echo $category_list = get_the_category_list( __( ', ', 'glowline' ) ); ?></span>
+                    <span>
+                        <?php echo $category_list = get_the_category_list( __( ', ', 'glowline' ) ); ?>
+                    </span>
                 </div>
 
                 <div class="slider-post-title">
                     <a href="<?php esc_url( the_permalink() ); ?>">
-                        <h2><?php the_title(); ?></h2>
+                        <?php the_title('<h2>','</h2>'); ?>
                     </a>
                 </div>
 
