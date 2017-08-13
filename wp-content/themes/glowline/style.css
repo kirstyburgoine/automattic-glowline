@@ -1087,15 +1087,8 @@ ul.load_post.standard-layout {
     padding-right:4px;
     color:#999;
 }
-.standard-layout .post .post-share {
-    float: right;
-    display: inline-flex;
-    padding: 5px 0px;
-}
 
-.standard-layout .post .post-share .post-author-pic img {
-    margin: 0;
-}
+
 
 .standard-layout .post .post-gallery-slider img{
     margin-bottom:0px;
@@ -1195,6 +1188,19 @@ ul.load_post.standard-layout {
 }
 .post-content .read-more a:hover {
     text-decoration: underline;
+}
+
+.posts-container .post-share {
+    float: right;
+    display: inline-flex;
+    padding: 5px 0px;
+}
+
+.posts-container .post-author-pic img {
+    vertical-align: middle;
+    max-width: 80px;
+    margin: 0 10px!important;
+    border-radius: 100%;
 }
 
 /*
@@ -1768,7 +1774,7 @@ form.search-form{
     text-align: center;
 }
 
-.content.post .post-author-pic img {
+.posts-container .post-author-pic img {
     vertical-align: middle;
     max-width: 80px;
     margin: 0 10px!important;

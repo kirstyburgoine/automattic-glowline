@@ -7,7 +7,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
 
-	<?php the_title('<div class="post-title"><h1><span>', '</span></h1></div>'); ?>
+	<?php the_title('<header class="post-title"><h1>', '</h1></header>'); ?>
 
 	<div class="post-content clearfix"><!-- Content Start -->
 

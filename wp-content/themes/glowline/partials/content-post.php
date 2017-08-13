@@ -7,7 +7,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
 
-	<div class="single-meta"><!-- Single Meta Start -->
+	<header class="single-meta"><!-- Single Meta Start -->
 
 		<div class="post-category">
 			<?php
@@ -21,13 +21,13 @@
 			?>
 		</div>
 
-		<?php the_title('<div class="post-title"><h1><span>', '</span></h1></div>'); ?>
+		<?php the_title('<h1 class="post-title">', '</h1>'); ?>
 
 		<div class="post-meta">
 			<span class="post-date"><?php the_time( get_option('date_format') ); ?></span>
 		</div>
 
-	</div><!-- Single Meta End -->
+	</header><!-- Single Meta End -->
 
 	<div class="post-content clearfix"><!-- Content Start -->
 

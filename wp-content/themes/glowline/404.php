@@ -5,22 +5,28 @@
 */
 
 get_header(); ?>
-</div>
-<div id="page" class="clearfix">
-<div class="content"><!-- Content Start -->
-<div class="page-content"><!-- blog-single -->
-	<div class="post-title"><h1><?php _e( 'Not Found', 'glowline' ); ?></h1></div>
-	<div class="page-description">
-		<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'glowline' ); ?></p>
-		<?php get_search_form(); ?>
-	</div>
-</div>
-</div>
-<!-- / Content End -->
 
-<div class="sidebar-wrapper">
-<?php get_sidebar(); ?>
-</div>
+<main id="main" class="site-main">
 
-</div>
+	<div class="container clearfix">
+
+		<header class="page-header">
+			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'glowline' ); ?></h1>
+		</header><!-- .page-header -->
+
+		<article id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
+
+			<div class="page-description">
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'glowline' ); ?></p>
+				<?php get_search_form(); ?>
+			</div>
+		</article>
+
+	<?php
+		get_sidebar(); ?>
+
+	</div><!-- .container //-->
+
+</main>
+
 <?php get_footer(); ?>
