@@ -6,7 +6,7 @@
 ?>
 <?php global $glowline_grid_layout; ?>
 
-<li id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+<li id="post-<?php the_ID(); ?>" <?php post_class('grid-post'); ?> >
 
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="post-img">

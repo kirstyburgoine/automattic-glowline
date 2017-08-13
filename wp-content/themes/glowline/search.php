@@ -4,47 +4,62 @@
 * The template for displaying Search Results pages
 */
 get_header(); ?>
-</div>
-<div class="container" class="clearfix">
-<div class="page-title breadcrumb">
-	<h1><?php printf( __( 'Search Results for: %s', 'glowline' ), get_search_query() ); ?></h1>
-</div>
-</div>
-<div id="page" class="clearfix right" >
-<div class="content"><!-- Content Start -->
-<?php if (have_posts()) : ?>
-	<?php global $glowline_grid_layout; ?>
-<div id="main">
-	<ul class="<?php echo esc_html_e($glowline_grid_layout, 'glowline'); ?>">
-		<?php
-		if( 'standard-layout' == $glowline_grid_layout ):
-				// Start the post formate loop.
-		while ( have_posts() ) : the_post();
-		get_template_part( 'content', get_post_format() );
-		endwhile;
-		else :
-			// Start the post formate grid.
-		while ( have_posts() ) : the_post();
-		get_template_part( 'content', 'grid' );
-		endwhile;
-		endif;
-		?>
-	</ul>
-	<div class="pagination">
-		<div class="older"><?php next_posts_link( 'Older Posts' ); ?></div>
-		<div class="newer"><?php previous_posts_link( 'Newer Posts' ); ?></div>
-	</div>
-</div>
+
+<main id="main" class="site-main">
+
+	<div class="container clearfix">
+
 <?php
-		else :
-		// If no content, include the "No posts found" template.
-		get_template_part( 'content', 'none' );
-		endif;
-?>
-</div>
-<div class="sidebar-wrapper">
-<?php get_sidebar(); ?>
-</div>
-</div>
-<!-- / Content End -->
+	if ( have_posts() ) : ?>
+
+		<header class="page-header">
+			<h1 class="page-title">
+				<?php
+					printf( esc_html__( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' );
+				?>
+			</h1>
+		</header><!-- .page-header //-->
+
+		<div class="content clearfix">
+			<?php
+			global $glowline_grid_layout;
+			global $glowline_masonry_layout;?>
+
+			<ul class="<?php echo esc_attr($glowline_grid_layout, 'glowline'); ?>  <?php echo esc_attr( $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="posts-container">
+
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) : the_post();
+					if ( 'standard-layout' == $glowline_grid_layout ):
+					/*
+					 * If layout is standard, include the Post-Format-specific template for the content.
+					 */
+					get_template_part( 'partials/content', get_post_format() );
+					else :
+					/*
+					 * Otherwise, include the grid template for content.
+					 */
+					get_template_part( 'partials/content', 'grid' );
+					endif;
+				endwhile;
+				?>
+
+			</ul>
+
+			<?php the_posts_navigation(); ?>
+
+		</div> <!-- .content //-->
+
+	<?php
+		get_sidebar();
+
+	else :
+		get_template_part( 'partials/content', 'none' );
+	endif;
+	?>
+
+	</div><!-- .container //-->
+
+</main>
+
 <?php get_footer(); ?>

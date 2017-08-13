@@ -28,8 +28,8 @@
 // masonry
  jQuery('.masonry-enabled').masonry({
   // options...
-  itemSelector: '.post',
-  columnWidth: '.post'
+  itemSelector: '.grid-post',
+  columnWidth: '.grid-post'
 });
 
 // Dropdown menu

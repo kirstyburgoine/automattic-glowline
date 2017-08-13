@@ -1030,7 +1030,7 @@ ul.load_post.standard-layout {
 .content  .post-last{
 	margin-right:0px!important;
 }
-.content .post, .content .type-post{
+.content .post, .content .grid-post{
 	clear: none;
 	margin-bottom:70px;
 }
@@ -1197,20 +1197,20 @@ ul.load_post.standard-layout {
     margin-right: -2%;
 }
 
-.masonry-enabled .post {
+.masonry-enabled .grid-post {
     margin: 0 1.3% 35px 1.3%;
 }
 
-.masonry-enabled.two-grid-layout .post {
+.masonry-enabled.two-grid-layout .grid-post {
     width:44.5%;
 }
-.masonry-enabled.three-grid-layout .post {
+.masonry-enabled.three-grid-layout .grid-post {
     width:28.5%;
 }
-.masonry-enabled.four-grid-layout .post {
+.masonry-enabled.four-grid-layout .grid-post {
     width:21%;
 }
-.masonry-enabled.five-grid-layout .post {
+.masonry-enabled.five-grid-layout .grid-post {
     width:16.5%;
 }
 
@@ -1218,16 +1218,16 @@ ul.load_post.standard-layout {
  * Listing each grid as we don't want hover on standard
  * but we do on all grids whether masonry is enabled or not
  */
-.content .two-grid-layout .post,
-.content .three-grid-layout .post,
-.content .four-grid-layout .post,
-.content .five-grid-layout .post {
+.content .two-grid-layout .grid-post,
+.content .three-grid-layout .grid-post,
+.content .four-grid-layout .grid-post,
+.content .five-grid-layout .grid-post {
      border: solid 1px #DDD;
  }
-.content .two-grid-layout .post:hover,
-.content .three-grid-layout .post:hover,
-.content .four-grid-layout .post:hover,
-.content .five-grid-layout .post:hover {
+.content .two-grid-layout .grid-post:hover,
+.content .three-grid-layout .grid-post:hover,
+.content .four-grid-layout .grid-post:hover,
+.content .five-grid-layout .grid-post:hover {
      box-shadow: 0 0 1px #E5E5E5;
 }
 
@@ -1235,19 +1235,19 @@ ul.load_post.standard-layout {
 /* ------------------------------ *\
  * Two Column Grid Layout
 \* ------------------------------ */
- .two-grid-layout .post {
+ .two-grid-layout .grid-post {
     width:48%;
     float:left;
     margin-right:4%;
 }
-.two-grid-layout .post-content {
+.two-grid-layout .grid-post-content {
 	padding:17px 6% 35px 6%;
 }
-.two-grid-layout .post-content h2 {
+.two-grid-layout .grid-post-content h2 {
 	font-size:22px;
 	margin-bottom:22px;
 }
-.two-grid-layout .post:nth-of-type(even){
+.two-grid-layout .grid-post:nth-of-type(even){
     margin-right:0px;
 }
 /* Two grid style end */
@@ -1256,20 +1256,20 @@ ul.load_post.standard-layout {
 /* ------------------------------ *\
  * Three Column Grid Layout
 \* ------------------------------ */
-.three-grid-layout .post {
+.three-grid-layout .grid-post {
     width:31.3%;
     float:left;
     margin-right:3%;
 }
-.three-grid-layout .post-content {
+.three-grid-layout .grid-post-content {
     padding: 17px 6% 0px 6%;
 }
-.three-grid-layout .post-content h2{
+.three-grid-layout .grid-post-content h2{
     font-size:18px;
     line-height: 26px;
     text-align:center;
 }
-.three-grid-layout .post:nth-of-type(3n+3) {
+.three-grid-layout .grid-post:nth-of-type(3n+3) {
     margin-right:0px;
 }
 /* Three grid style end */
@@ -1278,20 +1278,20 @@ ul.load_post.standard-layout {
 /* ------------------------------ *\
  * Four Column Grid Layout
 \* ------------------------------ */
-.four-grid-layout .post {
+.four-grid-layout .grid-post {
     width:23.1%;
     float:left;
     margin-right:2.5%;
 }
-.four-grid-layout .post-content {
+.four-grid-layout .grid-post-content {
     padding: 10% 6% 3% 6%;
 }
-.four-grid-layout .post-content h2{
+.four-grid-layout .grid-post-content h2{
     font-size:16px;
     line-height: 26px;
     text-align:center;
 }
-.four-grid-layout .post:nth-of-type(4n+4) {
+.four-grid-layout .grid-post:nth-of-type(4n+4) {
     margin-right:0px;
 }
 /* Three grid style end */
@@ -1300,41 +1300,41 @@ ul.load_post.standard-layout {
 /* ------------------------------ *\
  * Five Column Grid Layout
 \* ------------------------------ */
-.five-grid-layout .post {
+.five-grid-layout .grid-post {
     width:18.2%;
     float:left;
     margin-right:2.2%;
 }
-.five-grid-layout .post-content {
+.five-grid-layout .grid-post-content {
     padding:15px 6% 20px 6%;
 }
-.five-grid-layout .post-content h2{
+.five-grid-layout .grid-post-content h2{
     font-size:16px;
     line-height: 26px;
     text-align:center;
 }
-.five-grid-layout .post:nth-of-type(5n+5) {
+.five-grid-layout .grid-post:nth-of-type(5n+5) {
     margin-right:0px;
 }
 /* Five grid style end */
 
-.four-grid-layout .post-content .read-more,
-.three-grid-layout .post-content .read-more{
+.four-grid-layout .grid-post-content .read-more,
+.three-grid-layout .grid-post-content .read-more{
     display:none;
 }
 
 
-.two-grid-layout .post:nth-child(2n+1),
-.three-grid-layout .post:nth-child(3n+1),
-.four-grid-layout .post:nth-child(4n+1),
-.five-grid-layout .post:nth-child(5n+1) {
+.two-grid-layout .grid-post:nth-child(2n+1),
+.three-grid-layout .grid-post:nth-child(3n+1),
+.four-grid-layout .grid-post:nth-child(4n+1),
+.five-grid-layout .grid-post:nth-child(5n+1) {
     clear: both;
 }
 
-.masonry-enabled.two-grid-layout .post:nth-child(2n+1),
-.masonry-enabled.three-grid-layout .post:nth-child(3n+1),
-.masonry-enabled.four-grid-layout .post:nth-child(4n+1),
-.masonry-enabled.five-grid-layout .post:nth-child(5n+1) {
+.masonry-enabled.two-grid-layout .grid-post:nth-child(2n+1),
+.masonry-enabled.three-grid-layout .grid-post:nth-child(3n+1),
+.masonry-enabled.four-grid-layout .grid-post:nth-child(4n+1),
+.masonry-enabled.five-grid-layout .grid-post:nth-child(5n+1) {
     clear: none;
 }
 
