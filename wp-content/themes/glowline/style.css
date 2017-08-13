@@ -1142,6 +1142,13 @@ ul.load_post.standard-layout {
     letter-spacing: .7px;
     padding: 2px;
 }
+/* need on single otherwise border-bottom is full width... */
+.single-meta .post-category {
+    width: fit-content;
+    margin: 0 auto;
+    line-height: initial;
+}
+
 .post-content .post-category:hover,
 .post-content .post-category:focus,
 .single-meta .post-category:hover,
@@ -1717,7 +1724,13 @@ form.search-form{
     padding: 0 20px;
 }
 /* Footer Style End */
-/* Page Style Start */
+
+/* ------------------------------------------------------ *\
+ * ------------------------------------------------------ *
+ * Page Style Start
+ *
+ * ------------------------------------------------------ *
+\* ------------------------------------------------------ */
 .pagewrap {
     margin-top: 140px;
 }
@@ -1737,9 +1750,17 @@ form.search-form{
     margin-bottom: 12px;
     list-style: decimal;
 }
-/* Page Style End */
+/* ------------------------------------------------------ *\
+ * End Page Style
+\* ------------------------------------------------------ */
 
-/* Single Page Style Start */
+
+/* ------------------------------------------------------ *\
+ * ------------------------------------------------------ *
+ * Single Page Style Start
+ *
+ * ------------------------------------------------------ *
+\* ------------------------------------------------------ */
 
 .single .post-content {
 	padding:0px 0px 40px 0px;
@@ -1769,6 +1790,14 @@ form.search-form{
 .content .post .post-meta .post-date{
     text-align: center;
 }
+
+.content.post .post-author-pic img {
+    vertical-align: middle;
+    max-width: 80px;
+    margin: 0 10px!important;
+    border-radius: 100%;
+}
+
 .single span.byline {
     padding-right: 5px;
 }
@@ -1794,6 +1823,7 @@ ul.single-social-icon li a {
   font-size:13px;
   color: #999;
 }
+
 .post .post-share {
     float: right;
     display: inline-flex;
