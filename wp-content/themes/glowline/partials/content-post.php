@@ -15,8 +15,7 @@
 			if ( true == $current_category ) :
 				echo $current_category;
 			else :
-				$categories_list = get_the_category_list( __( ', ', 'glowline' ) );
-				echo $categories_list;
+				the_category(', ');
 			endif;
 			?>
 		</div>

@@ -1124,12 +1124,13 @@ ul.load_post.standard-layout {
     text-decoration: underline;
 }
 /* Category lists in header */
-.post-content .post-category,
+.post-content .post-category a,
 .single-meta .post-category,
 .slider-post-category span {
     text-align: center;
     border-bottom: 1px solid #ddd;
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 12px;
     letter-spacing: .7px;
     padding: 2px;
@@ -1141,13 +1142,14 @@ ul.load_post.standard-layout {
     line-height: initial;
 }
 
-.post-content .post-category:hover,
-.post-content .post-category:focus,
+.post-content .post-category a:hover,
+.post-content .post-category a:focus,
 .single-meta .post-category:hover,
 .slider-post-category span:hover,
 .single-meta .post-category:focus,
 .slider-post-category span:focus {
     border: 1px solid #ddd;
+    text-decoration: none;
 }
 .post-content .post-category:hover a,
 .post-content .post-category:focus a,
@@ -1164,6 +1166,11 @@ ul.load_post.standard-layout {
 }
 .post-content .post-meta {
     float:left;
+}
+
+.post .post-category a:hover,
+.post .post-category a:focus {
+    text-decoration: none;
 }
 
 /* ------ Post Description ------- */

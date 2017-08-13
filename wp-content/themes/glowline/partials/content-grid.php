@@ -22,7 +22,7 @@
 			<header class="post-header">
 
 				<span class="post-category">
-					<?php echo $category_list = get_the_category_list( __( ', ', 'glowline' ) ); ?>
+					<?php echo the_category(', '); ?>
 				</span>
 
 				<?php the_title( '<div class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><h2 class="entry-title">', '</h2></a></div>' ); ?>
