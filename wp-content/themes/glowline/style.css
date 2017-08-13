@@ -1111,8 +1111,10 @@ ul.load_post.standard-layout {
 
  /* -- Styles that apply to all grid settings -- */
 .posts-container {
+    display: block;
     list-style-type: none;
     padding: 0;
+    height: auto;
 }
 .posts-container .post {
     -webkit-transition: all ease-in-out .2s;
