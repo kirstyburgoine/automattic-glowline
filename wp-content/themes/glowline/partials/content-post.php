@@ -56,11 +56,11 @@
 		<div class="multipage-links">
 			<?php
 				wp_link_pages( array(
-							'before'      => '<span class="meta-nav">' . __( 'Pages:', 'glowline' ) . '</span>',
-							'after'       => '',
-							'link_before' => '<span class="active">',
-							'link_after'  => '</span>',
-						) );
+					'before'      => '<span class="meta-nav">' . __( 'Pages:', 'glowline' ) . '</span>',
+					'after'       => '',
+					'link_before' => '<span class="active">',
+					'link_after'  => '</span>',
+				) );
 			?>
 		</div>
 
