@@ -6,12 +6,7 @@
 ?>
 		<div class="footer-wrapper">
 
-			<div class="container">
-
-				<?php get_sidebar('footer'); ?>
-				<div class="clearfix"></div>
-
-			</div>
+			<?php get_sidebar('footer'); ?>
 
 			<div class="footer-copyright">
 				<div class="container">
