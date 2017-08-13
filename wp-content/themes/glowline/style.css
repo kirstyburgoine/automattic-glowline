@@ -1343,62 +1343,6 @@ ul.load_post.standard-layout {
 \* ------------------------------------------------------ */
 
 
-/* list Post Style end */
-.home-category-wrapper .category-title {
-    text-align: center;
-}
-.home-category-wrapper ul li .home-category img{
-	max-width:100%;
-}
-.home-category-wrapper .category-title h2 {
-	padding-bottom:10px;
-	margin-bottom:20px;
-	border-bottom:1px solid #ddd;
-}
-
-.home-category-wrapper .home-category img {
-	float:left;
-}
-
-.home-category{
-	width: 23.5%;
-	float: left;
-	position:relative;
-	margin-right:2%;
-	margin-bottom:2%;
-}
-.home-category-wrapper ul li:nth-child(4n+4) .home-category{
-    margin-right:0px;
-}
-.home-category .cat-img-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-.home-category .cat-img-wrap {
-	display: table;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.19);
-	transition: all 0.25s linear;
-}
-.home-category .cat-img-wrap:hover{
-    background: rgba(221, 153, 51, 0.46);
-}
-.home-category .cat-img-inner {
-    display: table-cell;
-    vertical-align: middle;
-}
-.home-category-wrapper .home-category .home-cat-title{
-    text-align: center;
-}
-.home-category-wrapper .home-category .home-cat-title h4{
-    color:#fff;
-    display: inline-block;
-    text-transform: uppercase;
-}
 
 /* ------------------------------------------------------ *\
  * ------------------------------------------------------ *
