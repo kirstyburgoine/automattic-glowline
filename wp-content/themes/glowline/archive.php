@@ -26,7 +26,7 @@ get_header(); ?>
 			global $glowline_grid_layout;
 			global $glowline_masonry_layout; ?>
 
-			<ul class="<?php echo esc_attr( $glowline_grid_layout, 'glowline' ); ?> <?php echo esc_attr( $glowline_masonry_layout, 'glowline' ); ?> posts-container">
+			<ul class="<?php echo esc_attr($glowline_grid_layout, 'glowline'); ?>  <?php echo esc_attr( $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="posts-container">
 
 				<?php
 				/* Start the Loop */

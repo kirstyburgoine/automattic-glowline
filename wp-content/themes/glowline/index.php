@@ -20,7 +20,9 @@ get_header(); ?>
 
 		<div class="content clearfix">
 
-			<?php global $glowline_grid_layout; ?>
+			<?php
+			global $glowline_grid_layout;
+			global $glowline_masonry_layout;?>
 
 			<ul class="<?php echo esc_attr($glowline_grid_layout, 'glowline'); ?>  <?php echo esc_attr( $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="posts-container">
 
