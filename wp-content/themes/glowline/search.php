@@ -27,6 +27,7 @@ get_header(); ?>
 
 			<ul class="<?php
 				echo esc_attr($glowline_grid_layout, 'glowline');
+				// TODO: Check not equal is allowed here. Makes more sense than creating new varibale to cover all other layouts
 				if ( 'standard-layout' !== $glowline_grid_layout ) :
 					echo esc_attr( $glowline_masonry_layout, 'glowline' );
 				endif;?> posts-container" id="posts-container">
