@@ -31,3 +31,4 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * Change to SASS later?
 * Update layout to use Grid CSS instead of floats with fall backs to flex using `@supports`...
 * Change archive post markup to not use lists so content.php can be used instead of seperate
+* Convert all units to em/rem
