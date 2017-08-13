@@ -30,6 +30,8 @@ get_header(); ?>
 			</div>
 
 		<?php
+		else :
+			get_template_part( 'partials/content', 'none' );
 		endif;
 
 		get_sidebar();
