@@ -1771,6 +1771,9 @@ form.search-form{
 	max-width:100%;
 	margin-bottom:20px;
 }
+.single .post-content .post-img img {
+    margin: 20px 0 0 0;
+}
 .single .single-meta{
 	text-align:center;
 }
@@ -1877,7 +1880,8 @@ li.sl-related-thumbnail h3{
 
 
 
-/*Comment Style Start*/
+/* --------------------------------------------------------
+ * Comment Style Start*/
 .comments-area {
 	margin: 0;
 }

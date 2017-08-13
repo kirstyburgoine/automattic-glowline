@@ -1,7 +1,8 @@
 <?php
 /**
-* @package Glowline
-* The default template for displaying content
+ * @package Glowline
+ * The default template for displaying content on archive pages
+ * This is not used for single as well because the markup on archive pages requires content to be in a list rather than <articles>
  */
 ?>
 

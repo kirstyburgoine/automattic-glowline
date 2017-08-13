@@ -5,65 +5,77 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
+
 	<div class="single-meta"><!-- Single Meta Start -->
 
 		<div class="post-category">
-		<?php
-		$current_category = single_cat_title("", false);
-		if ( true == $current_category ) :
-			echo $current_category;
-		else :
-			$categories_list = get_the_category_list( __( ', ', 'glowline' ) );
-		echo $categories_list;
-		endif;
-		?>
+			<?php
+			$current_category = single_cat_title("", false);
+			if ( true == $current_category ) :
+				echo $current_category;
+			else :
+				$categories_list = get_the_category_list( __( ', ', 'glowline' ) );
+				echo $categories_list;
+			endif;
+			?>
 		</div>
-
-	</div>
 
 		<?php the_title('<div class="post-title"><h1><span>', '</span></h1></div>'); ?>
 
-	<div class="post-meta">
-		<span class="post-date"><?php the_time( get_option('date_format') ); ?></span>
-	</div>
+		<div class="post-meta">
+			<span class="post-date"><?php the_time( get_option('date_format') ); ?></span>
+		</div>
+
 	</div><!-- Single Meta End -->
+
 	<div class="post-content clearfix"><!-- Content Start -->
-	<div class="post-img">
-		<a href="#"></a>
-	</div>
-	<div class="description">
-		<?php the_content( sprintf(
-				wp_kses(
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) ); ?>
-	</div>
-	<div class="clearfix"></div>
-	<div class="multipage-links">
-		<?php
-			wp_link_pages( array(
-						'before'      => '<span class="meta-nav">' . __( 'Pages:', 'glowline' ) . '</span>',
-						'after'       => '',
-						'link_before' => '<span class="active">',
-						'link_after'  => '</span>',
-					) );
-		?>
-	</div>
-	<div class="single-bottom-meta">
-		<div class="tagcloud"><?php echo get_the_tag_list( '', __( ' ', 'glowline' ) ); ?></div>
-		<?php if(get_theme_mod('single_social_share','on')=='on'): ?>
-		<div class="post-share">
-			<?php glowline_share_text(); ?>
+
+		<?php if ( has_post_thumbnail() ) : ?>
+		<div class="post-img">
+			<a href="<?php esc_url( the_permalink() ); ?>"> <?php the_post_thumbnail('post-thumbnails'); ?></a>
 		</div>
 		<?php endif; ?>
-	</div>
+
+		<div class="description">
+			<?php the_content( sprintf(
+					wp_kses(
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				) ); ?>
+		</div>
+
+		<div class="clearfix"></div>
+
+		<div class="multipage-links">
+			<?php
+				wp_link_pages( array(
+							'before'      => '<span class="meta-nav">' . __( 'Pages:', 'glowline' ) . '</span>',
+							'after'       => '',
+							'link_before' => '<span class="active">',
+							'link_after'  => '</span>',
+						) );
+			?>
+		</div>
+
+		<div class="single-bottom-meta">
+
+			<div class="tagcloud"><?php echo get_the_tag_list( '', __( ' ', 'glowline' ) ); ?></div>
+
+			<?php if(get_theme_mod('single_social_share','on')=='on'): ?>
+				<div class="post-share">
+					<?php glowline_share_text(); ?>
+				</div>
+			<?php endif; ?>
+
+		</div>
+
 	</div><!-- Content End -->
 
 
@@ -77,9 +89,8 @@
         ) );
 		?>
 
-
-
 	<div class="clearfix"></div>
-	<?php edit_post_link( __( 'Edit', 'glowline' ), '<span class="edit-link">', '</span>' );
-	?>
+
+	<?php edit_post_link( __( 'Edit', 'glowline' ), '<span class="edit-link">', '</span>' ); ?>
+
 </article>
