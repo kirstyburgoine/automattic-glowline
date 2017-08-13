@@ -74,7 +74,7 @@ img, video, object {
 
 .sticky {}
 .gallery-caption {}
-.commentlist .bypostauthor {}
+.comment-list .bypostauthor {}
 .header-wrapper{
 	padding-top: 82px;
 }
@@ -1858,21 +1858,21 @@ li.sl-related-thumbnail h3{
 .comments-area {
 	margin: 0;
 }
-ol.commentlist {
+ol.comment-list {
     clear: both;
     overflow: hidden;
     list-style: none;
     margin: 0;
     padding: 0px;
 }
-ol.commentlist li {
+ol.comment-list li {
     line-height: 18px;
     margin: 15px 0 15px;
     padding: 10px;
     padding-left: 0px;
     padding-right: 0px;
 }
-ol.commentlist li .comment-body {
+ol.comment-list li .comment-body {
     margin-left: 80px;
     position: relative;
     border: 1px solid rgba(221, 221, 221, 0.35);
@@ -1880,8 +1880,8 @@ ol.commentlist li .comment-body {
     background: transparent;
     border-radius: 3px;
 }
-ol.commentlist li .comment-author a:link,
-ol.commentlist li .comment-author a:visited {
+ol.comment-list li .comment-author a:link,
+ol.comment-list li .comment-author a:visited {
     color: #5a5d5a;
     text-decoration: none !important;
     font-size: 13px;
@@ -1911,7 +1911,7 @@ b.fn {
     color: #424242;
     font-weight: normal;
 }
-ol.commentlist li .comment-author .avatar {
+ol.comment-list li .comment-author .avatar {
     float: left;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -1924,26 +1924,26 @@ ol.commentlist li .comment-author .avatar {
     border: 1px solid rgba(221, 221, 221, 0.35);
     padding: 5px;
 }
-ol.commentlist li .comment-author .avatar:hover {
+ol.comment-list li .comment-author .avatar:hover {
     -webkit-animation: bounceIn_single 0.7s ease-in-out;
     -moz-animation: bounceIn_single 0.7s ease-in-out;
     -o-animation: bounceIn_single 0.7s ease-in-out;
     animation: bounceIn_single 0.7s ease-in-out;
 }
-ol.commentlist li .comment-meta {
+ol.comment-list li .comment-meta {
     display: inline;
 }
-ol.commentlist li .comment-meta a {
+ol.comment-list li .comment-meta a {
     color: #858484;
     text-decoration: none !important;
     display: inline-block;
 }
-ol.commentlist li p {
+ol.comment-list li p {
     line-height: 22px;
     margin-top: 5px;
     color: #666;
 }
-ol.commentlist li .reply {
+ol.comment-list li .reply {
     margin-top: 10px;
     font-size: 10px;
     text-align: right;
@@ -1953,7 +1953,7 @@ ol.commentlist li .reply {
     margin-right: -10px;
     padding-right: 10px;
 }
-ol.commentlist li .reply a {
+ol.comment-list li .reply a {
     color: #2f516d;
     font-size: 14px;
     position: absolute;
@@ -1962,7 +1962,7 @@ ol.commentlist li .reply a {
     padding-right: 20px;
     letter-spacing: 1px;
 }
-ol.commentlist li ul.children {
+ol.comment-list li ul.children {
     list-style: none;
     text-indent: 0;
     margin: 1em 0 0;
@@ -1990,7 +1990,9 @@ ol.commentlist li ul.children {
 .comment-respond label{
     display: block;
 }
-.comment-form input[type="text"] {
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"] {
     height:35px;
     width:316px;
     border:1px solid #eee;
@@ -2008,7 +2010,7 @@ p.comment-form-email,
 p.comment-form-url{
     margin-top:20px;
 }
-.comment-form input#submit {
+.comment-form input[type="submit"] {
     background-color: darkkhaki;
     color: #fff;
     border: none;
@@ -2388,7 +2390,7 @@ a#more_posts img {
     #move-to-top{
         display: none;
     }
-    .comment-form textarea#comment {
+    .comment-form textarea {
         width:100%;
     }
 
@@ -2601,7 +2603,9 @@ a#more_posts img {
     .header-bottom .contact-details .search-wrapper input[type="text"] {
         border-left:none;
     }
-    .comment-form input#author, .comment-form input#email, .comment-form input#url {
+    .comment-form input[type="text"],
+    .comment-form input[type="email"],
+    .comment-form input[type="url"]{
         width:100%;
     }
 
