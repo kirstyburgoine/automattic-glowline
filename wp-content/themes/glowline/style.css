@@ -1725,34 +1725,7 @@ form.search-form{
 }
 /* Footer Style End */
 
-/* ------------------------------------------------------ *\
- * ------------------------------------------------------ *
- * Page Style Start
- *
- * ------------------------------------------------------ *
-\* ------------------------------------------------------ */
-.pagewrap {
-    margin-top: 140px;
-}
-.pagewrap img {
-	max-width:100%;
-}
 
-.pagewrap ul, .pagewrap ol {
-    padding-left: 45px;
-    margin-bottom: 20px;
-}
-.pagewrap ul li {
-    margin-bottom: 12px;
-    list-style: square;
-}
-.pagewrap ol li {
-    margin-bottom: 12px;
-    list-style: decimal;
-}
-/* ------------------------------------------------------ *\
- * End Page Style
-\* ------------------------------------------------------ */
 
 
 /* ------------------------------------------------------ *\
