@@ -5,7 +5,7 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 ### Some General Notes to Remember ###
 
 * Only the theme files and plugins installed are tracked in this repo. Not the base install of WordPress
-* Uses vanilla CSS, maybe change that to SASS later?
+* Uses vanilla CSS
 * Test data installed from: https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
 
 ### TODO's ###
@@ -27,4 +27,7 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * https://commons.wikimedia.org/wiki/File:IPC_logo_white_(2004).png
 * https://commons.wikimedia.org/wiki/Category:Paralympic_Games#/media/File:140930-D-DB155-016_(15232257889).jpg
 
-
+### Further Development LAter? ###
+* Change to SASS later?
+* Update layout to use Grid CSS instead of floats with fall backs to flex using @supports...
+* Change archive post markup to not use lists so content.php can be used instead of seperate
