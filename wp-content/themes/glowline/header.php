@@ -52,7 +52,7 @@
 						</nav>
 						<!-- search Start -->
 						<div id="searchform-wrap" class="main-searchform-wrap">
-							<?php  get_template_part( 'search','form'); ?>
+							<?php  get_search_form(); ?>
 						</div>
 					</div>
 			</div>

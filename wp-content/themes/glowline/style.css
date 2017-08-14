@@ -920,13 +920,13 @@ input[type=submit] {
 .navigation{
     display: block;
 }
-.home #searchform-wrap {
+.home .main-searchform-wrap {
     top: 0px;
 }
-.home .smaller #searchform-wrap {
+.home .smaller .main-searchform-wrap {
     top: 12px;
 }
-#searchform-wrap {
+.main-searchform-wrap {
 	position: absolute;
     display: block;
     width: 40px;
@@ -936,7 +936,7 @@ input[type=submit] {
     top: 12px;
     right: 0px;
 }
-#searchform .icon-search:before {
+.search-form .search-field:before {
 	font-family: 'FontAwesome';
 	speak: none;
 	font-style: normal;
@@ -953,7 +953,7 @@ input[type=submit] {
     padding-top:9px;
 }
 
-#searchform #s {
+.search-form .search-field  {
 	width: 60px;
 	background: transparent;
 	color: #333;
@@ -966,21 +966,24 @@ input[type=submit] {
 	-moz-transition: width .7s;
 	transition: width .7s;
 }
-#searchform #s:focus,
-#searchform #s:hover,
-#searchform .icon-search:hover + #s {
+.search-form .search-field :focus,
+.search-form .search-field :hover,
+.search-form .icon-search:hover + .search-field  {
 	width: 150px;
 	color: #333;
 	background: #fff;
 	border-color: #999;
 }
-header.smaller #searchform #s:focus, header.smaller #searchform #s:hover, header.smaller #searchform .icon-search:hover + #s {
+header.smaller .search-form .search-field :focus, header.smaller .search-form .search-field :hover, header.smaller .search-form .icon-search:hover + .search-field  {
     width: 150px;
     color: #333;
     background: rgba(255, 255, 255, 0.75);
     border-color: #999;
 }
 /****Header search style End*******/
+
+
+
 ul.load_post.standard-layout {
     padding-left: 0px;
 }
@@ -2304,10 +2307,10 @@ a#more_posts img {
     .navigation ul ul li a:hover{
         background:#bdb76b!important;
     }
-    .home #searchform-wrap {
+    .home .main-searchform-wrap {
         top: 17px;
     }
-    #searchform-wrap {
+    .main-searchform-wrap {
         right: 50px;
     }
     .logged-in  header .navigation nav.navigation ul{ padding: 45px 0!important; }
