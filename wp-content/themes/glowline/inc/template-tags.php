@@ -2,7 +2,7 @@
 /**
  * Custom template tags for this theme
  *
- * @package glowline
+ * @package Glowline
  */
 
 if ( ! function_exists( 'glowline_posted_on' ) ) :

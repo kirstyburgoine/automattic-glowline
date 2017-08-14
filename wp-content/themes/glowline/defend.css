@@ -7,8 +7,10 @@
 
 
 
+
+
 /* Moved here while I figure out if needed */
-ol.commentlist li .reply a:hover,
+/*ol.commentlist li .reply a:hover,
 a.more-link:hover {
     text-decoration: underline!important;
 }
@@ -40,7 +42,7 @@ ul.slider-post-social.social-icon li.share-text,
     font-style: italic;
     letter-spacing: 1.5px;
 }
-
+*/
 
 
 /* Temporarily added here while debugging styles conflict */
