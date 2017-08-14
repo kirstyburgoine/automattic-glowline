@@ -22,11 +22,10 @@ include( get_template_directory() . '/inc/custom-style.php' );
  * @since GlowLine
  */
 function glowline_scripts() {
-	// Add Genericons font, used in the main stylesheet.
-	wp_enqueue_style( 'glowline-lato', '//fonts.googleapis.com/css?family=Lato:400,900,700');
-	wp_enqueue_style( 'glowline-playfair', '//fonts.googleapis.com/css?family=Playfair+Display:400,700');
+
+	wp_enqueue_style( 'glowline-lato', glowline_lato_fonts_url(), array(), null );
+	wp_enqueue_style( 'glowline-playfair', glowline_playfair_fonts_url(), array(), null );
 	wp_enqueue_style( 'glowline-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '1.0.0' );
-	wp_enqueue_style( 'glowline-owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.0.0' );
 	wp_enqueue_style( 'glowline-widgets', get_template_directory_uri() . '/css/widget-styles.css', array(), '1.0.0' );
 	wp_enqueue_style( 'glowline-defend', get_template_directory_uri() . '/defend.css', array(), '1.0.0' );
 	wp_enqueue_style( 'glowline-delete', get_template_directory_uri() . '/delete.css', array(), '1.0.0' );
@@ -39,16 +38,64 @@ function glowline_scripts() {
 
 
 	if ( glowline_has_featured_posts( 2 ) ) {
+
+		wp_enqueue_style( 'glowline-owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.0.0' );
 		wp_enqueue_script( 'glowline-owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.js', array( 'jquery' ), '', true );
 	}
 
-	// Comment reply
-	if (is_singular() && get_option('thread_comments')){
-		wp_enqueue_script('comment-reply');
-	}
 }
 
 add_action( 'wp_enqueue_scripts', 'glowline_scripts' );
+
+
+// TODO : Double check this is correct for multiple Google fonts. Seems wrong...
+/**
+ * Register Google Fonts
+ */
+function glowline_lato_font_url() {
+    $fonts_url = '';
+
+    /* Translators: If there are characters in your language that are not
+	 * supported by Lato, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$arimo = esc_html_x( 'on', 'Lato font: on or off', 'glowline' );
+
+	if ( 'off' !== $arimo ) {
+		$font_families = array();
+		$font_families[] = 'Lato:400,700,900,400italic,700italic,900italic&subset=latin,latin-ext';
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return $fonts_url;
+
+}
+
+function glowline_playfair_font_url() {
+    $fonts_url = '';
+	$arimo = esc_html_x( 'on', 'Playfair font: on or off', 'glowline' );
+
+	if ( 'off' !== $arimo ) {
+		$font_families = array();
+		$font_families[] = 'Lato:400,700,400italic,700italic&subset=latin,latin-ext';
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return $fonts_url;
+
+}
 
 
 
@@ -156,12 +203,16 @@ function glowline_has_featured_posts( $minimum = 1 ) {
 }
 
 // Add a fallback image
-function jeherve_custom_image( $media, $post_id, $args ) {
+function glowline_custom_image( $media, $post_id, $args ) {
     if ( $media ) {
         return $media;
     } else {
         $permalink = get_permalink( $post_id );
-        $url = apply_filters( 'jetpack_photon_url', get_template_directory_uri().'/images/790x450.png' );
+        //$url = apply_filters( 'jetpack_photon_url', get_template_directory_uri().'/images/790x450.png' );
+        $permalink = get_permalink( $post_id );
+        $custom_logo_id = get_theme_mod( 'custom_logo' );
+        $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+        $url = apply_filters( 'jetpack_photon_url', $image[0] );
 
         return array( array(
             'type'  => 'image',
@@ -171,7 +222,7 @@ function jeherve_custom_image( $media, $post_id, $args ) {
         ) );
     }
 }
-add_filter( 'jetpack_images_get_images', 'jeherve_custom_image', 10, 3 );
+add_filter( 'jetpack_images_get_images', 'glowline_custom_image', 10, 3 );
 
 
 
