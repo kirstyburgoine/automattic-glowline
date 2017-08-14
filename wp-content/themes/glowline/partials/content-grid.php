@@ -27,7 +27,6 @@
 
 				<?php the_title( '<div class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><h2 class="entry-title">', '</h2></a></div>' ); ?>
 
-
 				<?php glowline_posted_on(); ?>
 
 				<?php glowline_comment_number(); ?>
@@ -38,7 +37,7 @@
 			<?php
 				the_content( sprintf(
 					wp_kses(
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', '_s' ),
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
 						array(
 							'span' => array(
 								'class' => array('read-more'),
