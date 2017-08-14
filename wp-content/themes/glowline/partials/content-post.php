@@ -63,19 +63,15 @@
 			?>
 		</div>
 
-		<div class="single-bottom-meta">
-
-			<div class="tagcloud"><?php echo get_the_tag_list( '', __( ' ', 'glowline' ) ); ?></div>
-
-			<?php if(get_theme_mod('single_social_share','on')=='on'): ?>
-				<div class="post-share">
-					<?php glowline_share_text(); ?>
-				</div>
-			<?php endif; ?>
-
-		</div>
-
 	</div><!-- Content End -->
+
+	<footer class="single-bottom-meta">
+
+		<div class="tagcloud"><?php echo get_the_tag_list( '', __( ' ', 'glowline' ) ); ?></div>
+
+		<div class="clearfix"></div>
+
+		<?php glowline_author_bio(); ?>
 
 
 		<?php
@@ -88,6 +84,7 @@
         ) );
 		?>
 
+	</footer>
 	<div class="clearfix"></div>
 
 	<?php edit_post_link( __( 'Edit', 'glowline' ), '<span class="edit-link">', '</span>' ); ?>

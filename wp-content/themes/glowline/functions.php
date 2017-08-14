@@ -23,8 +23,8 @@ include( get_template_directory() . '/inc/custom-style.php' );
  */
 function glowline_scripts() {
 
-	wp_enqueue_style( 'glowline-lato', glowline_lato_fonts_url(), array(), null );
-	wp_enqueue_style( 'glowline-playfair', glowline_playfair_fonts_url(), array(), null );
+	wp_enqueue_style( 'glowline-lato', glowline_lato_font_url(), array(), null );
+	wp_enqueue_style( 'glowline-playfair', glowline_playfair_font_url(), array(), null );
 	wp_enqueue_style( 'glowline-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '1.0.0' );
 	wp_enqueue_style( 'glowline-widgets', get_template_directory_uri() . '/css/widget-styles.css', array(), '1.0.0' );
 	wp_enqueue_style( 'glowline-defend', get_template_directory_uri() . '/defend.css', array(), '1.0.0' );

@@ -49,9 +49,9 @@ color:<?php echo $theme_color; ?>;
 	border: solid 1px #999;
 }
 
-.post .post-content .post-category, .post .post-category a, .single-meta .post-category, .slider-post-category span, .page-title, li.sl-related-thumbnail h3, .multipage-links span, #searchform #s, #searchform #s:focus, #searchform #s:hover, #searchform .icon-search:hover + #s {
-	 border-bottom: 1px solid <?php echo $theme_color; ?>;
-}
+// .post .post-content .post-category, .post .post-category a, .single-meta .post-category, .slider-post-category span, .page-title, li.sl-related-thumbnail h3, .multipage-links span, #searchform #s, #searchform #s:focus, #searchform #s:hover, #searchform .icon-search:hover + #s {
+// 	 border-bottom: 1px solid <?php echo $theme_color; ?>;
+// }
 
 
 .single-meta .post-category:hover,
@@ -61,10 +61,10 @@ color:<?php echo $theme_color; ?>;
 .slider-post-category span:focus {
 border: 1px solid <?php echo $theme_color; ?>;
 }
-.post .post-category a:hover,
-.post .post-category a:focus {
-	border: 1px solid <?php echo $theme_color; ?>;
-}
+// .post .post-category a:hover,
+// .post .post-category a:focus {
+// 	border: 1px solid <?php echo $theme_color; ?>;
+// }
 
 .format-quote blockquote, .single .format-quote blockquote, .single blockquote{
 	 border-left: 5px solid <?php echo $theme_color; ?>;

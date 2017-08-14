@@ -1836,7 +1836,34 @@ ul.single-social-icon li a:hover {
 	color: #BABABA;
 }
 
+/* author card, swicthed on and off by Jetpack */
+.entry-author {
+    clear: left;
+    position: relative;
+    border: 1px solid rgba(221, 221, 221, 0.35);
+    padding: 10px 10px 5px 10px;
+    background: transparent;
+    border-radius: 3px;
+    margin: 30px 0;
+}
 
+.entry-author .author-avatar {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.entry-author h2 {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #424242;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+/* Related Posts */
 .related-post {
 	margin:85px 0px;
 	overflow:hidden;
