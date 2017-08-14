@@ -99,7 +99,7 @@ function glowline_setup() {
 
 	// header image
 	$args = array(
-		'default-image' => get_template_directory_uri()."/images/header-bg-dummy.jpg",
+		'default-image' => get_template_directory_uri()."/images/header-bg-default.jpg",
 	);
 	add_theme_support( 'custom-header', $args );
 

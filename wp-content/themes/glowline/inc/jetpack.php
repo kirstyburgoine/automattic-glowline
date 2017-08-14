@@ -37,7 +37,6 @@ function glowline_jetpack_setup() {
 	    ),
 	    'featured-images'    => array(
 	        'archive'         => true, // enable or not the featured image check for archive pages: true or false.
-	        'archive-default' => false, // the default setting of the featured image on archive pages, if it's being displayed or not: true or false (only required if false).
 	        'post'            => true, // enable or not the featured image check for single posts: true or false.
 	        'post-default'    => false, // the default setting of the featured image on single posts, if it's being displayed or not: true or false (only required if false).
 	        'page'            => true, // enable or not the featured image check for single pages: true or false.
