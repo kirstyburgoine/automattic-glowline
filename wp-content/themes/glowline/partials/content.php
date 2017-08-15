@@ -10,27 +10,7 @@
 
 	<header class="post-header">
 
-		<span class="post-category">
-			<?php
-			// Get the title of the current category
-			$current_category = single_cat_title("", false);
-		    // Get the ID of the current category
-		    $category_id = get_cat_ID( $current_category );
-		    // Get the URL of this category too
-		    $category_link = get_category_link( $category_id );
-
-
-			if ( true == $current_category ) : ?>
-
-				<a href="<?php echo esc_url( $category_link ); ?>" title="<?php echo esc_attr($current_category);?>"><?php echo esc_html($current_category);?></a>
-
-			<?php
-			else :
-				the_category(', ');
-			endif;
-			?>
-		</span>
-
+		<?php glowline_posted_in(); ?>
 
 		<?php the_title( '<div class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><h2 class="entry-title">', '</h2></a></div>' ); ?>
 
@@ -59,14 +39,6 @@
 
 	<div class="clearfix"></div>
 
-	<div class="standard-bottom-meta">
-
-		<?php glowline_comment_number(); ?>
-
-		<div class="post-share">
-			<?php glowline_share_text(); ?>
-		</div>
-
-	</div>
+	<?php glowline_content_bottom_meta(); ?>
 
 </li>

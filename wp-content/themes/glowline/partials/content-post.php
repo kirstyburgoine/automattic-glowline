@@ -9,22 +9,11 @@
 
 	<header class="single-meta"><!-- Single Meta Start -->
 
-		<div class="post-category">
-			<?php
-			$current_category = single_cat_title("", false);
-			if ( true == $current_category ) :
-				echo $current_category;
-			else :
-				the_category(', ');
-			endif;
-			?>
-		</div>
+		<?php glowline_posted_in(); ?>
 
 		<?php the_title('<h1 class="post-title">', '</h1>'); ?>
 
-		<div class="post-meta">
-			<span class="post-date"><?php the_time( get_option('date_format') ); ?></span>
-		</div>
+		<?php glowline_posted_on(); ?>
 
 	</header><!-- Single Meta End -->
 
