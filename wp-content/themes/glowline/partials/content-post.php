@@ -26,45 +26,23 @@
 		<?php endif; ?>
 
 		<div class="description">
-			<?php the_content( sprintf(
-					wp_kses(
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				) ); ?>
+			<?php the_content(); ?>
 		</div>
 
 		<div class="clearfix"></div>
 
-		<div class="multipage-links">
-			<?php
-				wp_link_pages( array(
-					'before'      => '<span class="meta-nav">' . __( 'Pages:', 'glowline' ) . '</span>',
-					'after'       => '',
-					'link_before' => '<span class="active">',
-					'link_after'  => '</span>',
-				) );
+		<?php
+			wp_link_pages( array(
+				'before'      => '<div class="multipage-links"><span class="meta-nav">' . __( 'Pages:', 'glowline' ) . '</span>',
+				'after'       => '</div>',
+				'link_before' => '<span class="active">',
+				'link_after'  => '</span>',
+			) );
 			?>
-		</div>
 
 	</div><!-- Content End -->
 
 	<?php glowline_single_bottom_meta(); ?>
-
-	<?php
-	the_post_navigation( array(
-        'prev_text'                  => '<span class="meta-nav" aria-hidden="true">' . __( '%title', 'glowline' ) . '</span> ' ,
-        'next_text'                  => '<span class="meta-nav" aria-hidden="true">' . __( '%title', 'glowline' ) . '</span> ' ,
-        'in_same_term'               => true,
-        'taxonomy'                   => __( 'post_tag' ),
-        'screen_reader_text' => __( 'Continue Reading' ),
-    ) );
-	?>
 
 	<div class="clearfix"></div>
 
