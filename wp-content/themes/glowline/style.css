@@ -1687,7 +1687,13 @@ form.search-form{
     border: solid 1px #999;
 }
 /* Back to top end */
-/* Footer Style Start */
+
+/* ------------------------------------------------------ *\
+ * ------------------------------------------------------ *
+ * Footer
+ *
+ * ------------------------------------------------------ *
+\* ------------------------------------------------------ */
 .footer .footer-widget-column .widget {
     width: 22.3%;
     float: left;
@@ -1711,27 +1717,15 @@ form.search-form{
     background-color:#f9f9f9;
 	margin-top:30px;
 }
-.footer-wrapper .footer-copyright {
-	text-align: center;
-	overflow:hidden;
-	padding:20px 0;
-	border-top:1px solid #ddd;
+
+
+.site-info {
+    padding: 20px;
+    text-align: center;
 }
-.footer-wrapper .footer-copyright ul li {
-	display: block;
-	padding: 6px 0;
-}
-.footer-wrapper .footer-copyright ul li ul,
-.footer-wrapper .footer-copyright ul{
-    padding-left:0px;
-}
-.footer-wrapper .social-icon ul li{
-	display:inline;
-}
-.footer-copyright {
-    padding: 0 20px;
-}
-/* Footer Style End */
+/* ------------------------------------------------------ *\
+ * End Sidebar
+\* ------------------------------------------------------ */
 
 
 
@@ -2505,17 +2499,17 @@ a#more_posts img {
     .home-category-wrapper .home-category .home-cat-title h4 {
         font-size:14px;
     }
-    .single-bottom-meta, .footer-wrapper .footer-copyright {
+    .single-bottom-meta, .footer-wrapper .site-info {
         text-align: center;
     }
     .single .tagcloud,
     .single .post-content .post-share,
-    .footer-wrapper .footer-copyright .copyright,
+    .footer-wrapper .site-info .copyright,
     .footer-wrapper .social-icon {
         padding:10px 0;
         float:none;
     }
-    .footer-wrapper .footer-copyright .copyright,
+    .footer-wrapper .site-info .copyright,
     .footer-wrapper .social-icon {
         display:block;
     }

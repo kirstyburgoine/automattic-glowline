@@ -8,22 +8,29 @@
 
 			<?php get_sidebar('footer'); ?>
 
-			<div class="footer-copyright">
+		</div> <!-- closes .footer-wrapper //-->
+
+		<footer id="colophon" class="site-footer">
+
+			<div class="site-info">
 				<div class="container">
 
-					<ul>
-						<li class="copyright">
-							<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'glowline' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'glowline' ), 'WordPress' ); ?></a>
-							<?php printf( __( 'Theme: %1$s by %2$s.', 'glowline' ), 'Glowline', '<a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>' ); ?>
-						</li>
-					</ul>
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'glowline' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'glowline' ); ?>" rel="generator"><?php printf( esc_html__( 'Proudly powered by %s', 'glowline' ), 'WordPress' ); ?></a>
+					<span class="sep"> | </span>
+					<?php
+						printf( esc_html__( 'Theme: %1$s by %2$s.', 'glowline' ), 'Glowline', '<a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>' );
+					?>
 
 				</div>
 			</div>
 
-		</div> <!-- closes .footer-wrapper //-->
+		</footer> <!-- closes #colophon -->
 
 		<?php wp_footer();?>
 
 	</body>
 </html>
+
+
+
+
