@@ -936,7 +936,7 @@ input[type=submit] {
     top: 12px;
     right: 0px;
 }
-.search-form .search-field:before {
+.main-searchform-wrap:before {
 	font-family: 'FontAwesome';
 	speak: none;
 	font-style: normal;
@@ -953,7 +953,7 @@ input[type=submit] {
     padding-top:9px;
 }
 
-.search-form .search-field  {
+.search-form input[type=search]  {
 	width: 60px;
 	background: transparent;
 	color: #333;
@@ -965,10 +965,10 @@ input[type=submit] {
 	-webkit-transition: width .7s;
 	-moz-transition: width .7s;
 	transition: width .7s;
+    text-indent: -999px;
 }
-.search-form .search-field :focus,
-.search-form .search-field :hover,
-.search-form .icon-search:hover + .search-field  {
+.search-form input[type=search]:focus,
+.search-form input[type=search]:hover {
 	width: 150px;
 	color: #333;
 	background: #fff;
