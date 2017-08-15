@@ -111,7 +111,6 @@ if ( ! function_exists( 'glowline_content_bottom_meta' ) ) :
 	}
 endif;
 
-
 function glowline_userpic(){
 	// ----------------------------------------------------------------------
 	// Gets the author pic used above
@@ -123,4 +122,53 @@ function glowline_userpic(){
 
 }
 
+// ----------------------------------------------------------------------
+// Tags, Jetpack author, edit link combined into one used in content-post.php
+// ----------------------------------------------------------------------
+
+if ( ! function_exists( 'glowline_single_bottom_meta' ) ) :
+
+	function glowline_single_bottom_meta() {
+
+		echo '<footer class="single-bottom-meta">';
+
+		// ----------------------------------------------------------------------
+		// Tags
+		// ----------------------------------------------------------------------
+		$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'glowline' ) );
+		if ( $tags_list ) {
+			/* translators: 1: list of tags. */
+			printf( '<div class="tagcloud">' . esc_html__( '%1$s', 'glowline' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+			echo '<div class="clearfix"></div>';
+		}
+
+		// ----------------------------------------------------------------------
+		// author bio for jetpack content controls
+		// ----------------------------------------------------------------------
+		glowline_author_bio();
+
+		// ----------------------------------------------------------------------
+		// Edit link
+		// ----------------------------------------------------------------------
+		edit_post_link(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Edit <span class="screen-reader-text">%s</span>', '_s' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			),
+			'<span class="edit-link">',
+			'</span>'
+		);
+
+		echo '</footer>';
+	}
+
+endif;
 ?>
