@@ -43,7 +43,7 @@ body{
     color: #ffffff;
     background: #bdb76b;
 }
-.main-searchform-wrap input[type=submit], .search-form input[type=submit]{
+.main-searchform-wrap input[type=submit] {
     display:none;
 }
 a, a:hover, a:focus {
@@ -947,7 +947,7 @@ input[type=submit] {
     padding-top:9px;
 }
 
-.search-form input[type=search]  {
+.main-searchform-wrap input[type=search]  {
 	width: 60px;
 	background: transparent;
 	color: #333;
@@ -961,15 +961,17 @@ input[type=submit] {
 	transition: width .7s;
     text-indent: -999px;
 }
-.search-form input[type=search]:focus,
-.search-form input[type=search]:hover,
-.search-form input[type=search]:active {
+.main-searchform-wrap input[type=search]:focus,
+.main-searchform-wrap input[type=search]:hover,
+.main-searchform-wrap input[type=search]:active {
 	width: 150px;
 	color: #333;
 	background: #fff;
 	border-color: #999;
 }
 
+/* ----------------------------------------- *\
+\* ----------------------------------------- */
 
 
 
@@ -1576,12 +1578,12 @@ form.search-form{
     text-align:center;
 }
 .widget input.search-field{
-    width:100%;
+    width:auto;
 }
 .widget input.search-field,
 .search input.search-field,
 .error404 input.search-field{
-    height:45px;
+    height:35px;
     max-width: 350px;
     padding-left:15px;
     border:1px solid #eee;
