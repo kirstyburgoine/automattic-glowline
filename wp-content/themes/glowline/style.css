@@ -920,17 +920,11 @@ input[type=submit] {
 .navigation{
     display: block;
 }
-.home .main-searchform-wrap {
-    top: 0px;
-}
-.home .smaller .main-searchform-wrap {
-    top: 12px;
-}
+
+
 .main-searchform-wrap {
 	position: absolute;
     display: block;
-    width: 40px;
-    height: 40px;
     margin: 5px 0 0 5px;
     float: right;
     top: 12px;
@@ -968,19 +962,16 @@ input[type=submit] {
     text-indent: -999px;
 }
 .search-form input[type=search]:focus,
-.search-form input[type=search]:hover {
+.search-form input[type=search]:hover,
+.search-form input[type=search]:active {
 	width: 150px;
 	color: #333;
 	background: #fff;
 	border-color: #999;
 }
-header.smaller .search-form .search-field :focus, header.smaller .search-form .search-field :hover, header.smaller .search-form .icon-search:hover + .search-field  {
-    width: 150px;
-    color: #333;
-    background: rgba(255, 255, 255, 0.75);
-    border-color: #999;
-}
-/****Header search style End*******/
+
+
+
 
 
 
