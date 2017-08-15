@@ -3,9 +3,9 @@
 function glowline_widgets_init() {
 // Area , located below the Primary Widget Area in the sidebar. Empty by default.
 register_sidebar(array(
-	'name' => __('Primary Sidebar', 'glowline'),
+	'name' => esc_html__('Primary Sidebar', 'glowline'),
 	'id' => 'sidebar-1',
-	'description' => __('Main sidebar that appears on the left.', 'glowline'),
+	'description' => esc_html__('Main sidebar that appears on the left.', 'glowline'),
 	'before_widget' => '<div class="sidebar-inner-widget">',
 	'after_widget' => '</div><div class="clearfix"></div>',
 	'before_title' => '<h4 class="widgettitle">',
@@ -13,32 +13,33 @@ register_sidebar(array(
 ));
 // Area 1, located in the footer. Empty by default.
 register_sidebar(array(
-	'name' => __('First Footer Widget Area', 'glowline'),
+	'name' => esc_html__('First Footer Widget Area', 'glowline'),
 	'id' => 'sidebar-2',
-	'description' => __('Appears in the first footer section of the site.', 'glowline'),
-	'before_widget' => '',
-	'after_widget' => '',
+	'description' => esc_html__('Appears in the first footer section of the site.', 'glowline'),
+	'before_widget' => '<div id="%1s" class="widget %2s">',
+	'after_widget' => '</div>',
 	'before_title' => '<h4 class="widgettitle" >',
 	'after_title' => '</h4>',
 ));
+
 // Area 2, located in the footer. Empty by default.
 register_sidebar(array(
-	'name' => __('Second Footer Widget Area', 'glowline'),
+	'name' => esc_html__('Second Footer Widget Area', 'glowline'),
 	'id' => 'sidebar-3',
-	'description' => __('Appears in the Second footer section of the site.', 'glowline'),
-	'before_widget' => '',
-	'after_widget' => '',
+	'description' => esc_html__('Appears in the Second footer section of the site.', 'glowline'),
+	'before_widget' => '<div id="%1s" class="widget %2s">',
+	'after_widget' => '</div>',
 	'before_title' => '<h4 class="widgettitle" >',
 	'after_title' => '</h4>',
 ));
 
 // Area 3, located in the footer. Empty by default.
 register_sidebar(array(
-	'name' => __('Third Footer Widget Area', 'glowline'),
+	'name' => esc_html__('Third Footer Widget Area', 'glowline'),
 	'id' => 'sidebar-4',
-	'description' => __('Appears in the Third footer section of the site.', 'glowline'),
-	'before_widget' => '',
-	'after_widget' => '',
+	'description' => esc_html__('Appears in the Third footer section of the site.', 'glowline'),
+	'before_widget' => '<div id="%1s" class="widget %2s">',
+	'after_widget' => '</div>',
 	'before_title' => '<h4 class="widgettitle">',
 	'after_title' => '</h4>',
 ));
