@@ -700,7 +700,7 @@ header h1#logo {
 
 .clearfix:after { clear: both }
 .clearfix { *zoom: 1  }
-a#pull { display: none }
+.toggle-mobile-menu { display: none }
 .navigation i { margin-right: 4px }
 
 
@@ -2322,26 +2322,28 @@ a#more_posts img {
     nav li a { border-bottom: 1px solid rgba(193, 193, 193, 0.2)!important; width: 100%!important; box-sizing: border-box; }
     nav a { text-align: left; width: 100%; text-indent: 25px; }
 
-    .header a#pull {
+    .header .toggle-mobile-menu {
         top: 3px;
         padding: 20px 0;
         display: block;
-        width: 100%;
+        width: auto;
         position: relative;
         color: #000;
         text-indent: 15px;
-        text-align: right;
+        float: right;
+        border: none;
+        background: none;
         -webkit-transition: all 0.5s ease-out;
         -moz-transition: all 0.5s ease-out;
         -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
     }
 
-    a#pull:after { content: "\f0c9"; display: inline-block; font-size:30px; font-family: FontAwesome; }
-	.mobile-menu-active a#pull:after {
+    .toggle-mobile-menu:after { content: "\f0c9"; display: inline-block; font-size:30px; font-family: FontAwesome; }
+	.mobile-menu-active .toggle-mobile-menu:after {
         content: "\f00d";
     }
-	.header-wrapper header.smaller a#pull {color: #000;}
+	.header-wrapper header.smaller .toggle-mobile-menu {color: #000;}
     .navigation ul .sfHover a, .navigation ul li:hover, .navigation ul .sfHover ul li { background: transparent }
 
     .mobile-menu-active .main-container, .mobile-menu-active #site-header, .mobile-menu-active .footer { left: 300px; transition: left 500ms ease; }
@@ -2617,7 +2619,7 @@ a#more_posts img {
     .featured-posts .main-logo h1 a{
         font-size: 36px;
     }
-    a#pull {
+    .toggle-mobile-menu {
         right:15px;
     }
     .logo{

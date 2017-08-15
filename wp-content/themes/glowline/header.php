@@ -36,7 +36,7 @@
 					</div>
 					<!-- Menu Start -->
 					<div id="main-menu-wrapper">
-						<a href="#" id="pull" class="toggle-mobile-menu"></a>
+						<button href="#" id="pull" class="toggle-mobile-menu"></button>
 						<nav class="navigation clearfix mobile-menu-wrapper">
 							<?php
 							wp_nav_menu(
