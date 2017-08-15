@@ -12,6 +12,8 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 
 * Remove defend.css
 * Find and Replace all 'TODO:' to check all tasks have been followed up and remove when done 
+* Check things like author images to be retina ready
+* Check all hover states have focus and active
 
 ### Theme Settings (controlled in Admin) ###
 
@@ -32,4 +34,3 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * Update layout to use Grid CSS instead of floats with fall backs to flex using `@supports`...
 * Change archive post markup to not use lists so content.php can be used instead of seperate
 * Convert all units to em/rem
-* Check things like author images to be retina ready
