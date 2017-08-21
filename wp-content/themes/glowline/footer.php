@@ -18,7 +18,7 @@
 					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'glowline' ) ); ?>" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'glowline' ); ?>" rel="generator"><?php printf( esc_html__( 'Proudly powered by %s', 'glowline' ), 'WordPress' ); ?></a>
 					<span class="sep"> | </span>
 					<?php
-						printf( esc_html__( 'Theme: %1$s by %2$s.', 'glowline' ), 'Glowline', '<a href="https://wordpress.com/themes/" rel="designer">WordPress.com</a>' );
+						printf( esc_html__( 'Theme: %1$s by %2$s.', 'glowline' ), 'Glowline', '<a href="https://themehunk.com" rel="designer">Theme Hunk</a>' );
 					?>
 
 				</div>
