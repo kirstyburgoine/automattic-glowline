@@ -65,7 +65,10 @@
 
 			<div class="main-logo container">
 
-				<?php glowline_the_custom_logo(); ?>
+				<?php
+				if ( function_exists( 'the_custom_logo' ) ) {
+					the_custom_logo();
+				} ?>
 
 				<h1 class="site-title"><?php esc_html( bloginfo( 'name' ) ); ?></h1>
 
