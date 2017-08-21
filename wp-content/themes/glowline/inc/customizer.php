@@ -94,7 +94,7 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
 
 	//  =============================
-	//  = Theme Settings       =
+	//  = Theme Options       =
 	//  =============================
    $wp_customize->add_section('theme_options', array(
 		'title'    => __('Theme Options ', 'glowline'),
@@ -104,32 +104,30 @@ $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	//= Choose Grid Layout  =
 	 $wp_customize->add_setting('dynamic_grid', array(
 		'default'           => 'standard-layout',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field',
+		'capability'        => 'edit_theme_options'
 	));
 	$wp_customize->add_control( 'dynamic_grid', array(
 		'settings'  => 'dynamic_grid',
-		'label'     => __('Choose Post Layout','glowline'),
+		'label'     => __('Choose A Post Layout','glowline'),
 		'section'   => 'theme_options',
 		'type'      => 'select',
 		'choices'   => array(
 			'standard-layout'       => __('Standard Layout','glowline'),
-			'two-grid-layout'       => __('Two Grid','glowline'),
-			'three-grid-layout'     => __('Three Grid','glowline'),
-			'four-grid-layout'      => __('Four Grid','glowline'),
-			'five-grid-layout'      => __('Five Grid','glowline'),
+			'two-grid-layout'       => __('Two Column Grid','glowline'),
+			'three-grid-layout'     => __('Three Column Grid','glowline'),
+			'four-grid-layout'      => __('Four Column Grid','glowline'),
+			'five-grid-layout'      => __('Five Column Grid','glowline'),
 		),
 	));
 	//= Enable Masonry  =
 	$wp_customize->add_setting('masonry_grid', array(
 		'default'           => 'masonry-disabled',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field',
+		'capability'        => 'edit_theme_options'
 	));
 	$wp_customize->add_control( 'masonry_grid', array(
 		'settings'  => 'masonry_grid',
-		'label'     => __('Enable Masonry','glowline'),
-		'description' => __('Only works with the grid options','glowline'),
+		'label'     => __('Enable Masonry Layout','glowline'),
+		'description' => __('Only works with the grid options selected','glowline'),
 		'section'   => 'theme_options',
 		'type'      => 'select',
 		'choices'   => array(
