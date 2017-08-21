@@ -8,7 +8,7 @@
 
 // ----------------------------------------------------------------------
 // ----------------------------------------------------------------------
-// Main grid layout function
+// Grid thumbnail functions
 // ----------------------------------------------------------------------
 // ----------------------------------------------------------------------
 function glowline_grid_thumb($glowline_grid_layout, $thumb_crop=true){
@@ -29,33 +29,9 @@ function glowline_grid_thumb($glowline_grid_layout, $thumb_crop=true){
 			case 'five-grid-layout':
 				the_post_thumbnail('glowline-custom-five-grid-thumb');
 				break;
-
-			case 'list-layout':
-				the_post_thumbnail('glowline-custom-list-thumb');
-				break;
-
-			case 'boxed-layout':
-				the_post_thumbnail('glowline-custom-boxed-thumb');
-				break;
 		}
 	endif;
 }
-
-
-
-// ----------------------------------------------------------------------
-// Optional Custom Logo
-// ----------------------------------------------------------------------
-if ( ! function_exists( 'glowline_the_custom_logo' ) ) :
-	/**
-	 * Does nothing if the custom logo is not available.
-	 */
-	function glowline_the_custom_logo() {
-		if ( function_exists( 'the_custom_logo' ) ) {
-			the_custom_logo();
-		}
-	}
-endif;
 
 
 
