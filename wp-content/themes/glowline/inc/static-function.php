@@ -36,18 +36,6 @@ function glowline_grid_thumb($glowline_grid_layout, $thumb_crop=true){
 
 
 // ----------------------------------------------------------------------
-// Custom header menu
-// ----------------------------------------------------------------------
-add_action( 'after_setup_theme', 'glowline_register_theme_menu' );
-
-function glowline_register_theme_menu() {
-	register_nav_menu( 'menu-1', __( 'Primary Menu', 'glowline' ) );
-}
-
-
-
-
-// ----------------------------------------------------------------------
 // hexa to rgba convert
 // ----------------------------------------------------------------------
 function glowline_hex2rgba($color, $opacity = false) {
