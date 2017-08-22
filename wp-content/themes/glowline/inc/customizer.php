@@ -6,91 +6,53 @@
 
 /*theme customizer*/
 function glowline_customize_register( $wp_customize ) {
-$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
-	 //  =============================
-	 //  = General Settings     =
-	 //  =============================
-	$wp_customize->get_section('title_tagline')->title = esc_html__('Site Identity', 'glowline');
-	$wp_customize->remove_control( 'header_textcolor' );
+	$wp_customize->get_setting( 'blogname' )->transport          = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport   = 'postMessage';
+	$wp_customize->get_setting( 'header_textcolor' )->transport  = 'postMessage';
 
-	 //  =============================
-	 //  = Header Settings       =
-	 //  =============================
-	$wp_customize->get_section('header_image')->title = esc_html__('Header Image Settings', 'glowline');
-	$wp_customize->get_section('header_image')->priority = 25;
-	//  =header  Background Type  =
-	 $wp_customize->add_setting('header_background_type', array(
-		'default'        => 'color',
-		'sanitize_callback' => 'sanitize_text_field',
-	));
-	$wp_customize->add_control( 'header_background_type', array(
-		'settings' => 'header_background_type',
-		'label'   => __('Background','glowline'),
-		'section' => 'header_image',
-		'priority' => 5,
+	$wp_customize->selective_refresh->add_partial( 'blogname', array(
+		'selector' => '.site-title a',
+		'render_callback' => 'glowline_customize_partial_blogname',
+	) );
+	$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+		'selector' => '.site-description',
+		'render_callback' => 'glowline_customize_partial_blogdescription',
+	) );
+
+	/**
+	 * Custom colors.
+	 */
+	$wp_customize->add_setting( 'colorscheme', array(
+		'default'           => 'light',
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'glowline_sanitize_colorscheme',
+	) );
+
+	$wp_customize->add_setting( 'colorscheme_hue', array(
+		'default'           => 250,
+		'transport'         => 'postMessage',
+		'sanitize_callback' => 'absint', // The hue is stored as a positive integer.
+	) );
+
+	$wp_customize->add_control( 'colorscheme', array(
 		'type'    => 'radio',
-		'choices'     => array(
-			'color'   => 'Color',
-			'image'   => 'Image',
+		'label'    => __( 'Color Scheme', 'glowline' ),
+		'choices'  => array(
+			'light'  => __( 'Light', 'glowline' ),
+			'dark'   => __( 'Dark', 'glowline' ),
+			'custom' => __( 'Custom', 'glowline' ),
 		),
-	));
-   $wp_customize->add_setting('theme_bg_color', array(
-		'default'           => '#f5f5f5',
-		'sanitize_callback' => 'sanitize_hex_color',
-		'capability'        => 'edit_theme_options',
-	));
-	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'theme_bg_color', array(
-		'label'    => __('Background Color', 'glowline'),
-		'section'  => 'header_image',
-		'settings' => 'theme_bg_color',
+		'section'  => 'colors',
+		'priority' => 5,
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'colorscheme_hue', array(
+		'mode' => 'hue',
+		'section'  => 'colors',
 		'priority' => 6,
+	) ) );
 
-	)));
-
-
-
-	//  =============================
-	//  = Colors      =
-	//  =============================
-
-	 $wp_customize->get_section('colors')->title = esc_html__('Colors', 'glowline');
-	 $wp_customize->add_setting('theme_color', array(
-		'default'           => '#bdb76b',
-		'sanitize_callback' => 'sanitize_hex_color',
-		'capability'        => 'edit_theme_options',
-	));
-	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'theme_color', array(
-		'label'    => __('Theme Color', 'glowline'),
-		'section'  => 'colors',
-		'settings' => 'theme_color',
-		'priority' => 6,
-
-	)));
-	$wp_customize->add_setting('header_bg_color', array(
-		'default'           => '#ffffff',
-		'sanitize_callback' => 'sanitize_hex_color',
-		'capability'        => 'edit_theme_options',
-	));
-	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'header_bg_color', array(
-		'label'    => __('Header Background Color', 'glowline'),
-		'section'  => 'colors',
-		'settings' => 'header_bg_color',
-		'priority' => 7,
-
-	)));
-	$wp_customize->add_setting('strapline', array(
-		'default'           => '#bdb76b',
-		'sanitize_callback' => 'sanitize_hex_color',
-		'capability'        => 'edit_theme_options',
-	));
-	$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'strapline', array(
-		'label'    => __('Strapline Color', 'glowline'),
-		'section'  => 'colors',
-		'settings' => 'strapline',
-		'priority' => 8,
-
-	)));
 
 
 	//  =============================
