@@ -41,7 +41,7 @@ function glowline_grid_thumb($glowline_grid_layout, $thumb_crop=true){
 add_action( 'after_setup_theme', 'glowline_register_theme_menu' );
 
 function glowline_register_theme_menu() {
-	register_nav_menu( 'primary', __( 'Primary Menu', 'glowline' ) );
+	register_nav_menu( 'menu-1', __( 'Primary Menu', 'glowline' ) );
 }
 
 
