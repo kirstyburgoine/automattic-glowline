@@ -80,7 +80,7 @@
 
 // Show-hide Scroll to top & move-to-top arrow
 
-	jQuery("body").prepend("<a id='move-to-top' class='animate ' href='#header'><i class='fa fa-angle-up'></i></a>");
+	jQuery("body").prepend("<a id='move-to-top' class='animate ' href='#masthead'><i class='fa fa-angle-up'></i></a>");
 
 	var scrollDes = 'html,body';
 	/*Opera does a strange thing if we use 'html' and 'body' together so my solution is to do the UA sniffing thing*/
