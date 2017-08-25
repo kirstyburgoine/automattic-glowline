@@ -244,13 +244,6 @@ include( get_template_directory() . '/inc/jetpack.php' );
 
 include( get_template_directory() . '/inc/widget.php' );
 
-include( get_template_directory() . '/inc/custom-customizer.php' );
-
-include( get_template_directory() . '/inc/customizer.php' );
-
-include( get_template_directory() . '/inc/custom-style.php' );
-
-
 // ---------------------------------------------------------
 // Keep Grid Settings in - Nice feature and compliments masonry
 
