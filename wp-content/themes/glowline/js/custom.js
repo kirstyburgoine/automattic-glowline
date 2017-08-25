@@ -135,12 +135,12 @@
 // Responsive Navigation
 
 /* <![CDATA[ */
-var themehunk_customscript = {"responsive":"1","nav_menu":"secondary"};
+var glowline_customscript = {"responsive":"1","nav_menu":"secondary"};
 /* ]]> */
-if (themehunk_customscript.responsive && themehunk_customscript.nav_menu != 'none') {
+if (glowline_customscript.responsive && glowline_customscript.nav_menu != 'none') {
 		jQuery(document).ready(function($){
 				// merge if two menus exist
-				if (themehunk_customscript.nav_menu == 'both') {
+				if (glowline_customscript.nav_menu == 'both') {
 						jQuery('.navigation').not('.mobile-menu-wrapper').find('.menu').clone().appendTo('.mobile-menu-wrapper').hide();
 				}
 
