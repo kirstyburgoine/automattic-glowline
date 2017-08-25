@@ -224,9 +224,6 @@ function glowline_custom_image( $media, $post_id, $args ) {
 add_filter( 'jetpack_images_get_images', 'glowline_custom_image', 10, 3 );
 
 
-
-
-
 // Enable threaded comments here instead of header
 function enable_threaded_comments(){
     if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -234,6 +231,7 @@ function enable_threaded_comments(){
     }
 }
 add_action('get_header', 'enable_threaded_comments');
+
 
 
 include( get_template_directory() . '/inc/static-function.php' );
