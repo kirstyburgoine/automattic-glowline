@@ -2111,7 +2111,7 @@ a img.aligncenter {
     bottom: 10px;
     width: 40px;
     z-index: 999;
-    background: #D1626F;
+    background: darkkhaki;
     transition: all 0.25s linear;
     -webkit-backface-visibility: hidden;
     text-align: center;
