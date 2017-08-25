@@ -49,8 +49,116 @@ Text Domain: glowline
         11.7 - max-width: 550px
         11.8 - max-width: 480px
 
+/*--------------------------------------------------------------*\
+ *  0 - Theme Colours
+\*--------------------------------------------------------------*/
+
+/* Strapline */
+.main-heading .main-logo h1 a,
+.main-heading .main-logo p,
+header.smaller .header .logo h1 a,
+.header h1.site-title a {
+    color: #fff;
+}
+
+/* theme colour */
+.navigation .menu > li > a:hover,
+.navigation ul li a:hover,
+header #main-menu-wrapper .menu-item-has-children > a:hover:after,
+.navigation ul ul.sub-menu a:hover,
+.navigation ul ul.sub-menu a:link:hover {
+    color: darkkhaki;
+}
+
+.slider-post-category span a,
+.post-category a,
+.social-icon i.fa:hover,
+.post-share i.fa:hover,
+.footer-copyright .social-icon ul li a:hover,
+.header-bottom .social-icon ul li a:hover,
+.content .post-content .read-more a,
+.slider-post-content .read-more-slider a,
+.owl-controls .owl-prev:before,
+.owl-controls .owl-next:before,
+a.more-link, ul li a:hover,
+#commentform #commentSubmit,
+ol.commentlist li .reply a,
+.th-widget-recent-post .th-recent-post h5 a:hover,
+.widget .twitter-user a,
+.standard-layout .format-link h2,
+.format-quote blockquote p:before,
+.widget .tagcloud a:hover, .tagcloud a:hover,
+.content .post-content .description p a,
+.page-description p a,
+.multipage-links span,
+.content .navigation.post-navigation .nav-links a:hover,
+.content,
+#searchform .icon-search:before,
+.content .post .post-meta .post-author a:hover {
+    color: darkkhaki;
+}
 
 
+.single-meta .post-category:hover,
+.slider-post-category span:hover,
+
+.single-meta .post-category:focus,
+.slider-post-category span:focus {
+border: 1px solid darkkhaki;
+}
+
+.format-quote blockquote,
+.single .format-quote blockquote,
+.single blockquote {
+     border-left: 5px solid darkkhaki;
+}
+.home-category .cat-img-wrap:hover {
+    background:<?php echo glowline_hex2rgba($theme_color, 0.7); ?>;
+    border: 1px solid darkkhaki;
+}
+#move-to-top,
+.slider-post-content .read-more-slider a:hover,
+.widget .search-submit:hover,
+.search .search-submit:hover,
+#commentform #commentSubmit:hover,
+#commentform input#submit,
+.tagcloud a,
+.mc4wp-form input[type=submit],
+input[type=submit]:hover,
+.pagination .nav-links a:hover,
+.pagination .nav-links span:hover {
+    background: darkkhaki;
+    border: 1px solid darkkhaki;
+}
+
+.page blockquote {
+    border-left: 0.3rem solid darkkhaki;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .navigation ul .current-menu-item > a,
+    .navigation ul li a:hover {
+        background: darkkhaki;
+    }
+}
+
+::selection{
+    background: darkkhaki;
+}
+
+::-moz-selection{
+    background: darkkhaki;
+}
+
+.widget .search-submit,
+.slider-post-content .read-more-slider a,
+.widget .search-submit,
+.search .search-submit,
+#commentform #commentSubmit,
+ul.paging li a, {
+    border: 1px solid darkkhaki;
+}
 
 /*--------------------------------------------------------------*\
  *  1 - Resets
@@ -423,7 +531,7 @@ header .logo img{
     -o-transition: height 0.3s;
     transition: height 0.3s;
     border-bottom: 1px solid rgba(190, 190, 190, 0.11);
-    /* background-color: rgba(255, 255, 255,1); */
+    background-color: rgba(255, 255, 255,1);
 }
 
 .nav-wrapper .logo h1 {
@@ -1216,7 +1324,7 @@ form.search-form{
 
 
 .tagcloud a:hover,
-.tagcloud a:focus { background: #ccc!important; border: 1px solid #eee; }
+.tagcloud a:focus { background: #ccc; border: 1px solid #eee; }
 
 .textwidget {
     letter-spacing: 1px;
