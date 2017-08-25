@@ -244,10 +244,11 @@ include( get_template_directory() . '/inc/jetpack.php' );
 
 include( get_template_directory() . '/inc/widget.php' );
 
+include( get_template_directory() . '/inc/customizer.php' );
+
+
 // ---------------------------------------------------------
 // Keep Grid Settings in - Nice feature and compliments masonry
-
-
 
 global $glowline_grid_layout;
 $glowline_grid_layout = get_theme_mod('dynamic_grid','standard-layout');
