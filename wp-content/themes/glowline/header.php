@@ -18,8 +18,8 @@
 <body <?php body_class(); ?>>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'glowline' ); ?></a>
 
-	<!-- Main Header Start TODO: Decide whether to leave image inline here or use img tag -->
-	<header class="header-wrapper clearfix" id="masthead" style="background-image: url('<?php header_image(); ?>');">
+	<!-- Main Header Start -->
+	<header class="header-wrapper clearfix" id="masthead" style="background-image: url(<?php if ( '' !== get_header_image() ) { echo esc_url( get_header_image() ); } ?>);" role="banner">
 
 		<!-- Top Header Start -->
 		<div class="nav-wrapper">
