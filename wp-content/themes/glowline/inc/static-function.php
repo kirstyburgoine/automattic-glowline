@@ -11,7 +11,7 @@
 // Grid thumbnail functions
 // ----------------------------------------------------------------------
 // ----------------------------------------------------------------------
-function glowline_grid_thumb( $glowline_grid_layout, true===$thumb_crop ) {
+function glowline_grid_thumb( $glowline_grid_layout, $thumb_crop=true ) {
 	if ( $thumb_crop ) {
 		switch ( $glowline_grid_layout ) {
 			case 'two-grid-layout':
