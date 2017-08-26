@@ -18,18 +18,20 @@
 
 	</header>
 
-	<?php if ( has_post_thumbnail() ) : ?>
+	<?php
+	if ( has_post_thumbnail() ) : ?>
 		<div class="post-img">
-			<a href="<?php esc_url( the_permalink() ); ?>"> <?php the_post_thumbnail('post-thumbnails'); ?></a>
+			<a href="<?php esc_url( the_permalink() ); ?>"> <?php the_post_thumbnail( 'post-thumbnails' ); ?></a>
 		</div>
-	<?php endif; ?>
+	<?php
+	endif; ?>
 
 	<?php the_content( sprintf(
 		wp_kses(
-			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', '_s' ),
+			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
 				array(
 					'span' => array(
-						'class' => array('read-more'),
+						'class' => array( 'read-more' ),
 					),
 				)
 			),

@@ -3,17 +3,19 @@
 * @package Glowline
 * The template for displaying posts in the dynamic grid view
 */
+
+global $glowline_grid_layout;
 ?>
-<?php global $glowline_grid_layout; ?>
 
-<li id="post-<?php the_ID(); ?>" <?php post_class('grid-post'); ?> >
+<li id="post-<?php the_ID(); ?>" <?php post_class( 'grid-post' ); ?> >
 
-	<?php if ( has_post_thumbnail() ) : ?>
+	<?php
+	if ( has_post_thumbnail() ) : ?>
 		<div class="post-img">
-			<a href="<?php esc_url( the_permalink() ); ?>"><?php glowline_grid_thumb($glowline_grid_layout); ?></a>
+			<a href="<?php esc_url( the_permalink() ); ?>"><?php glowline_grid_thumb( $glowline_grid_layout ); ?></a>
 		</div>
-	<?php endif; ?>
-
+	<?php
+	endif; ?>
 
 	<div class="post-content">
 
@@ -40,7 +42,7 @@
 						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
 						array(
 							'span' => array(
-								'class' => array('read-more'),
+								'class' => array( 'read-more' ),
 							),
 						)
 					),

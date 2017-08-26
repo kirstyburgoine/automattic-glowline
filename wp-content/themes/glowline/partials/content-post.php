@@ -11,7 +11,7 @@
 
 		<?php glowline_posted_in(); ?>
 
-		<?php the_title('<h1 class="post-title">', '</h1>'); ?>
+		<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 
 		<?php glowline_posted_on(); ?>
 
@@ -19,11 +19,13 @@
 
 	<div class="post-content clearfix"><!-- Content Start -->
 
-		<?php if ( has_post_thumbnail() ) : ?>
-		<div class="post-img">
-			<a href="<?php esc_url( the_permalink() ); ?>"> <?php the_post_thumbnail('post-thumbnails'); ?></a>
-		</div>
-		<?php endif; ?>
+		<?php
+		if ( has_post_thumbnail() ) : ?>
+			<div class="post-img">
+				<a href="<?php esc_url( the_permalink() ); ?>"> <?php the_post_thumbnail( 'post-thumbnails' ); ?></a>
+			</div>
+		<?php
+		endif; ?>
 
 		<div class="description">
 			<?php the_content(); ?>
@@ -39,7 +41,6 @@
 				'link_after'  => '</span>',
 			) );
 			?>
-
 	</div><!-- Content End -->
 
 	<?php glowline_single_bottom_meta(); ?>
