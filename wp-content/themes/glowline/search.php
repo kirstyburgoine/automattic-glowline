@@ -15,22 +15,19 @@ get_header(); ?>
 		<header class="page-header">
 			<h1 class="page-title">
 				<?php
-					printf( esc_html__( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Search Results for: %s', 'glowline' ), '<span>' . get_search_query() . '</span>' );
 				?>
 			</h1>
 		</header><!-- .page-header //-->
 
 		<div class="content clearfix">
+
 			<?php
 			global $glowline_grid_layout;
-			global $glowline_masonry_layout;?>
+			global $glowline_masonry_layout;
+			?>
 
-			<ul class="<?php
-				echo esc_attr($glowline_grid_layout, 'glowline');
-				// TODO: Check not equal is allowed here. Makes more sense than creating new varibale to cover all other layouts
-				if ( 'standard-layout' !== $glowline_grid_layout ) :
-					echo esc_attr( $glowline_masonry_layout, 'glowline' );
-				endif;?> posts-container" id="posts-container">
+			<ul class="<?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="posts-container">
 
 				<?php
 				/* Start the Loop */
