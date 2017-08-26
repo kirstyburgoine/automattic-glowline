@@ -8,6 +8,7 @@
 
 // ----------------------------------------------------------------------
 // Grid thumbnail functions
+// TODO: Not sure this is needed now?
 // ----------------------------------------------------------------------
 function glowline_grid_thumb( $glowline_grid_layout, $thumb_crop=true ) {
 	if ( $thumb_crop ) {
@@ -38,23 +39,7 @@ function glowline_grid_thumb( $glowline_grid_layout, $thumb_crop=true ) {
 function glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout ) {
 
 	if ( 'masonry-enabled' === $glowline_masonry_layout && 'standard-layout' !== $glowline_grid_layout ) {
-		switch ( $glowline_grid_layout ) {
-			case 'two-grid-layout':
-				echo 'two-grid-layout masonry-enabled';
-				break;
-
-			case 'three-grid-layout':
-				echo 'three-grid-layout masonry-enabled';
-				break;
-
-			case 'four-grid-layout':
-				echo 'four-grid-layout masonry-enabled';
-				break;
-
-			case 'five-grid-layout':
-				echo 'five-grid-layout masonry-enabled';
-				break;
-		}
+		echo $glowline_grid_layout . ' masonry-enabled';
 	} else {
 		echo $glowline_grid_layout;
 	}
