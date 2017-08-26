@@ -68,7 +68,7 @@ function glowline_setup() {
 
 
 	/* Set the image size by cropping the image */
-	add_theme_support('post-thumbnails');
+	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'glowline-custom-slider-thumb', 790, 450, true );
 	add_image_size( 'glowline-custom-two-grid-thumb', 562, 320, true );
 	//custom-three-grid-thumb and custom-releted-post-thumb
@@ -186,17 +186,20 @@ function glowline_get_featured_posts() {
 // More stuff for Jetpack featured content to replace custom slider
 function glowline_has_featured_posts( $minimum = 1 ) {
 
-    if ( is_paged() )
+    if ( is_paged() ) {
         return false;
+    }
 
     $minimum = absint( $minimum );
     $featured_posts = apply_filters( 'glowline_get_featured_posts', array() );
 
-    if ( ! is_array( $featured_posts ) )
+    if ( ! is_array( $featured_posts ) ) {
         return false;
+    }
 
-    if ( $minimum > count( $featured_posts ) )
+    if ( $minimum > count( $featured_posts ) ) {
         return false;
+    }
 
     return true;
 }
@@ -226,11 +229,11 @@ add_filter( 'jetpack_images_get_images', 'glowline_custom_image', 10, 3 );
 
 // Enable threaded comments here instead of header
 function enable_threaded_comments(){
-    if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-       wp_enqueue_script('comment-reply');
+    if ( is_singular() AND comments_open() AND ( get_option( 'thread_comments' ) == 1 ) ) {
+       wp_enqueue_script( 'comment-reply' );
     }
 }
-add_action('get_header', 'enable_threaded_comments');
+add_action( 'get_header', 'enable_threaded_comments' );
 
 
 
@@ -249,8 +252,8 @@ include( get_template_directory() . '/inc/customizer.php' );
 // Keep Grid Settings in - Nice feature and compliments masonry
 
 global $glowline_grid_layout;
-$glowline_grid_layout = get_theme_mod('dynamic_grid','standard-layout');
+$glowline_grid_layout = get_theme_mod( 'dynamic_grid', 'standard-layout' );
 
 global $glowline_masonry_layout;
-$glowline_masonry_layout = get_theme_mod('masonry_grid','masonry-disabled');
+$glowline_masonry_layout = get_theme_mod( 'masonry_grid', 'masonry-disabled' );
 
