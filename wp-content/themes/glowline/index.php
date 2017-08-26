@@ -16,19 +16,16 @@ get_header(); ?>
 	<div class="container clearfix">
 
 		<?php
-		if (have_posts()) : ?>
+		if ( have_posts() ) : ?>
 
 		<div class="content clearfix" id="content">
 
 			<?php
 			global $glowline_grid_layout;
-			global $glowline_masonry_layout; ?>
+			global $glowline_masonry_layout;
+			?>
 
-			<ul class="<?php
-				echo esc_attr($glowline_grid_layout, 'glowline');
-				if ( 'standard-layout' !== $glowline_grid_layout ) :
-					echo esc_attr( $glowline_masonry_layout, 'glowline' );
-				endif;?> posts-container" id="posts-container">
+			<ul class="<?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="posts-container">
 
 				<?php
 				/* Start the Loop */

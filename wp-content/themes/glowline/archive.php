@@ -22,20 +22,18 @@ get_header(); ?>
 
 		<div class="content clearfix" id="content">
 
+
 			<?php
 			global $glowline_grid_layout;
-			global $glowline_masonry_layout; ?>
+			global $glowline_masonry_layout;
+			?>
 
-			<ul class="<?php
-				echo esc_attr($glowline_grid_layout, 'glowline');
-				if ( 'standard-layout' !== $glowline_grid_layout ) :
-					echo esc_attr( $glowline_masonry_layout, 'glowline' );
-				endif;?> posts-container" id="posts-container">
+			<ul class="<?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="posts-container">
 
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
-					if ( 'standard-layout' == $glowline_grid_layout ):
+					if ( 'standard-layout' === $glowline_grid_layout ) :
 					/*
 					 * If layout is standard, include the Post-Format-specific template for the content.
 					 */
