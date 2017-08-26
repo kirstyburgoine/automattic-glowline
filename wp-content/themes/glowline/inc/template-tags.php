@@ -6,13 +6,10 @@
  */
 
 // ----------------------------------------------------------------------
-// Prints HTML with meta information for the current post-date/time to
-// replace Glowline's custom.
+// Prints HTML with meta information for the current post-date/time
 // ----------------------------------------------------------------------
-if ( ! function_exists( 'glowline_posted_on' ) ) :
-	/**
+if ( ! function_exists( 'glowline_posted_on' ) ) {
 
-	 */
 	function glowline_posted_on() {
 
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -34,21 +31,20 @@ if ( ! function_exists( 'glowline_posted_on' ) ) :
 
 		echo '<span class="post-meta">' . $posted_on . '</span>';
 	}
-endif;
-
+}
 
 // ----------------------------------------------------------------------
 // Prints HTML with meta information for the categories. Posted in
 // seperate function as the_title() splits these in content.php
 // the_title() is needed to output differently in different places so
-// simpler to keeo seperate
+// simpler to keep seperate
 // ----------------------------------------------------------------------
-if ( ! function_exists( 'glowline_posted_in' ) ) :
+if ( ! function_exists( 'glowline_posted_in' ) ) {
 
 	function glowline_posted_in() {
 
 		// Get the title of the current category
-		$current_category = single_cat_title("", false);
+		$current_category = single_cat_title( "", false );
 		// Get the ID of the current category
 		$category_id = get_cat_ID( $current_category );
 		// Get the URL of this category too
@@ -56,7 +52,7 @@ if ( ! function_exists( 'glowline_posted_in' ) ) :
 
 		if ( true == $current_category ) :
 			$posted_in = sprintf(
-				'<a href="' . esc_url( $category_link ) . '" title="' . esc_attr($current_category) .'">' . esc_html($current_category) .'</a>'
+				'<a href="' . esc_url( $category_link ) . '" title="' . esc_attr( $current_category ) .'">' . esc_html( $current_category ) .'</a>'
 			);
 		else :
 			$posted_in = the_category(', ');
@@ -65,13 +61,12 @@ if ( ! function_exists( 'glowline_posted_in' ) ) :
 		echo '<span class="post-category">' . $posted_in . '</span>';
 
 	}
-endif;
+}
 
 // ----------------------------------------------------------------------
-// Comments and auth card combined into one used in content.php
+// Comments and auth card combined into one. Used in content.php
 // ----------------------------------------------------------------------
-
-if ( ! function_exists( 'glowline_content_bottom_meta' ) ) :
+if ( ! function_exists( 'glowline_content_bottom_meta' ) ) {
 
 	function glowline_content_bottom_meta() {
 
@@ -84,7 +79,7 @@ if ( ! function_exists( 'glowline_content_bottom_meta' ) ) :
 			echo '<span class="post-comment">';
 				comments_popup_link(
 					sprintf(
-						__('Leave a Comment','glowline'), __('1 Comment','glowline'), __('% Comments','glowline')
+						__( 'Leave a Comment','glowline' ), __( '1 Comment','glowline' ), __( '% Comments','glowline' )
 					)
 				);
 			echo '</span>';
@@ -109,15 +104,16 @@ if ( ! function_exists( 'glowline_content_bottom_meta' ) ) :
 		echo '</footer>';
 
 	}
-endif;
+}
+
 
 function glowline_userpic(){
 	// ----------------------------------------------------------------------
 	// Gets the author pic used above
 	// ----------------------------------------------------------------------
-	$address = get_the_author_meta('user_email');
-	$nicname = get_the_author_meta('user_nicename');
-	$pic = get_avatar( $address, 30, '', $nicname);
+	$address = get_the_author_meta( 'user_email' );
+	$nicename = get_the_author_meta( 'user_nicename' );
+	$pic = get_avatar( $address, 30, '', $nicename );
 	return $pic;
 
 }
@@ -125,8 +121,7 @@ function glowline_userpic(){
 // ----------------------------------------------------------------------
 // Tags, Jetpack author, edit link combined into one used in content-post.php
 // ----------------------------------------------------------------------
-
-if ( ! function_exists( 'glowline_single_bottom_meta' ) ) :
+if ( ! function_exists( 'glowline_single_bottom_meta' ) ) {
 
 	function glowline_single_bottom_meta() {
 
@@ -138,7 +133,7 @@ if ( ! function_exists( 'glowline_single_bottom_meta' ) ) :
 		$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'glowline' ) );
 		if ( $tags_list ) {
 			/* translators: 1: list of tags. */
-			printf( '<div class="tagcloud">' . esc_html__( '%1$s', 'glowline' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+			printf( '<div class="tagcloud">' . esc_html__( '%1$s', 'glowline' ) . '</div>', $tags_list );
 			echo '<div class="clearfix"></div>';
 		}
 
@@ -154,7 +149,7 @@ if ( ! function_exists( 'glowline_single_bottom_meta' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', '_s' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'glowline' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -170,5 +165,4 @@ if ( ! function_exists( 'glowline_single_bottom_meta' ) ) :
 		echo '</footer>';
 	}
 
-endif;
-?>
+}

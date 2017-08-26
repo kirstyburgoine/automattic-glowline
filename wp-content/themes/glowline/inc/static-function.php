@@ -11,8 +11,8 @@
 // Grid thumbnail functions
 // ----------------------------------------------------------------------
 // ----------------------------------------------------------------------
-function glowline_grid_thumb($glowline_grid_layout, $thumb_crop=true){
-	if ( $thumb_crop ) :
+function glowline_grid_thumb( $glowline_grid_layout, true===$thumb_crop ) {
+	if ( $thumb_crop ) {
 		switch ( $glowline_grid_layout ) {
 			case 'two-grid-layout':
 				the_post_thumbnail('glowline-custom-two-grid-thumb');
@@ -30,7 +30,5 @@ function glowline_grid_thumb($glowline_grid_layout, $thumb_crop=true){
 				the_post_thumbnail('glowline-custom-five-grid-thumb');
 				break;
 		}
-	endif;
+	}
 }
-
-?>

@@ -1,7 +1,14 @@
 <?php
+/**
+ * Set theme colors for third party services.
+ *
+ * @package Glowline
+ */
+
 function glowline_wpcom_setup() {
+
 	global $themecolors;
-	// Set theme colors for third party services.
+
 	if ( ! isset( $themecolors ) ) {
 		$themecolors = array(
 			'bg'     => '',
@@ -12,4 +19,5 @@ function glowline_wpcom_setup() {
 		);
 	}
 }
+
 add_action( 'after_setup_theme', 'glowline_wpcom_setup' );
