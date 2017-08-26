@@ -23,15 +23,11 @@ global $glowline_grid_layout;
 
 			<header class="post-header">
 
-				<span class="post-category">
-					<?php echo the_category(', '); ?>
-				</span>
+				<?php glowline_posted_in(); ?>
 
 				<?php the_title( '<div class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><h2 class="entry-title">', '</h2></a></div>' ); ?>
 
 				<?php glowline_posted_on(); ?>
-
-				<?php glowline_comment_number(); ?>
 
 			</header>
 
