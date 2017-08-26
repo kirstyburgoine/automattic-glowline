@@ -11,12 +11,12 @@ get_header(); ?>
 	<div class="container clearfix">
 
 		<?php
-		if (have_posts()) : ?>
+		if ( have_posts() ) : ?>
 
 			<div class="content clearfix" id="content">
 
 				<?php
-				while (have_posts()) : the_post();
+				while ( have_posts() ) : the_post();
 
 					get_template_part( 'partials/content', 'page' );
 

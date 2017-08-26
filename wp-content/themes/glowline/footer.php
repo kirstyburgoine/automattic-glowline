@@ -6,7 +6,7 @@
 ?>
 		<div class="footer-wrapper" id="footer">
 
-			<?php get_sidebar('footer'); ?>
+			<?php get_sidebar( 'footer' ); ?>
 
 		</div> <!-- closes .footer-wrapper //-->
 

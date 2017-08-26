@@ -41,9 +41,9 @@
 							<?php
 							wp_nav_menu(
 								array(
-								'theme_location' => 'menu-1',
-								'container' => false,
-								'menu_class' => 'menu',
+								'theme_location'  => 'menu-1',
+								'container'       => false,
+								'menu_class'      => 'menu',
 								'menu_id'         => 'menu-1',
 								'fallback_cb'     => 'glowline_wp_page_menu'
 								)

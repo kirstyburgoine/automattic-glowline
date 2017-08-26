@@ -14,7 +14,7 @@ get_header(); ?>
 			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'glowline' ); ?></h1>
 		</header><!-- .page-header -->
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class('content'); ?>>
+		<article id="post-<?php the_ID(); ?>" <?php post_class( 'content' ); ?>>
 
 			<div class="page-description">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'glowline' ); ?></p>

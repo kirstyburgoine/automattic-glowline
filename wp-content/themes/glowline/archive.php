@@ -22,7 +22,6 @@ get_header(); ?>
 
 		<div class="content clearfix" id="content">
 
-
 			<?php
 			global $glowline_grid_layout;
 			global $glowline_masonry_layout;
