@@ -87,7 +87,6 @@ ol.commentlist li .reply a,
 .widget .twitter-user a,
 .standard-layout .format-link h2,
 .format-quote blockquote p:before,
-.widget .tagcloud a:hover, .tagcloud a:hover,
 .content .post-content .description p a,
 .page-description p a,
 .multipage-links span,
@@ -113,7 +112,7 @@ border: 1px solid darkkhaki;
      border-left: 5px solid darkkhaki;
 }
 .home-category .cat-img-wrap:hover {
-    background:<?php echo glowline_hex2rgba($theme_color, 0.7); ?>;
+    background: rgba(darkkhaki, 0.7);
     border: 1px solid darkkhaki;
 }
 #move-to-top,
@@ -122,11 +121,11 @@ border: 1px solid darkkhaki;
 .search .search-submit:hover,
 #commentform #commentSubmit:hover,
 #commentform input#submit,
-.tagcloud a,
 .mc4wp-form input[type=submit],
 input[type=submit]:hover,
 .pagination .nav-links a:hover,
-.pagination .nav-links span:hover {
+.pagination .nav-links span:hover,
+.widget .tagcloud a:hover, .tagcloud a:hover {
     background: darkkhaki;
     border: 1px solid darkkhaki;
 }
@@ -1316,15 +1315,15 @@ form.search-form{
     display: inline-block;
     margin-top: 2px;
     margin-bottom: 2px;
-    background: #bdb76b;
+    background-color: #F3F3F3;;
     color:#fff;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-
+/*
 .tagcloud a:hover,
-.tagcloud a:focus { background: #ccc; border: 1px solid #eee; }
+.tagcloud a:focus { background: #ccc; border: 1px solid #eee; }*/
 
 .textwidget {
     letter-spacing: 1px;
@@ -1341,11 +1340,10 @@ form.search-form{
     margin: 0 2px 4px;
     border: 1px solid #eee;
 }
-.widget .tagcloud a:hover,
+/*.widget .tagcloud a:hover,
 .widget .tagcloud a:focus{
-    background: #999;
     border: 1px solid #eee;
-}
+}*/
 .widget li a {
     letter-spacing: 1px;
 }
