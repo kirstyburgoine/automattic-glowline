@@ -1395,7 +1395,7 @@ form.search-form{
 
 .tagcloud a {
     color:#5a5d5a;
-    font-size: 9px;
+    font-size: 9px!important; /* used to here to override inline styles added dynamically */
     padding: 8px 13px;
     border: 1px solid #eee;
     display: inline-block;
@@ -2220,34 +2220,34 @@ a img.aligncenter {
 }
 
 #infinite-handle span {
-    font-size: 1.11em;
-    font-weight: bold;
-
+    font-size: 15px;
     display: block;
-
     width: 260px;
     margin: 1.5em auto;
     padding: .75em 1.5em;
-
     text-align: center;
     text-transform: uppercase;
-
-    color: #fff;
-    background: #81699b;
+    color: #bdb76b;
+    border: solid 1px #bdb76b;
+    background-color: #fff;
+    transition: all 0.25s linear;
 }
 #infinite-handle span:after {
     display: inline;
-
     margin-left: 5px;
-
     content: '\2192';
+}
+
+#infinite-handle:hover span,
+#infinite-handle:focus span {
+    background-color: rgba(189,183,107, 0.6);
+    color: #fff;
 }
 
 .infinite-loader {
     width: 34px;
     margin: 2.6em auto;
 }
-
 
 /* */
 .pagination{
@@ -2355,8 +2355,8 @@ a img.aligncenter {
 
 #move-to-top:hover,
 #move-to-top:focus {
-    background-color: #ccc;
-    border: solid 1px #999;
+    background-color: rgba(189,183,107, 0.6);
+    border: solid 1px #bdb76b;
 }
 /* Back to top end */
 
@@ -2455,10 +2455,7 @@ a img.aligncenter {
     }
 
     /* ------------------------------------------------------ *\
-     * ------------------------------------------------------ *
      * Grid Layout
-     *
-     * ------------------------------------------------------ *
     \* ------------------------------------------------------ */
     .three-grid-layout .post,
     .four-grid-layout .post,
@@ -2542,18 +2539,18 @@ a img.aligncenter {
     .footer-wrapper .social-icon {
         display:block;
     }
-    .related-post{
+    .related-post {
         margin-top:30px;
     }
-    .sl-related-thumbnail h3{
+    .sl-related-thumbnail h3 {
         line-height:22px;
     }
 
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 550px) {
 
-    .featured-posts .main-logo h1 a{
+    .featured-posts .main-logo h1 a {
         font-size: 40px;
     }
 
