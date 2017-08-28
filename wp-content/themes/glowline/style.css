@@ -379,6 +379,10 @@ ul.paging li a, {
  *      4.1 Header Area - General
 \*--------------------------------------------------------------*/
 
+.header-wrapper{
+  padding-top: 120px;
+}
+
 /* -- Home specific -- */
 .home .header-wrapper {
     background-color: #fff;
@@ -389,11 +393,11 @@ ul.paging li a, {
     overflow:hidden;
 }
 
-.home .header .logo{
+.home .header .logo {
     display:none;
 }
 
-.home .header-wrapper.smaller .header .logo{
+.home .header-wrapper.smaller .header .logo {
     display:block;
 }
 
@@ -847,6 +851,39 @@ header .logo img{
  *  4 - Page Elements
  *      4.4 Layout Options
 \*--------------------------------------------------------------*/
+
+.container {
+  max-width:1170px;
+  min-width:240px;
+  margin-right: auto;
+  margin-left:auto;
+  position:relative;
+  clear:both;
+}
+
+.admin-bar .nav-wrapper,
+.admin-bar .nav-wrapper.small {
+  top: 32px;
+}
+
+.content-fullwidth {
+    width: 100%;
+    max-width: 1170px;
+}
+
+.content {
+    padding-top: 9px;
+    width: 70%;
+    max-width: 800px;
+    float: left;
+}
+
+.sidebar-wrapper{
+    max-width: 400px;
+    width: 27.5%;
+    float: right;
+}
+
 
 /* ------------------------------ *\
  * Standard Layout
@@ -2381,6 +2418,10 @@ a img.aligncenter {
 
 /****Slider media start*******/
 @media screen and (max-width: 865px) {
+
+    .header-wrapper{
+        padding-top: 57px;
+    }
 
     .header-wrapper .owl-carousel .owl-item img {
         width: 100%;
