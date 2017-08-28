@@ -9,7 +9,8 @@ if ( ! function_exists( 'glowline_jetpack_setup' ) ) {
 
 	 	add_theme_support( 'infinite-scroll', array(
 	    	'container'      => 'posts-container',
-	    	'footer_widgets' => array('sidebar-2', 'sidebar-3', 'sidebar-4',),
+	    	'render'		 => 'glowline_infinite_scroll_render',
+	    	'footer_widgets' => array( 'sidebar-2', 'sidebar-3', 'sidebar-4', ),
 	    	'footer'         => 'footer',
 		) );
 
@@ -51,12 +52,22 @@ if ( ! function_exists( 'glowline_jetpack_setup' ) ) {
 add_action( 'after_setup_theme', 'glowline_jetpack_setup' );
 
 
+//add_action( 'init', 'glowline_infinite_scroll_init' );
 
-// add_action( 'init', 'glowline_infinite_scroll_init' );
+function glowline_infinite_scroll_render() {
 
-// function glowline_infinite_scroll_render() {
-//     get_template_part( 'partials/content', 'grid' );
-// }
+	global $glowline_grid_layout;
+
+    while ( have_posts() ) {
+		the_post();
+		if ( 'standard-layout' === $glowline_grid_layout ) {
+			get_template_part( 'partials/content', get_post_format() );
+		} else {
+			get_template_part( 'partials/content', 'grid' );
+		}
+	}
+}
+
 
 /**
  * Return early if Author Bio is not available.

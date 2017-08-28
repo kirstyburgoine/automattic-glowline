@@ -126,7 +126,7 @@ input[type=submit]:hover,
 .pagination .nav-links a:hover,
 .pagination .nav-links span:hover,
 .widget .tagcloud a:hover, .tagcloud a:hover {
-    background-color: rgba(189,183,107, 100, 0.6);
+    background-color: rgba(189,183,107, 0.6);
     border: 1px solid darkkhaki;
     color: #fff;
     text-decoration: none;
@@ -204,7 +204,9 @@ a, a:hover, a:focus {
 }
 .clearfix:after,.clearfix:before, .container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.clearfix:after, .container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}
 html{
-    font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;
+    font-family:sans-serif;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
 }
 
 span.edit-link a.post-edit-link {
@@ -2221,13 +2223,18 @@ a img.aligncenter {
 /* Back to top end */
 
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
     content: " ";
     display: table;
 }
 
-.clearfix:after { clear: both }
-.clearfix { *zoom: 1  }
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
 
 
 /* ------------------------------------------------------ *\

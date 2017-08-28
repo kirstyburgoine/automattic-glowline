@@ -30,7 +30,7 @@ get_header(); ?>
 				<?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
-					if ( 'standard-layout' == $glowline_grid_layout ):
+					if ( 'standard-layout' === $glowline_grid_layout ):
 					/*
 					 * If layout is standard, include the Post-Format-specific template for the content.
 					 */
