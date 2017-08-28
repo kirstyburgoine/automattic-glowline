@@ -50,13 +50,13 @@ if ( ! function_exists( 'glowline_posted_in' ) ) {
 		// Get the URL of this category too
 		$category_link = get_category_link( $category_id );
 
-		if ( true == $current_category ) :
+		if ( true === $current_category ) {
 			$posted_in = sprintf(
 				'<a href="' . esc_url( $category_link ) . '" title="' . esc_attr( $current_category ) .'">' . esc_html( $current_category ) .'</a>'
 			);
-		else :
-			$posted_in = the_category(', ');
-		endif;
+		} else {
+			$posted_in = get_the_category_list(', ');
+		}
 
 		echo '<span class="post-category">' . $posted_in . '</span>';
 

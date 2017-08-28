@@ -245,26 +245,8 @@ pre {
     color: #fff;
 }
 
-/* theme colour */
-/*.navigation .menu > li > a:hover,
-.navigation ul li a:hover,*/
-.navigation a:hover
-.navigation .menu-item-has-children > a:hover:after, /* arrow down */
-/*.navigation ul ul.sub-menu a:hover,*/
-/*.navigation ul ul.sub-menu a:link:hover*/
 
-.social-icon i.fa:hover,
-.post-share i.fa:hover,
-.footer-copyright .social-icon ul li a:hover,
-.header-bottom .social-icon ul li a:hover,
-.more-link, ul li a:hover,
-.th-widget-recent-post .th-recent-post h5 a:hover,
-.single-bottom-meta a:hover,
-.standard-bottom-meta a:hover,
-.nav-links a:hover {
-    color: darkkhaki;
-}
-
+/* All default colours */
 .slider-post-category span a,
 .post-category a,
 .content .post-content .read-more a,
@@ -280,26 +262,38 @@ ol.commentlist li .reply a,
 .page-description p a,
 .multipage-links span,
 #searchform .icon-search:before {
-    color: darkkhaki;
+    color: #bdb76b;
 }
 
 
-.single-meta .post-category:hover,
-.slider-post-category span:hover,
-
-.single-meta .post-category:focus,
-.slider-post-category span:focus {
-border: 1px solid darkkhaki;
+.navigation a:hover
+.navigation .menu-item-has-children > a:hover:after, /* arrow down */
+.post-header a:hover,
+.widget a:hover,
+.single-bottom-meta a:hover,
+.standard-bottom-meta a:hover,
+.nav-links a:hover,
+.navigation a:focus
+.navigation .menu-item-has-children > a:focus:after, /* arrow down */
+.post-header a:focus,
+.widget a:focus,
+.single-bottom-meta a:focus,
+.standard-bottom-meta a:focus,
+.nav-links a:focus {
+    color: #bdb76b;
 }
+
+
+
 
 .format-quote blockquote,
 .single .format-quote blockquote,
 .single blockquote {
-     border-left: 5px solid darkkhaki;
+     border-left: 5px solid #bdb76b;
 }
 .home-category .cat-img-wrap:hover {
     background-color: rgba(189,183,107, 100, 0.6);
-    border: 1px solid darkkhaki;
+    border: 1px solid #bdb76b;
 }
 #move-to-top,
 .slider-post-content .read-more-slider a:hover,
@@ -313,29 +307,29 @@ input[type=submit]:hover,
 .pagination .nav-links span:hover,
 .widget .tagcloud a:hover, .tagcloud a:hover {
     background-color: rgba(189,183,107, 0.6);
-    border: 1px solid darkkhaki;
+    border: 1px solid #bdb76b;
     color: #fff;
     text-decoration: none;
 }
 
 .page blockquote {
-    border-left: 0.3rem solid darkkhaki;
+    border-left: 0.3rem solid #bdb76b;
 }
 
 /*@media screen and (max-width: 1024px) {
 
     .navigation ul .current-menu-item > a,
     .navigation ul li a:hover {
-        background-color: darkkhaki;
+        background-color: #bdb76b;
     }
 }*/
 
 ::selection{
-    background-color: darkkhaki;
+    background-color: #bdb76b;
 }
 
 ::-moz-selection{
-    background-color: darkkhaki;
+    background-color: #bdb76b;
 }
 
 .widget .search-submit,
@@ -344,7 +338,7 @@ input[type=submit]:hover,
 .search .search-submit,
 #commentform #commentSubmit,
 ul.paging li a, {
-    border: 1px solid darkkhaki;
+    border: 1px solid #bdb76b;
 }
 
 /*--------------------------------------------------------------*\
@@ -476,7 +470,7 @@ header .logo img{
     font-variant: normal;
     text-transform: none;
     content: "\f002";
-    color: darkkhaki;
+    color: #bdb76b;
     font-size: 1.25em;
     position: absolute;
     right: 5px;
@@ -493,7 +487,7 @@ header .logo img{
     padding: 5px;
     float: right;
     border:none;
-    border-bottom: 1px solid darkkhaki;
+    border-bottom: 1px solid #bdb76b;
     -webkit-transition: width .7s;
     -moz-transition: width .7s;
     transition: width .7s;
@@ -669,7 +663,7 @@ header .logo img{
 .toggle-menu .active > .toggle-caret .fa:before { content: "\f068" }
 
 
-
+/* Mobile Menu Stuff */
 @media screen and (max-width:1024px) {
 
     .main-searchform-wrap {
@@ -906,6 +900,11 @@ header .logo img{
     -webkit-transition: all ease-in-out .2s;
     transition: all ease-in-out .2s;
 }
+.posts-container .post,
+.posts-container .grid-post{
+  clear: none;
+  margin:30px 0;
+}
 .post-content {
     padding: 17px 3% 35px;
 }
@@ -917,17 +916,17 @@ header .logo img{
 .post-content .post-header .post-title a:focus h2 {
     text-decoration: underline;
 }
-/* Category lists in header */
-.post-content .post-category a,
+/* Category lists in post header */
+.post-category a,
 .single-meta .post-category,
 .slider-post-category span {
     text-align: center;
-    border-bottom: 1px solid #ddd;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 12px;
     letter-spacing: .7px;
     padding: 2px;
+    border-bottom: 1px solid #bdb76b;
 }
 /* need on single otherwise border-bottom is full width... */
 .single-meta .post-category {
@@ -936,23 +935,25 @@ header .logo img{
     line-height: initial;
 }
 
-.post-content .post-category a:hover,
-.post-content .post-category a:focus,
+.post-category a:hover,
+.post-category a:focus,
 .single-meta .post-category:hover,
 .slider-post-category span:hover,
 .single-meta .post-category:focus,
 .slider-post-category span:focus {
-    border: 1px solid #ddd;
     text-decoration: none;
+    border: 1px solid #bdb76b;
 }
-.post-content .post-category:hover a,
-.post-content .post-category:focus a,
+.post-category:hover a,
+.post-category:focus a,
 .single-meta .post-category:hover a,
 .slider-post-category span:hover a,
 .single-meta .post-category:focus a,
 .slider-post-category span:focus a {
     text-decoration: none;
 }
+
+
 
 /* Date and comments beneath header */
 .post-content .post-comment {
@@ -1254,7 +1255,7 @@ tfoot tr #prev a{
     float:left;
 }
 .widget .twitter-user a {
-    color: darkkhaki;
+    color: #bdb76b;
 }
 .widget .twitter-list .twitter-timestamp {
     font-style: italic;
@@ -1474,6 +1475,7 @@ input[type=submit] {
     width: 29%;
     float: left;
     padding-left: 25px;
+    text-align: center;
 }
 .slider-post-category {
     margin-top: 20px;
@@ -1489,7 +1491,7 @@ input[type=submit] {
     margin: 20px 0;
 }
 .slider-post-content .read-more-slider a {
-    border: 1px solid darkkhaki;
+    border: 1px solid #bdb76b;
     padding: 9px 15px;
     display: inline-block;
 }
@@ -1525,13 +1527,13 @@ ul.slider-post-social.social-icon li.share-text,
     content: "\f104";
     font-family: fontawesome;
     font-size: 50px;
-    color: darkkhaki;
+    color: #bdb76b;
 }
 .owl-controls .owl-next:before {
     content: "\f105";
     font-family: fontawesome;
     font-size: 50px;
-    color: darkkhaki;
+    color: #bdb76b;
 }
 .slider .owl-controls .owl-next{
 right: 0%;
@@ -1588,13 +1590,13 @@ color: transparent;
     content: "\f104";
     font-family: fontawesome;
     font-size: 50px;
-    color: darkkhaki;
+    color: #bdb76b;
 }
 .owl-controls .owl-next:before {
     content: "\f105";
     font-family: fontawesome;
     font-size: 50px;
-    color: darkkhaki
+    color: #bdb76b
 }
 .owl-controls .owl-prev {
     top: 44%;
@@ -2024,7 +2026,7 @@ p.comment-form-url{
     margin-top:20px;
 }
 .comment-form input[type="submit"] {
-    background-color: darkkhaki;
+    background-color: #bdb76b;
     color: #fff;
     border: none;
     padding: 10px;
@@ -2337,7 +2339,7 @@ a img.aligncenter {
     bottom: 10px;
     width: 40px;
     z-index: 999;
-    background-color: darkkhaki;
+    background-color: #bdb76b;
     transition: all 0.25s linear;
     -webkit-backface-visibility: hidden;
     text-align: center;

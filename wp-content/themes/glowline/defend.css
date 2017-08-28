@@ -211,7 +211,4 @@ ul.load_post.standard-layout {
 .content  .post-last{
   margin-right:0px!important;
 }
-.content .post, .content .grid-post{
-  clear: none;
-  margin-bottom:70px;
-}
+
