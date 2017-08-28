@@ -140,16 +140,16 @@ input[type=submit]:hover,
 
     .navigation ul .current-menu-item > a,
     .navigation ul li a:hover {
-        background: darkkhaki;
+        background-color: darkkhaki;
     }
 }
 
 ::selection{
-    background: darkkhaki;
+    background-color: darkkhaki;
 }
 
 ::-moz-selection{
-    background: darkkhaki;
+    background-color: darkkhaki;
 }
 
 .widget .search-submit,
@@ -166,7 +166,7 @@ ul.paging li a, {
 \*--------------------------------------------------------------*/
 
 body{
-	background:#ffffff;
+	background-color: #ffffff;
 	font-family:"Lato", sans-serif;
 	color:#5A5D5A;
 	font-size:15px;
@@ -182,12 +182,12 @@ body{
 
 ::-moz-selection { /* Code for Firefox */
     color: #ffffff;
-    background: #bdb76b;
+    background-color: #bdb76b;
 }
 
 ::selection {
     color: #ffffff;
-    background: #bdb76b;
+    background-color: #bdb76b;
 }
 .main-searchform-wrap input[type=submit] {
     display:none;
@@ -282,7 +282,7 @@ td, th {
 	padding: 3px;
 }
 th {
-	background: #cccccc;
+	background-color: #cccccc;
 }
 hr {
     border: 1px solid #ddd;
@@ -489,7 +489,7 @@ header .logo img{
 
 .main-searchform-wrap input[type=search]  {
     width: 60px;
-    background: transparent;
+    background-color: transparent;
     color: #333;
     margin: 0px 27px 0 0;
     padding: 5px;
@@ -506,7 +506,7 @@ header .logo img{
 .main-searchform-wrap input[type=search]:active {
     width: 150px;
     color: #333;
-    background: #fff;
+    background-color: #fff;
     border-color: #999;
 }
 
@@ -610,7 +610,7 @@ header .logo img{
     z-index: 400;
     font-size: 12px;
     color: #798189;
-    background: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(188, 180, 180, 0.1);
 }
 
@@ -631,7 +631,7 @@ header .logo img{
     position: relative;
     width: 228px;
     border-left: 0;
-    background: transparent;
+    background-color: transparent;
     border-right: 0;
     border-radius: 0;
     border-bottom: 1px solid rgba(188, 180, 180, 0.1);
@@ -1106,7 +1106,7 @@ header .logo img{
     text-align: center;
 }
  .footer-wrapper tbody>tr>td>a {
-     background: #CDCDCD;
+     background-color: #CDCDCD;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -1118,7 +1118,7 @@ header .logo img{
 }
 .widget #wp-calendar th {
     text-align:center;
-    background: #F9F9F9;
+    background-color: #F9F9F9;
 }
 .widget #wp-calendar caption {
     letter-spacing: 1px;
@@ -1267,12 +1267,12 @@ form.search-form{
 }
 .mc4wp-form {
     margin: 1em 0;
-    background: #ececec;
+    background-color: #ececec;
     padding: 30px;
     overflow: hidden;
 }
 .footer .mc4wp-form {
-    background: none;
+    background-color: none;
 }
 .mc4wp-form label {
     display:none!important;
@@ -1288,7 +1288,7 @@ form.search-form{
     padding-top: 10px;
     color: white;
     transition: all 0.25s linear;
-    background: #bdb76b;
+    background-color: #bdb76b;
     margin-top: 15px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -1322,10 +1322,6 @@ form.search-form{
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
-/*
-.tagcloud a:hover,
-.tagcloud a:focus { background: #ccc; border: 1px solid #eee; }*/
 
 .textwidget {
     letter-spacing: 1px;
@@ -1712,7 +1708,7 @@ ul.single-social-icon li a:hover {
     left: 10px;
     position: absolute;
     padding: 6px 14px;
-    background: rgba(47, 46, 46, 0.22);
+    background-color: rgba(47, 46, 46, 0.22);
 }
 .blog .post.format-video .post-img a:before{
     content: "\f04b";
@@ -1751,7 +1747,7 @@ ul.single-social-icon li a:hover {
 }
 /***Link post format***/
 .standard-layout .format-link {
-    background: #ececec;
+    background-color: #ececec;
     min-width: 100%;
 }
 .standard-layout .format-link h2 {
@@ -1821,7 +1817,7 @@ ol.comment-list li .comment-body {
     position: relative;
     border: 1px solid rgba(221, 221, 221, 0.35);
     padding: 10px 10px 5px 15px;
-    background: transparent;
+    background-color: transparent;
     border-radius: 3px;
 }
 ol.comment-list li .comment-author a:link,
@@ -1974,7 +1970,7 @@ p.comment-form-url{
     position: relative;
     border: 1px solid rgba(221, 221, 221, 0.35);
     padding: 10px 10px 5px 10px;
-    background: transparent;
+    background-color: transparent;
     border-radius: 3px;
     margin: 30px 0;
 }
@@ -2074,7 +2070,7 @@ a img.aligncenter {
 }
 
 .wp-caption {
-    background: #fff;
+    background-color: #fff;
     border: 1px solid #f0f0f0;
     max-width: 96%; /* Image does not overflow the content area */
     padding: 5px 3px 10px;
@@ -2148,13 +2144,13 @@ a img.aligncenter {
     font-family: FontAwesome;
     content: "\f101";
     line-height:10px;
-  position: relative;
+    position: relative;
     top: 2px;
-  padding-left: 7px;
+    padding-left: 7px;
 }
 .nav-links .nav-previous {
     float: left;
-  padding:10px 0;
+    padding:10px 0;
 }
 .nav-links .nav-previous a:before,
 .content #main .pagination .older a:before{
@@ -2162,9 +2158,9 @@ a img.aligncenter {
     font-family: FontAwesome;
     content: "\f100";
     line-height:10px;
-  position: relative;
+    position: relative;
     top: 2px;
-  padding-right: 7px;
+    padding-right: 7px;
 }
 .multipage-links {
     text-align: right;
@@ -2203,7 +2199,7 @@ a img.aligncenter {
     bottom: 10px;
     width: 40px;
     z-index: 999;
-    background: darkkhaki;
+    background-color: darkkhaki;
     transition: all 0.25s linear;
     -webkit-backface-visibility: hidden;
     text-align: center;
@@ -2219,7 +2215,7 @@ a img.aligncenter {
 
 #move-to-top:hover,
 #move-to-top:focus {
-    background: #ccc;
+    background-color: #ccc;
     border: solid 1px #999;
 }
 /* Back to top end */
@@ -2254,10 +2250,10 @@ a img.aligncenter {
         float: right;
     }
     .navigation ul ul li:hover{
-        background:none!important;
+        background-color:none!important;
     }
     .navigation ul ul li a:hover{
-        background:#bdb76b!important;
+        background-color:#bdb76b!important;
     }
     .home .main-searchform-wrap {
         top: 17px;
@@ -2269,11 +2265,11 @@ a img.aligncenter {
     header.smaller .navigation nav.navigation ul { padding: 30px 0!important; }
     .navigation nav.navigation .menu{ padding:0px; }
     .navigation { width: 100%; border: none !important; display: none; }
-    .navigation ul .current-menu-item > a, .navigation ul li a:hover {   background: #bdb76b; color: #fff!important; }
-    .navigation .menu a, .navigation .menu .fa > a, .navigation .menu .fa > a { color: #000!important; background: transparent; }
-    .navigation .menu { display: block!important; float: none; background: transparent; margin-bottom: 45px; margin-right: 0; }
+    .navigation ul .current-menu-item > a, .navigation ul li a:hover {   background-color: #bdb76b; color: #fff!important; }
+    .navigation .menu a, .navigation .menu .fa > a, .navigation .menu .fa > a { color: #000!important; background-color: transparent; }
+    .navigation .menu { display: block!important; float: none; background-color: transparent; margin-bottom: 45px; margin-right: 0; }
     .navigation ul ul { visibility: visible!important; opacity: 1!important; position: relative; left: 0!important; border: 0; width: 100%; }
-    .navigation ul li li { background: transparent; border: 0; }
+    .navigation ul li li { background-color: transparent; border: 0; }
     nav { height: auto }
     nav li, .navigation ul li li { width: 100%!important; float: left; position: relative; }
     .navigation ul li:after { display: none }
@@ -2291,7 +2287,7 @@ a img.aligncenter {
         text-indent: 15px;
         float: right;
         border: none;
-        background: none;
+        background-color: none;
         -webkit-transition: all 0.5s ease-out;
         -moz-transition: all 0.5s ease-out;
         -o-transition: all 0.5s ease-out;
@@ -2303,16 +2299,16 @@ a img.aligncenter {
         content: "\f00d";
     }
 	.header-wrapper header.smaller .toggle-mobile-menu {color: #000;}
-    .navigation ul .sfHover a, .navigation ul li:hover, .navigation ul .sfHover ul li { background: transparent }
+    .navigation ul .sfHover a, .navigation ul li:hover, .navigation ul .sfHover ul li { background-color: transparent }
 
     .mobile-menu-active .main-container, .mobile-menu-active #site-header, .mobile-menu-active .footer { left: 300px; transition: left 500ms ease; }
     .navigation.mobile-menu-wrapper { display: block; position: fixed; top: 0px; left: -300px; width: 300px; height: 100%; background-color: #fff; border-right: 1px solid rgba(0, 0, 0, 0.2)!important; overflow: auto; transition: left 500ms ease; -webkit-backface-visibility: hidden;   z-index: 99999;}
     .mobile-menu-active .navigation.mobile-menu-wrapper { left: 0 }
     .navigation ul li { width: 100%; display: block; }
-    .navigation ul li:hover { background: none }
+    .navigation ul li:hover { background-color: none }
     .navigation ul li a, .navigation ul ul a { padding: 9px 0; width: 100%; border: none; }
     .navigation ul ul { position: static; width: 100%; border: none; }
-    .navigation ul ul li { background: none; width: 100%; }
+    .navigation ul ul li { background-color: none; width: 100%; }
     .navigation i { display: inline }
     .navigation ul ul a { padding: 9px 18px !important }
     .navigation ul ul ul a { padding: 9px 27px !important }
