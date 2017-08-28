@@ -7,7 +7,7 @@ Description: Glowline is graceful and beautiful WordPress theme. It has live cus
 Version: 1.1.4-wpcom
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags:accessibility-ready, author-bio, blog-excerpts, custom-background, custom-colors, custom-header, custome-menu, featured-images, flexible-header, full-width-template, multiple-menus, post-formats, post-slider, rtl-language-support, site-logo, sticky-post, testimonials, theme-options, threaded-comments, translation-ready, announcement, art, artwork, blog, business, cartoon, collaboration, craft, design, education, fashion, food, gaming, holiday, hotel, journal, lifestream, magazine, music, nature, news, outdoors, photoblogging, photography, portfolio, productivity, real-estate, school, scrapbooking, seasonal, sports, travel, tumblelog, video, wedding, black, blue, brown, dark, gray, green, light, orange, pink, purple, red, silver, tan, white, yellow, responsive-layout, right-sidebar, one-column, two-columns
+Tags:accessibility-ready, author-bio, blog-excerpts, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, multiple-menus, post-formats, post-slider, rtl-language-support, site-logo, sticky-post, testimonials, theme-options, threaded-comments, translation-ready, announcement, art, artwork, blog, business, cartoon, collaboration, craft, design, education, fashion, food, gaming, holiday, hotel, journal, lifestream, magazine, music, nature, news, outdoors, photoblogging, photography, portfolio, productivity, real-estate, school, scrapbooking, seasonal, sports, travel, tumblelog, video, wedding, black, blue, brown, dark, gray, green, light, orange, pink, purple, red, silver, tan, white, yellow, responsive-layout, right-sidebar, one-column, two-columns
 
 Text Domain: glowline
 */
@@ -695,12 +695,9 @@ header .logo img{
         content: "\f00d";
     }
 
-
-
     .logged-in  .navigation {
         padding: 45px 0;
     }
-
 
     .navigation.mobile-menu-wrapper {
         display: block;
@@ -710,7 +707,7 @@ header .logo img{
         width: 300px;
         height: 100%;
         background-color: #fff;
-        border-right: 1px solid rgba(0, 0, 0, 0.2)!important;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
         overflow: auto;
         transition: left 500ms ease;
         -webkit-backface-visibility: hidden;
@@ -746,8 +743,8 @@ header .logo img{
         border: none;
         text-align: left;
         text-indent: 25px;
-        border-bottom: 1px solid rgba(193, 193, 193, 0.2)!important;
-        width: 100%!important;
+        border-bottom: 1px solid rgba(193, 193, 193, 0.2);
+        width: 100%;
         box-sizing: border-box;
     }
 
@@ -780,19 +777,32 @@ header .logo img{
     }
 
     .navigation ul ul {
-        visibility: visible!important;
-        opacity: 1!important;
-        position: relative;
-        left: 0!important;
+        visibility: visible;
+        opacity: 1;
         border: none;
         width: 100%;
         position: static;
     }
 
-    .navigation ul ul li { background-color: none; width: 100%; }
-    .navigation ul ul a { padding: 9px 18px !important }
-    .navigation ul ul ul a { padding: 9px 27px !important }
-    .navigation ul ul ul ul a { padding: 9px 36px !important }
+    /* Quite specific here to counter desktop */
+    .navigation ul ul li {
+        background-color: none;
+        width: 100%;
+    }
+    .navigation ul ul.sub-menu a {
+        padding: 9px 18px;
+        width: 100%;
+        text-indent: 30px;
+    }
+    .navigation ul ul.sub-menu ul.sub-menu a {
+        padding: 9px 27px;
+    }
+    .navigation ul ul.sub-menu ul.sub-menu ul.sub-menu a {
+        padding: 9px 36px;
+    }
+    .navigation ul ul li:last-child a {
+        border-bottom: 1px solid rgba(188, 180, 180, 0.1);
+    }
 }
 
 /*--------------------------------------------------------------*\
@@ -997,7 +1007,7 @@ header .logo img{
 .posts-container .post-author-pic img {
     vertical-align: middle;
     max-width: 80px;
-    margin: 0 10px!important;
+    margin: 0 10px;
     border-radius: 100%;
 }
 
@@ -1545,14 +1555,16 @@ ul.slider-post-social.social-icon li.share-text,
     right: 1%;
     cursor: pointer;
 }
+
+.slider .owl-controls .owl-prev,
+.slider .owl-controls .owl-next{
+    opacity: 0;
+    transition: all 0.25s linear;
 }
-.slider .owl-controls .owl-prev, .slider .owl-controls .owl-next{
-opacity: 0;
-transition: all 0.25s linear;
-}
-.slider div#owl-demo:hover .owl-prev, .slider div#owl-demo:hover .owl-next{
-opacity: 1;
-color: transparent;
+.slider div#owl-demo:hover .owl-prev,
+.slider div#owl-demo:hover .owl-next{
+    opacity: 1;
+    color: transparent;
 }
 
 
@@ -1574,10 +1586,6 @@ color: transparent;
 .owl-carousel .owl-controls .owl-dot.active span:before{
     content: "\f192";
     font-family: fontAwesome;
-}
-
-.owl-carousel .owl-controls .owl-dots {
-    display: none!important;
 }
 .owl-carousel .owl-controls .owl-nav .owl-prev span:before{
 
@@ -1620,20 +1628,12 @@ color: transparent;
     display: inline-block;
     width: 30%;
 }
-.content .post .post-meta .post-author{
+.content .post .post-meta .post-author {
     text-align: right;
 }
-.content .post .post-meta .post-date{
+.content .post .post-meta .post-date {
     text-align: center;
 }
-
-.posts-container .post-author-pic img {
-    vertical-align: middle;
-    max-width: 80px;
-    margin: 0 10px!important;
-    border-radius: 100%;
-}
-
 .single span.byline {
     padding-right: 5px;
 }
@@ -1720,7 +1720,7 @@ ul.single-social-icon li a:hover {
 }
 .gallery .gallery-item{
     padding:5px;
-    margin:0px!important;
+    margin:0px;
     display: inline-block;
     vertical-align: top;
 }
@@ -1728,13 +1728,13 @@ ul.single-social-icon li a:hover {
     max-width:100%
 }
 .gallery-columns-3 .gallery-item {
-    width: 33.33333333%!important;
+    width: 33.33333333%;
 }
 .gallery-columns-5 .gallery-item {
     width: 20%;
 }
 .gallery-columns-6 .gallery-item {
-    width: 16.6666666667%!important;
+    width: 16.6666666667%;
 }
 
 
@@ -1848,7 +1848,7 @@ ol.comment-list li .comment-body {
 ol.comment-list li .comment-author a:link,
 ol.comment-list li .comment-author a:visited {
     color: #5a5d5a;
-    text-decoration: none !important;
+    text-decoration: none;
     font-size: 13px;
 }
 .comment-author.vcard {
@@ -1900,7 +1900,7 @@ ol.comment-list li .comment-meta {
 }
 ol.comment-list li .comment-meta a {
     color: #858484;
-    text-decoration: none !important;
+    text-decoration: none;
     display: inline-block;
 }
 ol.comment-list li p {
@@ -2373,12 +2373,12 @@ a img.aligncenter {
         padding-left: 0px;
     }
     .owl-controls .owl-prev {
-        top: 0%!important;
+        top: 1%;
         text-align: right;
         right: 35px;
     }
     .owl-controls .owl-next {
-        top: 0%!important;
+        top: 1%;
     }
 
 }
@@ -2451,33 +2451,18 @@ a img.aligncenter {
 
 
 
-    .footer .footer-widget-column.footer-widget-3column-active .widget{
+    .footer .footer-widget-column.footer-widget-3column-active .widget {
         width: 46%;
     }
     .footer .footer-widget-column .widget:nth-child(2n+1) {
         clear: both;
     }
-    ul.boxed-layout .post .post-img,
-    .content .boxed-layout .post  {
-        width: auto;
-        max-width: 585px;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    ul.boxed-layout .post .post-content {
-        width: 100%;
-    	padding: 17px 4% 35px!important;
-    }
 
-    .home-category-wrapper ul li .home-category {
-        width: 50%;
-    }
-    .home-category-wrapper .home-category .home-cat-title h4 {
-        font-size:14px;
-    }
-    .single-bottom-meta, .footer-wrapper .site-info {
+    .single-bottom-meta,
+    .footer-wrapper .site-info {
         text-align: center;
     }
+
     .single .tagcloud,
     .single .post-content .post-share,
     .footer-wrapper .site-info .copyright,
@@ -2489,9 +2474,11 @@ a img.aligncenter {
     .footer-wrapper .social-icon {
         display:block;
     }
+
     .related-post {
         margin-top:30px;
     }
+
     .sl-related-thumbnail h3 {
         line-height:22px;
     }
@@ -2537,6 +2524,7 @@ a img.aligncenter {
     .standard-layout .format-link h2 {
         padding: 25px 25px 25px 25px;
     }
+
     li.sl-related-thumbnail,
     .related-post li:last-child {
         width: 100%;

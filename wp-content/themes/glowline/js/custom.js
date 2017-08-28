@@ -15,6 +15,7 @@
 		lazyLoad : true,
 		singleItem:true,
 		autoHeight:true,
+		dots:false,
 		loop:true
 	});
 
