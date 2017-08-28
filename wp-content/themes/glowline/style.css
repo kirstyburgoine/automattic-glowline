@@ -2112,6 +2112,71 @@ a img.aligncenter {
  *      9.1 - Pagination
 \* ------------------------------------------------------ */
 
+/*--------------------------------------------------------------
+11.0 Infinite scroll
+--------------------------------------------------------------*/
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+    /* Theme Footer (when set to scrolling) */
+    display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+
+#infinite-footer .container {
+    border: none;
+    background: #222;
+}
+
+#infinite-footer .blog-credits,
+#infinite-footer .blog-credits a,
+#infinite-footer .blog-credits a:hover,
+#infinite-footer .blog-info a,
+#infinite-footer .blog-info a:hover {
+    color: #aaa;
+}
+
+#infinite-handle {
+    padding: 0;
+    text-align: center;
+}
+
+#infinite-handle span {
+    font-size: 1.11em;
+    font-weight: bold;
+
+    display: block;
+
+    width: 260px;
+    margin: 1.5em auto;
+    padding: .75em 1.5em;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: #81699b;
+}
+#infinite-handle span:after {
+    display: inline;
+
+    margin-left: 5px;
+
+    content: '\2192';
+}
+
+.infinite-loader {
+    width: 34px;
+    margin: 2.6em auto;
+}
+
+
+/* */
 .pagination{
     text-align: right;
     margin-bottom: 70px;
