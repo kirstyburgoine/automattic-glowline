@@ -218,6 +218,7 @@ pre {
     border:none;
     border-left: 5px solid #bdb76b;
 }
+
 .single .format-quote blockquote p:before,
 .single  blockquote p:before{
     content:"";
@@ -286,11 +287,7 @@ ol.commentlist li .reply a,
 
 
 
-.format-quote blockquote,
-.single .format-quote blockquote,
-.single blockquote {
-     border-left: 5px solid #bdb76b;
-}
+
 .home-category .cat-img-wrap:hover {
     background-color: rgba(189,183,107, 100, 0.6);
     border: 1px solid #bdb76b;
@@ -1523,6 +1520,7 @@ ul.slider-post-social.social-icon li.share-text,
     margin: 4px;
     font-size: 15px;
 }
+
 .owl-controls .owl-prev:before {
     content: "\f104";
     font-family: fontawesome;
@@ -1535,11 +1533,18 @@ ul.slider-post-social.social-icon li.share-text,
     font-size: 50px;
     color: #bdb76b;
 }
-.slider .owl-controls .owl-next{
-right: 0%;
+.owl-controls .owl-prev {
+    top: 44%;
+    position: absolute;
+    left: 1%;
+    cursor: pointer;
 }
-.slider .owl-controls .owl-prev{
-left: 0%;
+.owl-controls .owl-next {
+    top: 44%;
+    position: absolute;
+    right: 1%;
+    cursor: pointer;
+}
 }
 .slider .owl-controls .owl-prev, .slider .owl-controls .owl-next{
 opacity: 0;
@@ -1570,10 +1575,7 @@ color: transparent;
     content: "\f192";
     font-family: fontAwesome;
 }
-.owl-carousel .owl-controls .owl-nav .owl-prev,
-.owl-carousel .owl-controls .owl-nav .owl-next{
-    color: #ddd;
-}
+
 .owl-carousel .owl-controls .owl-dots {
     display: none!important;
 }
@@ -1585,31 +1587,7 @@ color: transparent;
     font-family: fontAwesome;
 }
 
-/****Single page slider start*******/
-.owl-controls .owl-prev:before {
-    content: "\f104";
-    font-family: fontawesome;
-    font-size: 50px;
-    color: #bdb76b;
-}
-.owl-controls .owl-next:before {
-    content: "\f105";
-    font-family: fontawesome;
-    font-size: 50px;
-    color: #bdb76b
-}
-.owl-controls .owl-prev {
-    top: 44%;
-    position: absolute;
-    left: 1%;
-    cursor: pointer;
-}
-.owl-controls .owl-next {
-    top: 44%;
-    position: absolute;
-    right: 1%;
-    cursor: pointer;
-}
+
 
 /*--------------------------------------------------------------*\
  *  7 - Content
@@ -1765,38 +1743,7 @@ ul.single-social-icon li a:hover {
  *      7.5 - Post Formats
 \*--------------------------------------------------------------*/
 
-/***Grid format icon post layout***/
-.blog .post.format-video .post-img,
-.blog .post.post_format-post-format-gallery .post-img,
-.blog .post.format-audio .post-img,
-.blog .post.format-link .post-img{
-    position:relative;
-}
-.blog .post.format-video .post-img a:before,
-.blog .post.post_format-post-format-gallery .post-img a:before,
-.blog .post.format-audio .post-img a:before,
-.blog .post.format-link .post-img a:before{
-    font-family:fontawesome;
-    font-size: 22px;
-    color: #fff;
-    top: 10px;
-    left: 10px;
-    position: absolute;
-    padding: 6px 14px;
-    background-color: rgba(47, 46, 46, 0.22);
-}
-.blog .post.format-video .post-img a:before{
-    content: "\f04b";
-}
-.blog .post.post_format-post-format-gallery .post-img a:before{
-    content: "\f03e";
-}
-.blog .post.format-audio .post-img a:before{
-    content: "\f025";
-}
-.blog .post.format-link .post-img a:before{
-    content: "\f0c1";
-}
+
 /***Post format start here***/
 .video-wrapper {
     padding-top: 56.25%;
@@ -1804,7 +1751,7 @@ ul.single-social-icon li a:hover {
     position: relative;
         margin-bottom: 10px;
 }
-  .video-wrapper iframe{
+.video-wrapper iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -1849,12 +1796,12 @@ ul.single-social-icon li a:hover {
     border-bottom: 1px solid #eee;
     border-right: 1px solid #eee;
 }
-.format-quote blockquote p{
+.format-quote blockquote p {
     font-size: 26px;
     line-height: 40px;
     font-style: italic;
 }
-.format-quote blockquote a{
+.format-quote blockquote a {
     font-style: normal;
 }
 .format-quote blockquote p:before {
@@ -1872,6 +1819,9 @@ ul.single-social-icon li a:hover {
 \*--------------------------------------------------------------*/
 .comments-area {
     margin: 0;
+    clear: both;
+    padding-top: 35px;
+
 }
 ol.comment-list {
     clear: both;
@@ -1977,7 +1927,7 @@ ol.comment-list li .reply a {
     padding-right: 20px;
     letter-spacing: 1px;
 }
-ol.comment-list li ul.children {
+ol.comment-list li ol.children {
     list-style: none;
     text-indent: 0;
     margin: 1em 0 0;

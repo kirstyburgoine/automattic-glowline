@@ -4,8 +4,41 @@
  * At the end of the project the grunt task to determine if CSS is bein used should discount everything in here
  */
 
+/***Grid format icon post layout***/
+/*.blog .post.format-video .post-img,
+.blog .post.post_format-post-format-gallery .post-img,
+.blog .post.format-audio .post-img,
+.blog .post.format-link .post-img{
+    position:relative;
+}
+.blog .post.format-video .post-img a:before,
+.blog .post.post_format-post-format-gallery .post-img a:before,
+.blog .post.format-audio .post-img a:before,
+.blog .post.format-link .post-img a:before{
+    font-family:fontawesome;
+    font-size: 22px;
+    color: #fff;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    padding: 6px 14px;
+    background-color: rgba(47, 46, 46, 0.22);
+}
+.blog .post.format-video .post-img a:before{
+    content: "\f04b";
+}
+.blog .post.post_format-post-format-gallery .post-img a:before{
+    content: "\f03e";
+}
+.blog .post.format-audio .post-img a:before{
+    content: "\f025";
+}
+.blog .post.format-link .post-img a:before{
+    content: "\f0c1";
+}*/
+
 /* Don't think these layouts are an option now... */
-ul.boxed-layout .post .post-img  {
+/*ul.boxed-layout .post .post-img  {
     width:50%;
     float:left;
     display:inline-block;
@@ -32,10 +65,10 @@ ul.boxed-layout .post .post-content .post-content-inner {
 }
 ul.boxed-layout li.post:nth-child(even) .post-img {
     float: right;
-}
+}*/
 /* box list Post Style end */
 /* list Post Style start */
-ul.list-layout .post .post-img {
+/*ul.list-layout .post .post-img {
     width: 40%;
     float: left;
     display: inline-block;
@@ -73,7 +106,7 @@ ul.list-layout .post .post-content .read-more{
     border: none;
     padding: 0;
 }
-
+*/
 
 /* list Post Style end */
 /*.home-category-wrapper .category-title {
