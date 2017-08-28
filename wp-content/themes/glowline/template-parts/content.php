@@ -6,7 +6,7 @@
  */
 ?>
 
-<li id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 
 	<header class="post-header">
 
@@ -43,4 +43,4 @@
 
 	<?php glowline_content_bottom_meta(); ?>
 
-</li>
+</article>

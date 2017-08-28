@@ -8,7 +8,7 @@ if ( ! function_exists( 'glowline_jetpack_setup' ) ) {
 	function glowline_jetpack_setup() {
 
 	 	add_theme_support( 'infinite-scroll', array(
-	    	'container'      => 'posts-container',
+	    	'container'      => 'content',
 	    	'render'		 => 'glowline_infinite_scroll_render',
 	    	'footer_widgets' => array( 'sidebar-2', 'sidebar-3', 'sidebar-4', ),
 	    	'footer'         => 'footer',
@@ -61,9 +61,9 @@ function glowline_infinite_scroll_render() {
     while ( have_posts() ) {
 		the_post();
 		if ( 'standard-layout' === $glowline_grid_layout ) {
-			get_template_part( 'partials/content', get_post_format() );
+			get_template_part( 'template-parts/content', get_post_format() );
 		} else {
-			get_template_part( 'partials/content', 'grid' );
+			get_template_part( 'template-parts/content', 'grid' );
 		}
 	}
 }
@@ -74,7 +74,7 @@ function glowline_infinite_scroll_render() {
  */
 function glowline_author_bio() {
 	if ( ! function_exists( 'jetpack_author_bio' ) ) {
-		get_template_part( 'partials/content', 'author' );
+		get_template_part( 'template-parts/content', 'author' );
 	} else {
 		jetpack_author_bio();
 	}

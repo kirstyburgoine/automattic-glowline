@@ -17,7 +17,7 @@ get_header(); ?>
 				<?php
 				while ( have_posts() ) : the_post();
 
-					get_template_part( 'partials/content', 'post' );
+					get_template_part( 'template-parts/content', 'post' );
 
 					the_post_navigation();
 
@@ -33,7 +33,7 @@ get_header(); ?>
 
 		<?php
 		else :
-			get_template_part( 'partials/content', 'none' );
+			get_template_part( 'template-parts/content', 'none' );
 		endif;
 
 		get_sidebar();

@@ -18,33 +18,29 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) : ?>
 
-		<div class="content clearfix" id="content">
+		<?php
+		global $glowline_grid_layout;
+		global $glowline_masonry_layout;
+		?>
+
+		<div class="content clearfix <?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="content">
 
 			<?php
-			global $glowline_grid_layout;
-			global $glowline_masonry_layout;
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
+				if ( 'standard-layout' === $glowline_grid_layout ):
+				/*
+				 * If layout is standard, include the Post-Format-specific template for the content.
+				 */
+				get_template_part( 'template-parts/content', get_post_format() );
+				else :
+				/*
+				 * Otherwise, include the grid template for content.
+				 */
+				get_template_part( 'template-parts/content', 'grid' );
+				endif;
+			endwhile;
 			?>
-
-			<ul class="<?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="posts-container">
-
-				<?php
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
-					if ( 'standard-layout' === $glowline_grid_layout ):
-					/*
-					 * If layout is standard, include the Post-Format-specific template for the content.
-					 */
-					get_template_part( 'partials/content', get_post_format() );
-					else :
-					/*
-					 * Otherwise, include the grid template for content.
-					 */
-					get_template_part( 'partials/content', 'grid' );
-					endif;
-				endwhile;
-				?>
-
-			</ul>
 
 			<?php the_posts_navigation(); ?>
 
@@ -54,7 +50,7 @@ get_header(); ?>
 		get_sidebar();
 
 	else :
-		get_template_part( 'partials/content', 'none' );
+		get_template_part( 'template-parts/content', 'none' );
 	endif;
 	?>
 
