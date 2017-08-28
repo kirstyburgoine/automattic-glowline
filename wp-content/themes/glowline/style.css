@@ -112,7 +112,7 @@ border: 1px solid darkkhaki;
      border-left: 5px solid darkkhaki;
 }
 .home-category .cat-img-wrap:hover {
-    background: rgba(darkkhaki, 0.7);
+    background-color: rgba(189,183,107, 100, 0.6);
     border: 1px solid darkkhaki;
 }
 #move-to-top,
@@ -126,8 +126,10 @@ input[type=submit]:hover,
 .pagination .nav-links a:hover,
 .pagination .nav-links span:hover,
 .widget .tagcloud a:hover, .tagcloud a:hover {
-    background: darkkhaki;
+    background-color: rgba(189,183,107, 100, 0.6);
     border: 1px solid darkkhaki;
+    color: #fff;
+    text-decoration: none;
 }
 
 .page blockquote {
