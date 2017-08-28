@@ -7,7 +7,7 @@
 global $glowline_grid_layout;
 ?>
 
-<li id="post-<?php the_ID(); ?>" <?php post_class( 'grid-post' ); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid-post' ); ?> >
 
 	<?php
 	if ( has_post_thumbnail() ) : ?>
@@ -50,4 +50,4 @@ global $glowline_grid_layout;
 		</div> <!-- .post-content-inner //-->
 	</div> <!-- .post-content //-->
 
-</li>
+</article>

@@ -1087,12 +1087,12 @@ header .logo img{
  * We don't want hover on standard
  * but we do on all grids whether masonry is enabled or not
  */
-.content :not(.standard-layout) .grid-post {
+.content .grid-post {
      border: solid 1px #DDD;
  }
-.content :not(.standard-layout) .grid-post:hover,
-.content :not(.standard-layout) .grid-post:focus {
-     box-shadow: 0 0 1px #E5E5E5;
+.content .grid-post:hover,
+.content .grid-post:focus {
+     box-shadow: 1px 1px 3px #E5E5E5;
 }
 
 
@@ -2184,6 +2184,7 @@ a img.aligncenter {
 #infinite-handle {
     padding: 0;
     text-align: center;
+    clear: both;
 }
 
 #infinite-handle span {
