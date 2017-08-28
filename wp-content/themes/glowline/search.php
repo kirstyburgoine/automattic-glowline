@@ -20,33 +20,29 @@ get_header(); ?>
 			</h1>
 		</header><!-- .page-header //-->
 
-		<div class="content clearfix">
+		<?php
+		global $glowline_grid_layout;
+		global $glowline_masonry_layout;
+		?>
+
+		<div class="content clearfix <?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="content">
 
 			<?php
-			global $glowline_grid_layout;
-			global $glowline_masonry_layout;
-			?>
-
-			<ul class="<?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="posts-container">
-
-				<?php
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
-					if ( 'standard-layout' == $glowline_grid_layout ):
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
+				if ( 'standard-layout' == $glowline_grid_layout ):
 					/*
 					 * If layout is standard, include the Post-Format-specific template for the content.
 					 */
 					get_template_part( 'template-parts/content', get_post_format() );
-					else :
+				else :
 					/*
 					 * Otherwise, include the grid template for content.
 					 */
 					get_template_part( 'template-parts/content', 'grid' );
-					endif;
-				endwhile;
-				?>
-
-			</ul>
+				endif;
+			endwhile;
+			?>
 
 			<?php the_posts_navigation(); ?>
 

@@ -29,15 +29,15 @@ get_header(); ?>
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 				if ( 'standard-layout' === $glowline_grid_layout ):
-				/*
-				 * If layout is standard, include the Post-Format-specific template for the content.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+					/*
+					 * If layout is standard, include the Post-Format-specific template for the content.
+					 */
+					get_template_part( 'template-parts/content', get_post_format() );
 				else :
-				/*
-				 * Otherwise, include the grid template for content.
-				 */
-				get_template_part( 'template-parts/content', 'grid' );
+					/*
+					 * Otherwise, include the grid template for content.
+					 */
+					get_template_part( 'template-parts/content', 'grid' );
 				endif;
 			endwhile;
 			?>
