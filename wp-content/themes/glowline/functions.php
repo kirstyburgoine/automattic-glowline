@@ -94,10 +94,7 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 endif;
 
 add_action( 'after_setup_theme', 'glowline_setup' );
-/** ---------------------------------------------------------
- * Ends After Setup Stuff.
- * ---------------------------------------------------------
- * Begins additional Functions.
+/**
  *
  * Enqueue scripts and styles for the front end.
  *
@@ -137,14 +134,14 @@ if ( ! function_exists( 'glowline_fonts_url' ) ) :
 
 		/*
 		Translators: If there are characters in your language that are not
-		* supported by Roboto, translate this to 'off'. Do not translate
+		* supported by Lato, translate this to 'off'. Do not translate
 		* into your own language.
 		*/
 		$lato = esc_html_x( 'on', 'Lato font: on or off', 'glowline' );
 
 		/*
 		Translators: If there are characters in your language that are not
-		* supported by Roboto Slab, translate this to 'off'. Do not translate
+		* supported by Playfair, translate this to 'off'. Do not translate
 		* into your own language.
 		*/
 		$playfair = esc_html_x( 'on', 'Playfair font: on or off', 'glowline' );
@@ -181,12 +178,11 @@ function glowline_get_featured_posts() {
 
 /**
  * Check if a minimum of 1 featured posts exists for slider.
+ *
+ * @param array $minimum to count number of posts.
  */
 function glowline_has_featured_posts( $minimum = 1 ) {
 
-	/**
-	 * $minimum number of posts allowed for slider
-	 */
 	if ( is_paged() ) {
 		return false;
 	}
@@ -205,11 +201,15 @@ function glowline_has_featured_posts( $minimum = 1 ) {
 	return true;
 }
 
-/** Add a fallback image. */
+/**
+ * Custom fall back image.
+ *
+ * @param string $media any existing media.
+ * @param array  $post_id ids of featured posts.
+ * @param array  $args all other options.
+ */
 function glowline_custom_image( $media, $post_id, $args ) {
-	/**
-	 * Pass the $media, $post_id, $args variables to get a custom image
-	 */
+
 	if ( $media ) {
 		return $media;
 	} else {

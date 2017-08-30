@@ -1,10 +1,16 @@
 <?php
 /**
- * Default Theme Customizer Settings
+ * Optional Theme Customizer Settings
  *
  * @package Glowline
  */
 
+/**
+ * Registers grid options
+ *
+ * @param array $wp_customize settings for customizer.
+ * @return void
+ */
 function glowline_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport          = 'postMessage';
@@ -84,4 +90,3 @@ function glowline_customize_register( $wp_customize ) {
 }
 
 add_action( 'customize_register','glowline_customize_register' );
-
