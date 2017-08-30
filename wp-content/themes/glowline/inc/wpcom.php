@@ -5,6 +5,9 @@
  * @package Glowline
  */
 
+/**
+ * Set theme colors
+ */
 function glowline_wpcom_setup() {
 
 	global $themecolors;

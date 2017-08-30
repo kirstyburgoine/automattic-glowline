@@ -1,10 +1,13 @@
 <?php
 /**
- * Widgets in Sidebar and Footer
+ * Widgets used in the sidebar and footer
  *
  * @package Glowline
  */
 
+/**
+ * Setup widgets
+ */
 function glowline_widgets_init() {
 
 	// Area , located below the Primary Widget Area in the sidebar. Empty by default.
