@@ -1,7 +1,8 @@
 <?php
 /**
- * @package Glowline
  * The template for displaying the sidebar footer
+ *
+ * @package Glowline
  */
 
 if ( ! is_active_sidebar( 'sidebar-2' )

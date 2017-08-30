@@ -1,8 +1,10 @@
 <?php
 /**
- * @package Glowline
  * The template for displaying the sidebar
+ *
+ * @package Glowline
  */
+
 ?>
 <?php
 if ( is_active_sidebar( 'sidebar-1' ) ) :

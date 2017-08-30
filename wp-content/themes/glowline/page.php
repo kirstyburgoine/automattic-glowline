@@ -1,7 +1,8 @@
 <?php
 /**
- * @package Glowline
  * The template for displaying all pages
+ *
+ * @package Glowline
  */
 
 get_header(); ?>

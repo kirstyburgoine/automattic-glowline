@@ -38,7 +38,7 @@ global $glowline_grid_layout;
 			<?php
 				the_content(
 					sprintf(
-						wp_kses( /* translators: %s: Name of of post. Only seen by screenreaders. */
+						wp_kses( /* translators: %s: Name of post. Only seen by screenreaders. */
 							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
 							array(
 								'span' => array(

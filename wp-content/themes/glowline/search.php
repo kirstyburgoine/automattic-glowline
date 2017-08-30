@@ -1,8 +1,10 @@
 <?php
 /**
- * @package Glowline
  * The template for displaying Search Results pages
+ *
+ * @package Glowline
  */
+
 get_header(); ?>
 
 <main id="main" class="site-main">
@@ -16,6 +18,7 @@ if ( have_posts() ) :
 		<header class="page-header">
 			<h1 class="page-title">
 				<?php
+				/* translators: %s: Term searched for. */
 				printf( esc_html__( 'Search Results for: %s', 'glowline' ), '<span>' . get_search_query() . '</span>' );
 				?>
 			</h1>
@@ -32,7 +35,7 @@ if ( have_posts() ) :
 		/* Start the Loop */
 		while ( have_posts() ) :
 			the_post();
-			if ( 'standard-layout' == $glowline_grid_layout ) :
+			if ( 'standard-layout' === $glowline_grid_layout ) :
 				/*
 				 * If layout is standard, include the Post-Format-specific template for the content.
 				 */

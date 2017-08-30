@@ -1,8 +1,10 @@
 <?php
 /**
- * @package Glowline
  * The Template for displaying all single posts
+ *
+ * @package Glowline
  */
+
 get_header(); ?>
 
 <main id="main" class="site-main">
