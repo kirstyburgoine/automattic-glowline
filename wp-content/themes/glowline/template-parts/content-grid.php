@@ -1,7 +1,8 @@
 <?php
 /**
- * @package Glowline
  * The template for displaying posts in the dynamic grid view
+ *
+ * @package Glowline
  */
 
 global $glowline_grid_layout;
@@ -37,7 +38,7 @@ global $glowline_grid_layout;
 			<?php
 				the_content(
 					sprintf(
-						wp_kses(
+						wp_kses( /* translators: %s: Name of of post. Only seen by screenreaders. */
 							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
 							array(
 								'span' => array(

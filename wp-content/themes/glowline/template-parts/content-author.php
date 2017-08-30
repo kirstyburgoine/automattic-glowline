@@ -25,13 +25,13 @@ if ( ! is_single() ) {
 	</div><!-- .author-avatar -->
 	<div class="author-content">
 		<div class="author-heading">
-			<h2 class="author-title"><?php printf( esc_html__( 'Published by %s', 'glowline' ), '<span class="author-name">' . get_the_author() . '</span>' ); ?></h2>
+			<h2 class="author-title"><?php /* translators: %s: Name of current author. */ printf( esc_html__( 'Published by %s', 'glowline' ), '<span class="author-name">' . get_the_author() . '</span>' ); ?></h2>
 		</div><!-- .author-heading -->
 
 		<p class="author-bio">
 			<?php the_author_meta( 'description' ); ?>
 			<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-				<?php printf( esc_html__( 'View all posts by %s', 'glowline' ), get_the_author() ); ?>
+				<?php /* translators: %s: Name of current author. */ printf( esc_html__( 'View all posts by %s', 'glowline' ), get_the_author() ); ?>
 			</a>
 		</p><!-- .author-bio -->
 	</div>

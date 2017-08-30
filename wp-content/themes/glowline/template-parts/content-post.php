@@ -1,8 +1,10 @@
 <?php
 /**
- * @package Glowline
  * The template for displaying full content on posts and pages
+ *
+ * @package Glowline
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

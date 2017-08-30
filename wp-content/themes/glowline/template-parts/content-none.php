@@ -1,9 +1,10 @@
 <?php
 /**
- * @package Glowline
  * The template for displaying a "No posts found" message
- * TODO: Copied from _s check works correctly in this theme later
+ *
+ * @package Glowline
  */
+
 ?>
 <section class="no-results not-found">
 
@@ -19,7 +20,7 @@
 			<p>
 			<?php
 				printf(
-					wp_kses(
+					wp_kses( /* translators: %1$s: Url to create post. */
 						__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'glowline' ),
 						array(
 							'a' => array(

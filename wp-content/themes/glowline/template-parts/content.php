@@ -1,9 +1,10 @@
 <?php
 /**
+ * The default template for displaying content on archive pages.
+ *
  * @package Glowline
- * The default template for displaying content on archive pages
- * This is not used for single as well because the markup on archive pages requires content to be in a list rather than <articles>
  */
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
@@ -31,7 +32,7 @@
 	<?php
 	the_content(
 		sprintf(
-			wp_kses(
+			wp_kses( /* translators: %s: Name of of post. Only seen by screenreaders. */
 				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
 				array(
 					'span' => array(
