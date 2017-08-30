@@ -1,7 +1,10 @@
 <?php
 /**
+ * The main header template for the theme
+ *
  * @package Glowline
  */
+
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >
@@ -18,7 +21,6 @@
 <body <?php body_class(); ?>>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'glowline' ); ?></a>
 
-	<!-- Main Header Start -->
 	<header class="header-wrapper clearfix" id="masthead" style="background-image: url(
 	<?php
 	if ( '' !== get_header_image() ) {
@@ -26,10 +28,8 @@
 ?>
 );" role="banner">
 
-		<!-- Top Header Start -->
 		<div class="nav-wrapper">
 			<div class="container header">
-					<!-- Logo Start -->
 					<div class="logo">
 
 						<?php
@@ -40,7 +40,6 @@
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 					</div>
-					<!-- Menu Start -->
 					<div id="main-menu-wrapper">
 						<button href="#" id="pull" class="toggle-mobile-menu"></button>
 						<nav class="navigation clearfix mobile-menu-wrapper">
@@ -56,7 +55,6 @@
 							);
 							?>
 						</nav>
-						<!-- search Start -->
 						<div id="searchform-wrap" class="main-searchform-wrap">
 							<?php get_search_form(); ?>
 						</div>
@@ -91,10 +89,7 @@
 				?>
 
 			</div>
-			<!-- Ends Main Logo -->
 
-
-			<!-- Slider Area -->
 			<?php
 			if ( glowline_has_featured_posts( 1 ) ) :
 			?>
@@ -108,14 +103,11 @@
 
 			</div>
 			<?php
-			endif; // ends if featured posts
+			endif;
 			?>
 
 		<?php
-		// Ends if front page and home
 		endif;
-		// ------------------------------------------------------------------
-		// ------------------------------------------------------------------
 		?>
 
 	</header>
