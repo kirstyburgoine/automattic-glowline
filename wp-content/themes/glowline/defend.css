@@ -113,10 +113,10 @@ ul.slider-post-social.social-icon li.share-text,
 \* ----------------------------------------- */
 
 ul.load_post.standard-layout {
-    padding-left: 0px;
+	padding-left: 0px;
 }
 .home .layout-top {
-    margin-top: 30px;
+	margin-top: 30px;
 }
 .social-icon ul li i {
   font-size:16px;
@@ -165,21 +165,21 @@ ul.load_post.standard-layout {
 
 @media screen and (max-width: 768px) {
 ul.boxed-layout .post .post-img,
-    .content .boxed-layout .post  {
-        width: auto;
-        max-width: 585px;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    ul.boxed-layout .post .post-content {
-        width: 100%;
-      padding: 17px 4% 35px!important;
-    }
+	.content .boxed-layout .post  {
+		width: auto;
+		max-width: 585px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	ul.boxed-layout .post .post-content {
+		width: 100%;
+	  padding: 17px 4% 35px!important;
+	}
 
-    .home-category-wrapper ul li .home-category {
-        width: 50%;
-    }
-    .home-category-wrapper .home-category .home-cat-title h4 {
-        font-size:14px;
-    }
+	.home-category-wrapper ul li .home-category {
+		width: 50%;
+	}
+	.home-category-wrapper .home-category .home-cat-title h4 {
+		font-size:14px;
+	}
 }

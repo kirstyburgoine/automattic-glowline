@@ -11,7 +11,8 @@ get_header(); ?>
 	<div class="container clearfix">
 
 	<?php
-	if ( have_posts() ) : ?>
+	if ( have_posts() ) :
+	?>
 
 		<header class="page-header">
 			<?php
@@ -29,11 +30,12 @@ get_header(); ?>
 
 			<?php
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-					if ( 'standard-layout' === $glowline_grid_layout ) :
+			while ( have_posts() ) :
+				the_post();
+				if ( 'standard-layout' === $glowline_grid_layout ) :
 					/*
-					 * If layout is standard, include the Post-Format-specific template for the content.
-					 */
+					* If layout is standard, include the Post-Format-specific template for the content.
+					*/
 					get_template_part( 'template-parts/content', get_post_format() );
 				else :
 					/*

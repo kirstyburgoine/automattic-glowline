@@ -19,16 +19,20 @@
 	</header>
 
 	<?php
-	if ( has_post_thumbnail() ) : ?>
+	if ( has_post_thumbnail() ) :
+	?>
 		<div class="post-img">
 			<a href="<?php esc_url( the_permalink() ); ?>"> <?php the_post_thumbnail( 'post-thumbnails' ); ?></a>
 		</div>
 	<?php
-	endif; ?>
+	endif;
+	?>
 
-	<?php the_content( sprintf(
-		wp_kses(
-			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
+	<?php
+	the_content(
+		sprintf(
+			wp_kses(
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
 				array(
 					'span' => array(
 						'class' => array( 'read-more' ),
@@ -36,7 +40,8 @@
 				)
 			),
 			get_the_title()
-		) );
+		)
+	);
 	?>
 
 	<div class="clearfix"></div>

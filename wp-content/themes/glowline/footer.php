@@ -1,8 +1,8 @@
 <?php
 /**
-* @package Glowline
-* The template for displaying the footer
-*/
+ * @package Glowline
+ * The template for displaying the footer
+ */
 ?>
 		<div class="footer-wrapper" id="footer">
 
@@ -26,7 +26,7 @@
 
 		</footer> <!-- closes #colophon -->
 
-		<?php wp_footer();?>
+		<?php wp_footer(); ?>
 
 	</body>
 </html>

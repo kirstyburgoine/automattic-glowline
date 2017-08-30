@@ -1,14 +1,14 @@
 <?php
 /**
-* @package Glowline
-*/
+ * @package Glowline
+ */
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >
 
 <head>
 
-	<meta charset="<?php bloginfo('charset'); ?>" />
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<?php wp_head(); ?>
@@ -19,7 +19,12 @@
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'glowline' ); ?></a>
 
 	<!-- Main Header Start -->
-	<header class="header-wrapper clearfix" id="masthead" style="background-image: url(<?php if ( '' !== get_header_image() ) { echo esc_url( get_header_image() ); } ?>);" role="banner">
+	<header class="header-wrapper clearfix" id="masthead" style="background-image: url(
+	<?php
+	if ( '' !== get_header_image() ) {
+		echo esc_url( get_header_image() ); }
+?>
+);" role="banner">
 
 		<!-- Top Header Start -->
 		<div class="nav-wrapper">
@@ -30,7 +35,8 @@
 						<?php
 						if ( function_exists( 'the_custom_logo' ) ) {
 							the_custom_logo();
-						} ?>
+						}
+						?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 					</div>
@@ -41,18 +47,18 @@
 							<?php
 							wp_nav_menu(
 								array(
-								'theme_location'  => 'menu-1',
-								'container'       => false,
-								'menu_class'      => 'menu',
-								'menu_id'         => 'menu-1',
-								'fallback_cb'     => 'glowline_wp_page_menu'
+									'theme_location'  => 'menu-1',
+									'container'       => false,
+									'menu_class'      => 'menu',
+									'menu_id'         => 'menu-1',
+									'fallback_cb'     => 'glowline_wp_page_menu',
 								)
 							);
 							?>
 						</nav>
 						<!-- search Start -->
 						<div id="searchform-wrap" class="main-searchform-wrap">
-							<?php  get_search_form(); ?>
+							<?php get_search_form(); ?>
 						</div>
 					</div>
 			</div>
@@ -61,24 +67,28 @@
 		<?php
 		// ------------------------------------------------------------------
 		// ------------------------------------------------------------------
-		if ( is_front_page() && is_home() ) : ?>
+		if ( is_front_page() && is_home() ) :
+		?>
 
 			<div class="main-logo container">
 
 				<?php
 				if ( function_exists( 'the_custom_logo' ) ) {
 					the_custom_logo();
-				} ?>
+				}
+				?>
 
 				<h1 class="site-title"><?php esc_html( bloginfo( 'name' ) ); ?></h1>
 
 				<?php
 				$description = get_bloginfo( 'description', 'display' );
 
-				if ( $description || is_customize_preview() ) : ?>
+				if ( $description || is_customize_preview() ) :
+				?>
 					<p class="site-description"><?php echo esc_html( $description ); ?></p>
 				<?php
-				endif;  ?>
+				endif;
+				?>
 
 			</div>
 			<!-- Ends Main Logo -->
@@ -86,20 +96,23 @@
 
 			<!-- Slider Area -->
 			<?php
-			if ( glowline_has_featured_posts( 1 ) ) : ?>
+			if ( glowline_has_featured_posts( 1 ) ) :
+			?>
 			<div class="container featured-posts">
 
 				<div class="slider">
-		    		<div id="owl-demo" class="owl-carousel">
+					<div id="owl-demo" class="owl-carousel">
 						<?php get_template_part( 'templates/main', 'slider' ); ?>
 					</div>
 				</div>
 
 			</div>
 			<?php
-			endif; // ends if featured posts ?>
+			endif; // ends if featured posts
+			?>
 
-		<?php // Ends if front page and home
+		<?php
+		// Ends if front page and home
 		endif;
 		// ------------------------------------------------------------------
 		// ------------------------------------------------------------------

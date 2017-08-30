@@ -1,8 +1,9 @@
 <?php
 /**
-* @package Glowline
-* The template for displaying 404 pages (Not Found)
-*/
+ * The template for displaying 404 pages (Not Found)
+ *
+ * @package Glowline
+ */
 
 get_header(); ?>
 
@@ -23,7 +24,8 @@ get_header(); ?>
 		</article>
 
 	<?php
-		get_sidebar(); ?>
+		get_sidebar();
+		?>
 
 	</div><!-- .container //-->
 

@@ -1,8 +1,8 @@
 <?php
 /**
-* @package Glowline
-* The Template for displaying all single posts
-*/
+ * @package Glowline
+ * The Template for displaying all single posts
+ */
 get_header(); ?>
 
 <main id="main" class="site-main">
@@ -10,12 +10,14 @@ get_header(); ?>
 	<div class="container clearfix">
 
 		<?php
-		if ( have_posts() ) : ?>
+		if ( have_posts() ) :
+		?>
 
 			<div class="content clearfix" id="content">
 
 				<?php
-				while ( have_posts() ) : the_post();
+				while ( have_posts() ) :
+					the_post();
 
 					get_template_part( 'template-parts/content', 'post' );
 

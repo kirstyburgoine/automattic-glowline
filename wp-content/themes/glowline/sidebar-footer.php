@@ -1,12 +1,12 @@
 <?php
 /**
-* @package Glowline
-* The template for displaying the sidebar footer
-*/
+ * @package Glowline
+ * The template for displaying the sidebar footer
+ */
 
-if ( ! is_active_sidebar( 'sidebar-2'  )
+if ( ! is_active_sidebar( 'sidebar-2' )
 && ! is_active_sidebar( 'sidebar-3' )
-&& ! is_active_sidebar( 'sidebar-4'  )
+&& ! is_active_sidebar( 'sidebar-4' )
 ) :
 	return;
 endif;
@@ -15,31 +15,37 @@ endif;
 <div class="container">
 
 	<div class="footer">
-	 	<div class="footer-widget-column footer-widget-3column-active">
+		 <div class="footer-widget-column footer-widget-3column-active">
 
 			<?php
-			if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			if ( is_active_sidebar( 'sidebar-2' ) ) :
+			?>
 
 					<?php dynamic_sidebar( 'sidebar-2' ); ?>
 
 			<?php
-			endif; ?>
+			endif;
+			?>
 
 			<?php
-			if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+			if ( is_active_sidebar( 'sidebar-3' ) ) :
+			?>
 
 					<?php dynamic_sidebar( 'sidebar-3' ); ?>
 
 			<?php
-			endif; ?>
+			endif;
+			?>
 
 			<?php
-			if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
+			if ( is_active_sidebar( 'sidebar-4' ) ) :
+			?>
 
 					<?php dynamic_sidebar( 'sidebar-4' ); ?>
 
 			<?php
-			endif; ?>
+			endif;
+			?>
 
 		</div>
 	</div>
