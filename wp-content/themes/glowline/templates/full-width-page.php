@@ -1,9 +1,13 @@
 <?php
 /**
+ * A template to display content full width withour a sidebar
+ *
  * @package Glowline
  * Template Name: Fullwidth Page
  */
-get_header(); ?>
+
+?>
+<?php get_header(); ?>
 
 <main id="main" class="site-main">
 

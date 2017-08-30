@@ -1,8 +1,18 @@
 <?php
+/**
+ * A template for slider content on homepage.
+ *
+ * @package Glowline
+ */
+
+?>
+<?php
+// TODO : Check new functions should be used.
 $featured_posts = glowline_get_featured_posts();
 
 foreach ( $featured_posts as $post ) :
-	setup_postdata( $post ); ?>
+	setup_postdata( $post );
+?>
 
 	<div class="item">
 
@@ -15,7 +25,10 @@ foreach ( $featured_posts as $post ) :
 
 				<div class="slider-post-category">
 					<span>
-						<?php echo $category_list = get_the_category_list( __( ', ', 'glowline' ) ); ?>
+						<?php
+							$category_list = get_the_category_list( __( ', ', 'glowline' ) );
+							echo esc_html_x( $category_list );
+							?>
 					</span>
 				</div>
 
@@ -35,7 +48,7 @@ foreach ( $featured_posts as $post ) :
 
 				<div class="read-more read-more-slider">
 					<a href="<?php esc_url( the_permalink() ); ?>">
-						<?php _e( 'Continue Reading...','glowline' ); ?>
+						<?php _esc_html_e( 'Continue Reading...','glowline' ); ?>
 					</a>
 				</div>
 
