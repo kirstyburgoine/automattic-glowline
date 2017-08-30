@@ -1,23 +1,28 @@
 <?php
-// ---------------------------------------------------------
-// JETPACK STUFF
-// ---------------------------------------------------------
+/**
+ * Adds file support for Jetpack-specific theme functions.
+ * See: http://jetpack.me/
+ *
+ * @package Glowline
+ */
+
 if ( ! function_exists( 'glowline_jetpack_setup' ) ) {
-
+	/**
+	 * Setup Jetpack options
+	 */
 	function glowline_jetpack_setup() {
-
-		 add_theme_support(
-			 'infinite-scroll', array(
-				 'container'      => 'content',
-				 'render'         => 'glowline_infinite_scroll_render',
-				 'footer_widgets' => array( 'sidebar-2', 'sidebar-3', 'sidebar-4' ),
-				 'footer'         => 'footer',
-			 )
-		 );
-
+		// Add support for Infinite Scroll.
+		add_theme_support(
+			'infinite-scroll', array(
+				'container'      => 'content',
+				'render'         => 'glowline_infinite_scroll_render',
+				'footer_widgets' => array( 'sidebar-2', 'sidebar-3', 'sidebar-4' ),
+				'footer'         => 'footer',
+			)
+		);
+		// Add support for Responsive Videos.
 		add_theme_support( 'jetpack-responsive-videos' );
-
-		// To replace custom slider
+		// Add support for Featured content.
 		add_theme_support(
 			'featured-content', array(
 				'filter'         => 'glowline_get_featured_posts',
@@ -25,7 +30,7 @@ if ( ! function_exists( 'glowline_jetpack_setup' ) ) {
 				'post_types'     => array( 'post' ),
 			)
 		);
-
+		// Add theme support for Content Options.
 		add_theme_support(
 			'jetpack-content-options', array(
 				'blog-display'        => 'content', // the default setting of the theme: 'content', 'excerpt' or array( 'content', 'excerpt' ) for themes mixing both display.
@@ -51,12 +56,13 @@ if ( ! function_exists( 'glowline_jetpack_setup' ) ) {
 		);
 
 	}
-} // glowline_setup
+}
 
 add_action( 'after_setup_theme', 'glowline_jetpack_setup' );
 
-
-// add_action( 'init', 'glowline_infinite_scroll_init' );
+/**
+ * Check if different layouts are used and render the right one.
+ */
 function glowline_infinite_scroll_render() {
 
 	global $glowline_grid_layout;
