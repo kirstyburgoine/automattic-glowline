@@ -1,7 +1,9 @@
 <?php
 /**
+ * Sets up the Glowline theme.
+ * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
+ *
  * @package Glowline
- * The template for displaying 404 pages (Not Found)
  */
 
 if ( ! isset( $content_width ) ) {
@@ -18,16 +20,17 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function glowline_setup() {
-		/*
+		/**
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
 		*/
 		load_theme_textdomain( 'glowline', get_template_directory() . '/languages' );
 
-		// Add RSS feed links to <head> for posts and comments.
+		/** Add RSS feed links to <head> for posts and comments.
+		 */
 		add_theme_support( 'automatic-feed-links' );
 
-		/*
+		/**
 		 * Let WordPress manage the document title.
 		 * By adding theme support, we declare that this theme does not use a
 		 * hard-coded <title> tag in the document head, and expect WordPress to
@@ -36,17 +39,17 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		/**
-	 * Register menu in theme
-	 * This theme uses wp_nav_menu() in one location
-	 */
+		 * Register menu in theme.
+		 * This theme uses wp_nav_menu() in one location.
+		 */
 		register_nav_menu( 'menu-1', __( 'Primary Menu', 'glowline' ) );
 
-		/*
+		/**
 		 * Enable support for Post Formats.
 		 */
 		add_theme_support( 'post-formats', array( 'link', 'gallery', 'quote', 'video', 'audio' ) );
 
-		/*
+		/**
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
@@ -60,22 +63,20 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 			)
 		);
 
-		/*
+		/**
 		 * Enable global print stylesheet.
 		 */
 		add_theme_support( 'print-style' );
 
-		// header image
 		$args = array(
 			'default-image' => get_template_directory_uri() . '/images/header-bg-default.jpg',
 		);
 		add_theme_support( 'custom-header', $args );
 
-		/* Set the image size by cropping the image */
+		/** Set the image size by cropping the image */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'glowline-custom-slider-thumb', 790, 450, true );
 		add_image_size( 'glowline-custom-two-grid-thumb', 562, 320, true );
-		// custom-three-grid-thumb and custom-releted-post-thumb
 		add_image_size( 'glowline-custom-three-grid-thumb', 358, 204, true );
 		add_image_size( 'glowline-custom-list-thumb', 468, 267, true );
 		add_image_size( 'glowline-custom-boxed-thumb', 585, 333, true );
@@ -88,25 +89,23 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 				'header-text' => array( 'site-title', 'site-description' ),
 			)
 		);
-
 	}
 
-endif; // glowline_setup
+endif;
 
 add_action( 'after_setup_theme', 'glowline_setup' );
-// ---------------------------------------------------------
-// Ends After Setup Stuff
-// ---------------------------------------------------------
-// Begins additional Functions
-/**
+/** ---------------------------------------------------------
+ * Ends After Setup Stuff.
+ * ---------------------------------------------------------
+ * Begins additional Functions.
+ *
  * Enqueue scripts and styles for the front end.
  *
  * @since GlowLine
  */
 function glowline_scripts() {
 
-	wp_enqueue_style( 'glowline-lato', glowline_lato_font_url(), array(), null );
-	wp_enqueue_style( 'glowline-playfair', glowline_playfair_font_url(), array(), null );
+	wp_enqueue_style( 'glowline-fonts', glowline_fonts_url(), array(), null );
 	wp_enqueue_style( 'glowline-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '1.0.0' );
 	wp_enqueue_style( 'glowline-widgets', get_template_directory_uri() . '/css/widget-styles.css', array(), '1.0.0' );
 	wp_enqueue_style( 'glowline-defend', get_template_directory_uri() . '/defend.css', array(), '1.0.0' );
@@ -129,66 +128,65 @@ function glowline_scripts() {
 add_action( 'wp_enqueue_scripts', 'glowline_scripts' );
 
 
-// TODO : Double check this is correct for multiple Google fonts. Seems wrong...
-/**
- * Register Google Fonts
- */
-function glowline_lato_font_url() {
-	$fonts_url = '';
-
-	/*
-     Translators: If there are characters in your language that are not
-	 * supported by Lato, translate this to 'off'. Do not translate
-	 * into your own language.
+if ( ! function_exists( 'glowline_fonts_url' ) ) :
+	/**
+	 * Register Google Fonts
 	 */
-	$arimo = esc_html_x( 'on', 'Lato font: on or off', 'glowline' );
+	function glowline_fonts_url() {
+		$fonts_url = '';
 
-	if ( 'off' !== $arimo ) {
-		$font_families = array();
-		$font_families[] = 'Lato:400,700,900,400italic,700italic,900italic&subset=latin,latin-ext';
+		/*
+		Translators: If there are characters in your language that are not
+		* supported by Roboto, translate this to 'off'. Do not translate
+		* into your own language.
+		*/
+		$lato = esc_html_x( 'on', 'Lato font: on or off', 'glowline' );
 
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
+		/*
+		Translators: If there are characters in your language that are not
+		* supported by Roboto Slab, translate this to 'off'. Do not translate
+		* into your own language.
+		*/
+		$playfair = esc_html_x( 'on', 'Playfair font: on or off', 'glowline' );
 
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+		if ( 'off' !== $lato || 'off' !== $playfair ) {
+			$font_families = array();
+
+			if ( 'off' !== $lato ) {
+				$font_families[] = 'Lato:400,700,900,400italic,700italic,900italic&subset=latin,latin-ext';
+			}
+
+			if ( 'off' !== $playfair ) {
+				$font_families[] = 'Playfair+Display:400,700';
+			}
+
+			$query_args = array(
+				'family' => rawurlencode( implode( '|', $font_families ) ),
+				'subset' => rawurlencode( 'latin,latin-ext' ),
+			);
+
+			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+		}
+
+		return $fonts_url;
 	}
-
-	return $fonts_url;
-
-}
-
-function glowline_playfair_font_url() {
-	$fonts_url = '';
-	$arimo = esc_html_x( 'on', 'Playfair font: on or off', 'glowline' );
-
-	if ( 'off' !== $arimo ) {
-		$font_families = array();
-		$font_families[] = 'Lato:400,700,400italic,700italic&subset=latin,latin-ext';
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-
-}
+endif;
 
 
-// More stuff for Jetpack featured content to replace custom slider
+/** More stuff for Jetpack featured content to replace custom slider. */
 function glowline_get_featured_posts() {
 	return apply_filters( 'glowline_get_featured_posts', array() );
 }
 
 
-// More stuff for Jetpack featured content to replace custom slider
+/**
+ * Check if a minimum of 1 featured posts exists for slider.
+ */
 function glowline_has_featured_posts( $minimum = 1 ) {
 
+	/**
+	 * $minimum number of posts allowed for slider
+	 */
 	if ( is_paged() ) {
 		return false;
 	}
@@ -207,13 +205,15 @@ function glowline_has_featured_posts( $minimum = 1 ) {
 	return true;
 }
 
-// Add a fallback image
+/** Add a fallback image. */
 function glowline_custom_image( $media, $post_id, $args ) {
+	/**
+	 * Pass the $media, $post_id, $args variables to get a custom image
+	 */
 	if ( $media ) {
 		return $media;
 	} else {
 		$permalink = get_permalink( $post_id );
-		// $url = apply_filters( 'jetpack_photon_url', get_template_directory_uri().'/images/790x450.png' );
 		$permalink = get_permalink( $post_id );
 		$custom_logo_id = get_theme_mod( 'custom_logo' );
 		$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -232,9 +232,9 @@ function glowline_custom_image( $media, $post_id, $args ) {
 add_filter( 'jetpack_images_get_images', 'glowline_custom_image', 10, 3 );
 
 
-// Enable threaded comments here instead of header
+/** Enable threaded comments here instead of header. */
 function enable_threaded_comments() {
-	if ( is_singular() and comments_open() and ( get_option( 'thread_comments' ) == 1 ) ) {
+	if ( is_singular() && comments_open() && ( get_option( 'thread_comments' ) === 1 ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
@@ -253,8 +253,9 @@ include( get_template_directory() . '/inc/widget.php' );
 include( get_template_directory() . '/inc/customizer.php' );
 
 
-// ---------------------------------------------------------
-// Keep Grid Settings in - Nice feature and compliments masonry
+/**
+ * Grid & Masonry Settings.
+ */
 global $glowline_grid_layout;
 $glowline_grid_layout = get_theme_mod( 'dynamic_grid', 'standard-layout' );
 
