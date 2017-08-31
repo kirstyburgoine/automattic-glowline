@@ -31,7 +31,7 @@ foreach ( $featured_posts as $post ) :
 
 				<?php glowline_posted_in(); ?>
 
-				<?php the_title( '<div class="slider-post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><h2>', '</h2></a></div>' ); ?>
+				<?php the_title( '<div class="slider-post-title"><h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2></div>' ); ?>
 
 				<?php glowline_posted_on(); ?>
 <!-- 				<div class="slider-post-date">
