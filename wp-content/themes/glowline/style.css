@@ -254,15 +254,13 @@ pre {
 .slider-post-content .read-more-slider a,
 .owl-controls .owl-prev:before,
 .owl-controls .owl-next:before,
-#commentform #commentSubmit,
 ol.commentlist li .reply a,
 .widget .twitter-user a,
 .standard-layout .format-link h2,
 .format-quote blockquote p:before,
 .content .post-content .description p a,
 .page-description p a,
-.multipage-links span,
-#searchform .icon-search:before {
+.multipage-links span {
 	color: #bdb76b;
 }
 
@@ -284,32 +282,38 @@ ol.commentlist li .reply a,
 	color: #bdb76b;
 }
 
+.widget .search-submit,
+.read-more-slider a,
+.widget .search-submit,
+.search .search-submit,
+.comment-form input[type=submit],
+ul.paging li a, {
+	border: 1px solid #bdb76b;
+}
+
 .home-category .cat-img-wrap:hover,
 .home-category .cat-img-wrap:focus {
 	background-color: rgba(189,183,107, 100, 0.6);
 	border: 1px solid #bdb76b;
 }
 
-#move-to-top,
-.slider-post-content .read-more-slider a:hover,
+.read-more-slider a:hover,
+.read-more-slider a:focus,
 .widget .search-submit:hover,
-.search .search-submit:hover,
-#commentform #commentSubmit:hover,
-.slider-post-content .read-more-slider a:focus,
 .widget .search-submit:focus,
+.search .search-submit:hover,
 .search .search-submit:focus,
-#commentform #commentSubmit:focus,
-#commentform input#submit,
-.mc4wp-form input[type=submit],
+.comment-form input[type=submit]:hover,
+.comment-form input[type=submit]:focus,
 input[type=submit]:hover,
-.pagination .nav-links a:hover,
-.pagination .nav-links span:hover,
-.widget .tagcloud a:hover,
-.tagcloud a:hover,
 input[type=submit]:focus,
+.pagination .nav-links a:hover,
 .pagination .nav-links a:focus,
+.pagination .nav-links span:hover,
 .pagination .nav-links span:focus,
+.widget .tagcloud a:hover,
 .widget .tagcloud a:focus,
+.tagcloud a:hover,
 .tagcloud a:focus {
 	background-color: rgba(189,183,107, 0.6);
 	border: 1px solid #bdb76b;
@@ -327,15 +331,6 @@ input[type=submit]:focus,
 
 ::-moz-selection{
 	background-color: #bdb76b;
-}
-
-.widget .search-submit,
-.slider-post-content .read-more-slider a,
-.widget .search-submit,
-.search .search-submit,
-#commentform #commentSubmit,
-ul.paging li a, {
-	border: 1px solid #bdb76b;
 }
 
 /*--------------------------------------------------------------*\
@@ -2319,7 +2314,7 @@ a img.aligncenter {
 \* ------------------------------------------------------ */
 
 /* Back to top Start */
-#move-to-top {
+.move-to-top {
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
@@ -2334,18 +2329,19 @@ a img.aligncenter {
 	transition: all 0.25s linear;
 	-webkit-backface-visibility: hidden;
 	text-align: center;
+	border: solid 1px #bdb76b;
 	border-radius: 2px;
 }
-#move-to-top:not(.filling) {
+.move-to-top:not(.filling) {
 	opacity: 0;
 	visibility: hidden;
 }
-#move-to-top .fa-angle-up:before {
+.move-to-top .fa-angle-up:before {
 	font-size:20px;
 }
 
-#move-to-top:hover,
-#move-to-top:focus {
+.move-to-top:hover,
+.move-to-top:focus {
 	background-color: rgba(189,183,107, 0.6);
 	border: solid 1px #bdb76b;
 }
@@ -2440,7 +2436,7 @@ a img.aligncenter {
 
 @media screen and (max-width: 768px) {
 
-	#move-to-top{
+	.move-to-top{
 		display: none;
 	}
 	.comment-form textarea {
