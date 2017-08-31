@@ -7,7 +7,6 @@
 
 ?>
 <?php
-// TODO : Check new functions should be used.
 $featured_posts = glowline_get_featured_posts();
 
 foreach ( $featured_posts as $post ) :
