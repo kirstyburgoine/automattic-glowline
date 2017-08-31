@@ -265,19 +265,21 @@ ol.commentlist li .reply a,
 }
 
 
-.navigation a:hover
+.navigation a:hover,
+.navigation a:focus,
 .navigation .menu-item-has-children > a:hover:after, /* arrow down */
-.post-header a:hover,
-.widget a:hover,
-.single-bottom-meta a:hover,
-.standard-bottom-meta a:hover,
-.nav-links a:hover,
-.navigation a:focus
 .navigation .menu-item-has-children > a:focus:after, /* arrow down */
+.post-header a:hover,
 .post-header a:focus,
+.slider-post-title a:hover,
+.slider-post-title a:focus,
+.widget a:hover,
 .widget a:focus,
+.single-bottom-meta a:hover,
 .single-bottom-meta a:focus,
+.standard-bottom-meta a:hover,
 .standard-bottom-meta a:focus,
+.nav-links a:hover,
 .nav-links a:focus {
 	color: #bdb76b;
 }
@@ -1566,12 +1568,18 @@ ul.slider-post-social.social-icon li.share-text,
 	font-family: fontawesome;
 	font-size: 50px;
 	color: #bdb76b;
+	background-color: #fff;
+	padding: 0 20px 3px 15px;
+	border-radius: 30px;
 }
 .owl-controls .owl-next:before {
 	content: "\f105";
 	font-family: fontawesome;
 	font-size: 50px;
 	color: #bdb76b;
+	background-color: #fff;
+	padding: 0 15px 3px 20px;
+	border-radius: 30px;
 }
 .owl-controls .owl-prev {
 	top: 44%;
