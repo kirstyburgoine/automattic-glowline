@@ -394,7 +394,7 @@ ul.paging li a, {
 	display:none;
 }
 
-.home .header-wrapper.smaller .header .logo {
+.home .smaller .header .logo {
 	display:block;
 }
 
@@ -480,6 +480,15 @@ header .logo img{
 	padding-top:9px;
 }
 
+/* moves position when nav is skinny before scroll on home page */
+.home .main-searchform-wrap {
+    top: 0px;
+}
+
+.home .smaller .main-searchform-wrap {
+	top: 12px; /* puts it back again when logo displays and nav gets fatter */
+}
+
 .main-searchform-wrap input[type=search]  {
 	width: 60px;
 	background-color: transparent;
@@ -538,10 +547,24 @@ header .logo img{
 
 
 /* Top level nav */
+
 .navigation ul {
 	padding: 0;
 	margin-right: 80px;
 }
+
+/* home specific */
+.home .smaller .navigation ul {
+    padding: 13px 0;
+    margin: 0;
+}
+
+.home .navigation ul {
+ 	padding: 0;
+    margin: 0;
+}
+
+
 
 .navigation ul li {
 	line-height: 44px;
