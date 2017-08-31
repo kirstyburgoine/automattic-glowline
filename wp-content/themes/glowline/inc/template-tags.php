@@ -41,22 +41,7 @@ if ( ! function_exists( 'glowline_posted_in' ) ) {
 	 */
 	function glowline_posted_in() {
 
-		// Get the title of the current category.
-		$current_category = single_cat_title( '', false );
-		// Get the ID of the current category. Changed : https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/pull/969.
-		$category_id = get_term_by( 'id', $current_category, 'category' );
-		// Get the URL of this category too. Changed: https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1096.
-		$category_link = get_term_link( $category_id );
-
-		if ( true === $current_category ) {
-			$posted_in = sprintf(
-				'<a href="' . esc_url( $category_link ) . '" title="' . esc_attr( $current_category ) . '">' . esc_html( $current_category ) . '</a>'
-			);
-		} else {
-			$posted_in = get_the_category_list( ', ' );
-		}
-
-		echo '<span class="post-category">' . _e( $posted_in ) . '</span>';
+		echo '<span class="post-category">' . get_the_category_list( ', ' ) . '</span>';
 
 	}
 }
