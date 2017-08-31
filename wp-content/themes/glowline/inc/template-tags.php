@@ -29,7 +29,7 @@ if ( ! function_exists( 'glowline_posted_on' ) ) {
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="post-meta">' . esc_html( $posted_on ) . '</span>';
+		echo '<span class="post-meta">' . _e( $posted_on ) . '</span>';
 	}
 }
 
@@ -56,7 +56,7 @@ if ( ! function_exists( 'glowline_posted_in' ) ) {
 			$posted_in = get_the_category_list( ', ' );
 		}
 
-		echo '<span class="post-category">' . esc_html( $posted_in ) . '</span>';
+		echo '<span class="post-category">' . _e( $posted_in ) . '</span>';
 
 	}
 }
