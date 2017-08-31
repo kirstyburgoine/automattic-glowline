@@ -16,41 +16,45 @@ foreach ( $featured_posts as $post ) :
 
 	<div class="item">
 
-		<a href="<?php esc_url( the_permalink() ); ?>">
-			<?php the_post_thumbnail( 'glowline-custom-slider-thumb' ); ?>
-		</a>
+		<?php
+		if ( has_post_thumbnail() ) :
+		?>
+			<a href="<?php esc_url( the_permalink() ); ?>">
+				<?php the_post_thumbnail( 'glowline-custom-slider-thumb' ); ?>
+			</a>
+		<?php
+		endif;
+		?>
 
 		<div class="slider-post-content-wrapper">
 			<div class="slider-post-content">
 
-				<div class="slider-post-category">
+				<?php glowline_posted_in(); ?>
+
+				<?php the_title( '<div class="slider-post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><h2>', '</h2></a></div>' ); ?>
+
+				<?php glowline_posted_on(); ?>
+<!-- 				<div class="slider-post-date">
 					<span>
-						<?php
-							$category_list = get_the_category_list( __( ', ', 'glowline' ) );
-							echo esc_html_x( $category_list );
-							?>
+						<a><?php //the_time( get_option( 'date_format' ) ); ?></a>
 					</span>
-				</div>
+				</div> -->
 
-				<div class="slider-post-title">
-					<a href="<?php esc_url( the_permalink() ); ?>">
-						<?php the_title( '<h2>','</h2>' ); ?>
-					</a>
-				</div>
-
-				<div class="slider-post-date">
-					<span>
-						<a><?php the_time( get_option( 'date_format' ) ); ?></a>
-					</span>
-				</div>
-
-				<p><?php the_excerpt(); ?></p>
-
-				<div class="read-more read-more-slider">
-					<a href="<?php esc_url( the_permalink() ); ?>">
-						<?php _esc_html_e( 'Continue Reading...','glowline' ); ?>
-					</a>
-				</div>
+				<?php
+				the_content(
+					sprintf(
+						wp_kses( /* translators: %s: Name of of post. Only seen by screenreaders. */
+							__( 'Continue Reading...<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
+							array(
+								'div' => array(
+									'class' => array( 'read-more, read-more-slider' ),
+								),
+							)
+						),
+						get_the_title()
+					)
+				);
+				?>
 
 			</div>
 		</div>
