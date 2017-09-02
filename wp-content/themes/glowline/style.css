@@ -183,6 +183,7 @@ pre {
 }
 
 .page blockquote {
+	position: relative;
 	overflow: hidden;
 	margin: 2.5rem 0;
 	padding: 15px 10px 15px 44px;
@@ -201,7 +202,7 @@ pre {
 	font-weight: bold;
 	color: #999;
 	position: absolute;
-	left: 20px;
+	left: 10px;
 	margin-top:14px;
 }
 .page blockquote p {
@@ -1033,8 +1034,7 @@ header .logo img{
 
 /* ------ Post Description ------- */
 .post-content .description{
-	padding-top:25px;
-	/*padding-bottom:45px;*/
+	padding: 25px 10px 0 10px;
 }
 .post-content .description p a,
 .page-description p a {
