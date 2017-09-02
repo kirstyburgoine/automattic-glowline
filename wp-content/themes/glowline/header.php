@@ -41,7 +41,7 @@
 
 					</div>
 					<div id="main-menu-wrapper">
-						<button href="#" id="pull" class="toggle-mobile-menu"></button>
+						<button id="pull" class="toggle-mobile-menu"></button>
 						<nav class="navigation clearfix mobile-menu-wrapper">
 							<?php
 							wp_nav_menu(
