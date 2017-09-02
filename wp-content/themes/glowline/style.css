@@ -1015,10 +1015,6 @@ header .logo img{
 .post-content .post-comment {
 	float:right;
 }
-.post-content .post-meta {
-	float:left;
-}
-
 .post .post-category a:hover,
 .post .post-category a:focus {
 	text-decoration: none;

@@ -29,7 +29,11 @@ if ( ! function_exists( 'glowline_posted_on' ) ) {
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="post-meta">' . _e( $posted_on ) . '</span>';
+		if ( is_sticky() ) :
+			echo '<span class="post-meta">Sticky Post</span>';
+		else :
+			echo _e( $posted_on );
+		endif;
 	}
 }
 
@@ -109,7 +113,7 @@ if ( ! function_exists( 'glowline_single_bottom_meta' ) ) {
 		if ( $tags_list ) {
 
 			/* translators: 1: list of tags. */
-			printf( '<div class="tagcloud">' . esc_html__( '%1$s', 'glowline' ) . '</div>', esc_html_x( $tags_list ) );
+			printf( '<div class="tagcloud">' . esc_html__( '%1$s', 'glowline' ) . '</div>', $tags_list );
 			echo '<div class="clearfix"></div>';
 		}
 
