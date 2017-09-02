@@ -281,10 +281,7 @@ pre {
 	color: #bdb76b;
 }
 
-.widget .search-submit,
 .read-more-slider a,
-.widget .search-submit,
-.search .search-submit,
 .comment-form input[type=submit],
 .paging li a {
 	border: 1px solid #bdb76b;
@@ -1039,6 +1036,13 @@ header .logo img{
 .post-content .description p a,
 .page-description p a {
 	color:#bdb76b;
+	text-decoration: underline;
+}
+.post-content .description p a:hover,
+.page-description p a:hover,
+.post-content .description p a:focus,
+.page-description p a:focus {
+	color: #5a5a5a;
 }
 .post-content .read-more{
 	text-align:center;
@@ -2025,7 +2029,6 @@ ol.comment-list li ol.children {
 	background-color: #bdb76b;
 	border: 1px solid #bdb76b;
 	color: #fff;
-	border: none;
 	padding: 10px;
 	margin-top: 20px;
 }
