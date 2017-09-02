@@ -8,13 +8,6 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * Uses vanilla CSS
 * Test data installed from: https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
 
-### TODO's ###
-
-* Remove defend.css
-* Find and Replace all 'TODO:' to check all tasks have been followed up and remove when done 
-* Check things like author images to be retina ready
-* Check all hover states have focus and active
-
 ### Theme Settings (controlled in Admin) ###
 
 * Site Title: "This is a test for the Glowline theme, which is a rubbish name for a website".
@@ -28,9 +21,3 @@ Conversion of Glowline theme from WordPress.org to WordPress.com theme.
 * https://unsplash.com/?photo=jOS6t2qZFHQ
 * https://commons.wikimedia.org/wiki/File:IPC_logo_white_(2004).png
 * https://commons.wikimedia.org/wiki/Category:Paralympic_Games#/media/File:140930-D-DB155-016_(15232257889).jpg
-
-### Further Development Later? ###
-* Change to SASS later?
-* Update layout to use Grid CSS instead of floats with fall backs to flex using `@supports`...
-* Change archive post markup to not use lists so content.php can be used instead of seperate
-* Convert all units to em/rem
