@@ -7,7 +7,7 @@ Description: Glowline is graceful and beautiful WordPress theme. It has live cus
 Version: 1.1.4-wpcom
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags:accessibility-ready, author-bio, blog-excerpts, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, multiple-menus, post-formats, post-slider, rtl-language-support, site-logo, sticky-post, testimonials, theme-options, threaded-comments, translation-ready, announcement, art, artwork, blog, business, cartoon, collaboration, craft, design, education, fashion, food, gaming, holiday, hotel, journal, lifestream, magazine, music, nature, news, outdoors, photoblogging, photography, portfolio, productivity, real-estate, school, scrapbooking, seasonal, sports, travel, tumblelog, video, wedding, black, blue, brown, dark, gray, green, light, orange, pink, purple, red, silver, tan, white, yellow, responsive-layout, right-sidebar, one-column, two-columns
+Tags: accessibility-ready, author-bio, blog-excerpts, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, multiple-menus, post-formats, post-slider, rtl-language-support, site-logo, sticky-post, testimonials, theme-options, threaded-comments, translation-ready, announcement, art, artwork, blog, business, cartoon, collaboration, craft, design, education, fashion, food, gaming, holiday, hotel, journal, lifestream, magazine, music, nature, news, outdoors, photoblogging, photography, portfolio, productivity, real-estate, school, scrapbooking, seasonal, sports, travel, tumblelog, video, wedding, black, blue, brown, dark, gray, green, light, orange, pink, purple, red, silver, tan, white, yellow, responsive-layout, right-sidebar, one-column, two-columns
 
 Text Domain: glowline
 */
@@ -15,24 +15,26 @@ Text Domain: glowline
 /*-------------------------------------------------------------
  * TABLE OF CONTENTS:
 \* ------------------------------------------------------------
-    1 - Resets
+    1 - Resets / Defaults
     2 - Typography
-    3 - Accessibility
-    4 - Page Elements
-        4.1 - Header
-        4.2 - Navigation
-        4.3 - Footer
-        4.4 - Layout Options
-    5 - Widgets
-    6 - Forms
-    7 - Content
-        7.1 - Featured Posts Slider
-        7.2 - Single Post and Standard Pages
-        7.3 - Search Page
-        7.4 - Gallery Page
-        7.5 - Comments
-        7.6 - Author Card
-        7.7 - Related Posts
+    3 - Theme Colours
+    4 - Accessibility
+    5 - Page Elements
+        5.1 - Header
+        5.2 - Search Form
+        5.3 - Navigation
+        5.4 - Footer
+        5.5 - Layout Options
+    6 - Widgets
+    7 - Forms
+    8 - Content
+        8.1 - Featured Posts Slider
+        8.2 - Single Post and Standard Pages
+        8.3 - Search Page
+        8.4 - Gallery Page
+        8.5 - Post Formats
+        8.6 - Comments
+        8.7 - Author Card
     8 - Alignments
     9 - Infinite scroll
         9.1 - Pagination
@@ -50,7 +52,7 @@ Text Domain: glowline
         11.8 - max-width: 480px
 
 /*--------------------------------------------------------------*\
- *  1 - Resets
+ *  1 - Resets / Defaults
 \*--------------------------------------------------------------*/
 
 body {
@@ -72,10 +74,7 @@ body {
 	background-color: #bdb76b;
 }
 
-::selection {
-	color: #ffffff;
-	background-color: #bdb76b;
-}
+
 .main-searchform-wrap input[type=submit] {
 	display:none;
 }
@@ -89,10 +88,6 @@ a, a:hover, a:focus {
 .clearfix:after,.clearfix:before, .container:after,.container:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before{display:table;content:" "}.clearfix:after, .container:after,.nav:after,.navbar-collapse:after,.navbar-header:after,.navbar:after{clear:both}
 html{
 	font-family:sans-serif;
-	-webkit-text-size-adjust:100%;
-	   -moz-text-size-adjust:100%;
-	    -ms-text-size-adjust:100%;
-	        text-size-adjust:100%;
 }
 
 span.edit-link a.post-edit-link {
@@ -107,7 +102,6 @@ img, video, object {
 }
 ::-webkit-input-placeholder { color: #bababa; }
 :-ms-input-placeholder { color: #bababa; }
-::placeholder { color: #bababa; }
 
 /*--------------------------------------------------------------*\
  *  2 - Typography
@@ -234,7 +228,9 @@ pre {
 }
 
 /*--------------------------------------------------------------*\
- *  2 - Theme Colours
+ *  3 - Theme Colours
+ *  These colors were controlled by custom stuff.
+ *  Defaulted to brand colours for now
 \*--------------------------------------------------------------*/
 
 /* Strapline */
@@ -320,12 +316,10 @@ input[type=submit]:focus,
 	background-color: #bdb76b;
 }
 
-::selection{
-	background-color: #bdb76b;
-}
+
 
 /*--------------------------------------------------------------*\
- *  3 - Accessibility
+ *  4 - Accessibility
 \*--------------------------------------------------------------*/
 
 /* Text meant only for screen readers. */
@@ -359,8 +353,8 @@ input[type=submit]:focus,
 }
 
 /*--------------------------------------------------------------*\
- *  4 - Page Elements
- *      4.1 Header Area - General
+ *  5 - Page Elements
+ *      5.1 Header Area - General
 \*--------------------------------------------------------------*/
 
 .header-wrapper{
@@ -436,8 +430,8 @@ header .logo img{
 }
 
 /*--------------------------------------------------------------*\
- *  4 - Page Elements
- *      4.1 Header Area - Search Form
+ *  5 - Page Elements
+ *      5.2 Header Area - Search Form
 \*--------------------------------------------------------------*/
 
 .main-searchform-wrap {
@@ -497,8 +491,8 @@ header .logo img{
 }
 
 /*--------------------------------------------------------------*\
- *  4 - Page Elements
- *      4.2 Navigation
+ *  5 - Page Elements
+ *      5.3 Navigation
 \*--------------------------------------------------------------*/
 
 .nav-wrapper {
@@ -804,7 +798,7 @@ header .logo img{
 
 	/* Quite specific here to counter desktop */
 	.navigation ul ul li {
-		background-color: none;
+		background-color: transparent;
 		width: 100%;
 	}
 	.navigation ul ul.sub-menu a {
@@ -824,8 +818,8 @@ header .logo img{
 }
 
 /*--------------------------------------------------------------*\
-    4 - Page Elements
-        4.3 - Footer
+    5 - Page Elements
+        5.4 - Footer
 \*--------------------------------------------------------------*/
 .footer .footer-widget-column .widget {
 	width: 22.3%;
@@ -858,22 +852,22 @@ header .logo img{
 }
 
 /*--------------------------------------------------------------*\
- *  4 - Page Elements
- *      4.4 Layout Options
+ *  5 - Page Elements
+ *      5.5 Layout Options
 \*--------------------------------------------------------------*/
 
 .container {
-  max-width:1170px;
-  min-width:240px;
-  margin-right: auto;
-  margin-left:auto;
-  position:relative;
-  clear:both;
+   max-width:1170px;
+   min-width:240px;
+   margin-right: auto;
+   margin-left:auto;
+   position:relative;
+   clear:both;
 }
 
 .admin-bar .nav-wrapper,
 .admin-bar .nav-wrapper.small {
-  top: 32px;
+   top: 32px;
 }
 
 .content-fullwidth {
@@ -896,7 +890,7 @@ header .logo img{
 
 
 /* ------------------------------ *\
- * Standard Layout
+ * 5.5 Standard Layout
 \* ------------------------------ */
 .standard-layout .post {
 	-webkit-box-shadow: none;
@@ -945,7 +939,7 @@ header .logo img{
 }
 
 /* ------------------------------ *\
- * All Grid Layouts
+ * 5.5 All Grid Layouts
 \* ------------------------------ */
 
  /* -- Styles that apply to all grid settings -- */
@@ -972,6 +966,7 @@ header .logo img{
 .post-content .post-header {
 	text-align:center;
 }
+.post-content .post-header .post-title a:hover,
 .post-content .post-header .post-title a:focus {
 	text-decoration: underline;
 }
@@ -1115,7 +1110,7 @@ header .logo img{
 
 
 /* ------------------------------ *\
- * Two Column Grid Layout
+ * 5.5 Two Column Grid Layout
 \* ------------------------------ */
  .two-grid-layout .grid-post {
 	width:48%;
@@ -1136,7 +1131,7 @@ header .logo img{
 
 
 /* ------------------------------ *\
- * Three Column Grid Layout
+ * 5.5 Three Column Grid Layout
 \* ------------------------------ */
 .three-grid-layout .grid-post {
 	width:31.3%;
@@ -1158,7 +1153,7 @@ header .logo img{
 
 
 /* ------------------------------ *\
- * Four Column Grid Layout
+ * 5.5 Four Column Grid Layout
 \* ------------------------------ */
 .four-grid-layout .grid-post {
 	width:23.1%;
@@ -1180,7 +1175,7 @@ header .logo img{
 
 
 /* ------------------------------ *\
- * Five Column Grid Layout
+ * 5.5 Five Column Grid Layout
 \* ------------------------------ */
 .five-grid-layout .grid-post {
 	width:18.2%;
@@ -1223,7 +1218,7 @@ header .logo img{
 
 
 /*--------------------------------------------------------------*\
- *  5 - Widgets
+ *  6 - Widgets
 \*--------------------------------------------------------------*/
 .widget {
 	margin: 0 0 3.5em;
@@ -1461,7 +1456,7 @@ form.search-form{
 }
 
 /*--------------------------------------------------------------*\
- *   6 - Forms
+ *   7 - Forms
 \*--------------------------------------------------------------*/
 
 input, select, textarea {
@@ -1490,8 +1485,8 @@ input[type=submit] {
 
 
 /*--------------------------------------------------------------*\
- *  7 - Content
- *      7.1 - Featured Post Slider
+ *  8 - Content
+ *      8.1 - Featured Post Slider
 \*--------------------------------------------------------------*/
 
 .featured-posts .slider {
@@ -1543,7 +1538,7 @@ input[type=submit] {
 	margin-top: 38px;
 	text-align: center;
 }
-ul.slider-post-social.social-icon li.share-text,
+.slider-post-social.social-icon li.share-text,
 .standard-bottom-meta .post-share .share-text,
 .single-bottom-meta .post-share .share-text {
 	margin: 0;
@@ -1649,8 +1644,8 @@ ul.slider-post-social.social-icon li.share-text,
 
 
 /*--------------------------------------------------------------*\
- *  7 - Content
- *      7.2 - Single Post and Standard Pages
+ *  8 - Content
+ *      8.2 - Single Post and Standard Pages
 \*--------------------------------------------------------------*/
 
 .single .post-content,
@@ -1742,8 +1737,8 @@ ul.slider-post-social.social-icon li.share-text,
 
 
 /*--------------------------------------------------------------*\
- *  7 - Content
- *      7.3 - Search Page
+ *  8 - Content
+ *      8.3 - Search Page
 \*--------------------------------------------------------------*/
 
 .search-no-results .page-header .page-title {
@@ -1758,8 +1753,8 @@ ul.slider-post-social.social-icon li.share-text,
 
 
 /*--------------------------------------------------------------*\
- *  7 - Content
- *      7.4 - Gallery Page
+ *  8 - Content
+ *      8.4 - Gallery Page
 \*--------------------------------------------------------------*/
 
 .gallery-icon.landscape a img:hover,
@@ -1790,8 +1785,8 @@ ul.slider-post-social.social-icon li.share-text,
 
 
 /*--------------------------------------------------------------*\
- *  7 - Content
- *      7.5 - Post Formats
+ *  8 - Content
+ *      8.5 - Post Formats
 \*--------------------------------------------------------------*/
 
 
@@ -1857,7 +1852,7 @@ ul.slider-post-social.social-icon li.share-text,
 }
 .format-quote blockquote p:before {
 	font-style: normal;
-	font-family: Playfair Display;
+	font-family: "Playfair Display";
 	content: '\201c';
 	font-size: 160px;
 	color: #bdb76b;
@@ -1865,8 +1860,8 @@ ul.slider-post-social.social-icon li.share-text,
 }
 
 /*--------------------------------------------------------------*\
- *  7 - Content
- *      7.5 - Comments
+ *  8 - Content
+ *      8.6 - Comments
 \*--------------------------------------------------------------*/
 .comments-area {
 	margin: 0;
@@ -2035,8 +2030,8 @@ ol.comment-list li ol.children {
 
 
 /*--------------------------------------------------------------*\
- *  7 - Content
- *      7.6 - Author Card
+ *  8 - Content
+ *      8.7 - Author Card
 \*--------------------------------------------------------------*/
 
 /* author card, swicthed on and off by Jetpack */
@@ -2064,39 +2059,6 @@ ol.comment-list li ol.children {
 	color: #5a5a5a;
 	font-weight: normal;
 	margin-top: 0;
-}
-
-
-/*--------------------------------------------------------------*\
- *  7 - Content
- *      7.7 - Related Posts
-\*--------------------------------------------------------------*/
-
-/* TODO: Still USed? */
-.related-post {
-	margin:85px 0;
-	overflow:hidden;
-}
-li.sl-related-thumbnail {
-	width: 30.6%;
-	float: left;
-	list-style-type: none;
-	margin-right: 4%;
-}
-li.sl-related-thumbnail img{
-	width:100%;
-	height:auto;
-}
-li.sl-related-thumbnail h3{
-	text-align: center;
-	border-bottom: 1px solid #bdb76b;
-	display: inline-block;
-	margin: 10px 0;
-	font-size:15px;
-	padding-bottom: 10px;
-}
-.related-post li:last-child {
-	margin-right: 0;
 }
 
 
@@ -2182,12 +2144,7 @@ a img.aligncenter {
 
 /* ------------------------------------------------------ *\
  *  9 - Infinite Scroll
- *      9.1 - Pagination
 \* ------------------------------------------------------ */
-
-/*--------------------------------------------------------------
-11.0 Infinite scroll
---------------------------------------------------------------*/
 
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation,
@@ -2239,37 +2196,19 @@ a img.aligncenter {
 	margin: 2.6em auto;
 }
 
-/* TODO: Check if needed */
-.pagination{
-	text-align: right;
-	margin-bottom: 70px;
-}
+/* ------------------------------------------------------ *\
+ *  9 - Infinite Scroll
+ *      9.1 - Pagination
+\* ------------------------------------------------------ */
 
-.pagination .nav-links .prev,
-.pagination .nav-links .page-numbers {
-	border: 1px solid #bdb76b;
-	padding: 8px 15px;
-	font-size: 14px;
-	color: #bdb76b;
+.posts-navigation {
+	clear: both;
 }
-.pagination .nav-links .current {
-	background-color:#bdb76b;
-	color:#fff;
-}
-
-.pagination .nav-links a:hover,
-.pagination .nav-links span:hover,
-.pagination .nav-links a:focus,
-.pagination .nav-links span:focus{
-	border: 1px solid #bdb76b;
-	background-color:#bdb76b;
-	color:#fff;
-}
-.nav-next {
+.nav-links .nav-next {
 	float: right;
+	padding:10px 0;
 }
-.nav-links .nav-next a:after,
-.content #main .pagination .newer a:after{
+.nav-links .nav-next a:after {
 	font-size: 18px;
 	font-family: FontAwesome;
 	content: "\f101";
@@ -2282,8 +2221,7 @@ a img.aligncenter {
 	float: left;
 	padding:10px 0;
 }
-.nav-links .nav-previous a:before,
-.content .site-main .pagination .older a:before{
+.nav-links .nav-previous a:before {
 	font-size: 18px;
 	font-family: FontAwesome;
 	content: "\f100";
@@ -2363,9 +2301,7 @@ a img.aligncenter {
 .clearfix:after {
 	clear: both;
 }
-.clearfix {
-	*zoom: 1;
-}
+
 
 
 /* ------------------------------------------------------ *\
@@ -2390,7 +2326,7 @@ a img.aligncenter {
 		margin:0 auto;
 		clear:both;
 	}
-	.sidebar-wrapper{
+	.sidebar-wrapper {
 		max-width: 400px;
 		width: 96%;
 		float:none;
@@ -2404,7 +2340,7 @@ a img.aligncenter {
 
 @media screen and (max-width: 865px) {
 
-	.header-wrapper{
+	.header-wrapper {
 		padding-top: 57px;
 	}
 
@@ -2431,8 +2367,8 @@ a img.aligncenter {
 
 @media screen and (min-width: 767px) {
 
-	ul.five-grid-layout li.post .post-content .post-meta .post-date,
-	ul.five-grid-layout li.post .post-content .post-meta .post-comment{
+	.five-grid-layout .post .post-content .post-meta .post-date,
+	.five-grid-layout .post .post-content .post-meta .post-comment{
 		float: none;
 		display: block;
 		width: 100%;
@@ -2518,14 +2454,6 @@ a img.aligncenter {
 		display:block;
 	}
 
-	.related-post {
-		margin-top:30px;
-	}
-
-	.sl-related-thumbnail h3 {
-		line-height:22px;
-	}
-
 }
 
 @media screen and (max-width: 550px) {
@@ -2568,49 +2496,6 @@ a img.aligncenter {
 		padding: 25px 25px 25px 25px;
 	}
 
-	/* TODO: STill needed? */;
-	li.sl-related-thumbnail,
-	.related-post li:last-child {
-		width: 100%;
-		max-width:358px;
-		margin: 0 auto 40px;
-		text-align: center;
-		float: none;
-	}
-	.related-post {
-		margin-bottom: 0;
-	}
-	.footer .footer-widget-column .widget {
-		width: 100%;
-	}
-	.home-category.most-assigned,
-	.home-category.other-category,
-	.home-category-wrapper .other-category img,
-	.home-category-wrapper .most-assigned img {
-		width: 100%;
-		height:auto;
-		max-height:100%;
-	}
-	.content ul.list-layout .post,
-	ul.list-layout .post .post-content .read-more,
-	ul.list-layout .post .post-content .post-header {
-		text-align:center;
-	}
-	ul.list-layout .post .post-img {
-		max-width: 320px;
-		width:auto;
-		float: none;
-	}
-	ul.list-layout .post .post-content {
-		padding: 17px 3% 35px;
-		width: auto;
-		max-width: 320px;
-		margin: 0 auto;
-	}
-	ul.list-layout .post .post-content .read-more {
-		text-align: center;
-	}
-	/* End TODO */
 	.footer .footer-widget-column.footer-widget-3column-active .widget {
 		width: 100%;
 	}
