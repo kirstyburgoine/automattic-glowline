@@ -1,16 +1,23 @@
-"GlowLine Lite a gracefull WordPress Theme" By ThemeHunk.
+== Theme: GlowLine ==
 
-== Theme: GlowLine Lite ==
+Theme URI:		http://www.themehunk.com/product/glowline-lite-free-blogging-theme/
+Author:   		ThemeHunk
+Author URI:  	http://www.themehunk.com/
+Version: 		1.1.4-wpcom
 
-* By ThemeHunk, http://themehunk.com/
+Tags: accessibility-ready, author-bio, blog-excerpts, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, multiple-menus, post-formats, post-slider, rtl-language-support, site-logo, sticky-post, testimonials, theme-options, threaded-comments, translation-ready, announcement, art, artwork, blog, business, cartoon, collaboration, craft, design, education, fashion, food, gaming, holiday, hotel, journal, lifestream, magazine, music, nature, news, outdoors, photoblogging, photography, portfolio, productivity, real-estate, school, scrapbooking, seasonal, sports, travel, tumblelog, video, wedding, black, blue, brown, dark, gray, green, light, orange, pink, purple, red, silver, tan, white, yellow, responsive-layout, right-sidebar, one-column, two-columns
+
+
+== Description ==
+Glowline is graceful and beautiful WordPress theme. It has live customizer to check changes instantly and lead generation plugin integrated. Glowline theme supports five widgetized areas (two in the sidebar, three in the footer). Glowline supports sidebar on home page also.
 
 == Theme License & Copyright ==
-GlowLine Lite Theme is distributed under the terms of the GNU GPL
-GlowLine Lite Theme - Copyright 2014 GlowLine Lite Theme, themehunk.com
+License: 		GNU General Public License v3 or later
+License URI: 	http://www.gnu.org/licenses/gpl-3.0.html
 
 License for images:
 
-1. Image Name: header-bg-dummy.jpg
+1. Image Name: header-bg-default.jpg
 Resource link: https://www.pexels.com/photo/black-and-white-city-skyline-buildings-1139/
 Licensed under the CCO license.
 License link : https://www.pexels.com/photo-license/
@@ -46,16 +53,3 @@ License URL for CSS : http://opensource.org/licenses/mit-license.html
 
 ==  Other Licenses ==
 See headers of files for further details.
-	
-== Theme License & Copyright ==
-GlowLine is distributed under the terms of the GNU GPL
-GlowLine -Copyright 2014 GlowLine, ThemeHunk.com
-License : GPL License
-License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
-
-custom.js, mobile-menu.js is distributed under the terms of the GNU GPL
-License For js
-    All js files are GPL Compatible.
-    See headers of JS files for further details.
-
-Once again, thank you so much for trying the GlowLine WordPress Theme. As we said at the beginning, we will be glad to help you. If you have any questions related to this theme then do let us know & we will try our best to assist. If you have any general questions related to the themes on ThemeHunk, we would recommend you to visit the ThemeHunk Support Forum and ask your queries there.
