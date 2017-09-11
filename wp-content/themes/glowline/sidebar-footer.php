@@ -12,45 +12,48 @@ if ( ! is_active_sidebar( 'sidebar-2' )
 	return;
 endif;
 ?>
+<div class="footer-wrapper" id="footer">
 
-<div class="container">
+	<div class="container">
 
-	<div class="footer">
-		 <div class="footer-widget-column footer-widget-3column-active">
+		<div class="footer">
+			 <div class="footer-widget-column footer-widget-3column-active">
 
-			<?php
-			if ( is_active_sidebar( 'sidebar-2' ) ) :
-			?>
+				<?php
+				if ( is_active_sidebar( 'sidebar-2' ) ) :
+				?>
 
-					<?php dynamic_sidebar( 'sidebar-2' ); ?>
+						<?php dynamic_sidebar( 'sidebar-2' ); ?>
 
-			<?php
-			endif;
-			?>
+				<?php
+				endif;
+				?>
 
-			<?php
-			if ( is_active_sidebar( 'sidebar-3' ) ) :
-			?>
+				<?php
+				if ( is_active_sidebar( 'sidebar-3' ) ) :
+				?>
 
-					<?php dynamic_sidebar( 'sidebar-3' ); ?>
+						<?php dynamic_sidebar( 'sidebar-3' ); ?>
 
-			<?php
-			endif;
-			?>
+				<?php
+				endif;
+				?>
 
-			<?php
-			if ( is_active_sidebar( 'sidebar-4' ) ) :
-			?>
+				<?php
+				if ( is_active_sidebar( 'sidebar-4' ) ) :
+				?>
 
-					<?php dynamic_sidebar( 'sidebar-4' ); ?>
+						<?php dynamic_sidebar( 'sidebar-4' ); ?>
 
-			<?php
-			endif;
-			?>
+				<?php
+				endif;
+				?>
 
+			</div>
 		</div>
+
+		<div class="clearfix"></div>
+
 	</div>
 
-	<div class="clearfix"></div>
-
-</div>
+</div> <!-- closes .footer-wrapper //-->

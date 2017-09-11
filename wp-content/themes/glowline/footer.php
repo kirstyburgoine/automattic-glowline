@@ -6,11 +6,8 @@
  */
 
 ?>
-		<div class="footer-wrapper" id="footer">
 
-			<?php get_sidebar( 'footer' ); ?>
-
-		</div> <!-- closes .footer-wrapper //-->
+		<?php get_sidebar( 'footer' ); ?>
 
 		<footer id="colophon" class="site-footer">
 
