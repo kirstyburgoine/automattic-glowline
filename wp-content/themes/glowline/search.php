@@ -29,7 +29,7 @@ if ( have_posts() ) :
 		global $glowline_masonry_layout;
 		?>
 
-		<div class="content clearfix <?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout, 'glowline' ); ?> posts-container" id="content">
+		<div class="content clearfix <?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout ); ?> posts-container" id="content">
 
 		<?php
 		/* Start the Loop */
