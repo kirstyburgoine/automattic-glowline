@@ -7,7 +7,7 @@
 
 ?>
 
-<article id="post-<?php esc_attr( the_ID() ); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php the_title( '<header><h1 class="post-title">', '</h1></header>' ); ?>
 
