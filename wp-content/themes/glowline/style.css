@@ -673,28 +673,29 @@ header .logo img{
 	}
 
 	.header .toggle-mobile-menu {
-		top: 3px;
-		padding: 20px 0;
 		display: block;
-		width: auto;
-		position: relative;
-		color: #000;
-		text-indent: 15px;
+		width: 30px;
+		height: 30px;
+		padding:0;
 		float: right;
+		top: 25px;
+		right: 0;
+		position: relative;
 		border: none;
 		background-color: transparent;
 		-webkit-transition: all 0.5s ease-out;
 		transition: all 0.5s ease-out;
+		overflow: hidden;
 	}
 
-	.toggle-mobile-menu:after {
+	.toggle-mobile-menu:before {
 		content: "\f0c9";
 		display: inline-block;
 		font-size:30px;
 		font-family: FontAwesome;
 		color: #000;
 	}
-	.mobile-menu-active .toggle-mobile-menu:after {
+	.mobile-menu-active .toggle-mobile-menu:before {
 		content: "\f00d";
 	}
 
