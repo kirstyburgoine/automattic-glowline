@@ -14,11 +14,11 @@ function glowline_wpcom_setup() {
 
 	if ( ! isset( $themecolors ) ) {
 		$themecolors = array(
-			'bg'     => '',
-			'border' => '',
-			'text'   => '',
-			'link'   => '',
-			'url'    => '',
+			'bg'     => 'FFFFFF',
+			'border' => 'DDDDDD',
+			'text'   => '5A5A5A',
+			'link'   => 'bdb76b',
+			'url'    => 'bdb76b',
 		);
 	}
 }
