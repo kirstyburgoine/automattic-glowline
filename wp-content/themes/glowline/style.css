@@ -1598,6 +1598,7 @@ input[type=submit] {
 	left: 1%;
 	cursor: pointer;
 }
+
 .owl-controls .owl-next {
 	top: 44%;
 	position: absolute;
@@ -1605,20 +1606,20 @@ input[type=submit] {
 	cursor: pointer;
 }
 
-.slider .owl-controls .owl-prev,
-.slider .owl-controls .owl-next{
+.slider .owl-carousel .owl-prev,
+.slider .owl-carousel .owl-next{
 	opacity: 0;
 	-webkit-transition: all 0.25s linear;
 	transition: all 0.25s linear;
 }
-.slider .owl-controls:hover .owl-prev,
-.slider .owl-controls:hover .owl-next,
-.slider .owl-controls:focus .owl-prev,
-.slider .owl-controls:focus .owl-next  {
+
+.slider .owl-carousel:hover .owl-prev,
+.slider .owl-carousel:hover .owl-next,
+.slider .owl-carousel:focus .owl-prev,
+.slider .owl-carousel:focus .owl-next  {
 	opacity: 1;
 	color: transparent;
 }
-
 
 /* Post navigation */
 .owl-carousel .owl-controls .owl-dots{
@@ -1626,19 +1627,23 @@ input[type=submit] {
 	bottom: 30px;
 	max-width: 70%;
 }
+
 .owl-carousel .owl-controls .owl-dot{
 	display: inline-block;
 	padding: 2px;
 }
+
 .owl-carousel .owl-controls .owl-dot span:before{
 	content: "\f1db";
 	font-family: fontAwesome;
 	color: #ddd;
 }
+
 .owl-carousel .owl-controls .owl-dot.active span:before{
 	content: "\f192";
 	font-family: fontAwesome;
 }
+
 .owl-carousel .owl-controls .owl-nav .owl-next span:before{
 	content: "\f192";
 	font-family: fontAwesome;
