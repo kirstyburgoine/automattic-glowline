@@ -13,7 +13,7 @@
 
 		<?php glowline_posted_in(); ?>
 
-		<?php the_title( '<div class="post-title"><h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2></div>' ); ?>
+		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 
 		<?php glowline_posted_on(); ?>
 
@@ -23,7 +23,7 @@
 	if ( has_post_thumbnail() ) :
 	?>
 		<div class="post-img">
-			<a href="<?php esc_url( the_permalink() ); ?>"> <?php the_post_thumbnail( 'post-thumbnails' ); ?></a>
+			<a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail( 'post-thumbnails' ); ?></a>
 		</div>
 	<?php
 	endif;

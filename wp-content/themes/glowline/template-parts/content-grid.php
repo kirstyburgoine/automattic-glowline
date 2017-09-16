@@ -28,7 +28,7 @@ global $glowline_grid_layout;
 
 				<?php glowline_posted_in(); ?>
 
-				<?php the_title( '<div class="post-title"><h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2></div>' ); ?>
+				<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 
 				<?php glowline_posted_on(); ?>
 
