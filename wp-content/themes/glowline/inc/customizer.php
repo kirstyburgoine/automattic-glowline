@@ -36,7 +36,7 @@ function glowline_customize_register( $wp_customize ) {
 	// =============================
 	   $wp_customize->add_section(
 		   'theme_options', array(
-			   'title'       => __( 'Theme Options ', 'glowline' ),
+			   'title'       => esc_html__( 'Theme Options ', 'glowline' ),
 			   'priority'    => 250,
 		   )
 	   );
@@ -46,21 +46,22 @@ function glowline_customize_register( $wp_customize ) {
 		 'dynamic_grid', array(
 			 'default'     => 'standard-layout',
 			 'capability'  => 'edit_theme_options',
+			 'sanitize_callback' => 'glowline_sanitize_grid_options',
 		 )
 	 );
 
 	$wp_customize->add_control(
 		'dynamic_grid', array(
 			'settings'    => 'dynamic_grid',
-			'label'       => __( 'Choose A Post Layout','glowline' ),
+			'label'       => esc_html__( 'Choose A Post Layout','glowline' ),
 			'section'     => 'theme_options',
 			'type'        => 'select',
 			'choices'     => array(
-				'standard-layout'       => __( 'Standard Layout','glowline' ),
-				'two-grid-layout'       => __( 'Two Column Grid','glowline' ),
-				'three-grid-layout'     => __( 'Three Column Grid','glowline' ),
-				'four-grid-layout'      => __( 'Four Column Grid','glowline' ),
-				'five-grid-layout'      => __( 'Five Column Grid','glowline' ),
+				'standard-layout'       => esc_html__( 'Standard Layout','glowline' ),
+				'two-grid-layout'       => esc_html__( 'Two Column Grid','glowline' ),
+				'three-grid-layout'     => esc_html__( 'Three Column Grid','glowline' ),
+				'four-grid-layout'      => esc_html__( 'Four Column Grid','glowline' ),
+				'five-grid-layout'      => esc_html__( 'Five Column Grid','glowline' ),
 			),
 		)
 	);
@@ -70,19 +71,20 @@ function glowline_customize_register( $wp_customize ) {
 		'masonry_grid', array(
 			'default'     => 'masonry-disabled',
 			'capability'  => 'edit_theme_options',
+			'sanitize_callback' => 'glowline_sanitize_masonry_options',
 		)
 	);
 
 	$wp_customize->add_control(
 		'masonry_grid', array(
 			'settings'    => 'masonry_grid',
-			'label'       => __( 'Enable Masonry Layout','glowline' ),
-			'description' => __( 'Only works with the grid options selected','glowline' ),
+			'label'       => esc_html__( 'Enable Masonry Layout','glowline' ),
+			'description' => esc_html__( 'Only works with the grid options selected','glowline' ),
 			'section'     => 'theme_options',
 			'type'        => 'select',
 			'choices'     => array(
-				'masonry-enabled'       => __( 'Enabled','glowline' ),
-				'masonry-disabled'      => __( 'Disabled','glowline' ),
+				'masonry-enabled'       => esc_html__( 'Enabled','glowline' ),
+				'masonry-disabled'      => esc_html__( 'Disabled','glowline' ),
 			),
 		)
 	);
@@ -90,3 +92,43 @@ function glowline_customize_register( $wp_customize ) {
 }
 
 add_action( 'customize_register','glowline_customize_register' );
+
+
+/**
+ * Sanitize a layout dropdown options
+ */
+function glowline_sanitize_grid_options( $input ) {
+    $valid = array(
+    	'standard-layout'		=> esc_html__( 'Standard Layout','glowline' ),
+		'two-grid-layout'       => esc_html__( 'Two Column Grid','glowline' ),
+		'three-grid-layout'     => esc_html__( 'Three Column Grid','glowline' ),
+		'four-grid-layout'      => esc_html__( 'Four Column Grid','glowline' ),
+		'five-grid-layout'      => esc_html__( 'Five Column Grid','glowline' ),
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/**
+ * Sanitize masonry dropdown
+ */
+function glowline_sanitize_masonry_options( $input ) {
+    $valid = array(
+		'masonry-enabled'       => esc_html__( 'Enabled','glowline' ),
+		'masonry-disabled'      => esc_html__( 'Disabled','glowline' ),
+    );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+
+
+
