@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying full content on posts and pages
+ * The template for displaying full content on posts
  *
  * @package Glowline
  */
@@ -31,11 +31,11 @@
 		endif;
 		?>
 
-		<div class="description">
+		<div class="description clearfix">
 			<?php the_content(); ?>
 		</div>
 
-		<div class="clearfix"></div>
+
 
 		<?php
 			wp_link_pages(
@@ -50,7 +50,5 @@
 	</div><!-- Content End -->
 
 	<?php glowline_single_bottom_meta(); ?>
-
-	<div class="clearfix"></div>
 
 </article>
