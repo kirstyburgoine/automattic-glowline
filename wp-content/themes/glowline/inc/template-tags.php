@@ -84,7 +84,7 @@ if ( ! function_exists( 'glowline_content_bottom_meta' ) ) {
 			echo '<div class="post-share"><ul class="single-social-icon">';
 
 			if ( glowline_userpic() ) {
-				echo '<li><span class="post-author-pic">' . esc_html( glowline_userpic() ) . '</span></li>';
+				echo '<li><span class="post-author-pic">' . glowline_userpic() . '</span></li>';
 			};
 
 				echo '<li><span class="post-author">' . the_author_posts_link() . '</span></li>';
@@ -122,7 +122,7 @@ if ( ! function_exists( 'glowline_single_bottom_meta' ) ) {
 		if ( $tags_list ) {
 
 			/* translators: 1: list of tags. */
-			printf( '<div class="tagcloud">' . esc_html__( '%1$s', 'glowline' ) . '</div>', $tags_list );
+			printf( '<div class="tagcloud">' . __( '%1$s', 'glowline' ) . '</div>', $tags_list );
 			echo '<div class="clearfix"></div>';
 		}
 
