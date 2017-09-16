@@ -103,11 +103,11 @@ add_action( 'after_setup_theme', 'glowline_setup' );
 function glowline_scripts() {
 
 	wp_enqueue_style( 'glowline-fonts', glowline_fonts_url(), array(), null );
-	wp_enqueue_style( 'glowline-font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '1.0.0' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '1.0.0' );
 	// Load our main stylesheet.
 	wp_enqueue_style( 'glowline-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'glowline-classie', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '', true );
+	wp_enqueue_script( 'classie', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'glowline-custom', get_template_directory_uri() . '/js/glowline-global.js', array( 'jquery', 'masonry' ), '', true );
 
 	if ( is_singular() && comments_open() && ( get_option( 'thread_comments' ) === 1 ) ) {
@@ -115,8 +115,8 @@ function glowline_scripts() {
 	}
 
 	if ( glowline_has_featured_posts( 2 ) ) {
-		wp_enqueue_style( 'glowline-owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.0.0' );
-		wp_enqueue_script( 'glowline-owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.js', array( 'jquery' ), '', true );
+		wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.0.0' );
+		wp_enqueue_script( 'owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.js', array( 'jquery' ), '', true );
 	}
 
 }
