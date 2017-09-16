@@ -32,7 +32,7 @@ if ( ! function_exists( 'glowline_posted_on' ) ) {
 		if ( is_sticky() ) :
 			echo '<span class="sticky-post">Sticky Post</span>';
 		else :
-			echo _e( $posted_on );
+			echo $posted_on;
 		endif;
 	}
 }
@@ -62,11 +62,20 @@ if ( ! function_exists( 'glowline_content_bottom_meta' ) ) {
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 
 			echo '<span class="post-comment">';
-				comments_popup_link(
-					sprintf(
-						__( 'Leave a Comment','glowline' ), __( '1 Comment','glowline' ), __( '% Comments','glowline' )
-					)
-				);
+			comments_popup_link(
+				sprintf(
+					wp_kses(
+						/* translators: %s: post title */
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'glowline' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				)
+			);
 			echo '</span>';
 		}
 
