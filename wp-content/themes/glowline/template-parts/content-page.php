@@ -7,15 +7,21 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php esc_attr( the_ID() ); ?>" <?php post_class(); ?>>
 
 	<?php the_title( '<header><h1 class="post-title">', '</h1></header>' ); ?>
 
 	<div class="post-content clearfix"><!-- Content Start -->
 
-		<div class="post-img">
-			<a href="#"></a>
-		</div>
+		<?php
+		if ( has_post_thumbnail() ) :
+		?>
+			<div class="post-img">
+				<?php the_post_thumbnail( 'post-thumbnails' ); ?>
+			</div>
+		<?php
+		endif;
+		?>
 
 		<div class="page-description">
 			<?php the_content(); ?>
