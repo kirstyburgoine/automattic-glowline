@@ -27,7 +27,7 @@ get_header(); ?>
 			            'prev_text'                  => __( 'Previous: %title' ),
 			            'next_text'                  => __( 'Next: %title' ),
 			            'in_same_term'               => true,
-			            'screen_reader_text' => __( 'Continue Reading' ),
+			            'screen_reader_text' => __( 'Read More' ),
 			        ) );
 
 					// If comments are open or we have at least one comment, load up the comment template.
