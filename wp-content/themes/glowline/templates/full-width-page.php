@@ -3,7 +3,7 @@
  * A template to display content full width withour a sidebar
  *
  * @package Glowline
- * Template Name: Fullwidth Page
+ * Template Name: Full-width Page
  */
 
 ?>
