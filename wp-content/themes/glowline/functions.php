@@ -149,7 +149,7 @@ if ( ! function_exists( 'glowline_fonts_url' ) ) :
 			$font_families = array();
 
 			if ( 'off' !== $lato ) {
-				$font_families[] = 'Lato:400,700,900,400italic,700italic,900italic&subset=latin,latin-ext';
+				$font_families[] = 'Lato:400,700,900,400italic,700italic,900italic';
 			}
 
 			if ( 'off' !== $playfair ) {
