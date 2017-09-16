@@ -33,11 +33,6 @@ foreach ( $featured_posts as $post ) :
 				<?php the_title( '<div class="slider-post-title"><h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2></div>' ); ?>
 
 				<?php glowline_posted_on(); ?>
-<!-- 				<div class="slider-post-date">
-					<span>
-						<a><?php //the_time( get_option( 'date_format' ) ); ?></a>
-					</span>
-				</div> -->
 
 				<?php
 				the_content(
