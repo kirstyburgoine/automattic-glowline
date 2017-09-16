@@ -903,7 +903,8 @@ header .logo img{
 	text-align:center;
 	margin-bottom: 20px;
 }
-.standard-layout .post .post-header .post-meta {
+.standard-layout .post .post-header .post-meta,
+.standard-layout .post .post-header .sticky-post {
 	display: block;
 	/* Makes sure it clears category when no title */
 }

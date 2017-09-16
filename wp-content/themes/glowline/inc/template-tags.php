@@ -30,7 +30,7 @@ if ( ! function_exists( 'glowline_posted_on' ) ) {
 		);
 
 		if ( is_sticky() ) :
-			echo '<span class="post-meta">Sticky Post</span>';
+			echo '<span class="sticky-post">Sticky Post</span>';
 		else :
 			echo _e( $posted_on );
 		endif;
