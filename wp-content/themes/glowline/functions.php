@@ -110,6 +110,10 @@ function glowline_scripts() {
 	wp_enqueue_script( 'glowline-classie', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'glowline-custom', get_template_directory_uri() . '/js/glowline-global.js', array( 'jquery', 'masonry' ), '', true );
 
+	if ( is_singular() && comments_open() && ( get_option( 'thread_comments' ) === 1 ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
 	if ( glowline_has_featured_posts( 2 ) ) {
 		wp_enqueue_style( 'glowline-owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.0.0' );
 		wp_enqueue_script( 'glowline-owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.js', array( 'jquery' ), '', true );
@@ -163,18 +167,6 @@ if ( ! function_exists( 'glowline_fonts_url' ) ) :
 		return $fonts_url;
 	}
 endif;
-
-
-
-
-/** Enable threaded comments here instead of header. */
-function glowline_enable_threaded_comments() {
-	if ( is_singular() && comments_open() && ( get_option( 'thread_comments' ) === 1 ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'get_header', 'enable_threaded_comments' );
-
 
 
 include( get_template_directory() . '/inc/static-function.php' );
