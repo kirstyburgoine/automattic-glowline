@@ -165,70 +165,10 @@ if ( ! function_exists( 'glowline_fonts_url' ) ) :
 endif;
 
 
-/** More stuff for Jetpack featured content to replace custom slider. */
-function glowline_get_featured_posts() {
-	return apply_filters( 'glowline_get_featured_posts', array() );
-}
-
-
-/**
- * Check if a minimum of 1 featured posts exists for slider.
- *
- * @param array $minimum to count number of posts.
- */
-function glowline_has_featured_posts( $minimum = 1 ) {
-
-	if ( is_paged() ) {
-		return false;
-	}
-
-	$minimum = absint( $minimum );
-	$featured_posts = apply_filters( 'glowline_get_featured_posts', array() );
-
-	if ( ! is_array( $featured_posts ) ) {
-		return false;
-	}
-
-	if ( $minimum > count( $featured_posts ) ) {
-		return false;
-	}
-
-	return true;
-}
-
-/**
- * Custom fall back image.
- *
- * @param string $media any existing media.
- * @param array  $post_id ids of featured posts.
- * @param array  $args all other options.
- */
-function glowline_custom_image( $media, $post_id, $args ) {
-
-	if ( $media ) {
-		return $media;
-	} else {
-		$permalink = get_permalink( $post_id );
-		$permalink = get_permalink( $post_id );
-		$custom_logo_id = get_theme_mod( 'custom_logo' );
-		$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-		$url = apply_filters( 'jetpack_photon_url', $image[0] );
-
-		return array(
-			array(
-				'type'  => 'image',
-				'from'  => 'custom_fallback',
-				'src'   => esc_url( $url ),
-				'href'  => $permalink,
-			),
-		);
-	}
-}
-add_filter( 'jetpack_images_get_images', 'glowline_custom_image', 10, 3 );
 
 
 /** Enable threaded comments here instead of header. */
-function enable_threaded_comments() {
+function glowline_enable_threaded_comments() {
 	if ( is_singular() && comments_open() && ( get_option( 'thread_comments' ) === 1 ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
