@@ -507,7 +507,7 @@ header .logo img{
 	background-color: #fff;
 }
 
-.nav-wrapper .logo h1 {
+.nav-wrapper .logo .site-title {
 	/* site description breaks layout but we want to keep for screen readers */
 	margin: -1px;
 	padding: 0;
