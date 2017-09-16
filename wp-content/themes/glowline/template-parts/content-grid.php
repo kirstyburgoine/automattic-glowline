@@ -14,7 +14,7 @@ global $glowline_grid_layout;
 	if ( has_post_thumbnail() ) :
 	?>
 		<div class="post-img">
-			<a href="<?php esc_url( the_permalink() ); ?>"><?php glowline_grid_thumb( $glowline_grid_layout ); ?></a>
+			<a href="<?php the_permalink(); ?>"><?php glowline_grid_thumb( $glowline_grid_layout ); ?></a>
 		</div>
 	<?php
 	endif;
