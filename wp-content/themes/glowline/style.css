@@ -384,7 +384,9 @@ input[type=submit]:focus,
 \*--------------------------------------------------------------*/
 
 .header-wrapper{
-  padding-top: 120px;
+ 	/* padding-top: 120px;*/
+	/* TODO: check whether to remove this after all... */
+	padding-top: 75px;
 }
 
 /* -- Home specific -- */
@@ -508,7 +510,6 @@ header .logo img {
 	border-bottom: 1px solid #bdb76b;
 	-webkit-transition: width .7s;
 	transition: width .7s;
-	text-indent: -999px;
 }
 
 .main-searchform-wrap .search-form input[type=search]:focus,
