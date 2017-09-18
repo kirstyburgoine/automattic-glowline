@@ -453,7 +453,7 @@ input[type=submit]:focus,
 	height: auto;
 }
 
-header .logo img{
+header .logo img {
 	max-height:50px;
 }
 
@@ -1050,6 +1050,10 @@ header .logo img{
 /* ------ Post Header ------- */
 .post-content .post-header {
 	text-align:center;
+}
+
+.post-content .post-header h2 {
+	word-wrap: break-word;
 }
 
 .post-content .post-header .post-title a:hover,
