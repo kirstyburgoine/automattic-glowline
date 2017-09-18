@@ -15,6 +15,8 @@ get_header(); ?>
 	if ( have_posts() ) :
 	?>
 
+		<div class="content clearfix <?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout ); ?> posts-container" id="content">
+
 		<header class="page-header">
 			<?php
 				the_archive_title( '<h1 class="archive-title">', '</h1>' );
@@ -26,8 +28,6 @@ get_header(); ?>
 		global $glowline_grid_layout;
 		global $glowline_masonry_layout;
 		?>
-
-		<div class="content clearfix <?php glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout ); ?> posts-container" id="content">
 
 			<?php
 			/* Start the Loop */
