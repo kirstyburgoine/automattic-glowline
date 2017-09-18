@@ -940,7 +940,7 @@ header .logo img{
 	float: left;
 }
 
-.sidebar-wrapper{
+.sidebar-wrapper {
 	max-width: 400px;
 	width: 27.5%;
 	float: right;
@@ -956,7 +956,7 @@ header .logo img{
 }
 
 .standard-layout .post .post-header,
-.standard-layout .format-link .post-title{
+.standard-layout .format-link .post-title {
 	text-align:center;
 	margin-bottom: 20px;
 }
@@ -977,7 +977,7 @@ header .logo img{
 	margin-top:10px;
 }
 
-.standard-layout .post p{
+.standard-layout .post p {
 	text-align:center;
 }
 
@@ -988,20 +988,20 @@ header .logo img{
 	border-bottom: 1px solid #e5e5e5;
 }
 
-.standard-layout .post  span.post-comment{
+.standard-layout .post  span.post-comment {
 	float: left;
 	font-size: 13px;
 	color: #999;
 }
 
-.standard-layout .post span.post-comment:before{
+.standard-layout .post span.post-comment:before {
 	font-family: FontAwesome;
 	content: "\f0e6";
 	padding-right:4px;
 	color:#999;
 }
 
-.standard-layout .post .post-gallery-slider img{
+.standard-layout .post .post-gallery-slider img {
 	margin-bottom: 0;
 }
 
@@ -1023,7 +1023,7 @@ header .logo img{
 }
 
 .posts-container .post,
-.posts-container .grid-post{
+.posts-container .grid-post {
   	clear: none;
   	margin:30px 0;
 }
@@ -1053,6 +1053,9 @@ header .logo img{
 	letter-spacing: .7px;
 	padding: 2px;
 	border-bottom: 1px solid #bdb76b;
+	border-left: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
+	border-top: 1px solid #ffffff;
 }
 
 /* need on single otherwise border-bottom is full width... */
@@ -1094,7 +1097,7 @@ header .logo img{
 }
 
 /* ------ Post Description ------- */
-.post-content .description{
+.post-content .description {
 	padding: 25px 10px 0 10px;
 }
 
@@ -1111,7 +1114,7 @@ header .logo img{
 	color: #5a5a5a;
 }
 
-.post-content .read-more{
+.post-content .read-more {
 	text-align:center;
 }
 
