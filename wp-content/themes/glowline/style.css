@@ -465,7 +465,7 @@ header .logo img{
 .main-searchform-wrap {
 	position: absolute;
 	display: block;
-	margin: 5px 0 0 5px;
+	margin: 0 0 0 5px;
 	float: right;
 	top: 12px;
 	right: 0;
@@ -494,7 +494,7 @@ header .logo img{
 }
 
 .home .smaller .main-searchform-wrap {
-	top: 12px; /* puts it back again when logo displays and nav gets fatter */
+	top: 7px; /* puts it back again when logo displays and nav gets fatter */
 }
 
 .main-searchform-wrap .search-form input[type=search] {
@@ -534,7 +534,8 @@ header .logo img{
 	-webkit-transition: height 0.3s;
 	transition: height 0.3s;
 	border-bottom: 1px solid #f1f1f1;
-	background-color: #fff;
+	background-color: #ffffff;
+	box-shadow: 0px 0.5px 3px rgba(190, 190, 190, 0.46);
 }
 
 .nav-wrapper .logo .site-title {
@@ -712,17 +713,27 @@ header .logo img{
 /* Mobile Menu Stuff */
 @media screen and (max-width:1024px) {
 
+	.nav-wrapper {
+		height: 70px;
+	}
+
 	.main-searchform-wrap {
-		right: 50px;
+		right: 35px;
+		margin: 5px 0 0 5px;
+	}
+
+	/* moves position when nav is skinny before scroll on home page */
+	.home .main-searchform-wrap {
+	    top: 7px;
 	}
 
 	.header .toggle-mobile-menu {
 		display: block;
 		width: 30px;
 		height: 30px;
-		padding:0;
+		padding: 0;
 		float: right;
-		top: 25px;
+		top: 20px;
 		right: 0;
 		position: relative;
 		border: none;
@@ -735,13 +746,17 @@ header .logo img{
 	.toggle-mobile-menu:before {
 		content: "\f0c9";
 		display: inline-block;
-		font-size:30px;
+		font-size: 30px;
 		font-family: FontAwesome;
 		color: #000;
 	}
 
 	.mobile-menu-active .toggle-mobile-menu:before {
 		content: "\f00d";
+	}
+
+	.header .toggle-mobile-menu:hover {
+		cursor: pointer;
 	}
 
 	.logged-in  .navigation {
@@ -1207,7 +1222,7 @@ header .logo img{
 	margin-bottom:22px;
 }
 
-.two-grid-layout .grid-post:nth-of-type(even){
+.two-grid-layout .grid-post:nth-of-type(even) {
 	margin-right: 0;
 }
 /* Two grid style end */
@@ -1225,7 +1240,7 @@ header .logo img{
 	padding: 17px 6% 0 6%;
 }
 
-.three-grid-layout .grid-post-content h2{
+.three-grid-layout .grid-post-content h2 {
 	font-size:18px;
 	line-height: 26px;
 	text-align:center;
@@ -1249,7 +1264,7 @@ header .logo img{
 	padding: 10% 6% 3% 6%;
 }
 
-.four-grid-layout .grid-post-content h2{
+.four-grid-layout .grid-post-content h2 {
 	font-size:16px;
 	line-height: 26px;
 	text-align:center;
@@ -1477,7 +1492,7 @@ tfoot tr td[id="prev"] a {
 }
 
 .widget .about-img {
-	text-align:center;
+	text-align: center;
 }
 
 .widget .about-square {
@@ -1490,7 +1505,7 @@ tfoot tr td[id="prev"] a {
 
 .instagram-pics li {
 	padding: 0;
-	display:inline-block;
+	display: inline-block;
 	max-width: 31%;
 	margin: 0 1% 1% 1%;
 }
@@ -1500,33 +1515,33 @@ tfoot tr td[id="prev"] a {
 }
 
 .instagram-pics li img {
-	width:100%;
+	width: 100%;
 }
 
 .instagram-pics li img:hover,
 .instagram-pics li img:focus {
-	opacity:0.9;
+	opacity: 0.9;
 }
 
 .widget span.screen-reader-text {
 	display: none;
 }
 form.search-form{
-	text-align:center;
+	text-align: center;
 }
 
-.widget input.search-field{
-	width:auto;
+.widget input.search-field {
+	width: auto;
 }
 
 .widget input.search-field,
 .search input.search-field,
-.error404 input.search-field{
-	height:35px;
+.error404 input.search-field {
+	height: 35px;
 	max-width: 350px;
-	padding-left:15px;
-	border:1px solid #ddd;
-	padding-right:10px;
+	padding-left: 15px;
+	border: 1px solid #ddd;
+	padding-right: 10px;
 	font-size: 15px;
 	letter-spacing: 1px;
 }
@@ -1537,7 +1552,7 @@ form.search-form{
 	letter-spacing: 1px;
 }
 
-.widget .tweet-content .time{
+.widget .tweet-content .time {
 	padding-top: 5px;
 	display: block;
 	text-align: right;
@@ -1549,7 +1564,7 @@ form.search-form{
 }
 
 .tagcloud a {
-	color:#5a5d5a;
+	color: #5a5d5a;
 	font-size: 9px!important; /* used to here to override inline styles added dynamically */
 	padding: 8px 13px;
 	border: 1px solid #ddd;
@@ -2770,7 +2785,7 @@ a img.aligncenter {
 
 @media screen and (max-width: 480px) {
 
-	.featured-posts .main-logo h1 a{
+	.featured-posts .main-logo h1 a {
 		font-size: 36px;
 	}
 
@@ -2779,7 +2794,7 @@ a img.aligncenter {
 	}
 
 	.logo {
-		max-width:240px;
+		max-width:150px;
 	}
 
 	.header-bottom .contact-details .social-icon,
