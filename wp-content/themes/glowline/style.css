@@ -1062,6 +1062,10 @@ header .logo img {
 	text-decoration: underline;
 }
 
+.post-content .post-header .post-category {
+	display: block;
+}
+
 /* Category lists in post header */
 .post-category a,
 .single-meta .post-category,
@@ -1118,7 +1122,9 @@ header .logo img {
 
 /* ------ Post Description ------- */
 .post-content .description {
-	padding: 25px 10px 0 10px;
+	padding: 0 10px 0 10px;
+/*	TODO: Check this across layout options
+	padding: 25px 10px 0 10px; */
 }
 
 .post-content .description p a,
