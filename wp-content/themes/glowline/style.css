@@ -537,6 +537,18 @@ header .logo img {
 	padding-top: 9px;
 }
 
+/* fixes nasty 1px difference between button and input on standard search forms */
+.page-content .search-form,
+.widget .search-form {
+	display: flex;
+}
+
+.page-content .search-form input[type=submit],
+.widget .search-form input[type=submit] {
+	margin-top: 0;
+	padding: 5px 21px;
+	margin-left: 5px;
+}
 
 /*--------------------------------------------------------------*\
  *  5 - Page Elements
