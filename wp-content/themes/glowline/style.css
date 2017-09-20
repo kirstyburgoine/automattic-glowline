@@ -681,6 +681,7 @@ header .logo img {
 	top: 50%;
 	margin-top: -12px;
 	right: 15px;
+	transform: rotate(-90deg);
 }
 
 .navigation nav.navigation .menu {
