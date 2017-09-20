@@ -75,10 +75,6 @@ body {
 	background-color: #bdb76b;
 }
 
-.main-searchform-wrap input[type=submit] {
-	display:none;
-}
-
 a, a:hover, a:focus {
 	-webkit-transition: all 0.25s linear;
 	transition: all 0.25s linear;
@@ -468,26 +464,8 @@ header .logo img {
 	position: absolute;
 	display: block;
 	margin: 0 0 0 5px;
-	float: right;
 	top: 12px;
 	right: 0;
-}
-
-.main-searchform-wrap:before {
-	font-family: 'FontAwesome';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	content: "\f002";
-	color: #bdb76b;
-	font-size: 1.25em;
-	position: absolute;
-	right: 5px;
-	top: 0;
-	cursor: pointer;
-	padding-top:9px;
 }
 
 /* moves position when nav is skinny before scroll on home page */
@@ -499,11 +477,17 @@ header .logo img {
 	top: 7px; /* puts it back again when logo displays and nav gets fatter */
 }
 
+.main-searchform-wrap .search-form {
+	display: flex;
+	flex-direction row;
+	position: relative;
+}
+
 .main-searchform-wrap .search-form input[type=search] {
 	width: 60px;
 	background-color: transparent;
 	color: #333;
-	margin: 0 27px 0 0;
+	margin: 0;
 	padding: 5px;
 	float: right;
 	border:none;
@@ -519,6 +503,40 @@ header .logo img {
 	color: #333;
 	background-color: #fff;
 }
+
+.main-searchform-wrap .search-form input[type=search]::placeholder {
+	color: #fff;
+}
+
+.main-searchform-wrap .search-form input[type=submit] {
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin-top: 0;
+	width: 27px;
+	height: 35px;
+	text-indent: -9999px;
+	z-index: 9999;
+	/* hide button visually so that search icon can be seen behind */
+}
+
+.main-searchform-wrap .search-form:before {
+	font-family: 'FontAwesome';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	content: "\f002";
+	color: #bdb76b;
+	font-size: 1.25em;
+	position: absolute;
+	right: 5px;
+	top: 0;
+	cursor: pointer;
+	padding-top: 9px;
+}
+
 
 /*--------------------------------------------------------------*\
  *  5 - Page Elements
