@@ -518,7 +518,6 @@ header .logo img {
 	width: 150px;
 	color: #333;
 	background-color: #fff;
-	border-color: #999;
 }
 
 /*--------------------------------------------------------------*\
@@ -1068,7 +1067,6 @@ header .logo img {
 
 /* Category lists in post header */
 .post-category a,
-.single-meta .post-category,
 .slider-post-category span {
 	text-align: center;
 	text-transform: uppercase;
@@ -1093,9 +1091,7 @@ header .logo img {
 
 .post-category a:hover,
 .post-category a:focus,
-.single-meta .post-category:hover,
 .slider-post-category span:hover,
-.single-meta .post-category:focus,
 .slider-post-category span:focus {
 	text-decoration: none;
 	border: 1px solid #bdb76b;
