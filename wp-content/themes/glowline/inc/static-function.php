@@ -49,3 +49,18 @@ function glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout 
 	}
 
 }
+
+/**
+ * Determines whether a sidebar exists and if not adds classes to make age full width.
+ *
+ * @param string $glowline_fullwidth adds fullwidth or not.
+ */
+function glowline_fullwidth( $glowline_fullwidth ) {
+	if ( is_active_sidebar( 'sidebar-1' ) ) {
+		$glowline_fullwidth === 'fullwidth';
+	}
+	else {
+		$glowline_fullwidth === 'not-fullwidth';
+	}
+	echo $glowline_fullwidth;
+}
