@@ -1138,7 +1138,7 @@ header .logo img {
 	text-decoration: underline;
 }
 
-.post-content .post-header .post-category {
+.post-header .post-category {
 	display: block;
 }
 
@@ -1393,7 +1393,7 @@ header .logo img {
 .three-grid-layout .grid-post:nth-child(3n+1),
 .four-grid-layout .grid-post:nth-child(4n+1),
 .five-grid-layout .grid-post:nth-child(5n+1) {
-	clear: both;
+	/*clear: both;*/
 }
 
 /* Cancels all clears on masonry as it messes things up */
