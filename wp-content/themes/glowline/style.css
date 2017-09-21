@@ -984,7 +984,7 @@ header .logo img {
 .content-fullwidth,
 .content.fullwidth,
 .container.fullwidth {
-	width: 75%;
+	width: 100%;
 	max-width: 880px;
 	float: none;
 	margin: 0 auto;
@@ -2688,6 +2688,17 @@ a img.aligncenter {
 		float: none;
 		margin:0 auto;
 		clear:both;
+	}
+
+	.content.fullwidth {
+		width: 100%;
+		max-width: 880px;
+	    float: none;
+	    margin: 0 auto;
+	}
+
+	.post-content .description {
+		padding: 0;
 	}
 
 	.sidebar-wrapper {
