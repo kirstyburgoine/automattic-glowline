@@ -55,9 +55,9 @@ function glowline_grid_classes( $glowline_grid_layout, $glowline_masonry_layout 
  */
 function glowline_fullwidth() {
 	if ( is_active_sidebar( 'sidebar-1' ) ) {
-		echo ' not-fullwidth';
+		echo esc_attr( ' not-fullwidth' );
 	}
 	else {
-		echo ' fullwidth';
+		echo esc_attr( ' fullwidth' );
 	}
 }
