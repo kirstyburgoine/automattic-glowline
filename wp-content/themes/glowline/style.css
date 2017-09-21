@@ -2454,6 +2454,7 @@ a img.aligncenter {
 	max-width: 96%; /* Image does not overflow the content area */
 	padding: 5px 3px 10px;
 	text-align: center;
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
 
@@ -2472,10 +2473,15 @@ a img.aligncenter {
 .wp-caption img {
 	border: 0 none;
 	height: auto;
-	margin: 0;
 	max-width: 98.5%;
 	padding: 0;
 	width: auto;
+}
+
+.post-content .wp-caption img {
+	/* overrides standard post image */
+	margin-bottom: 0;
+	padding: 3px 5px 10px 5px;
 }
 
 .wp-caption p.wp-caption-text,
@@ -2488,6 +2494,7 @@ a img.aligncenter {
 
 .wp-caption-text {
 	font-style: italic;
+	margin-bottom: 10px;
 }
 
 /* ------------------------------------------------------ *\
