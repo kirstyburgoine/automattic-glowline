@@ -983,8 +983,10 @@ header .logo img {
 
 .content-fullwidth,
 .content.fullwidth {
-	width: 100%;
-	max-width: 1170px;
+	width: 75%;
+	max-width: 880px;
+	float: none;
+	margin: 0 auto;
 	/*
 	content-fullwidth is the fullwidth page template selected in the admin
 	content.fullwidth is when sidebar-1 is not active.
