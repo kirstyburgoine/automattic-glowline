@@ -104,7 +104,7 @@ function glowline_userpic() {
 	$address = get_the_author_meta( 'user_email' );
 	$nicename = get_the_author_meta( 'user_nicename' );
 	$pic = get_avatar( $address, 30, '', $nicename );
-	return esc_html( $pic );
+	return $pic;
 
 }
 
