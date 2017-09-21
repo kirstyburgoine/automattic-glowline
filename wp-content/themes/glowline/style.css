@@ -982,7 +982,8 @@ header .logo img {
 }
 
 .content-fullwidth,
-.content.fullwidth {
+.content.fullwidth,
+.container.fullwidth {
 	width: 75%;
 	max-width: 880px;
 	float: none;

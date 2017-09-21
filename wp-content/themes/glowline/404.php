@@ -9,7 +9,7 @@ get_header(); ?>
 
 <main id="main" class="site-main">
 
-	<div class="container clearfix">
+	<div class="container clearfix<?php glowline_fullwidth(); ?>">
 
 		<header class="page-header">
 			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'glowline' ); ?></h1>
