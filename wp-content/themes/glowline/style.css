@@ -974,16 +974,22 @@ header .logo img {
    	top: 32px;
 }
 
-.content-fullwidth {
-	width: 100%;
-	max-width: 1170px;
-}
-
 .content {
 	padding-top: 9px;
 	width: 70%;
 	max-width: 800px;
 	float: left;
+}
+
+.content-fullwidth,
+.content.fullwidth {
+	width: 100%;
+	max-width: 1170px;
+	/*
+	content-fullwidth is the fullwidth page template selected in the admin
+	content.fullwidth is when sidebar-1 is not active.
+	Its chained rather than using the orginal fullwidth class so that specificity is greater
+	*/
 }
 
 .sidebar-wrapper {
