@@ -1089,8 +1089,9 @@ header .logo img {
 	margin-top: -7px; /* Cancels weird, unexplained gap... */
 }
 
-.sticky .post-content:before,
-.sticky .post-header:before {
+/* Sticky post label */
+.grid-post.sticky .post-content:before,
+.standard-post.sticky .post-header:before {
 	display: block;
 	content: '';
     border-top: 60px solid #bdb76b;
@@ -1119,14 +1120,14 @@ header .logo img {
     color: #fff;
     transform: rotate(-45deg);
 }
-/* ------ Post Header ------- */
-.post-content .post-header {
-	text-align: center;
+
+.standard-post {
 	position: relative;
 }
 
-.post-header {
-	position: relative;
+/* ------ Post Header ------- */
+.post-content .post-header {
+	text-align: center;
 }
 
 .post-content .post-header h2 {
