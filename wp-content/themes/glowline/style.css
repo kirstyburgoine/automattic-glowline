@@ -1089,7 +1089,8 @@ header .logo img {
 	margin-top: -7px; /* Cancels weird, unexplained gap... */
 }
 
-.sticky .post-content:before {
+.sticky .post-content:before,
+.sticky .post-header:before {
 	display: block;
 	content: '';
     border-top: 60px solid #bdb76b;
@@ -1121,6 +1122,11 @@ header .logo img {
 /* ------ Post Header ------- */
 .post-content .post-header {
 	text-align: center;
+	position: relative;
+}
+
+.post-header {
+	position: relative;
 }
 
 .post-content .post-header h2 {

@@ -30,7 +30,7 @@ if ( ! function_exists( 'glowline_posted_on' ) ) {
 		);
 
 		if ( is_sticky() ) :
-			echo '<i class="sticky-post fa fa-icon-pushpin"></i';
+			echo '<i class="sticky-post fa fa-icon-pushpin"></i>';
 		else :
 			echo $posted_on;
 		endif;
