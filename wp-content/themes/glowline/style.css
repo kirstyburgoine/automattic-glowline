@@ -2007,6 +2007,7 @@ input[type=submit] {
 .search .pagination a {
 	padding:15px 5px;
 	color: #BABABA;
+	word-wrap: break-word;
 }
 
 /*--------------------------------------------------------------*\
@@ -2564,6 +2565,8 @@ a img.aligncenter {
 .nav-links .nav-next {
 	float: right;
 	padding:10px 0;
+	width: 45%;
+	text-align: right;
 }
 
 .nav-links .nav-next a:after {
@@ -2579,6 +2582,8 @@ a img.aligncenter {
 .nav-links .nav-previous {
 	float: left;
 	padding:10px 0;
+	width: 45%;
+	text-align: left;
 }
 
 .nav-links .nav-previous a:before {
