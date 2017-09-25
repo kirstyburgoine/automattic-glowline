@@ -34,21 +34,13 @@ foreach ( $featured_posts as $post ) :
 
 				<?php glowline_posted_on(); ?>
 
-				<?php
-				the_content(
-					sprintf(
-						wp_kses( /* translators: %s: Name of of post. Only seen by screenreaders. */
-							__( 'Continue Reading...<span class="screen-reader-text"> "%s"</span>', 'glowline' ),
-							array(
-								'div' => array(
-									'class' => array( 'read-more, read-more-slider' ),
-								),
-							)
-						),
-						get_the_title()
-					)
-				);
-				?>
+				<?php the_excerpt(); ?>
+
+				<div class="read-more read-more-slider">
+					<a href="<?php esc_url( the_permalink() ); ?>">
+						<?php echo esc_html( 'Continue Reading...', 'glowline' ); ?>
+					</a>
+				</div>
 
 			</div>
 		</div>
