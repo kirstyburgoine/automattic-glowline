@@ -84,7 +84,7 @@
 				}
 				?>
 
-				<h1 class="site-title"><?php esc_html( bloginfo( 'name' ) ); ?></h1>
+				<h1 class="site-title"><span class="highlight"><?php esc_html( bloginfo( 'name' ) ); ?></span></h1>
 
 				<?php
 				$description = get_bloginfo( 'description', 'display' );
