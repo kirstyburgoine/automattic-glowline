@@ -938,7 +938,7 @@ header .logo img {
     5 - Page Elements
         5.4 - Footer
 \*--------------------------------------------------------------*/
-.footer .footer-widget-column .widget {
+.footer .footer-widget-column {
 	width: 22.3%;
 	float: left;
 	position: relative;
@@ -946,12 +946,11 @@ header .logo img {
 	margin-right: 3.6%;
 }
 
-.footer .footer-widget-column.footer-widget-3column-active .widget {
+.footer .footer-widget-column.footer-widget-3column-active {
    width: 30.9%;
 }
 
-.footer .footer-widget-column .widget:last-child,
-.footer .footer-widget-column.footer-widget-3column-active .widget:last-child {
+.footer .footer-widget-column:last-child {
 	margin-right: 0%;
 }
 
@@ -2838,11 +2837,11 @@ a img.aligncenter {
 		clear: none;
 	}
 
-	.footer .footer-widget-column.footer-widget-3column-active .widget {
+	.footer .footer-widget-column.footer-widget-3column-active {
 		width: 46%;
 	}
 
-	.footer .footer-widget-column .widget:nth-child(2n+1) {
+	.footer .footer-widget-column:nth-child(2n+1) {
 		clear: both;
 	}
 
@@ -2912,7 +2911,7 @@ a img.aligncenter {
 		padding: 25px 25px 25px 25px;
 	}
 
-	.footer .footer-widget-column.footer-widget-3column-active .widget {
+	.footer .footer-widget-column.footer-widget-3column-active {
 		width: 100%;
 	}
 

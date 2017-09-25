@@ -28,7 +28,8 @@ endif;
 				<?php
 				endif;
 				?>
-
+			</div>
+			<div class="footer-widget-column footer-widget-3column-active">
 				<?php
 				if ( is_active_sidebar( 'sidebar-3' ) ) :
 				?>
@@ -38,7 +39,8 @@ endif;
 				<?php
 				endif;
 				?>
-
+			</div>
+			<div class="footer-widget-column footer-widget-3column-active">
 				<?php
 				if ( is_active_sidebar( 'sidebar-4' ) ) :
 				?>
@@ -48,7 +50,6 @@ endif;
 				<?php
 				endif;
 				?>
-
 			</div>
 		</div>
 
