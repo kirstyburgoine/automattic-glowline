@@ -24,10 +24,10 @@ get_header(); ?>
 					get_template_part( 'template-parts/content', 'post' );
 
 					the_post_navigation( array(
-			            'prev_text'             => __( 'Previous: %title', 'glowline' ),
-			            'next_text'             => __( 'Next: %title', 'glowline' ),
+			            'prev_text'             => esc_html__( 'Previous: %title', 'glowline' ),
+			            'next_text'             => esc_html__( 'Next: %title', 'glowline' ),
 			            'in_same_term'          => true,
-			            'screen_reader_text' 	=> __( 'Read More', 'glowline' ),
+			            'screen_reader_text' 	=> esc_html__( 'Read More', 'glowline' ),
 			        ) );
 
 					// If comments are open or we have at least one comment, load up the comment template.

@@ -25,7 +25,7 @@
 
 		<div class="page-description">
 			<?php the_content(); ?>
-			<?php edit_post_link( __( 'Edit', 'glowline' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( esc_html__( 'Edit', 'glowline' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 		<div class="clearfix"></div>
@@ -34,7 +34,7 @@
 			<?php
 				wp_link_pages(
 					array(
-						'before'      => '<span class="meta-nav">' . __( 'Pages:', 'glowline' ) . '</span>',
+						'before'      => '<span class="meta-nav">' . esc_html__( 'Pages:', 'glowline' ) . '</span>',
 						'after'       => '',
 						'link_before' => '<span class="active">',
 						'link_after'  => '</span>',

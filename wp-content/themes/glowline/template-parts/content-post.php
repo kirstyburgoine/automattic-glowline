@@ -40,7 +40,7 @@
 		<?php
 			wp_link_pages(
 				array(
-					'before'      => '<div class="multipage-links"><span class="meta-nav">' . __( 'Pages:', 'glowline' ) . '</span>',
+					'before'      => '<div class="multipage-links"><span class="meta-nav">' . esc_html__( 'Pages:', 'glowline' ) . '</span>',
 					'after'       => '</div>',
 					'link_before' => '<span class="active">',
 					'link_after'  => '</span>',
