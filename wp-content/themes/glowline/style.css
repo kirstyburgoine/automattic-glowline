@@ -1099,7 +1099,7 @@ header .logo img {
 }
 
 .post-content {
-	padding: 25px 3% 35px;
+	padding: 25px 20px;
 	position: relative;
 	margin-top: -7px; /* Cancels weird, unexplained gap... */
 }
@@ -1147,6 +1147,8 @@ header .logo img {
 
 .post-content .post-header h2 {
 	word-wrap: break-word;
+	margin-top: 20px;
+	margin-bottom: 0;
 }
 
 .post-content .post-header .post-title a:hover,
@@ -1210,9 +1212,15 @@ header .logo img {
 	text-decoration: none;
 }
 
+.post-content .post-date {
+	display: block;
+	margin-top: 20px;
+}
+
 /* ------ Post Description ------- */
 .post-content .description {
-	padding: 0 10px 0 10px;
+	padding: 0;
+	margin-top: 20px;
 /*	TODO: Check this across layout options
 	padding: 25px 10px 0 10px; */
 }
@@ -1260,6 +1268,17 @@ header .logo img {
 	max-width: 80px;
 	margin: 0 10px;
 	border-radius: 100%;
+}
+
+.grid-post .standard-bottom-meta {
+	overflow: hidden;
+	padding-bottom: 0;
+	margin-top: 0;
+	border-bottom: none;
+}
+
+.grid-post .standard-bottom-meta ul {
+	margin: 0;
 }
 
 /*

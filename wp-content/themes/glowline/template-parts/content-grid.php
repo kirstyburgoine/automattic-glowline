@@ -52,6 +52,10 @@ global $glowline_grid_layout;
 			?>
 			</div> <!-- .description //-->
 
+			<div class="clearfix"></div>
+
+			<?php glowline_content_bottom_meta(); ?>
+
 		</div> <!-- .post-content-inner //-->
 	</div> <!-- .post-content //-->
 
