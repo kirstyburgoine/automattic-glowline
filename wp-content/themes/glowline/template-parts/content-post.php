@@ -15,7 +15,7 @@
 
 		<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 
-		<?php glowline_posted_on(); ?>
+		<?php glowline_single_posted_on(); ?>
 
 	</header><!-- Single Meta End -->
 
