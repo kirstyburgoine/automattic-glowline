@@ -1144,6 +1144,7 @@ header .logo img {
 	text-align: center;
 }
 
+.post-header h1,
 .post-header h2 {
 	word-wrap: break-word;
 	margin-top: 10px;
@@ -1251,7 +1252,26 @@ header .logo img {
 	padding: 5px 0;
 }
 
-.posts-container .post-author-pic img {
+.single-social-icon {
+	padding: 0;
+	margin: 0;
+}
+
+.single-social-icon li a {
+	font-size: 13px;
+	color: #999;
+}
+
+.single-social-icon li {
+	display: inline-block;
+}
+
+.single-social-icon li a {
+	font-size: 13px;
+	color: #999;
+}
+
+.single-social-icon .post-author-pic img {
 	vertical-align: middle;
 	max-width: 80px;
 	margin: 0 10px;
@@ -1305,11 +1325,6 @@ header .logo img {
 /* more specific than needed but reads better to match above */
 .posts-container .grid-post .standard-bottom-meta .post-share {
 	float: left;
-}
-
-.posts-container .grid-post .standard-bottom-meta .post-share ul {
-	margin: 0;
-	padding: 0;
 }
 
 .posts-container .grid-post .standard-bottom-meta .post-share .post-author-pic img {
@@ -1945,6 +1960,20 @@ input[type=submit] {
  *      8.2 - Single Post and Standard Pages
 \*--------------------------------------------------------------*/
 
+.single .post-header {
+	margin-top: 20px;
+}
+
+.single .post-date {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.single .post-share {
+	display: inline;
+	margin-bottom: 20px;
+}
+
 .single .post-content,
 .page .post-content {
 	padding: 0 0 40px 0;
@@ -1960,74 +1989,22 @@ input[type=submit] {
 	margin: 20px 0 0 0;
 }
 
-.single .post-date,
-.single .post-author {
-	padding-right: 10px;
-	padding-left: 10px;
-}
-
-.content .post .post-meta .post-author,
-.content .post .post-meta .post-date {
-	position: static;
-	display: inline-block;
-	width: 30%;
-}
-
-.content .post .post-meta .post-author {
-	text-align: right;
-}
-
-.content .post .post-meta .post-date {
-	text-align: center;
-}
-
-.single .byline {
-	padding-right: 5px;
-}
-
-.single .post-content .post-share {
-	float:right;
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	padding: 5px 0;
-}
-
 .single-bottom-meta {
 	overflow: hidden;
 	padding-bottom: 10px;
 }
 
 .single .tagcloud {
-	float:left;
+	float: left;
 }
 
 .single-bottom-meta .tagcloud {
 	margin-bottom: 20px;
 }
 
-.single-social-icon li {
-	display: inline-block;
-}
-
-.single-social-icon li a {
-	font-size:13px;
-	color: #999;
-}
-
-.post .post-share {
-	float: right;
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	padding: 5px 0;
-}
-
 .content .standard-layout .post .post-comment a:hover,
-.single-social-icon li a:hover,
-.content .standard-layout .post  .post-comment a:focus,
-.single-social-icon li a:focus {
-	text-decoration:underline;
+.content .standard-layout .post  .post-comment a:focus {
+	text-decoration: underline;
 }
 
 .post-nav .prev {
@@ -2042,7 +2019,7 @@ input[type=submit] {
 
 .content .navigation.post-navigation .nav-links a,
 .search .pagination a {
-	padding:15px 5px;
+	padding: 15px 5px;
 	color: #BABABA;
 	word-wrap: break-word;
 }
@@ -2053,13 +2030,13 @@ input[type=submit] {
 \*--------------------------------------------------------------*/
 
 .search-no-results .page-header .page-title {
-	border:none;
+	border: none;
 }
 
 .search .content .search-form,
 .error404 .content .search-form {
-	margin-top:30px;
-	text-align:left;
+	margin-top: 30px;
+	text-align: left;
 }
 
 /*--------------------------------------------------------------*\
@@ -2158,7 +2135,7 @@ input[type=submit] {
 
 /***Audio post format***/
 .format-audio .video-wrapper {
-	padding:0;
+	padding: 0;
 }
 
 .format-audio iframe {
@@ -2176,17 +2153,17 @@ input[type=submit] {
 .standard-layout .format-link h2 {
 	color: #bdb76b;
 	font-size: 26px;
-	padding:50px 50px 50px 80px;
-	line-height:40px;
+	padding: 50px 50px 50px 80px;
+	line-height: 40px;
 	font-style: italic;
-	letter-spacing:1px;
+	letter-spacing: 1px;
 }
 
 .standard-layout .format-link h2:before {
-	content:"\f0c1";
-	font-family:fontawesome;
-	font-size:40px;
-	padding-right:10px;
+	content: "\f0c1";
+	font-family: fontawesome;
+	font-size: 40px;
+	padding-right: 10px;
 	vertical-align: middle;
 }
 /***Quote post format***/

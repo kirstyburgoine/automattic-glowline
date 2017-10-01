@@ -137,18 +137,11 @@ if ( ! function_exists( 'glowline_single_posted_on' ) ) {
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="post-date">' . $posted_on  . '</span>';
+		echo '<span class="post-date">'. $posted_on . '</span>';
 
-		if ( glowline_userpic() || get_author_posts_link() ) {
-			echo '<div class="post-share"><ul class="single-social-icon">';
-
-			if ( glowline_userpic() ) {
-				echo '<li><span class="post-author-pic">' . glowline_userpic() . '</span></li>';
-			};
-
-				echo '<li><span class="post-author">' . get_the_author_posts_link() . '</span></li>';
-			echo '</ul></div>';
-		}
+		if ( get_the_author_posts_link() ) {
+			echo '<span class="post-share">, by ' . get_the_author_posts_link() . '</span>';
+		};
 
 	}
 }
