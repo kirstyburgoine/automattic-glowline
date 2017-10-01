@@ -8,6 +8,7 @@
 if ( ! function_exists( 'glowline_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
+	 * Used on archive pages for grid and standard layouts
 	 */
 	function glowline_posted_on() {
 
@@ -37,40 +38,12 @@ if ( ! function_exists( 'glowline_posted_on' ) ) {
 	}
 }
 
-if ( ! function_exists( 'glowline_single_posted_on' ) ) {
-	/**
-	 * Prints HTML with meta information for the current post-date/time.
-	 */
-	function glowline_single_posted_on() {
-
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-		}
-
-		$time_string = sprintf(
-			$time_string,
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( 'c' ) ),
-			esc_html( get_the_modified_date() )
-		);
-
-		$posted_on = sprintf(
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
-
-		echo '<span class="post-date">' . $posted_on  . '</span><span class="post-share">' . the_author_posts_link() . '</span>';
-
-	}
-}
-
 
 if ( ! function_exists( 'glowline_posted_in' ) ) {
 	/**
 	 * Prints HTML with meta information for the categories. Posted in seperate function as the_title() splits these in content.php.
 	 * the_title() is needed to output differently in different places so simpler to keep seperate.
+	 * Used on archive pages for grid and standard layouts
 	 */
 	function glowline_posted_in() {
 
@@ -83,6 +56,7 @@ if ( ! function_exists( 'glowline_posted_in' ) ) {
 if ( ! function_exists( 'glowline_content_bottom_meta' ) ) {
 	/**
 	 * Comments and auth card combined into one. Used in content.php.
+	 * Used on archive pages for grid and standard layouts
 	 */
 	function glowline_content_bottom_meta() {
 
@@ -116,7 +90,7 @@ if ( ! function_exists( 'glowline_content_bottom_meta' ) ) {
 				echo '<li><span class="post-author-pic">' . glowline_userpic() . '</span></li>';
 			};
 
-				echo '<li><span class="post-author">' . the_author_posts_link() . '</span></li>';
+				echo '<li><span class="post-author">' . get_the_author_posts_link() . '</span></li>';
 			echo '</ul></div>';
 		}
 
@@ -126,7 +100,7 @@ if ( ! function_exists( 'glowline_content_bottom_meta' ) ) {
 }
 
 /**
- * Gets the author pic used above.
+ * Gets the author pic used.
  */
 function glowline_userpic() {
 
@@ -135,6 +109,48 @@ function glowline_userpic() {
 	$pic = get_avatar( $address, 30, '', $nicename );
 	return $pic;
 
+}
+
+
+if ( ! function_exists( 'glowline_single_posted_on' ) ) {
+	/**
+	 * Prints HTML with meta information for the current post-date/time & author.
+	 * Used on single articles
+	 */
+	function glowline_single_posted_on() {
+
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+		}
+
+		$time_string = sprintf(
+			$time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+
+		$posted_on = sprintf(
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		);
+
+		echo '<span class="post-date">' . $posted_on  . '</span>';
+
+		if ( glowline_userpic() || get_author_posts_link() ) {
+			echo '<div class="post-share"><ul class="single-social-icon">';
+
+			if ( glowline_userpic() ) {
+				echo '<li><span class="post-author-pic">' . glowline_userpic() . '</span></li>';
+			};
+
+				echo '<li><span class="post-author">' . get_the_author_posts_link() . '</span></li>';
+			echo '</ul></div>';
+		}
+
+	}
 }
 
 
