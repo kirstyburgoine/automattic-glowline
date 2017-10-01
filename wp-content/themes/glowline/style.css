@@ -956,13 +956,13 @@ header .logo img {
 
 .footer {
 	overflow: hidden;
-	padding-top:40px;
+	padding-top: 40px;
 	padding-bottom: 40px;
 }
 
 .footer-wrapper {
-	background-color:#f9f9f9;
-	margin-top:30px;
+	background-color: #f9f9f9;
+	margin-top: 30px;
 }
 
 .site-info {
@@ -976,12 +976,12 @@ header .logo img {
 \*--------------------------------------------------------------*/
 
 .container {
-   	max-width:1170px;
-   	min-width:240px;
+   	max-width: 1170px;
+   	min-width: 240px;
    	margin-right: auto;
-   	margin-left:auto;
-   	position:relative;
-   	clear:both;
+   	margin-left: auto;
+   	position: relative;
+   	clear: both;
 }
 
 .admin-bar .nav-wrapper,
@@ -1027,7 +1027,7 @@ header .logo img {
 
 .standard-layout .post .post-header,
 .standard-layout .format-link .post-title {
-	text-align:center;
+	text-align: center;
 	margin-bottom: 20px;
 }
 
@@ -1043,18 +1043,17 @@ header .logo img {
 }
 
 .standard-layout .post img {
-	margin-bottom:20px;
-	margin-top:10px;
+	margin-bottom: 20px;
+	margin-top: 10px;
 }
 
 .standard-layout .post p {
-	text-align:center;
+	text-align: center;
 }
 
 .standard-bottom-meta {
 	overflow: hidden;
 	padding-bottom: 10px;
-	margin-top:20px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
@@ -1067,8 +1066,8 @@ header .logo img {
 .standard-layout .post span.post-comment:before {
 	font-family: FontAwesome;
 	content: "\f0e6";
-	padding-right:4px;
-	color:#999;
+	padding-right: 4px;
+	color: #999;
 }
 
 .standard-layout .post .post-gallery-slider img {
@@ -1141,22 +1140,23 @@ header .logo img {
 }
 
 /* ------ Post Header ------- */
-.post-content .post-header {
+.post-header {
 	text-align: center;
 }
 
-.post-content .post-header h2 {
+.post-header h2 {
 	word-wrap: break-word;
-	margin-top: 20px;
+	margin-top: 10px;
 	margin-bottom: 0;
 }
 
-.post-content .post-header .post-title a:hover,
-.post-content .post-header .post-title a:focus {
+.post-header .post-title a:hover,
+.post-header .post-title a:focus {
 	text-decoration: underline;
 }
 
-.post-header .post-category {
+.post-header .post-category,
+.post-header .post-date {
 	display: block;
 }
 
@@ -1212,9 +1212,9 @@ header .logo img {
 	text-decoration: none;
 }
 
-.post-content .post-date {
+.post-header .post-date {
 	display: block;
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 /* ------ Post Description ------- */
@@ -1306,7 +1306,6 @@ header .logo img {
 .posts-container .grid-post .standard-bottom-meta {
 	overflow: hidden;
 	padding-bottom: 0;
-	margin-top: 0;
 	border-bottom: none;
 }
 
