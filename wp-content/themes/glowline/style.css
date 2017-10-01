@@ -1204,7 +1204,7 @@ header .logo img {
 
 /* Date and comments beneath header */
 .post-content .post-comment {
-	float:right;
+	float: right;
 }
 
 .post .post-category a:hover,
@@ -1227,7 +1227,7 @@ header .logo img {
 
 .post-content .description p a,
 .page-description p a {
-	color:#bdb76b;
+	color: #bdb76b;
 	text-decoration: underline;
 }
 
@@ -1239,14 +1239,14 @@ header .logo img {
 }
 
 .post-content .read-more {
-	text-align:center;
+	text-align: center;
 }
 
 .post-content .read-more a {
 	padding: 0 0 3px;
 	display: inline-block;
-	font-size:13px;
-	letter-spacing:1px;
+	font-size: 13px;
+	letter-spacing: 1px;
 	font-weight: 600;
 }
 
@@ -1270,17 +1270,6 @@ header .logo img {
 	border-radius: 100%;
 }
 
-.grid-post .standard-bottom-meta {
-	overflow: hidden;
-	padding-bottom: 0;
-	margin-top: 0;
-	border-bottom: none;
-}
-
-.grid-post .standard-bottom-meta ul {
-	margin: 0;
-}
-
 /*
  * Negative margins instead of using nth-child because
  * masonry cannot determine which would be 1st, 2nd, 3rd etc.
@@ -1295,19 +1284,49 @@ header .logo img {
 }
 
 .masonry-enabled.two-grid-layout .grid-post {
-	width:44.5%;
+	width: 44.5%;
 }
 
 .masonry-enabled.three-grid-layout .grid-post {
-	width:28.5%;
+	width: 28.5%;
 }
 
 .masonry-enabled.four-grid-layout .grid-post {
-	width:21%;
+	width: 21%;
 }
 
 .masonry-enabled.five-grid-layout .grid-post {
-	width:16.5%;
+	width: 16.5%;
+}
+
+/*
+ * additional settings for footer stuff in all grid layouts
+ * more specific than needed but reads better to match above
+ */
+.posts-container .grid-post .standard-bottom-meta {
+	overflow: hidden;
+	padding-bottom: 0;
+	margin-top: 0;
+	border-bottom: none;
+}
+
+/* Comments in footer */
+.posts-container .grid-post .standard-bottom-meta .post-comment {
+	line-height: 2.5; /* added to align with author card */
+}
+
+/* more specific than needed but reads better to match above */
+.posts-container .grid-post .standard-bottom-meta .post-share {
+	float: left;
+}
+
+.posts-container .grid-post .standard-bottom-meta .post-share ul {
+	margin: 0;
+	padding: 0;
+}
+
+.posts-container .grid-post .standard-bottom-meta .post-share .post-author-pic img {
+	margin: 0 10px 0 0;
 }
 
 /*
@@ -1328,18 +1347,18 @@ header .logo img {
  * 5.5 Two Column Grid Layout
 \* ------------------------------ */
  .two-grid-layout .grid-post {
-	width:48%;
-	float:left;
-	margin-right:4%;
+	width: 48%;
+	float: left;
+	margin-right: 4%;
 }
 
 .two-grid-layout .grid-post-content {
-	padding:17px 6% 35px 6%;
+	padding: 17px 6% 35px 6%;
 }
 
 .two-grid-layout .grid-post-content h2 {
-	font-size:22px;
-	margin-bottom:22px;
+	font-size: 22px;
+	margin-bottom: 22px;
 }
 
 .two-grid-layout .grid-post:nth-of-type(even) {
@@ -1351,9 +1370,9 @@ header .logo img {
  * 5.5 Three Column Grid Layout
 \* ------------------------------ */
 .three-grid-layout .grid-post {
-	width:31.3%;
-	float:left;
-	margin-right:3%;
+	width: 31.3%;
+	float: left;
+	margin-right: 3%;
 }
 
 .three-grid-layout .grid-post-content {
@@ -1361,9 +1380,9 @@ header .logo img {
 }
 
 .three-grid-layout .grid-post-content h2 {
-	font-size:18px;
+	font-size: 18px;
 	line-height: 26px;
-	text-align:center;
+	text-align: center;
 }
 
 .three-grid-layout .grid-post:nth-of-type(3n+3) {
@@ -1375,9 +1394,9 @@ header .logo img {
  * 5.5 Four Column Grid Layout
 \* ------------------------------ */
 .four-grid-layout .grid-post {
-	width:23.1%;
-	float:left;
-	margin-right:2.5%;
+	width: 23.1%;
+	float: left;
+	margin-right: 2.5%;
 }
 
 .four-grid-layout .grid-post-content {
@@ -1385,9 +1404,9 @@ header .logo img {
 }
 
 .four-grid-layout .grid-post-content h2 {
-	font-size:16px;
+	font-size: 16px;
 	line-height: 26px;
-	text-align:center;
+	text-align: center;
 }
 
 .four-grid-layout .grid-post:nth-of-type(4n+4) {
@@ -1399,19 +1418,19 @@ header .logo img {
  * 5.5 Five Column Grid Layout
 \* ------------------------------ */
 .five-grid-layout .grid-post {
-	width:18.2%;
-	float:left;
-	margin-right:2.2%;
+	width: 18.2%;
+	float: left;
+	margin-right: 2.2%;
 }
 
 .five-grid-layout .grid-post-content {
-	padding:15px 6% 20px 6%;
+	padding: 15px 6% 20px 6%;
 }
 
 .five-grid-layout .grid-post-content h2 {
-	font-size:16px;
+	font-size: 16px;
 	line-height: 26px;
-	text-align:center;
+	text-align: center;
 }
 
 .five-grid-layout .grid-post:nth-of-type(5n+5) {
@@ -1421,7 +1440,7 @@ header .logo img {
 
 .four-grid-layout .grid-post-content .read-more,
 .three-grid-layout .grid-post-content .read-more {
-	display:none;
+	display: none;
 }
 
 
@@ -1620,7 +1639,6 @@ tfoot tr td[id="prev"] a {
 	max-width: 100%;
 	height: auto;
 	border-radius:2px;
-
 }
 
 .instagram-pics li {
@@ -1646,6 +1664,7 @@ tfoot tr td[id="prev"] a {
 .widget span.screen-reader-text {
 	display: none;
 }
+
 form.search-form{
 	text-align: center;
 }
@@ -1787,12 +1806,12 @@ input[type=submit] {
 	margin-top: 20px;
 }
 
-.slider-post-content .slider-post-title{
+.slider-post-content .slider-post-title {
 	margin-bottom: 20px;
 	letter-spacing: 2px;
 }
 
-.slider-post-content .slider-post-title h2{
+.slider-post-content .slider-post-title h2 {
 	font-size:21px;
 }
 
@@ -1806,7 +1825,7 @@ input[type=submit] {
 	display: inline-block;
 }
 
-.slider-post-content .read-more-slider a:hover ,
+.slider-post-content .read-more-slider a:hover,
 .slider-post-content .read-more-slider a:focus {
 	color: #fff;
 }
@@ -1832,7 +1851,7 @@ input[type=submit] {
 	color: #bababa;
 }
 
-.slider-post-content .slider-post-social li.share-text{
+.slider-post-content .slider-post-social li.share-text {
 	font-size: 13px;
 }
 
@@ -1892,7 +1911,7 @@ input[type=submit] {
 }
 
 .slider .owl-carousel .owl-prev,
-.slider .owl-carousel .owl-next{
+.slider .owl-carousel .owl-next {
 	opacity: 0;
 	-webkit-transition: all 0.25s linear;
 	transition: all 0.25s linear;
@@ -1907,29 +1926,29 @@ input[type=submit] {
 }
 
 /* Post navigation */
-.owl-carousel .owl-controls .owl-dots{
+.owl-carousel .owl-controls .owl-dots {
 	position: relative;
 	bottom: 30px;
 	max-width: 70%;
 }
 
-.owl-carousel .owl-controls .owl-dot{
+.owl-carousel .owl-controls .owl-dot {
 	display: inline-block;
 	padding: 2px;
 }
 
-.owl-carousel .owl-controls .owl-dot span:before{
+.owl-carousel .owl-controls .owl-dot span:before {
 	content: "\f1db";
 	font-family: fontAwesome;
 	color: #ddd;
 }
 
-.owl-carousel .owl-controls .owl-dot.active span:before{
+.owl-carousel .owl-controls .owl-dot.active span:before {
 	content: "\f192";
 	font-family: fontAwesome;
 }
 
-.owl-carousel .owl-controls .owl-nav .owl-next span:before{
+.owl-carousel .owl-controls .owl-nav .owl-next span:before {
 	content: "\f192";
 	font-family: fontAwesome;
 }
@@ -1945,7 +1964,7 @@ input[type=submit] {
 	height: auto;
 }
 
-.single .post-content img{
+.single .post-content img {
 	max-width: 100%;
 	margin-bottom: 20px;
 }
@@ -1954,7 +1973,7 @@ input[type=submit] {
 	margin: 20px 0 0 0;
 }
 
-.single .single-meta{
+.single .single-meta {
 	text-align: center;
 	line-height: 3;
 }
@@ -2154,6 +2173,7 @@ input[type=submit] {
 	width: 100%;
 	height: 100%;
 }
+
 /***Audio post format***/
 .format-audio .video-wrapper {
 	padding:0;
@@ -2164,6 +2184,7 @@ input[type=submit] {
 	width: 100%;
 	height: 185px;
 }
+
 /***Link post format***/
 .standard-layout .format-link {
 	background-color: #ececec;
@@ -2223,7 +2244,6 @@ input[type=submit] {
 	margin: 0;
 	clear: both;
 	padding-top: 35px;
-
 }
 
 ol.comment-list {
