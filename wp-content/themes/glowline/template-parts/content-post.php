@@ -9,7 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="single-meta"><!-- Single Meta Start -->
+	<header class="post-header">
 
 		<?php glowline_posted_in(); ?>
 
@@ -17,7 +17,7 @@
 
 		<?php glowline_single_posted_on(); ?>
 
-	</header><!-- Single Meta End -->
+	</header>
 
 	<div class="post-content clearfix"><!-- Content Start -->
 

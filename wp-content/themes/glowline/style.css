@@ -1175,16 +1175,6 @@ header .logo img {
 	border-top: 1px solid #ffffff;
 }
 
-/* need on single otherwise border-bottom is full width... */
-.single-meta .post-category {
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-	margin: 0 auto;
-	line-height: initial;
-	display: block;
-}
-
 .post-category a:hover,
 .post-category a:focus,
 .slider-post-category span:hover,
@@ -1195,9 +1185,7 @@ header .logo img {
 
 .post-category:hover a,
 .post-category:focus a,
-.single-meta .post-category:hover a,
 .slider-post-category span:hover a,
-.single-meta .post-category:focus a,
 .slider-post-category span:focus a {
 	text-decoration: none;
 }
@@ -1970,11 +1958,6 @@ input[type=submit] {
 
 .single .post-content .post-img img {
 	margin: 20px 0 0 0;
-}
-
-.single .single-meta {
-	text-align: center;
-	line-height: 3;
 }
 
 .single .post-date,
@@ -2899,10 +2882,6 @@ a img.aligncenter {
 	.footer-wrapper .site-info .copyright,
 	.footer-wrapper .social-icon {
 		display: block;
-	}
-
-	.single .single-meta {
-		line-height: 3;
 	}
 
 }
