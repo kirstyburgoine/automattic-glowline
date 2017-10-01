@@ -2226,11 +2226,15 @@ ol.comment-list {
 }
 
 ol.comment-list li {
-	line-height: 18px;
 	margin: 15px 0 15px;
 	padding: 10px;
 	padding-left: 0;
 	padding-right: 0;
+}
+
+ol.comment-list li .comment-content li {
+	margin: 0;
+	padding: 0;
 }
 
 ol.comment-list li .comment-body {
