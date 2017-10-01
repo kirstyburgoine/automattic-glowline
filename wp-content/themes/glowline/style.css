@@ -2226,15 +2226,16 @@ ol.comment-list {
 }
 
 ol.comment-list li {
-	margin: 15px 0 15px;
+	margin: 5px 0 5px 0;
 	padding: 10px;
 	padding-left: 0;
 	padding-right: 0;
 }
 
-ol.comment-list li .comment-content li {
-	margin: 0;
-	padding: 0;
+ol.comment-list li.bypostauthor .comment-body,
+ol.comment-list li.bypostauthor .comment-author.vcard img {
+	border: solid 1px #bdb76b;
+	background-color: rgba(189,183,107, 0.4);
 }
 
 ol.comment-list li .comment-body {
@@ -2269,6 +2270,11 @@ ol.comment-list li .comment-author a:visited {
 
 .comment-author.vcard .says {
 	display: none;
+}
+
+ol.comment-list li .comment-content li {
+	margin: 0;
+	padding: 0;
 }
 
 cite.fn {
