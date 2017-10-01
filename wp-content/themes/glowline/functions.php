@@ -157,8 +157,8 @@ if ( ! function_exists( 'glowline_fonts_url' ) ) :
 			}
 
 			$query_args = array(
-				'family' => rawurlencode( implode( '|', $font_families ) ),
-				'subset' => rawurlencode( 'latin,latin-ext' ),
+				'family' => esc_html__( implode( '|', $font_families ) ),
+				'subset' => esc_html__( 'latin,latin-ext' ),
 			);
 
 			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
