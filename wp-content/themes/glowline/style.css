@@ -2391,28 +2391,33 @@ ol.comment-list li ol.children {
 
 .comment-respond label{
 	display: block;
+	font-weight: 600;
 }
 
 .comment-form input[type="text"],
 .comment-form input[type="email"],
 .comment-form input[type="url"] {
-	height:35px;
-	width:316px;
-	border:1px solid #ddd;
-	padding:0 5px;
+	height: 35px;
+	width: 316px;
+	border: 1px solid #ddd;
+	padding: 0 5px;
 }
 
 .comment-form textarea {
 	width: 100%;
-	height:200px;
-	margin-top:40px;
-	padding:5px;
-	border:1px solid #ddd;
+	height: 200px;
+	margin-top: 10px;
+	padding: 5px;
+	border: 1px solid #ddd;
+}
+
+.comment-form .comment-form-comment {
+	margin-top: 30px;
 }
 
 .comment-form-email,
 .comment-form-url{
-	margin-top:20px;
+	margin-top: 20px;
 }
 
 /*--------------------------------------------------------------*\
