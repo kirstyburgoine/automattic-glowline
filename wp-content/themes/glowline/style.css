@@ -1160,7 +1160,7 @@ header .logo img {
 .post-header h2 {
 	word-wrap: break-word;
 	margin-top: 10px;
-	margin-bottom: 0;
+	margin-bottom: 4px;
 }
 
 .post-header .post-title a:hover,
@@ -2266,16 +2266,20 @@ ol.comment-list li .comment-author a:visited {
 .comment-author.vcard .says {
 	display: none;
 }
+
 cite.fn {
 	color: #5a5d5a;
 	font-style: normal;
 	margin-right: 8px;
 }
+
 b.fn {
-	font-size: 15px;
+	display: block;
+	font-size: 13px;
 	letter-spacing: 1px;
 	color: #5a5a5a;
 	font-weight: normal;
+	margin-bottom: 8px;
 }
 
 ol.comment-list li .comment-author .avatar {
@@ -2352,18 +2356,25 @@ ol.comment-list li ol.children {
 	margin: 1em 0 0;
 }
 
-.comment-nav {
-	height: 20px;
-	padding: 5px;
+.comment-navigation {
+	display: block;
 }
 
-.comment-nav a:link, .comment-nav a:visited {
-	color: #f96e02;
+.comment-navigation:before,
+.comment-navigation:after {
+	content: " ";
+	display: table;
 }
+
+.comment-navigation:after {
+	clear: both;
+}
+
 /* Comment form specifically */
 .comment-respond {
 	margin: 10px 0;
 	padding: 0;
+	clear: both;
 }
 
 .comment-respond h3 {
