@@ -79,6 +79,7 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 		add_image_size( 'glowline-standard-thumb', 880, 550, true );
 		add_image_size( 'glowline-custom-two-grid-thumb', 562, 320, true );
 		add_image_size( 'glowline-custom-three-grid-thumb', 358, 204, true );
+		add_image_size( 'glowline-custom-four-grid-thumb', 201, 134, true );
 
 		add_theme_support(
 			'custom-logo', array(

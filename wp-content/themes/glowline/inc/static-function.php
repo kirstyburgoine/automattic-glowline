@@ -25,10 +25,6 @@ function glowline_grid_thumb( $glowline_grid_layout, $thumb_crop = true ) {
 			case 'four-grid-layout':
 				the_post_thumbnail( 'glowline-custom-four-grid-thumb' );
 				break;
-
-			case 'five-grid-layout':
-				the_post_thumbnail( 'glowline-custom-five-grid-thumb' );
-				break;
 		}
 	}
 }

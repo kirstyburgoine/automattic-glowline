@@ -61,7 +61,6 @@ function glowline_customize_register( $wp_customize ) {
 				'two-grid-layout'       => esc_html__( 'Two Column Grid','glowline' ),
 				'three-grid-layout'     => esc_html__( 'Three Column Grid','glowline' ),
 				'four-grid-layout'      => esc_html__( 'Four Column Grid','glowline' ),
-				'five-grid-layout'      => esc_html__( 'Five Column Grid','glowline' ),
 			),
 		)
 	);
