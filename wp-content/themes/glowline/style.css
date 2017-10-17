@@ -1816,14 +1816,6 @@ input[type=submit] {
 	text-align: center;
 }
 
-.header-wrapper .slider-post-content.no-image {
-	display: block;
-	width: 100%;
-	float: none;
-	padding-left: 0;
-	text-align: center;
-}
-
 .slider-post-category {
 	margin-top: 20px;
 }
