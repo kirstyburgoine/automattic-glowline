@@ -17,7 +17,7 @@
 		if ( has_post_thumbnail() ) :
 		?>
 			<div class="post-img">
-				<?php the_post_thumbnail( 'post-thumbnails' ); ?>
+				<?php the_post_thumbnail( 'glowline-standard-thumb' ); ?>
 			</div>
 		<?php
 		endif;

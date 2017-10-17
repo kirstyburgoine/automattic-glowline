@@ -25,7 +25,7 @@
 		if ( has_post_thumbnail() ) :
 		?>
 			<div class="post-img">
-				<a href="<?php esc_url( the_permalink() ); ?>"> <?php the_post_thumbnail( 'post-thumbnails' ); ?></a>
+				<a href="<?php esc_url( the_permalink() ); ?>"> <?php the_post_thumbnail( 'glowline-standard-thumb' ); ?></a>
 			</div>
 		<?php
 		endif;

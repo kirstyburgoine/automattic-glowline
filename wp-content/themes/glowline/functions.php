@@ -76,10 +76,9 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 		/** Set the image size by cropping the image */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'glowline-custom-slider-thumb', 790, 450, true );
+		add_image_size( 'glowline-standard-thumb', 880, 550, true );
 		add_image_size( 'glowline-custom-two-grid-thumb', 562, 320, true );
 		add_image_size( 'glowline-custom-three-grid-thumb', 358, 204, true );
-		add_image_size( 'glowline-custom-list-thumb', 468, 267, true );
-		add_image_size( 'glowline-custom-boxed-thumb', 585, 333, true );
 
 		add_theme_support(
 			'custom-logo', array(
