@@ -67,7 +67,7 @@ body {
 
 * {
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 ::-moz-selection {
@@ -362,7 +362,7 @@ input[type=submit]:focus,
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+			box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	color: #21759b;
 	display: block;
@@ -385,7 +385,7 @@ input[type=submit]:focus,
 \*--------------------------------------------------------------*/
 
 .header-wrapper {
- 	/* padding-top: 120px;*/
+	 /* padding-top: 120px;*/
 	/* TODO: check whether to remove this after all... */
 	padding-top: 75px;
 }
@@ -425,14 +425,14 @@ input[type=submit]:focus,
 	line-height: 1.2;
 	color: #fff;
 	display: inline;
-    background: rgba(51, 51, 51, 0.7);;
-  	box-shadow: 10px 0 0 rgba(51, 51, 51, 0.7), -10px 0 0 rgba(51, 51, 51, 0.7);
+	background: rgba(51, 51, 51, 0.7);;
+	  box-shadow: 10px 0 0 rgba(51, 51, 51, 0.7), -10px 0 0 rgba(51, 51, 51, 0.7);
 }
 
 .main-logo h1 span {
 	display: inline;
-    background: rgba(51, 51, 51, 0.7);;
-  	box-shadow: 6px 0 0 rgba(51, 51, 51, 0.7), -6px 0 0 rgba(51, 51, 51, 0.7);
+	background: rgba(51, 51, 51, 0.7);;
+	  box-shadow: 6px 0 0 rgba(51, 51, 51, 0.7), -6px 0 0 rgba(51, 51, 51, 0.7);
 }
 
 .smaller .main-logo {
@@ -486,7 +486,7 @@ header .logo img {
 
 /* moves position when nav is skinny before scroll on home page */
 .home .main-searchform-wrap {
-    top: 0;
+	top: 0;
 }
 
 .home .smaller .main-searchform-wrap {
@@ -604,13 +604,13 @@ header .logo img {
 
 /* home specific */
 .home .smaller .navigation ul {
-    padding: 13px 0;
-    margin: 0;
+	padding: 13px 0;
+	margin: 0;
 }
 
 .home .navigation ul {
- 	padding: 0;
-    margin: 0;
+	 padding: 0;
+	margin: 0;
 }
 
 .navigation ul li {
@@ -771,7 +771,7 @@ header .logo img {
 
 	/* moves position when nav is skinny before scroll on home page */
 	.home .main-searchform-wrap {
-	    top: 7px;
+		top: 7px;
 	}
 
 	.header .toggle-mobile-menu {
@@ -823,7 +823,7 @@ header .logo img {
 		-webkit-transition: left 500ms ease;
 		transition: left 500ms ease;
 		-webkit-backface-visibility: hidden;
-		        backface-visibility: hidden;
+				backface-visibility: hidden;
 		z-index: 99999;
 	}
 
@@ -868,7 +868,7 @@ header .logo img {
 		border-bottom: 1px solid rgba(193, 193, 193, 0.2);
 		width: 100%;
 		-webkit-box-sizing: border-box;
-		        box-sizing: border-box;
+				box-sizing: border-box;
 	}
 
 	.navigation i { display: inline }
@@ -976,17 +976,17 @@ header .logo img {
 \*--------------------------------------------------------------*/
 
 .container {
-   	max-width: 1170px;
-   	min-width: 240px;
-   	margin-right: auto;
-   	margin-left: auto;
-   	position: relative;
-   	clear: both;
+	   max-width: 1170px;
+	   min-width: 240px;
+	   margin-right: auto;
+	   margin-left: auto;
+	   position: relative;
+	   clear: both;
 }
 
 .admin-bar .nav-wrapper,
 .admin-bar .nav-wrapper.small {
-   	top: 32px;
+	   top: 32px;
 }
 
 .content {
@@ -1021,7 +1021,7 @@ header .logo img {
 \* ------------------------------ */
 .standard-layout .post {
 	-webkit-box-shadow: none;
-	        box-shadow: none;
+			box-shadow: none;
 	list-style-type: none;
 }
 
@@ -1093,8 +1093,8 @@ header .logo img {
 
 .posts-container .post,
 .posts-container .grid-post {
-  	clear: none;
-  	margin:30px 0;
+	  clear: none;
+	  margin:30px 0;
 }
 
 /* Applies to headings in archive to force font over <a> */
@@ -1120,31 +1120,31 @@ header .logo img {
 .standard-post.sticky .post-header:before {
 	display: block;
 	content: '';
-    border-top: 60px solid #bdb76b;
+	border-top: 60px solid #bdb76b;
 	border-right: 60px solid transparent;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
 }
 
 .sticky-post:before {
-    position: absolute;
-    top: 4px;
-    left: 5px;
-    display: block;
-    width: 40px;
-    height: 40px;
-    font-family: 'FontAwesome';
-    font-size: 1.65em;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    content: "\f08d";
-    color: #fff;
-    transform: rotate(-45deg);
+	position: absolute;
+	top: 4px;
+	left: 5px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-family: 'FontAwesome';
+	font-size: 1.65em;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	content: "\f08d";
+	color: #fff;
+	transform: rotate(-45deg);
 }
 
 .standard-post {
@@ -1354,7 +1354,7 @@ header .logo img {
 .content .grid-post:hover,
 .content .grid-post:focus {
 	-webkit-box-shadow: 1px 1px 3px #E5E5E5;
-	        box-shadow: 1px 1px 3px #E5E5E5;
+			box-shadow: 1px 1px 3px #E5E5E5;
 }
 
 /* ------------------------------ *\
@@ -1455,14 +1455,6 @@ header .logo img {
 .four-grid-layout .grid-post-content .read-more,
 .three-grid-layout .grid-post-content .read-more {
 	display: none;
-}
-
-
-.two-grid-layout .grid-post:nth-child(2n+1),
-.three-grid-layout .grid-post:nth-child(3n+1),
-.four-grid-layout .grid-post:nth-child(4n+1),
-.five-grid-layout .grid-post:nth-child(5n+1) {
-	/*clear: both;*/
 }
 
 /* Cancels all clears on masonry as it messes things up */
@@ -1766,10 +1758,10 @@ input, select, textarea {
 	color: #5a5a5a;
 	padding: 9px 10px;
 	width: 100%;
-    line-height: 23px;
-    font-size: 15px;
+	line-height: 23px;
+	font-size: 15px;
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 input[type=submit] {
@@ -1907,7 +1899,7 @@ input[type=submit] {
 .owl-controls .owl-next:focus:before {
 	color: #fff;
 	background-color: rgba(189,183,107, 0.6);
-    border: solid 1px #bdb76b;
+	border: solid 1px #bdb76b;
 }
 
 .owl-controls .owl-prev {
@@ -2309,7 +2301,7 @@ ol.comment-list li .comment-author .avatar {
 ol.comment-list li .comment-author .avatar:hover,
 ol.comment-list li .comment-author .avatar:focus {
 	-webkit-animation: bounceIn_single 0.7s ease-in-out;
-	        animation: bounceIn_single 0.7s ease-in-out;
+			animation: bounceIn_single 0.7s ease-in-out;
 }
 
 ol.comment-list li .comment-meta {
@@ -2694,7 +2686,7 @@ a img.aligncenter {
 	-webkit-transition: all 0.25s linear;
 	transition: all 0.25s linear;
 	-webkit-backface-visibility: hidden;
-	        backface-visibility: hidden;
+			backface-visibility: hidden;
 	text-align: center;
 	border: solid 1px #bdb76b;
 	border-radius: 2px;
@@ -2751,8 +2743,8 @@ a img.aligncenter {
 	.content.fullwidth {
 		width: 100%;
 		max-width: 880px;
-	    float: none;
-	    margin: 0 auto;
+		float: none;
+		margin: 0 auto;
 	}
 
 	.post-content .description {
