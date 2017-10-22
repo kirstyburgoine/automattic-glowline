@@ -1346,7 +1346,7 @@ header .logo img {
 /* ------------------------------ *\
  * 5.5 Two Column Grid Layout
 \* ------------------------------ */
- .two-grid-layout .grid-post {
+.two-grid-layout .grid-post {
 	width: 47.1%;
 }
 
@@ -1357,10 +1357,6 @@ header .logo img {
 .two-grid-layout .grid-post-content h2 {
 	font-size: 22px;
 	margin-bottom: 22px;
-}
-
-.two-grid-layout .grid-post:nth-of-type(even) {
-	margin-right: 0;
 }
 /* Two grid style end */
 
@@ -1380,10 +1376,6 @@ header .logo img {
 	line-height: 26px;
 	text-align: center;
 }
-
-.three-grid-layout .grid-post:nth-of-type(3n+3) {
-	margin-right: 0;
-}
 /* Three grid style end */
 
 /* ------------------------------ *\
@@ -1402,33 +1394,7 @@ header .logo img {
 	line-height: 26px;
 	text-align: center;
 }
-
-.four-grid-layout .grid-post:nth-of-type(4n+4) {
-	margin-right: 0;
-}
-/* Three grid style end */
-
-/* ------------------------------ *\
- * 5.5 Five Column Grid Layout
-\* ------------------------------ */
-.five-grid-layout .grid-post {
-	width: 18.2%;
-}
-
-.five-grid-layout .grid-post-content {
-	padding: 15px 6% 20px 6%;
-}
-
-.five-grid-layout .grid-post-content h2 {
-	font-size: 16px;
-	line-height: 26px;
-	text-align: center;
-}
-
-.five-grid-layout .grid-post:nth-of-type(5n+5) {
-	margin-right: 0;
-}
-/* Five grid style end */
+/* Four grid style end */
 
 .four-grid-layout .grid-post-content .read-more,
 .three-grid-layout .grid-post-content .read-more {
@@ -1437,8 +1403,7 @@ header .logo img {
 
 .content.two-grid-layout,
 .content.three-grid-layout,
-.content.four-grid-layout,
-.content.five-grid-layout {
+.content.four-grid-layout {
 	width: 72%;
 }
 
@@ -2570,6 +2535,12 @@ a img.aligncenter {
 	padding: 0;
 	text-align: center;
 	clear: both;
+	bottom: -70px;
+    position: absolute;
+    z-index: 10;
+    width: 260px;
+    left: 50%;
+    margin-left: -140px;
 }
 
 #infinite-handle span {

@@ -44,9 +44,8 @@ get_header(); ?>
 			endwhile;
 			?>
 
-			<?php the_posts_navigation(); ?>
-
 		</div> <!-- .content //-->
+		<?php the_posts_navigation(); ?>
 
 	<?php
 		get_sidebar();

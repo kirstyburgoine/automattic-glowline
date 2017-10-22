@@ -14,15 +14,14 @@ get_header(); ?>
 	<?php
 	if ( have_posts() ) :
 	?>
-
-		<div class="content clearfix <?php glowline_grid_classes( $glowline_grid_layout ); ?> posts-container<?php glowline_fullwidth(); ?>" id="content">
-
 		<header class="page-header">
 			<?php
 				the_archive_title( '<h1 class="archive-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 			?>
 		</header><!-- .page-header //-->
+
+		<div class="content clearfix <?php glowline_grid_classes( $glowline_grid_layout ); ?> posts-container<?php glowline_fullwidth(); ?>" id="content">
 
 		<?php
 		global $glowline_grid_layout;
@@ -46,9 +45,9 @@ get_header(); ?>
 			endwhile;
 			?>
 
-			<?php the_posts_navigation(); ?>
-
 		</div> <!-- .content //-->
+
+		<?php the_posts_navigation(); ?>
 
 	<?php
 		get_sidebar();

@@ -4,6 +4,94 @@
  * @package Glowline
  */
 
+
+(function($) {
+
+	// posts block for Masonry
+	var $blocks = $('.masonry-enabled');
+
+	$( window ).load( function() {
+		/**
+		 * Initial Masonry setup
+		 */
+
+		// Determine text direction
+		var ltr = true;
+		if ( $('html' ).attr( 'dir' ) == 'rtl') {
+			ltr = false;
+		}
+
+		// fire up Masonry!
+		$blocks.imagesLoaded( function() {
+			$blocks.masonry({
+				columnWidth: 1,
+				itemSelector: '.grid-post',
+				transitionDuration: 0,
+				isOriginLeft: ltr,
+			} ).masonry( 'layout' );
+
+			var masonryChild = $blocks.find( '.grid-post' );
+
+			// Animating JS based off Huntt theme
+			masonryChild.each( function( i ) {
+				// Show content
+				setTimeout( function() {
+					masonryChild.eq( i ).addClass( 'post-loaded fade-in' );
+				}, 100 * ( i + 1 ) );
+			} );
+
+			$( '#spinner' ).fadeOut( 250, function() {
+				$( this ).remove();
+			} );
+		} );
+	} );
+
+	/**
+	 * Masonry update after Infinte Scroll
+	 * JS based off Huntt theme
+	 */
+
+	$( document.body ).on( 'post-load', function() {
+
+		// make sure we're only grabbing new posts
+		var newEl = $blocks.children().not( '.post-loaded, span.infinite-loader' ).addClass( 'post-loaded' );
+
+		// create function for refreshing Masonry
+		function refreshMasonry() {
+			$blocks.masonry( 'layout' );
+		}
+
+		// check if images loaded in these new posts
+		newEl.imagesLoaded( function () {
+			// if images loaded, add new posts and update masonry layout
+			$blocks.masonry( 'appended', newEl, true ).masonry( 'layout' );
+
+			// reinitialize flexslider for new posts, and re-run masonry when complete
+			$( ".flexslider" ).flexslider( {
+				animation: "slide",
+				controlNav: false,
+				prevText: "Previous",
+				nextText: "Next",
+				smoothHeight: false,
+				startAt : 1,
+				start: refreshMasonry, // reload masonry layout on finish, just in case flexslider was slow
+			} );
+
+		} ).delay( 500 ).each( function( i ) {
+			// then have a small delay between displaying each post
+			setTimeout( function() {
+				newEl.eq( i ).addClass( 'fade-in' );
+			}, 200 * ( i + 1 ) );
+		} );
+
+		// reloading masonry layout again, after delay
+		// fixes edge case issue with Facebook embed reloading and messing up layout
+		setTimeout( refreshMasonry, 3000 );
+	} );
+
+} )( jQuery );
+
+
 jQuery( document ).ready(
 	function() {
 		"use strict";
