@@ -1,34 +1,27 @@
-jQuery( document ).ready(
-	function() {
+/**
+ * File customizer.js.
+ *
+ * Theme Customizer enhancements for a better user experience.
+ *
+ * Contains handlers to make Theme Customizer preview reload changes asynchronously.
+ */
 
-		/* === Checkbox Multiple Control === */
-		jQuery( '.customize-control-checkbox-multiple input[type="checkbox"]' ).on(
-			'change',
-			function() {
-				// alert('');
-				checkbox_values = jQuery( this ).parents( '.customize-control' ).find( 'input[type="checkbox"]:checked' ).map(
-					function() {
-						return this.value;
-					}
-				).get().join( ',' );
+( function( $ ) {
 
-				jQuery( this ).parents( '.customize-control' ).find( 'input[type="hidden"]' ).val( checkbox_values ).trigger( 'change' );
+	// Grid Settings.
+	wp.customize( 'dynamic_grid', function( value ) {
+		value.bind( function( to ) {
+
+			if ( 'standard-layout' === to ) {
+				$( 'body' ).addClass( 'standard-layout' ).removeClass( 'masonry-enabled two-grid-layout three-grid-layout four-grid-layout' );
+			} elseif ( 'two-grid-layout' === to ) {
+				$( 'body' ).addClass( 'masonry-enabled two-grid-layout' ).removeClass( 'standard-layout three-grid-layout four-grid-layout' );
+			} elseif ( 'three-grid-layout' === to ) {
+				$( 'body' ).addClass( 'masonry-enabled three-grid-layout' ).removeClass( 'standard-layout two-grid-layout four-grid-layout' );
+			} else {
+				$( 'body' ).addClass( 'masonry-enabled four-grid-layout' ).removeClass( 'standard-layout two-grid-layout three-grid-layout' );
 			}
-		);
+		} );
+	} );
 
-		/*Documentation link and Upgrade to PRO link */
-		if ( ! jQuery( ".preview-notice" ).length ) {
-			jQuery( '#customize-theme-controls > ul' ).prepend( '<li class="accordion-section preview-notice">' );
-		}
-
-		if ( jQuery( ".preview-notice" ).length ) {
-
-			jQuery( '.preview-notice' ).append( '<a style="width: 80%; margin: 5px auto 5px auto; display: block; text-align: center;" href="//themehunk.com/product/glowline-gracefull-wordpress-theme/" class="button" target="_blank">{pro}</a>'.replace( '{pro}', glowlineCustomizerObject.pro ) );
-
-		}
-		if ( ! jQuery( ".preview-notice" ).length ) {
-			jQuery( '#customize-theme-controls > ul' ).prepend( '</li>' );
-		}
-
-	}
-);
+} )( jQuery );
