@@ -56,7 +56,7 @@ Text Domain: glowline
 \*--------------------------------------------------------------*/
 
 body {
-	background-color: #ffffff;
+	background-color: #f9f9f9;
 	font-family: "Lato", sans-serif;
 	color: #5A5D5A;
 	font-size: 15px;
@@ -88,7 +88,6 @@ html {
 
 span.edit-link a.post-edit-link {
 	float: right;
-	margin-top: 20px;
 	color: #bdb76b;
 }
 
@@ -387,8 +386,6 @@ input[type=submit]:focus,
 \*--------------------------------------------------------------*/
 
 .header-wrapper {
-	 /* padding-top: 120px;*/
-	/* TODO: check whether to remove this after all... */
 	padding-top: 75px;
 }
 
@@ -996,8 +993,7 @@ header .logo img {
 }
 
 .content {
-	padding-top: 9px;
-	width: 72%;
+	width: 70%;
 	max-width: 850px;
 	float: left;
 }
@@ -1014,6 +1010,16 @@ header .logo img {
 	content.fullwidth is when sidebar-1 is not active.
 	Its chained rather than using the orginal fullwidth class so that specificity is greater
 	*/
+}
+
+.type-page,
+.type-post {
+	background-color: #ffffff;
+	padding: 15px;
+}
+
+.type-post.grid-post {
+	padding: 0;
 }
 
 .sidebar-wrapper {
@@ -1102,6 +1108,7 @@ header .logo img {
 .posts-container .grid-post {
 	  clear: none;
 	  margin: 0 0 30px 0;
+	  background-color: #ffffff;
 }
 
 /* Applies to headings in archive to force font over <a> */
@@ -1301,14 +1308,14 @@ header .logo img {
  * additional settings for footer stuff in all grid layouts
  * more specific than needed but reads better to match above
  */
-.posts-container .grid-post .standard-bottom-meta {
+.posts-container .standard-bottom-meta {
 	overflow: hidden;
 	padding-bottom: 0;
 	border-bottom: none;
 }
 
 /* Comments in footer */
-.posts-container .grid-post .standard-bottom-meta .post-comment {
+.posts-container .standard-bottom-meta .post-comment {
 	line-height: 2.5; /* added to align with author card */
 }
 
@@ -1326,6 +1333,7 @@ header .logo img {
  * but we do on all grids whether masonry is enabled or not
  */
 .content .grid-post {
+	background-color: #ffffff;
 	border: solid 1px #DDD;
  }
 
@@ -1405,8 +1413,6 @@ header .logo img {
 \* ------------------------------ */
 .five-grid-layout .grid-post {
 	width: 18.2%;
-	float: left;
-	margin-right: 2.2%;
 }
 
 .five-grid-layout .grid-post-content {
@@ -1459,6 +1465,7 @@ header .logo img {
 	margin: 0 0 3.5em;
 	word-wrap: break-word;
 	overflow: hidden;
+	background-color: #ffffff;
 }
 
 .widgettitle {
@@ -1647,7 +1654,7 @@ tfoot tr td[id="prev"] a {
 	display: none;
 }
 
-form.search-form{
+form.search-form {
 	text-align: center;
 }
 
@@ -2185,9 +2192,10 @@ input[type=submit] {
  *      8.6 - Comments
 \*--------------------------------------------------------------*/
 .comments-area {
-	margin: 0;
+	margin-top: 35px;
 	clear: both;
-	padding-top: 35px;
+	padding: 15px;
+	background-color: #ffffff;
 }
 
 ol.comment-list {

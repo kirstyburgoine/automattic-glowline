@@ -73,6 +73,14 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 		);
 		add_theme_support( 'custom-header', $args );
 
+		/**
+		 * Add support for custom backgrounds
+		 */
+		add_theme_support( 'custom-background', apply_filters( 'glowline_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
+
 		/** Set the image size by cropping the image */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'glowline-custom-slider-thumb', 790, 450, true );

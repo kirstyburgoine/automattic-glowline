@@ -14,7 +14,7 @@ function glowline_wpcom_setup() {
 
 	if ( ! isset( $themecolors ) ) {
 		$themecolors = array(
-			'bg'     => 'FFFFFF',
+			'bg'     => 'F9F9F9',
 			'border' => 'DDDDDD',
 			'text'   => '5A5A5A',
 			'link'   => 'bdb76b',
