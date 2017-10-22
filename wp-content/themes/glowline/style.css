@@ -960,7 +960,7 @@ header .logo img {
 }
 
 .footer-wrapper {
-	background-color: #f9f9f9;
+	background-color: #fff;
 	margin-top: 30px;
 }
 
@@ -1435,6 +1435,13 @@ header .logo img {
 	display: none;
 }
 
+.content.two-grid-layout,
+.content.three-grid-layout,
+.content.four-grid-layout,
+.content.five-grid-layout {
+	width: 72%;
+}
+
 /*
  * Negative margins instead of using nth-child because
  * masonry cannot determine which would be 1st, 2nd, 3rd etc.
@@ -1463,9 +1470,14 @@ header .logo img {
 
 .sidebar-inner-widget {
 	margin: 0 0 3.5em;
+	padding: 10px;
 	word-wrap: break-word;
 	overflow: hidden;
 	background-color: #ffffff;
+}
+
+.sidebar-inner-widget > div {
+	margin: 0 auto;
 }
 
 .widgettitle {
@@ -1666,12 +1678,17 @@ form.search-form {
 .search input.search-field,
 .error404 input.search-field {
 	height: 35px;
+	width: 100%;
 	max-width: 350px;
 	padding-left: 15px;
 	border: 1px solid #ddd;
 	padding-right: 10px;
 	font-size: 15px;
 	letter-spacing: 1px;
+}
+
+.widget input[type=submit] {
+	width: 35%;
 }
 
 .widget .tweet-content {
