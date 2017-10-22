@@ -15,7 +15,7 @@ get_header(); ?>
 		if ( have_posts() ) :
 		?>
 
-			<div class="content clearfix<?php glowline_fullwidth(); ?>" id="content">
+			<div class="content<?php glowline_fullwidth(); ?>" id="content">
 
 				<?php
 				while ( have_posts() ) :

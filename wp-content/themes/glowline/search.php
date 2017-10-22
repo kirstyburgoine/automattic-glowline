@@ -15,7 +15,7 @@ get_header(); ?>
 if ( have_posts() ) :
 	?>
 
-		<div class="content clearfix <?php glowline_grid_classes(); ?> posts-container" id="content">
+		<div class="content clearfix <?php glowline_grid_classes( $glowline_grid_layout ); ?> posts-container" id="content">
 
 		<header class="page-header">
 			<h1 class="page-title">
