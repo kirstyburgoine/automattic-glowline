@@ -977,6 +977,10 @@ header .logo img {
  *      5.5 Layout Options
 \*--------------------------------------------------------------*/
 
+.site-main {
+	padding: 30px 0;
+}
+
 .container {
 	   max-width: 1170px;
 	   min-width: 240px;
@@ -1096,7 +1100,7 @@ header .logo img {
 .posts-container .post,
 .posts-container .grid-post {
 	  clear: none;
-	  margin:30px 0;
+	  margin: 0 0 60px 0;
 }
 
 /* Applies to headings in archive to force font over <a> */
