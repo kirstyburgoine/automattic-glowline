@@ -22,7 +22,7 @@
 
 	// -------------------------------------------
 	// masonry
-	jQuery('.posts-container').masonry({
+	jQuery('.masonry-enabled').masonry({
 		itemSelector: '.grid-post',
 		columnWidth: '.grid-post'
 	});

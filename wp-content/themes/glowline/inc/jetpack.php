@@ -36,7 +36,7 @@ if ( ! function_exists( 'glowline_jetpack_setup' ) ) {
 			'blog-display'        => 'content', // the default setting of the theme: 'content', 'excerpt' or array( 'content', 'excerpt' ) for themes mixing both display.
 			'author-bio'          => true, // display or not the author bio: true or false.
 			'author-bio-default'  => false, // the default setting of the author bio, if it's being displayed or not: true or false (only required if false).
-			'masonry'             => '.posts-container', // a CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
+			'masonry'             => '.masonry-enabled', // a CSS selector matching the elements that triggers a masonry refresh if the theme is using a masonry layout.
 			'post-details'        => array(
 				'stylesheet'      => 'glowline-style', // name of the theme's stylesheet.
 				'date'            => '.post-meta', // a CSS selector matching the elements that display the post date.
