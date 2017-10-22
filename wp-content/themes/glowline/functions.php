@@ -183,6 +183,3 @@ include( get_template_directory() . '/inc/customizer.php' );
  */
 global $glowline_grid_layout;
 $glowline_grid_layout = get_theme_mod( 'dynamic_grid', 'standard-layout' );
-
-global $glowline_masonry_layout;
-$glowline_masonry_layout = get_theme_mod( 'masonry_grid', 'masonry-disabled' );

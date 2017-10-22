@@ -64,30 +64,6 @@ function glowline_customize_register( $wp_customize ) {
 			),
 		)
 	);
-
-	// = Enable Masonry  =
-	$wp_customize->add_setting(
-		'masonry_grid', array(
-			'default'     => 'masonry-disabled',
-			'capability'  => 'edit_theme_options',
-			'sanitize_callback' => 'glowline_sanitize_masonry_options',
-		)
-	);
-
-	$wp_customize->add_control(
-		'masonry_grid', array(
-			'settings'    => 'masonry_grid',
-			'label'       => esc_html__( 'Enable Masonry Layout','glowline' ),
-			'description' => esc_html__( 'Only works with the grid options selected','glowline' ),
-			'section'     => 'theme_options',
-			'type'        => 'select',
-			'choices'     => array(
-				'masonry-enabled'       => esc_html__( 'Enabled','glowline' ),
-				'masonry-disabled'      => esc_html__( 'Disabled','glowline' ),
-			),
-		)
-	);
-
 }
 
 add_action( 'customize_register','glowline_customize_register' );
@@ -111,23 +87,3 @@ function glowline_sanitize_grid_options( $input ) {
         return '';
     }
 }
-
-/**
- * Sanitize masonry dropdown
- */
-function glowline_sanitize_masonry_options( $input ) {
-    $valid = array(
-		'masonry-enabled'       => esc_html__( 'Enabled','glowline' ),
-		'masonry-disabled'      => esc_html__( 'Disabled','glowline' ),
-    );
-
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
-}
-
-
-
-
