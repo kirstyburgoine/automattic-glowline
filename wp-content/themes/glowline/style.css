@@ -2536,11 +2536,11 @@ a img.aligncenter {
 	text-align: center;
 	clear: both;
 	bottom: -70px;
-    position: absolute;
-    z-index: 10;
-    width: 260px;
-    left: 50%;
-    margin-left: -140px;
+	position: absolute;
+	z-index: 10;
+	width: 260px;
+	left: 50%;
+	margin-left: -140px;
 }
 
 #infinite-handle span {
