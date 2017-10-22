@@ -16,7 +16,7 @@ function glowline_widgets_init() {
 			'name'          => esc_html__( 'Primary Sidebar', 'glowline' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Main sidebar that appears on the left.', 'glowline' ),
-			'before_widget' => '<div div id="%1s" class="sidebar-inner-widget widget %2s">',
+			'before_widget' => '<div id="%1s" class="sidebar-inner-widget widget %2s">',
 			'after_widget'  => '</div><div class="clearfix"></div>',
 			'before_title'  => '<h4 class="widgettitle">',
 			'after_title'   => '</h4>',
