@@ -106,8 +106,6 @@ function glowline_scripts() {
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '1.0.0' );
 	// Load our main stylesheet.
 	wp_enqueue_style( 'glowline-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'classie', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'glowline-custom', get_template_directory_uri() . '/js/glowline-global.js', array( 'jquery', 'masonry' ), '', true );
 
 	if ( is_singular() && comments_open() && ( get_option( 'thread_comments' ) === 1 ) ) {
