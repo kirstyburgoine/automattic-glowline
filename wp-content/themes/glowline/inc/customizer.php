@@ -34,21 +34,21 @@ function glowline_customize_register( $wp_customize ) {
 	// =============================
 	// = Theme Options       =
 	// =============================
-	   $wp_customize->add_section(
-		   'theme_options', array(
-			   'title'       => esc_html__( 'Theme Options ', 'glowline' ),
-			   'priority'    => 250,
-		   )
-	   );
+	$wp_customize->add_section(
+		'theme_options', array(
+			'title'       => esc_html__( 'Theme Options ', 'glowline' ),
+			'priority'    => 250,
+		)
+	);
 
 	// = Choose Grid Layout  =
-	 $wp_customize->add_setting(
-		 'dynamic_grid', array(
-			 'default'     => 'standard-layout',
-			 'capability'  => 'edit_theme_options',
-			 'sanitize_callback' => 'glowline_sanitize_grid_options',
-		 )
-	 );
+	$wp_customize->add_setting(
+		'dynamic_grid', array(
+			'default'     => 'standard-layout',
+			'capability'  => 'edit_theme_options',
+			'sanitize_callback' => 'glowline_sanitize_grid_options',
+		)
+	);
 
 	$wp_customize->add_control(
 		'dynamic_grid', array(
@@ -70,20 +70,22 @@ add_action( 'customize_register','glowline_customize_register' );
 
 
 /**
- * Sanitize a layout dropdown options
+ * Sanitize layout dropdown options
+ *
+ * @param string $input options selected.
  */
 function glowline_sanitize_grid_options( $input ) {
-    $valid = array(
-    	'standard-layout'		=> esc_html__( 'Standard Layout','glowline' ),
+	$valid = array(
+		'standard-layout'       => esc_html__( 'Standard Layout','glowline' ),
 		'two-grid-layout'       => esc_html__( 'Two Column Grid','glowline' ),
 		'three-grid-layout'     => esc_html__( 'Three Column Grid','glowline' ),
 		'four-grid-layout'      => esc_html__( 'Four Column Grid','glowline' ),
 		'five-grid-layout'      => esc_html__( 'Five Column Grid','glowline' ),
-    );
+	);
 
-    if ( array_key_exists( $input, $valid ) ) {
-        return $input;
-    } else {
-        return '';
-    }
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
+	}
 }
