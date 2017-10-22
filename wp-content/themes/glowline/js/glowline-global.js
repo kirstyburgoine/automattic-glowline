@@ -1,13 +1,19 @@
+/**
+ * JS functions file
+ *
+ * @package Glowline
+ */
+
 jQuery( document ).ready(
 	function() {
 		"use strict";
 
 		// -------------------------------------------
-		// Responsive slider
+		// Responsive slider.
 		jQuery( ".owl-carousel" ).owlCarousel(
 			{
 				rtl: true,
-				nav: true, // Show next and prev buttons
+				nav: true, // Show next and prev buttons.
 				pagination:false,
 				slideSpeed : 500,
 				paginationSpeed : 400,
@@ -22,7 +28,7 @@ jQuery( document ).ready(
 		);
 
 		// -------------------------------------------
-		// masonry
+		// masonry.
 		jQuery( '.masonry-enabled' ).masonry(
 			{
 				itemSelector: '.grid-post',
@@ -31,7 +37,7 @@ jQuery( document ).ready(
 		);
 
 		// -------------------------------------------
-		// Dropdown menu
+		// Dropdown menu.
 		function thDropdownMenu() {
 			var wWidth = jQuery( window ).width();
 
@@ -70,7 +76,7 @@ jQuery( document ).ready(
 		);
 
 		// -------------------------------------------
-		// Vertical menus toggles
+		// Vertical menus toggles.
 		jQuery( '.widget .menu-menu-1-container, .navigation .menu' ).addClass( 'toggle-menu' );
 		jQuery( '.toggle-menu ul.sub-menu, .toggle-menu ul.children' ).addClass( 'toggle-submenu' );
 		jQuery( '.toggle-menu ul.sub-menu' ).parent().addClass( 'toggle-menu-item-parent' );
@@ -84,7 +90,7 @@ jQuery( document ).ready(
 		);
 
 		// -------------------------------------------
-		// Show-hide Scroll to top & move-to-top arrow
+		// Show-hide Scroll to top & move-to-top arrow.
 		jQuery( "body" ).prepend( "<a id='move-to-top' class='animate move-to-top ' href='#masthead'><i class='fa fa-angle-up'></i></a>" );
 
 		var scrollDes = 'html,body';
@@ -94,7 +100,7 @@ jQuery( document ).ready(
 		}
 
 		// -------------------------------------------
-		// show ,hide
+		// show ,hide.
 		jQuery( window ).scroll(
 			function () {
 				if (jQuery( this ).scrollTop() > 160) {
@@ -106,20 +112,20 @@ jQuery( document ).ready(
 		);
 
 		// -------------------------------------------
-		// Make all anchor links smooth scrolling & scroll handler
+		// Make all anchor links smooth scrolling & scroll handler.
 		var scrollToAnchor = function( id, event ) {
-			// grab the element to scroll to based on the name
+			// grab the element to scroll to based on the name.
 			var elem = jQuery( "a[name='" + id + "']" );
-			// if that didn't work, look for an element with our ID
+			// if that didn't work, look for an element with our ID.
 			if ( typeof( elem.offset() ) === "undefined" ) {
 				elem = jQuery( "#" + id );
 			}
-			// if the destination element exists
+			// if the destination element exists.
 			if ( typeof( elem.offset() ) !== "undefined" ) {
-				// cancel default event propagation
+				// cancel default event propagation.
 				event.preventDefault();
 
-				// do the scroll
+				// do the scroll.
 				var scroll_to = elem.offset().top;
 				jQuery( 'html, body' ).animate(
 					{
@@ -133,13 +139,13 @@ jQuery( document ).ready(
 		};
 
 		// -------------------------------------------
-		// bind to click event
+		// bind to click event.
 		jQuery( "a" ).click(
 			function( event ) {
-				// only do this if it's an anchor link
+				// only do this if it's an anchor link.
 				var href = jQuery( this ).attr( "href" );
 				if ( href && href.match( "#" ) && href !== '#' ) {
-					// scroll to the location
+					// scroll to the location.
 					var parts = href.split( '#' ),
 					url = parts[0],
 					target = parts[1];
@@ -151,7 +157,7 @@ jQuery( document ).ready(
 		);
 
 		// -------------------------------------------
-		// Responsive Navigation
+		// Responsive Navigation.
 		/* <![CDATA[ */
 		var glowline_customscript = {"responsive":"1","nav_menu":"secondary"};
 		/* ]]> */
@@ -159,7 +165,7 @@ jQuery( document ).ready(
 		if (glowline_customscript.responsive && glowline_customscript.nav_menu != 'none') {
 			jQuery( document ).ready(
 				function($){
-					// merge if two menus exist
+					// merge if two menus exist.
 					if (glowline_customscript.nav_menu == 'both') {
 						jQuery( '.navigation' ).not( '.mobile-menu-wrapper' ).find( '.menu' ).clone().appendTo( '.mobile-menu-wrapper' ).hide();
 					}
@@ -172,7 +178,7 @@ jQuery( document ).ready(
 						}
 					);
 
-					// prevent propagation of scroll event to parent
+					// prevent propagation of scroll event to parent.
 					jQuery( document ).on(
 						'DOMMouseScroll mousewheel', '.mobile-menu-wrapper', function(ev) {
 							var $this = jQuery( this ),
@@ -191,7 +197,7 @@ jQuery( document ).ready(
 								return false;
 							}
 
-							if ( jQuery( 'a#pull' ).css( 'display' ) !== 'none' ) { // if toggle menu button is visible ( small screens )
+							if ( jQuery( 'a#pull' ).css( 'display' ) !== 'none' ) { // if toggle menu button is visible ( small screens ).
 
 								if ( ! up && -delta > scrollHeight - height - scrollTop) {
 									// Scrolling down, but this will take us past the bottom.
@@ -210,8 +216,8 @@ jQuery( document ).ready(
 			).on(
 				'click', function(event) {
 
-						var $target = jQuery( event.target );
-					if ( ( $target.hasClass( "fa" ) && $target.parent().hasClass( "toggle-caret" ) ) || $target.hasClass( "toggle-caret" ) ) {// allow clicking on menu toggles
+					var $target = jQuery( event.target );
+					if ( ( $target.hasClass( "fa" ) && $target.parent().hasClass( "toggle-caret" ) ) || $target.hasClass( "toggle-caret" ) ) {// allow clicking on menu toggles.
 						return;
 					}
 
@@ -220,7 +226,7 @@ jQuery( document ).ready(
 			);
 		}
 
-		// Scroll down header
+		// Scroll down header.
 		function init() {
 			window.addEventListener(
 				'scroll', function(e){
