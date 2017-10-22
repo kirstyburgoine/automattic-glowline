@@ -24,7 +24,7 @@ get_header(); ?>
 		global $glowline_grid_layout;
 		?>
 
-		<div class="content clearfix <?php glowline_grid_classes(); ?> posts-container<?php glowline_fullwidth(); ?>" id="content">
+		<div class="content clearfix <?php glowline_grid_classes( $glowline_grid_layout ); ?> posts-container<?php glowline_fullwidth(); ?>" id="content">
 
 			<?php
 			/* Start the Loop */

@@ -31,13 +31,17 @@ function glowline_grid_thumb( $glowline_grid_layout, $thumb_crop = true ) {
 
 /**
  * Determines what layout has been selected and builds classes based on that.
- * Just slightly nicer than outputting $glowline_grid_layout in template.
+ * Needed as even if masonry is enabled it can't be used on standard layouts.
  *
- * @param string $glowline_grid_layout defines which layout is selected in customzer as set in functions.php.
+ * @param string $glowline_grid_layout defines which layout is selected.
  */
-function glowline_grid_classes() {
+function glowline_grid_classes( $glowline_grid_layout ) {
 
+	if ( 'standard-layout' !== $glowline_grid_layout ) {
+		echo esc_attr( $glowline_grid_layout ) . ' masonry-enabled';
+	} else {
 		echo esc_attr( $glowline_grid_layout );
+	}
 }
 
 /**
