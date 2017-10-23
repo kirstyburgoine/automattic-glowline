@@ -23,22 +23,18 @@
 	} );
 
 	// Grid Settings.
-	wp.customize(
-		'dynamic_grid', function( value ) {
-			value.bind(
-				function( to ) {
-					if ( 'standard-layout' === to ) {
-						$( '.posts-container' ).addClass( 'standard-layout' ).removeClass( 'masonry-enabled two-grid-layout three-grid-layout four-grid-layout' );
-					} else if( 'two-grid-layout' === to ) {
-						$( '.posts-container' ).addClass( 'masonry-enabled two-grid-layout' ).removeClass( 'standard-layout three-grid-layout four-grid-layout' );
-					} else if( 'three-grid-layout' === to ) {
-						$( '.posts-container' ).addClass( 'masonry-enabled three-grid-layout' ).removeClass( 'standard-layout two-grid-layout four-grid-layout' );
-					} else {
-						$( '.posts-container' ).addClass( 'masonry-enabled four-grid-layout' ).removeClass( 'standard-layout two-grid-layout three-grid-layout' );
-					}
-				}
-			);
-		}
-	);
+	wp.customize( 'dynamicgrid', function( value ) {
+		value.bind( function( to ) {
+			if ( 'standard-layout' === to ) {
+				$( '#content' ).addClass( 'standard-layout' ).removeClass( 'masonry-enabled two-grid-layout three-grid-layout four-grid-layout' );
+			} else if( 'two-grid-layout' === to ) {
+				$( '#content' ).addClass( 'masonry-enabled two-grid-layout' ).removeClass( 'standard-layout three-grid-layout four-grid-layout' );
+			} else if( 'three-grid-layout' === to ) {
+				$( '#content' ).addClass( 'masonry-enabled three-grid-layout' ).removeClass( 'standard-layout two-grid-layout four-grid-layout' );
+			} else {
+				$( '#content' ).addClass( 'masonry-enabled four-grid-layout' ).removeClass( 'standard-layout two-grid-layout three-grid-layout' );
+			}
+		} );
+	} );
 
 } )( jQuery );
