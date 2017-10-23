@@ -63,6 +63,16 @@ function glowline_customize_register( $wp_customize ) {
 			),
 		)
 	);
+
+	$wp_customize->get_setting( 'dynamicgrid' )->transport   	 = 'postMessage';
+
+	$wp_customize->selective_refresh->add_partial(
+		'dynamicgrid', array(
+			'selector'        	=> '#content',
+			'settings'    		=> 'dynamicgrid',
+			'render_callback' 	=> 'glowline_customize_partial_grid_classes',
+		)
+	);
 }
 
 add_action( 'customize_register','glowline_customize_register' );
@@ -89,10 +99,19 @@ function glowline_sanitize_grid_options( $input ) {
 	}
 }
 
+function glowline_customize_partial_grid_classes( $glowline_grid_layout ) {
+	$grid_layout = get_option( 'dynamicgrid' );
+
+	if ( 'standard-layout' === $grid_layout ) {
+		return $grid_layout;
+	} else {
+		return $grid_layout;
+	}
+}
+
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  *
- * @since Glowline 1.2
  */
 function glowline_customize_preview_js() {
 	wp_enqueue_script( 'glowline_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '', true );
