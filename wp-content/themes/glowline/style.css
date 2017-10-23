@@ -1001,7 +1001,7 @@ header .logo img {
 .content-fullwidth,
 .content.fullwidth,
 .container.fullwidth {
-	width: 100%;
+	width: 100%!important; /* added because no matter what grid option this should always override if there is no sidebar */
 	max-width: 880px;
 	float: none;
 	margin: 0 auto;
