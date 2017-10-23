@@ -15,7 +15,6 @@ function glowline_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport          = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport   = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport  = 'postMessage';
 
 	$wp_customize->selective_refresh->add_partial(
 		'blogname', array(
@@ -89,3 +88,13 @@ function glowline_sanitize_grid_options( $input ) {
 		return '';
 	}
 }
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ *
+ * @since Glowline 1.2
+ */
+function glowline_customize_preview_js() {
+	wp_enqueue_script( 'glowline_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '', true );
+}
+add_action( 'customize_preview_init', 'glowline_customize_preview_js' );

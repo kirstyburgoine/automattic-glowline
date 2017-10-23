@@ -9,20 +9,32 @@
 
 ( function( $ ) {
 
+	// Site title and description.
+	wp.customize( 'blogname', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-title span' ).text( to );
+		} );
+	} );
+
+	wp.customize( 'blogdescription', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-description' ).text( to );
+		} );
+	} );
+
 	// Grid Settings.
 	wp.customize(
 		'dynamic_grid', function( value ) {
 			value.bind(
 				function( to ) {
-
 					if ( 'standard-layout' === to ) {
-						$( 'body' ).addClass( 'standard-layout' ).removeClass( 'masonry-enabled two-grid-layout three-grid-layout four-grid-layout' );
-					} elseif( 'two-grid-layout' === to ) {
-						$( 'body' ).addClass( 'masonry-enabled two-grid-layout' ).removeClass( 'standard-layout three-grid-layout four-grid-layout' );
-					} elseif( 'three-grid-layout' === to ) {
-						$( 'body' ).addClass( 'masonry-enabled three-grid-layout' ).removeClass( 'standard-layout two-grid-layout four-grid-layout' );
+						$( '.posts-container' ).addClass( 'standard-layout' ).removeClass( 'masonry-enabled two-grid-layout three-grid-layout four-grid-layout' );
+					} else if( 'two-grid-layout' === to ) {
+						$( '.posts-container' ).addClass( 'masonry-enabled two-grid-layout' ).removeClass( 'standard-layout three-grid-layout four-grid-layout' );
+					} else if( 'three-grid-layout' === to ) {
+						$( '.posts-container' ).addClass( 'masonry-enabled three-grid-layout' ).removeClass( 'standard-layout two-grid-layout four-grid-layout' );
 					} else {
-						$( 'body' ).addClass( 'masonry-enabled four-grid-layout' ).removeClass( 'standard-layout two-grid-layout three-grid-layout' );
+						$( '.posts-container' ).addClass( 'masonry-enabled four-grid-layout' ).removeClass( 'standard-layout two-grid-layout three-grid-layout' );
 					}
 				}
 			);
