@@ -2169,6 +2169,10 @@ input[type=submit] {
 	vertical-align: middle;
 }
 
+.twitter-tweet {
+	min-width: 100%!important; /* needs to overwrite an inline style :( */
+}
+
 /*--------------------------------------------------------------*\
  *  8 - Content
  *      8.6 - Comments
