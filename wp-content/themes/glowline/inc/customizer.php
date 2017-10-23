@@ -42,7 +42,7 @@ function glowline_customize_register( $wp_customize ) {
 
 	// = Choose Grid Layout  =
 	$wp_customize->add_setting(
-		'dynamic_grid', array(
+		'dynamicgrid', array(
 			'default'     => 'standard-layout',
 			'capability'  => 'edit_theme_options',
 			'sanitize_callback' => 'glowline_sanitize_grid_options',
@@ -50,8 +50,8 @@ function glowline_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'dynamic_grid', array(
-			'settings'    => 'dynamic_grid',
+		'dynamicgrid', array(
+			'settings'    => 'dynamicgrid',
 			'label'       => esc_html__( 'Choose A Post Layout','glowline' ),
 			'section'     => 'theme_options',
 			'type'        => 'select',
