@@ -2106,6 +2106,18 @@ input[type=submit] {
 	height: 100%;
 }
 
+.standard-layout .format-video h2 {
+	color: #bdb76b;
+}
+
+.standard-layout .format-video h2:before {
+	content: "\f03d";
+	font-family: fontawesome;
+	font-size: 40px;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+
 /***Audio post format***/
 .format-audio .video-wrapper {
 	padding: 0;
@@ -2124,11 +2136,7 @@ input[type=submit] {
 
 .standard-layout .format-link h2 {
 	color: #bdb76b;
-	font-size: 26px;
-	padding: 50px 50px 50px 80px;
-	line-height: 40px;
 	font-style: italic;
-	letter-spacing: 1px;
 }
 
 .standard-layout .format-link h2:before {
@@ -2152,6 +2160,7 @@ input[type=submit] {
 }
 
 /***Quote post format***/
+.format-quote,
 .format-quote blockquote {
 	padding: 60px 30px 40px;
 	margin: 20px 0;
@@ -2161,16 +2170,19 @@ input[type=submit] {
 	border-right: 1px solid #ddd;
 }
 
+.format-quote p,
 .format-quote blockquote p {
 	font-size: 26px;
 	line-height: 40px;
 	font-style: italic;
 }
 
+.format-quote a,
 .format-quote blockquote a {
 	font-style: normal;
 }
 
+.format-quote p:before,
 .format-quote blockquote p:before {
 	font-style: normal;
 	font-family: "Playfair Display";
@@ -2178,6 +2190,12 @@ input[type=submit] {
 	font-size: 160px;
 	color: #bdb76b;
 	vertical-align: middle;
+}
+
+.format-chat .description p:nth-child(2n + 2) {
+	background-color: #ececec;
+	margin: 10px 0;
+	padding: 10px;
 }
 
 .twitter-tweet {
