@@ -77,7 +77,7 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 		 * Add support for custom backgrounds
 		 */
 		add_theme_support( 'custom-background', apply_filters( 'glowline_custom_background_args', array(
-			'default-color' => 'ffffff',
+			'default-color' => 'f9f9f9',
 			'default-image' => '',
 		) ) );
 
