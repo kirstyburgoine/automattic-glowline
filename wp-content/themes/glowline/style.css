@@ -2120,7 +2120,6 @@ input[type=submit] {
 /***Link post format***/
 .standard-layout .format-link {
 	background-color: #ececec;
-	min-width: 100%;
 }
 
 .standard-layout .format-link h2 {
@@ -2139,6 +2138,19 @@ input[type=submit] {
 	padding-right: 10px;
 	vertical-align: middle;
 }
+
+.format-link .post-category a {
+	border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-top: 1px solid #ececec;
+}
+
+.format-link .post-category a:hover {
+	border-left: 1px solid #bdb76b;
+    border-right: 1px solid #bdb76b;
+    border-top: 1px solid #bdb76b;
+}
+
 /***Quote post format***/
 .format-quote blockquote {
 	padding: 60px 30px 40px;
