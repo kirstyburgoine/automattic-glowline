@@ -13,7 +13,7 @@ foreach ( $featured_posts as $post ) :
 	setup_postdata( $post );
 ?>
 
-	<div class="item">
+	<li class="item">
 
 		<?php
 		if ( has_post_thumbnail() ) :
@@ -45,7 +45,7 @@ foreach ( $featured_posts as $post ) :
 				</div>
 			</div>
 
-	</div>
+	</li>
 
 <?php
 endforeach; ?>
