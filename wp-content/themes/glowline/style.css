@@ -2110,11 +2110,11 @@ input[type=submit] {
 	color: #bdb76b;
 }
 
-.standard-layout .format-video h2:before {
+.standard-layout .format-video h2:after {
 	content: "\f03d";
 	font-family: fontawesome;
-	font-size: 40px;
-	padding-right: 10px;
+	font-size: 30px;
+	padding-left: 10px;
 	vertical-align: middle;
 }
 
