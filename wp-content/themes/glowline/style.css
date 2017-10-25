@@ -2106,16 +2106,34 @@ input[type=submit] {
 	height: 100%;
 }
 
-.standard-layout .format-video h2 {
-	color: #bdb76b;
+.standard-layout .format-video:before {
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-family: 'FontAwesome';
+    font-size: 1.65em;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    content: "\f03d";
+    color: #fff;
+    z-index: 10;
 }
 
-.standard-layout .format-video h2:after {
-	content: "\f03d";
-	font-family: fontawesome;
-	font-size: 30px;
-	padding-left: 10px;
-	vertical-align: middle;
+.standard-layout .format-video h2:before {
+	display: block;
+    content: '';
+    border-top: 60px solid #bdb76b;
+    border-right: 60px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
 }
 
 /***Audio post format***/
@@ -2128,6 +2146,45 @@ input[type=submit] {
 	width: 100%;
 	height: 185px;
 }
+
+.standard-layout .format-audio:before {
+    position: absolute;
+    top: 9px;
+    left: -1px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-family: 'FontAwesome';
+    font-size: 1.65em;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    content: "\f028";
+    color: #fff;
+    transform: rotate(45deg);
+    z-index: 10;
+}
+
+.standard-layout .format-audio h2:before {
+	display: block;
+    content: '';
+    border-top: 60px solid #bdb76b;
+    border-right: 60px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+}
+
+/*.standard-layout .format-audio h2:after {
+	content: "\f028";
+	font-family: fontawesome;
+	font-size: 30px;
+	padding-left: 10px;
+	vertical-align: middle;
+}*/
 
 /***Link post format***/
 .standard-layout .format-link {
