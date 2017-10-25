@@ -2178,14 +2178,6 @@ input[type=submit] {
     width: 0;
 }
 
-/*.standard-layout .format-audio h2:after {
-	content: "\f028";
-	font-family: fontawesome;
-	font-size: 30px;
-	padding-left: 10px;
-	vertical-align: middle;
-}*/
-
 /***Link post format***/
 .standard-layout .format-link {
 	background-color: #ececec;
