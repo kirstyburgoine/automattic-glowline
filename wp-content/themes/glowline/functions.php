@@ -91,8 +91,8 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 
 		add_theme_support(
 			'custom-logo', array(
-				'height'      => 100,
-				'width'       => 400,
+				'height'      => 200,
+				'width'       => 800,
 				'flex-height' => true,
 				'header-text' => array( 'site-title', 'site-description' ),
 			)
@@ -123,8 +123,8 @@ function glowline_scripts() {
 	}
 
 	if ( glowline_has_featured_posts( 2 ) ) {
-		wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), '1.0.0' );
-		wp_enqueue_script( 'owl-carousel-js', get_template_directory_uri() . '/js/owl.carousel.js', array( 'jquery' ), '', true );
+		wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/css/flexslider.css', array(), '1.0.0' );
+		wp_enqueue_script( 'owl-carousel-js', get_template_directory_uri() . '/js/jquery.flexslider.js', array( 'jquery' ), '', true );
 	}
 
 }

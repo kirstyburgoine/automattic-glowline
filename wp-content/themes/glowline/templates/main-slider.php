@@ -13,15 +13,28 @@ foreach ( $featured_posts as $post ) :
 	setup_postdata( $post );
 ?>
 
-	<div class="item">
+	<li class="item">
 
 		<?php
+		// If featured image use that
 		if ( has_post_thumbnail() ) :
 		?>
 			<a href="<?php esc_url( the_permalink() ); ?>">
 				<?php the_post_thumbnail( 'glowline-custom-slider-thumb' ); ?>
 			</a>
 		<?php
+		// elseif use the first the image in the post
+		elseif ( main_image() ) :
+		?>
+			<a href="<?php esc_url( the_permalink() ); ?>">
+				<?php main_image(); ?>
+			</a>
+		<?php
+		// else use the website logo
+		else :
+			if ( function_exists( 'the_custom_logo' ) ) {
+				the_custom_logo();
+			}
 		endif;
 		?>
 
@@ -45,7 +58,7 @@ foreach ( $featured_posts as $post ) :
 				</div>
 			</div>
 
-	</div>
+	</li>
 
 <?php
 endforeach; ?>

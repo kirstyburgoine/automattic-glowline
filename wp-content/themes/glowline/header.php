@@ -102,10 +102,10 @@
 			?>
 			<div class="container featured-posts">
 
-				<div class="slider">
-					<div id="owl-demo" class="owl-carousel">
+				<div class="flexslider">
+					<ul class="slides">
 						<?php get_template_part( 'templates/main', 'slider' ); ?>
-					</div>
+					</ul>
 				</div>
 
 			</div>

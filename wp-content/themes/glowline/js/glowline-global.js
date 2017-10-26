@@ -117,22 +117,29 @@ jQuery( document ).ready(
 
 		// -------------------------------------------
 		// Responsive slider.
-		jQuery( ".owl-carousel" ).owlCarousel(
-			{
-				rtl: true,
-				nav: true, // Show next and prev buttons.
-				pagination:false,
-				slideSpeed : 500,
-				paginationSpeed : 400,
-				items : 1,
-				autoplay: true,
-				lazyLoad : true,
-				singleItem:true,
-				autoHeight:true,
-				dots:false,
-				loop:true
-			}
-		);
+		// jQuery( ".owl-carousel" ).owlCarousel(
+		// 	{
+		// 		rtl: true,
+		// 		nav: true, // Show next and prev buttons.
+		// 		pagination:false,
+		// 		slideSpeed : 500,
+		// 		paginationSpeed : 400,
+		// 		items : 1,
+		// 		autoplay: true,
+		// 		lazyLoad : true,
+		// 		singleItem:true,
+		// 		autoHeight:true,
+		// 		dots:false,
+		// 		loop:true
+		// 	}
+		// );
+
+		jQuery(window).load(function() {
+    		jQuery('.flexslider').flexslider({
+    			controlNav: false,
+    			animation: "slide"
+    		});
+		});
 
 		// -------------------------------------------
 		// masonry.
