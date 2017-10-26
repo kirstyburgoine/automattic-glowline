@@ -91,8 +91,8 @@ if ( ! function_exists( 'glowline_setup' ) ) :
 
 		add_theme_support(
 			'custom-logo', array(
-				'height'      => 100,
-				'width'       => 400,
+				'height'      => 200,
+				'width'       => 800,
 				'flex-height' => true,
 				'header-text' => array( 'site-title', 'site-description' ),
 			)
