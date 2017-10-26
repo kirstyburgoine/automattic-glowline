@@ -1750,7 +1750,7 @@ input[type=submit] {
  *      8.1 - Featured Post Slider
 \*--------------------------------------------------------------*/
 
-.featured-posts .slider {
+.featured-posts .flexslider {
 	background-color: #fff;
 	border: 1px solid #f1f1f1;
 	padding: 10px;
@@ -1758,7 +1758,7 @@ input[type=submit] {
 	min-height: 480px;
 }
 
-.header-wrapper .owl-carousel .owl-item img {
+.header-wrapper .slides .item img {
 	display: inline-block;
 	width: 70%;
 	float: left;
@@ -1885,45 +1885,45 @@ input[type=submit] {
 	cursor: pointer;
 }
 
-.slider .owl-carousel .owl-prev,
-.slider .owl-carousel .owl-next {
+.flexslider .slides .owl-prev,
+.flexslider .slides .owl-next {
 	opacity: 0;
 	-webkit-transition: all 0.25s linear;
 	transition: all 0.25s linear;
 }
 
-.slider .owl-carousel:hover .owl-prev,
-.slider .owl-carousel:hover .owl-next,
-.slider .owl-carousel:focus .owl-prev,
-.slider .owl-carousel:focus .owl-next  {
+.flexslider .slides:hover .owl-prev,
+.flexslider .slides:hover .owl-next,
+.flexslider .slides:focus .owl-prev,
+.flexslider .slides:focus .owl-next  {
 	opacity: 1;
 	color: transparent;
 }
 
 /* Post navigation */
-.owl-carousel .owl-controls .owl-dots {
+.slides .owl-controls .owl-dots {
 	position: relative;
 	bottom: 30px;
 	max-width: 70%;
 }
 
-.owl-carousel .owl-controls .owl-dot {
+.slides .owl-controls .owl-dot {
 	display: inline-block;
 	padding: 2px;
 }
 
-.owl-carousel .owl-controls .owl-dot span:before {
+.slides .owl-controls .owl-dot span:before {
 	content: "\f1db";
 	font-family: fontAwesome;
 	color: #ddd;
 }
 
-.owl-carousel .owl-controls .owl-dot.active span:before {
+.slides .owl-controls .owl-dot.active span:before {
 	content: "\f192";
 	font-family: fontAwesome;
 }
 
-.owl-carousel .owl-controls .owl-nav .owl-next span:before {
+.slides .owl-controls .owl-nav .owl-next span:before {
 	content: "\f192";
 	font-family: fontAwesome;
 }
@@ -2829,7 +2829,7 @@ a img.aligncenter {
 		padding-top: 70px;
 	}
 
-	.header-wrapper .owl-carousel .owl-item img {
+	.header-wrapper .slides .item img {
 		width: 100%;
 		max-width:790px;
 		float: none;
