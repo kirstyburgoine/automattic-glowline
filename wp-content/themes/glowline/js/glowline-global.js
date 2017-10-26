@@ -135,7 +135,10 @@ jQuery( document ).ready(
 		// );
 
 		jQuery(window).load(function() {
-    		jQuery('.flexslider').flexslider();
+    		jQuery('.flexslider').flexslider({
+    			controlNav: false,
+    			animation: "slide"
+    		});
 		});
 
 		// -------------------------------------------
