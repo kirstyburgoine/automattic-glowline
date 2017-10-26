@@ -2090,33 +2090,33 @@ input[type=submit] {
 }
 
 .standard-layout .format-video:before {
-    position: absolute;
-    top: 3px;
-    left: 6px;
-    display: block;
-    width: 40px;
-    height: 40px;
-    font-family: 'FontAwesome';
-    font-size: 1.65em;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    content: "\f03d";
-    color: #fff;
-    z-index: 10;
+	position: absolute;
+	top: 3px;
+	left: 6px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-family: 'FontAwesome';
+	font-size: 1.65em;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	content: "\f03d";
+	color: #fff;
+	z-index: 10;
 }
 
 .standard-layout .format-video h2:before {
 	display: block;
-    content: '';
-    border-top: 60px solid #bdb76b;
-    border-right: 60px solid transparent;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
+	content: '';
+	border-top: 60px solid #bdb76b;
+	border-right: 60px solid transparent;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
 }
 
 /***Audio post format***/
@@ -2131,34 +2131,34 @@ input[type=submit] {
 }
 
 .standard-layout .format-audio:before {
-    position: absolute;
-    top: 9px;
-    left: -1px;
-    display: block;
-    width: 40px;
-    height: 40px;
-    font-family: 'FontAwesome';
-    font-size: 1.65em;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    content: "\f028";
-    color: #fff;
-    transform: rotate(45deg);
-    z-index: 10;
+	position: absolute;
+	top: 9px;
+	left: -1px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-family: 'FontAwesome';
+	font-size: 1.65em;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	content: "\f028";
+	color: #fff;
+	transform: rotate(45deg);
+	z-index: 10;
 }
 
 .standard-layout .format-audio h2:before {
 	display: block;
-    content: '';
-    border-top: 60px solid #bdb76b;
-    border-right: 60px solid transparent;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
+	content: '';
+	border-top: 60px solid #bdb76b;
+	border-right: 60px solid transparent;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
 }
 
 /***Link post format***/
@@ -2181,14 +2181,14 @@ input[type=submit] {
 
 .format-link .post-category a {
 	border-left: 1px solid #ececec;
-    border-right: 1px solid #ececec;
-    border-top: 1px solid #ececec;
+	border-right: 1px solid #ececec;
+	border-top: 1px solid #ececec;
 }
 
 .format-link .post-category a:hover {
 	border-left: 1px solid #bdb76b;
-    border-right: 1px solid #bdb76b;
-    border-top: 1px solid #bdb76b;
+	border-right: 1px solid #bdb76b;
+	border-top: 1px solid #bdb76b;
 }
 
 /***Quote post format***/
