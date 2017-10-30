@@ -80,13 +80,23 @@
 
 				<?php
 				if ( is_front_page() && is_home() ) :
-				if ( function_exists( 'the_custom_logo' ) ) {
-					the_custom_logo();
-				}
+					if ( function_exists( 'the_custom_logo' ) ) {
+						the_custom_logo();
+					}
 				endif;
 				?>
 
-				<h1 class="site-title"><span class="highlight"><?php esc_html( bloginfo( 'name' ) ); ?></span></h1>
+				<?php
+				if ( is_front_page() && is_home() ) :
+				?>
+					<h1 class="site-title"><span class="highlight"><?php esc_html( bloginfo( 'name' ) ); ?></span></h1>
+				<?php
+				else :
+				?>
+					<h2 class="site-title"><span class="highlight"><?php esc_html( bloginfo( 'name' ) ); ?></span></h2>
+				<?php
+				endif;
+				?>
 
 				<?php
 				$description = get_bloginfo( 'description', 'display' );
