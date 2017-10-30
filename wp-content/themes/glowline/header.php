@@ -73,15 +73,17 @@
 		<?php
 		// ------------------------------------------------------------------
 		// ------------------------------------------------------------------
-		if ( is_front_page() && is_home() ) :
+		// if ( is_front_page() && is_home() ) :
 		?>
 
 			<div class="main-logo container">
 
 				<?php
+				if ( is_front_page() && is_home() ) :
 				if ( function_exists( 'the_custom_logo' ) ) {
 					the_custom_logo();
 				}
+				endif;
 				?>
 
 				<h1 class="site-title"><span class="highlight"><?php esc_html( bloginfo( 'name' ) ); ?></span></h1>
@@ -90,7 +92,7 @@
 				$description = get_bloginfo( 'description', 'display' );
 				if ( $description || is_customize_preview() ) :
 				?>
-					<p class="site-description"><?php echo esc_html( $description ); ?></p>
+					<p class="site-description"><span><?php echo esc_html( $description ); ?></span></p>
 				<?php
 				endif;
 				?>
@@ -98,6 +100,7 @@
 			</div>
 
 			<?php
+			if ( is_front_page() && is_home() ) :
 			if ( glowline_has_featured_posts( 1 ) ) :
 			?>
 			<div class="container featured-posts">
@@ -111,10 +114,11 @@
 			</div>
 			<?php
 			endif;
+			endif;
 			?>
 
 		<?php
-		endif;
+		// endif;
 		?>
 
 	</header>
