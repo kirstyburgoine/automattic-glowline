@@ -668,7 +668,8 @@ header .logo img {
 }
 
 .navigation ul ul li:hover,
-.navigation ul ul li:focus {
+.navigation ul ul li:focus,
+.navigation ul ul li[aria-expanded="true"] {
 	background-color: #f9f9f9;
 }
 

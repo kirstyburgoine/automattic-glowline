@@ -118,6 +118,8 @@ function glowline_scripts() {
 	wp_enqueue_script( 'classie', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'glowline-custom', get_template_directory_uri() . '/js/glowline-global.js', array( 'jquery', 'masonry' ), '', true );
 
+	wp_enqueue_script( 'textdomain-wai-aria', get_template_directory_uri() . '/js/wai-aria.js', array( 'jquery' ), null );
+
 	if ( is_singular() && comments_open() && ( get_option( 'thread_comments' ) === 1 ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -187,6 +189,7 @@ include( get_template_directory() . '/inc/widget.php' );
 
 include( get_template_directory() . '/inc/customizer.php' );
 
+include( get_template_directory() . '/inc/aria-walker-nav-menu.php' );
 
 /**
  * Grid & Masonry Settings.

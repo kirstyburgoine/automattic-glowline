@@ -50,7 +50,7 @@
 					</div>
 					<div id="main-menu-wrapper">
 						<button id="pull" class="toggle-mobile-menu" aria-controls="menu-1">Menu</button>
-						<nav class="navigation clearfix mobile-menu-wrapper">
+						<nav class="navigation clearfix mobile-menu-wrapper" role="navigation" aria-label="<?php esc_attr( 'Main Menu' ); ?>">
 							<?php
 							wp_nav_menu(
 								array(
@@ -58,7 +58,9 @@
 									'container'       => false,
 									'menu_class'      => 'menu',
 									'menu_id'         => 'menu-1',
+									'walker'		  => new Aria_Walker_Nav_Menu(),
 									'fallback_cb'     => 'glowline_wp_page_menu',
+									'items_wrap'     => '<ul id="%1$s" class="%2$s" role="menubar">%3$s</ul>',
 								)
 							);
 							?>
