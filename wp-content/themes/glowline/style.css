@@ -1753,7 +1753,7 @@ input[type=submit] {
 .featured-posts .flexslider {
 	background-color: #fff;
 	border: 1px solid #f1f1f1;
-	padding: 10px;
+	padding: 11px;
 	overflow: hidden;
 	min-height: 480px;
 }
