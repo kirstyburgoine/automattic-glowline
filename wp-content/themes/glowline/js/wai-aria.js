@@ -2,6 +2,7 @@
  * File wai-aria.js
  *
  * Focus styles for menus when using keyboard navigation
+ * Solution taken from: https://codeable.io/wordpress-accessibility-creating-accessible-dropdown-menus/
  *
  * @package Glowline
  */
