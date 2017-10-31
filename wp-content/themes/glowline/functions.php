@@ -118,7 +118,7 @@ function glowline_scripts() {
 	wp_enqueue_script( 'classie', get_template_directory_uri() . '/js/classie.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'glowline-custom', get_template_directory_uri() . '/js/glowline-global.js', array( 'jquery', 'masonry' ), '', true );
 
-	wp_enqueue_script( 'textdomain-wai-aria', get_template_directory_uri() . '/js/wai-aria.js', array( 'jquery' ), null );
+	wp_enqueue_script( 'textdomain-wai-aria', get_template_directory_uri() . '/js/wai-aria.js', array( 'jquery' ), '', true );
 
 	if ( is_singular() && comments_open() && ( get_option( 'thread_comments' ) === 1 ) ) {
 		wp_enqueue_script( 'comment-reply' );
