@@ -68,9 +68,9 @@ function glowline_customize_register( $wp_customize ) {
 
 	$wp_customize->selective_refresh->add_partial(
 		'dynamicgrid', array(
-			'selector'          => '#content',
+			'selector'          => '.posts-container',
 			'settings'          => 'dynamicgrid',
-			'render_callback'   => 'glowline_customize_partial_grid_classes',
+			'render_callback'   => 'glowline_customize_partial_dynamicgrid',
 		)
 	);
 }
@@ -102,11 +102,8 @@ function glowline_sanitize_grid_options( $input ) {
 function glowline_customize_partial_grid_classes( $glowline_grid_layout ) {
 	$grid_layout = get_option( 'dynamicgrid' );
 
-	if ( 'standard-layout' === $grid_layout ) {
 		return $grid_layout;
-	} else {
-		return $grid_layout;
-	}
+
 }
 
 /**

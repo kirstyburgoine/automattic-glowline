@@ -36,13 +36,13 @@
 			value.bind(
 				function( to ) {
 					if ( 'standard-layout' === to ) {
-						$( '#content' ).addClass( 'standard-layout' ).removeClass( 'masonry-enabled two-grid-layout three-grid-layout four-grid-layout' );
+						$( '.posts-container' ).addClass( 'standard-layout' ).removeClass( 'two-grid-layout three-grid-layout four-grid-layout' );
 					} else if ( 'two-grid-layout' === to ) {
-						$( '#content' ).addClass( 'masonry-enabled two-grid-layout' ).removeClass( 'standard-layout three-grid-layout four-grid-layout' );
+						$( '.posts-container' ).addClass( 'two-grid-layout' ).removeClass( 'standard-layout three-grid-layout four-grid-layout' );
 					} else if ( 'three-grid-layout' === to ) {
-						$( '#content' ).addClass( 'masonry-enabled three-grid-layout' ).removeClass( 'standard-layout two-grid-layout four-grid-layout' );
+						$( '.posts-container' ).addClass( 'three-grid-layout' ).removeClass( 'standard-layout two-grid-layout four-grid-layout' );
 					} else {
-						$( '#content' ).addClass( 'masonry-enabled four-grid-layout' ).removeClass( 'standard-layout two-grid-layout three-grid-layout' );
+						$( '.posts-container' ).addClass( 'four-grid-layout' ).removeClass( 'standard-layout two-grid-layout three-grid-layout' );
 					}
 				}
 			);
