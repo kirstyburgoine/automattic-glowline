@@ -69,6 +69,7 @@ function glowline_customize_register( $wp_customize ) {
 	$wp_customize->selective_refresh->add_partial(
 		'dynamicgrid', array(
 			'selector'          => '.posts-container',
+			'type'				=> 'grid_class',
 			'settings'          => 'dynamicgrid',
 			'render_callback'   => 'glowline_customize_partial_grid_classes',
 		)
@@ -102,7 +103,11 @@ function glowline_sanitize_grid_options( $input ) {
 function glowline_customize_partial_grid_classes( $glowline_grid_layout ) {
 	$grid_layout = get_option( 'dynamicgrid' );
 
-		echo $grid_layout;
+	if ( 'standard-layout' === $grid_layout ) {
+		return $grid_layout;
+	} else {
+		return $grid_layout;
+	}
 
 }
 
@@ -110,6 +115,6 @@ function glowline_customize_partial_grid_classes( $glowline_grid_layout ) {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function glowline_customize_preview_js() {
-	wp_enqueue_script( 'glowline_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '', true );
+	wp_enqueue_script( 'glowline_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview', 'customize-selective-refresh' ), '', true );
 }
 add_action( 'customize_preview_init', 'glowline_customize_preview_js' );
