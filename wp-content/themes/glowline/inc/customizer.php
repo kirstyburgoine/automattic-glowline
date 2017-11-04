@@ -115,6 +115,10 @@ function glowline_customize_partial_grid_classes( $glowline_grid_layout ) {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function glowline_customize_preview_js() {
+
+	if ( ! is_customize_preview() ) {
+		return;
+	}
 	wp_enqueue_script( 'glowline_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview', 'customize-selective-refresh' ), '', true );
 }
 add_action( 'customize_preview_init', 'glowline_customize_preview_js' );
