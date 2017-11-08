@@ -48,12 +48,12 @@ if ( have_posts() ) :
 			endwhile;
 		?>
 
-		<?php the_posts_navigation(); ?>
-
 		</div> <!-- .content //-->
 
 	<?php
 	get_sidebar();
+
+	the_posts_navigation();
 
 	else :
 		get_template_part( 'template-parts/content', 'none' );

@@ -47,10 +47,10 @@ get_header(); ?>
 
 		</div> <!-- .content //-->
 
-		<?php the_posts_navigation(); ?>
-
 	<?php
 		get_sidebar();
+
+		the_posts_navigation();
 
 	else :
 		get_template_part( 'template-parts/content', 'none' );
