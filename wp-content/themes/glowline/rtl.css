@@ -282,69 +282,7 @@ ul.load_post.standard-layout {
 	float:left;
 }
 
-ul.two-grid-layout li.post:nth-of-type(even) {
-	margin-right:0px;
-	margin-left: auto;
-}
 
-/* Global Style for posts End*/
-/* Sidebar two grid style start */
- ul.two-grid-layout li.post {
-	float:left;
-}
-
-.two-grid-layout .post {
-	margin-right:4%;
-	margin-left: auto;
-}
-
-/* Sidebar two grid style end */
-/* Sidebar three grid style start */
-ul.three-grid-layout li.post {
-	float:left;
-}
-
-ul.three-grid-layout li.post:nth-of-type(3n+3) {
-	margin-right:0px;
-	margin-left: auto;
-}
-
-.three-grid-layout .post {
-	margin-right:4%;
-	margin-left: auto;
-}
-
-/* Sidebar three grid style end */
-/* Sidebar four grid style start */
-
- ul.four-grid-layout li.post {
-	float:left;
-}
-
-.four-grid-layout .post {
-	margin-right:4%;
-	margin-left: auto;
-}
-
-ul.four-grid-layout li.post:nth-of-type(4n+4) {
-	margin-right:0px;
-	margin-left: auto;
-}
-
-/* Fullwidth Five grid style Start */
-ul.five-grid-layout li.post {
-	float:left;
-}
-
-.five-grid-layout .post {
-	margin-right:3%;
-	margin-left: auto;
-}
-
-ul.five-grid-layout li.post:nth-of-type(5n+5) {
-	margin-right:0px;
-	margin-left: auto;
-}
 
 /* Fullwidth Five grid style end */
 
