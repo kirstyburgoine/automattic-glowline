@@ -150,7 +150,8 @@ header h1#logo {
 }
 
 .navigation ul {
-	margin-right: 80px;
+	margin-left: 80px;
+	margin-right: 0;
 }
 
 
@@ -537,7 +538,7 @@ tfoot tr #prev a {
 }
 
 .single .tagcloud {
-	float:left;
+	float: right;
 }
 
 .post .post-share {
